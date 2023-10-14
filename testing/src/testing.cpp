@@ -10,23 +10,18 @@
 using namespace std;
 
 int main() {
-	int a = 5;
-	int& b = a;
-	int* c = &a;
-	cout << "Das ist b, auch der Wert von a: " << b << endl;
-	cout << "Das ist c, auch die Adresse von a: " << c << endl;
+	int matrix[5][5] = {};
+	cout << matrix << endl;
 
-	b = 10;
-	cout << "Das ist der neue Wert von a: " << a << endl;
-	cout << "Wie sieht dann b aus?: " << b << endl;
+	for (int i = 0; i < 5; i++) {
+	    for (int j = 0; j < 5; j++) {
+	        cout << matrix[i][j] << " ";
+	        if(j == 4){
+	        	cout << endl;
+	        }
+	    }
+	}
 
-	int &d = *c;
-	cout << "a: " << a << ", b: " << b << ", c: " << c << ", d: " << d << endl;
-
-	d = 15;
-	cout << "a: " << a << ", b: " << b << ", c: " << c << ", d: " << d << endl;
-	*c = 5;
-	cout << "a: " << a << ", b: " << b << ", c: " << c << ", d: " << d << endl;
 
 	return 0;
 }
