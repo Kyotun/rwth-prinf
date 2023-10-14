@@ -10,18 +10,19 @@
 using namespace std;
 
 int main() {
-	int matrix[5][5] = {};
-	cout << matrix << endl;
-
-	for (int i = 0; i < 5; i++) {
-	    for (int j = 0; j < 5; j++) {
-	        cout << matrix[i][j] << " ";
-	        if(j == 4){
-	        	cout << endl;
-	        }
-	    }
-	}
-
+	int* p = nullptr;
+	int a[10] = {};
+	int i = 5;
+	a[3] = 30;
+	a[4] = 40;
+	p = &(a[3]);
+	cout << p << endl;
+	i = *p;
+	cout << i << endl;
+	p++;
+	cout << p << endl; // p zeigt die Adresse von viertem Element von Array a.
+	i = *p;
+	cout << i << endl;
 
 	return 0;
 }

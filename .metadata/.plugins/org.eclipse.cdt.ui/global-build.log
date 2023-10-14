@@ -553,3 +553,352 @@ Finished building target: testing
 10:49:16 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+11:06:26 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:06:27 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:06:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:18: error: cannot take the address of an rvalue of type 'int (*)[5]'
+                cout << &(matrix+i+j) << " ";
+                        ^ ~~~~~~~~~~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:07:47 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:07:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:08:45 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:16: error: cannot take the address of an rvalue of type 'int (*)[5]'
+                int* p = &(matrix+i+i);
+                         ^ ~~~~~~~~~~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:09:30 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:12: error: cannot initialize a variable of type 'int *' with an rvalue of type 'int (*)[5]'
+                int* p = &matrix[i+j];
+                     ^   ~~~~~~~~~~~~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:09:51 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:09:53 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:10:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:10:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:14:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:13:7: warning: unused variable 'p' [-Wunused-variable]
+        int *p = nullptr;
+             ^
+../src/testing.cpp:14:6: warning: unused variable 'a' [-Wunused-variable]
+        int a[10] = {};
+            ^
+../src/testing.cpp:15:6: warning: unused variable 'i' [-Wunused-variable]
+        int i = 0;
+            ^
+3 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:14:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:14:6: warning: unused variable 'a' [-Wunused-variable]
+        int a[10] = {};
+            ^
+../src/testing.cpp:15:6: warning: unused variable 'i' [-Wunused-variable]
+        int i = 0;
+            ^
+2 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:15:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:14:6: warning: unused variable 'a' [-Wunused-variable]
+        int a[10] = {};
+            ^
+../src/testing.cpp:15:6: warning: unused variable 'i' [-Wunused-variable]
+        int i = 0;
+            ^
+2 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:15:31 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:15:6: warning: unused variable 'i' [-Wunused-variable]
+        int i = 0;
+            ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:15:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:15:56 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:6: error: incompatible pointer to integer conversion assigning to 'int' from 'int *'; dereference with *
+        i = p;
+            ^
+            *
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:15:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:6: error: incompatible pointer to integer conversion assigning to 'int' from 'int *'; dereference with *
+        i = p;
+            ^
+            *
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:25 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:7: error: incompatible pointer to integer conversion assigning to 'int' from 'int *'; dereference with *
+        *i = p;
+             ^
+             *
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:33 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:7: error: incompatible pointer to integer conversion assigning to 'int' from 'int *'; dereference with *
+        *i = p;
+             ^
+             *
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:7: error: incompatible pointer to integer conversion assigning to 'int' from 'int **'
+        *i = &p;
+             ^~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:50 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:7: error: incompatible pointer to integer conversion assigning to 'int' from 'int **'
+        *i = &p;
+             ^~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:17:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:6: error: incompatible integer to pointer conversion assigning to 'int *' from 'int'; remove *
+        i = *p;
+            ^~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:17:22 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:17:23 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:17:30 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:17:31 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:17:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:17:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:18:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:18:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:18:23 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:18:24 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:19:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:19:42 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:19:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:19:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
