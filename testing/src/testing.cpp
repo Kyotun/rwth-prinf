@@ -17,6 +17,7 @@ int main() {
 		cout << p[i] << endl;
 	}
 	cout << endl;
+	p = nullptr;
 	delete [] p;
 	for(int i = 0; i < sizeof(p); i++){
 		cout << p[i] << endl;
