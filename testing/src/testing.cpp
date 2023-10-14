@@ -10,19 +10,25 @@
 using namespace std;
 
 int main() {
-	int* p = nullptr;
-	int a[10] = {};
-	int i = 5;
-	a[3] = 30;
-	a[4] = 40;
-	p = &(a[3]);
-	cout << p << endl;
-	i = *p;
-	cout << i << endl;
-	p++;
-	cout << p << endl; // p zeigt die Adresse von viertem Element von Array a.
-	i = *p;
-	cout << i << endl;
+	char* p = new char [10];
+	fill(p, p+10,'0');
+	p[3] = 'c';
+	for(int i = 0; i < sizeof(p); i++){
+		cout << p[i] << endl;
+	}
+	cout << endl;
+	delete [] p;
+	for(int i = 0; i < sizeof(p); i++){
+		cout << p[i] << endl;
+	}
+	cout << 'n';
+	p = nullptr;
+	cout << 'n';
+	for(int i = 0; i < sizeof(p); i++){
+		cout << p[i] << endl;
+	}
+
+
 
 	return 0;
 }
