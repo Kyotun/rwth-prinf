@@ -9,24 +9,19 @@
 #include <iostream>
 using namespace std;
 
-int fakulteatBerechner(int x)
+void referenceTester(int *x)
 {
-	int fak = 1;
-	for(int i = x; i > 0; i--){
-		fak *= i;
-	}
-	return fak;
-
-
+	 *x = 2*(*x);
 }
-
 
 int main() {
 	int zahl;
-	cout << "Bitte geben sie die Zahl,deren Fakultät berechnet werden soll, aus: ";
+	cout << "Bitte geben sie die Zahl,deren Multiplikation von 2 berecehnet werden soll, aus: ";
 	cin >> zahl;
 
-	cout << fakulteatBerechner(zahl);
+	referenceTester(&zahl);
+
+	cout << zahl;
 
 	return 0;
 }
