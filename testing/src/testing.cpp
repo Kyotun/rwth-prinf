@@ -9,27 +9,24 @@
 #include <iostream>
 using namespace std;
 
-struct BirthDate
+enum CentCoin
 {
-	string name;
-	int year, month, day;
+	C01 = 1,
+	C02,
+	C05 = 5,
+	C10 = 10,
+	C20 = 20,
+	C50 = 50,
+
 };
 
 int main() {
 
-	BirthDate special;
-	special.name = "Emir Pisirici";
-	special.day = 27;
-	special.month = 1;
-	special.year = 2002;
-	cout << "First name: " << special.name << endl;
-
-	BirthDate* p_special = &special;
-	p_special->name = "Pisirici, Emir";
-	cout << "Second name: " << special.name << endl;
-
-	(*p_special).name = "Emir Pisirici";
-	cout << "Third name: " << special.name << endl;
+	CentCoin aCoin;
+	aCoin = C50;
+	int coin = C20 | C50;
+	cout << coin << endl;
+	cout << aCoin;
 
 	return 0;
 }
