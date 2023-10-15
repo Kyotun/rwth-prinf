@@ -9,30 +9,24 @@
 #include <iostream>
 using namespace std;
 
-enum CentCoin
+int fakulteatBerechner(int x)
 {
-	C01 = 1,
-	C02,
-	C05 = 5,
-	C10 = 10,
-	C20 = 20,
-	C50 = 50,
+	int fak = 1;
+	for(int i = x; i > 0; i--){
+		fak *= i;
+	}
+	return fak;
 
-};
+
+}
+
 
 int main() {
+	int zahl;
+	cout << "Bitte geben sie die Zahl,deren Fakultät berechnet werden soll, aus: ";
+	cin >> zahl;
 
-	int i = 10;
-	while(i > 0){
-		i--;
-		continue;
-		cout << i << " ";
-		if(i == 5){
-			continue;
-		}
-		cout << i << endl;
-	}
-	cout << "End of while";
+	cout << fakulteatBerechner(zahl);
 
 	return 0;
 }
