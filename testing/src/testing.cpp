@@ -9,27 +9,27 @@
 #include <iostream>
 using namespace std;
 
+struct BirthDate
+{
+	string name;
+	int year, month, day;
+};
+
 int main() {
-	char* p = new char [10];
-	fill(p, p+10,'0');
-	p[3] = 'c';
-	for(int i = 0; i < sizeof(p); i++){
-		cout << p[i] << endl;
-	}
-	cout << endl;
-	p = nullptr;
-	delete [] p;
-	for(int i = 0; i < sizeof(p); i++){
-		cout << p[i] << endl;
-	}
-	cout << 'n';
-	p = nullptr;
-	cout << 'n';
-	for(int i = 0; i < sizeof(p); i++){
-		cout << p[i] << endl;
-	}
 
+	BirthDate special;
+	special.name = "Emir Pisirici";
+	special.day = 27;
+	special.month = 1;
+	special.year = 2002;
+	cout << "First name: " << special.name << endl;
 
+	BirthDate* p_special = &special;
+	p_special->name = "Pisirici, Emir";
+	cout << "Second name: " << special.name << endl;
+
+	(*p_special).name = "Emir Pisirici";
+	cout << "Third name: " << special.name << endl;
 
 	return 0;
 }

@@ -1184,3 +1184,39 @@ Finished building target: testing
 17:01:50 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+18:54:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+18:54:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:34:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:35:00 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:37:52 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:37:53 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
