@@ -22,11 +22,17 @@ enum CentCoin
 
 int main() {
 
-	CentCoin aCoin;
-	aCoin = C50;
-	int coin = C20 | C50;
-	cout << coin << endl;
-	cout << aCoin;
+	int i = 10;
+	while(i > 0){
+		i--;
+		continue;
+		cout << i << " ";
+		if(i == 5){
+			continue;
+		}
+		cout << i << endl;
+	}
+	cout << "End of while";
 
 	return 0;
 }
