@@ -9,9 +9,9 @@
 #include <iostream>
 using namespace std;
 
-void referenceTester(int *x)
+void referenceTester(int &x)
 {
-	 *x = 2*(*x);
+	 x = 2*(x);
 }
 
 int main() {
@@ -19,7 +19,7 @@ int main() {
 	cout << "Bitte geben sie die Zahl,deren Multiplikation von 2 berecehnet werden soll, aus: ";
 	cin >> zahl;
 
-	referenceTester(&zahl);
+	referenceTester(zahl);
 
 	cout << zahl;
 
