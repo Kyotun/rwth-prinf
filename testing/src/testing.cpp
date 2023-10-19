@@ -7,21 +7,17 @@
 //============================================================================
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void referenceTester(int &x)
-{
-	 x = 2*(x);
-}
-
 int main() {
-	int zahl;
-	cout << "Bitte geben sie die Zahl,deren Multiplikation von 2 berecehnet werden soll, aus: ";
-	cin >> zahl;
+	vector<int> test_scores;
+	for(int i = 0; i < 5; i++){
+		test_scores.push_back(i);
+		cout << test_scores.at(i) << endl;
+	}
+	cout << test_scores.at(4) << endl;
 
-	referenceTester(zahl);
-
-	cout << zahl;
 
 	return 0;
 }
