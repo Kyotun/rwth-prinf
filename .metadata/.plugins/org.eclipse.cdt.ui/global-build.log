@@ -1,3 +1,197 @@
 16:35:57 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+11:25:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:27:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:27:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:27:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:28:00 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:28:43 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:11:10: fatal error: 'header.h' file not found
+#include "header.h"
+         ^~~~~~~~~~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:30:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:30:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:30:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "name1::foo()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:31:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:31:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:32:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:32:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:32:33 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:34:2: error: call to 'foo' is ambiguous
+        foo();
+        ^~~
+../src/testing.cpp:14:7: note: candidate function
+        void foo(){
+             ^
+../src/testing.cpp:21:7: note: candidate function
+        void foo(){
+             ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:33:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:33:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.

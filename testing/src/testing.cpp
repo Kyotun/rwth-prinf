@@ -7,17 +7,29 @@
 //============================================================================
 
 #include <iostream>
-#include <vector>
 using namespace std;
 
-int main() {
-	vector<int> test_scores;
-	for(int i = 0; i < 5; i++){
-		test_scores.push_back(i);
-		cout << test_scores.at(i) << endl;
+namespace name1
+{
+	void foo(){
+		cout << "name1" << endl;
 	}
-	cout << test_scores.at(4) << endl;
+}
 
+namespace name2
+{
+	void foo(){
+		cout << "name2" << endl;
+	}
+}
+
+
+int main() {
+
+	name1::foo();
+
+
+	name2::foo();
 
 	return 0;
 }

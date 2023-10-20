@@ -705,3 +705,13 @@ Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse
 
 !ENTRY org.eclipse.core.resources 2 10035 2023-10-19 15:07:18.517
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2023-10-20 10:51:39.947 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -keyring /Users/kyotun/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.cpp.product -keyring /Users/kyotun/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-10-20 10:51:44.611
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
