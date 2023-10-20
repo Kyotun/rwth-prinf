@@ -195,3 +195,250 @@ Finished building target: testing
 11:33:29 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+12:58:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:27:6: warning: unused variable 'income' [-Wunused-variable]
+        int income = number;
+            ^
+../src/testing.cpp:51:54: error: reference to non-static member function must be called; did you mean to call it with no arguments?
+        cout << "\nIs your income equals to: " << character.getIncome << "\n?";
+                                                  ~~~~~~~~~~^~~~~~~~~
+                                                                     ()
+1 warning and 1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:58:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:27:6: warning: unused variable 'income' [-Wunused-variable]
+        int income = number;
+            ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+12:59:18 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+12:59:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:00:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:27:6: warning: unused variable 'income' [-Wunused-variable]
+        int income = number;
+            ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:00:05 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:01:22 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:01:24 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:02:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:02:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:04:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:04:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:05:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:05:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:06:16 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:06:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:05:19 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "myClass::myClass()", referenced from:
+      _main in testing.o
+  "myClass::~myClass()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:08:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "myClass::~myClass()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:08:47 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:17:7: warning: private field 'age' is not used [-Wunused-private-field]
+                int age;
+                    ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+17:09:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+17:09:09 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:17:7: warning: private field 'age' is not used [-Wunused-private-field]
+                int age;
+                    ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+17:10:09 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+17:10:12 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+17:10:43 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+17:10:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+17:10:53 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+17:10:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
