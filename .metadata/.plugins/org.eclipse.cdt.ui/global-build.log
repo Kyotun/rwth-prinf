@@ -442,3 +442,1386 @@ Finished building target: testing
 17:10:54 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+19:33:47 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+19:33:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+00:14:18 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:40:10: error: redefinition of 'myClass'
+myClass::myClass(){
+         ^
+../src/testing.cpp:21:3: note: previous definition is here
+                myClass(){
+                ^
+../src/testing.cpp:45:10: error: no matching constructor for initialization of 'myClass'
+        myClass character;
+                ^
+../src/testing.cpp:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were provided
+class myClass{
+      ^
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:15:30 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+00:15:31 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+00:17:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:15: warning: defaulted function definitions are a C++11 extension [-Wc++11-extensions]
+                myClass() = default;
+                            ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+19:38:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "myClass::myClass()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:39:50 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:40:8: error: called object type 'int' is not a function or function pointer
+        income(income);
+        ~~~~~~^
+../src/testing.cpp:41:2: error: type 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >') does not provide a call operator
+        name(name);
+        ^~~~
+../src/testing.cpp:42:2: error: type 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >') does not provide a call operator
+        gender(gender);
+        ^~~~~~
+3 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:45:16 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:35:8: error: called object type 'int' is not a function or function pointer
+        income(income);
+        ~~~~~~^
+../src/testing.cpp:36:2: error: type 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >') does not provide a call operator
+        name(name);
+        ^~~~
+../src/testing.cpp:37:2: error: type 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char> >') does not provide a call operator
+        gender(gender);
+        ^~~~~~
+../src/testing.cpp:41:10: error: no matching constructor for initialization of 'myClass'
+        myClass character;
+                ^
+../src/testing.cpp:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were provided
+class myClass{
+      ^
+../src/testing.cpp:34:10: note: candidate constructor not viable: requires 3 arguments, but 0 were provided
+myClass::myClass(int income, string name, string gender){
+         ^
+4 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:47:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:35:6: error: member reference type 'myClass *' is a pointer; did you mean to use '->'?
+        this.income = income;
+        ~~~~^
+            ->
+../src/testing.cpp:36:6: error: member reference type 'myClass *' is a pointer; did you mean to use '->'?
+        this.name = name;
+        ~~~~^
+            ->
+../src/testing.cpp:37:6: error: member reference type 'myClass *' is a pointer; did you mean to use '->'?
+        this.gender = gender;
+        ~~~~^
+            ->
+../src/testing.cpp:41:10: error: no matching constructor for initialization of 'myClass'
+        myClass character;
+                ^
+../src/testing.cpp:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were provided
+class myClass{
+      ^
+../src/testing.cpp:34:10: note: candidate constructor not viable: requires 3 arguments, but 0 were provided
+myClass::myClass(int income, string name, string gender){
+         ^
+4 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:47:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:41:10: error: no matching constructor for initialization of 'myClass'
+        myClass character;
+                ^
+../src/testing.cpp:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were provided
+class myClass{
+      ^
+../src/testing.cpp:34:10: note: candidate constructor not viable: requires 3 arguments, but 0 were provided
+myClass::myClass(int income, string name, string gender){
+         ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:48:50 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:41:10: error: no matching constructor for initialization of 'myClass'
+        myClass character;
+                ^
+../src/testing.cpp:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were provided
+class myClass{
+      ^
+../src/testing.cpp:34:10: note: candidate constructor not viable: requires 3 arguments, but 0 were provided
+myClass::myClass(int income, string name, string gender){
+         ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:49:15 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+19:49:31 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+19:50:06 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:27:9: error: cannot assign to non-static data member 'income' with const-qualified type 'const int'
+        income = number;
+        ~~~~~~ ^
+../src/testing.cpp:16:13: note: non-static data member 'income' declared const here
+                const int income;
+                ~~~~~~~~~~^~~~~~
+../src/testing.cpp:34:10: error: constructor for 'myClass' must explicitly initialize the const member 'income'
+myClass::myClass(int income, string name, string gender){
+         ^
+../src/testing.cpp:16:13: note: declared here
+                const int income;
+                          ^
+../src/testing.cpp:35:15: error: cannot assign to non-static data member 'income' with const-qualified type 'const int'
+        this->income = income;
+        ~~~~~~~~~~~~ ^
+../src/testing.cpp:16:13: note: non-static data member 'income' declared const here
+                const int income;
+                ~~~~~~~~~~^~~~~~
+3 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:27:07 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+20:27:13 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+20:30:16 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:19:19: warning: default member initializer for non-static data member is a C++11 extension [-Wc++11-extensions]
+                char* test_char = nullptr;
+                                ^
+../src/testing.cpp:37:10: error: no matching constructor for initialization of 'myClass'
+        myClass character(10, "hey", "bye");
+                ^         ~~~~~~~~~~~~~~~~
+../src/testing.cpp:23:3: note: candidate constructor not viable: requires 1 argument, but 3 were provided
+                myClass(const myClass&);
+                ^
+../src/testing.cpp:22:3: note: candidate constructor not viable: requires 0 arguments, but 3 were provided
+                myClass();
+                ^
+1 warning and 1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:30:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:2: error: expected expression
+        public:
+        ^
+../src/testing.cpp:37:10: error: no matching constructor for initialization of 'myClass'
+        myClass character(10, "hey", "bye");
+                ^         ~~~~~~~~~~~~~~~~
+../src/testing.cpp:23:3: note: candidate constructor not viable: requires 1 argument, but 3 were provided
+                myClass(const myClass&);
+                ^
+../src/testing.cpp:38:12: error: 'setIncome' is a private member of 'myClass'
+        character.setIncome(5);
+                  ^
+../src/testing.cpp:24:8: note: declared private here
+                void setIncome(int number);
+                     ^
+../src/testing.cpp:39:20: error: 'getIncome' is a private member of 'myClass'
+        cout << character.getIncome() << endl;
+                          ^
+../src/testing.cpp:25:7: note: declared private here
+                int getIncome();
+                    ^
+4 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:30:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:2: error: expected expression
+        public:
+        ^
+../src/testing.cpp:37:19: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        myClass character();
+                         ^~
+../src/testing.cpp:38:2: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        character.setIncome(5);
+        ^~~~~~~~~
+                 ()
+../src/testing.cpp:38:12: error: 'setIncome' is a private member of 'myClass'
+        character.setIncome(5);
+                  ^
+../src/testing.cpp:24:8: note: declared private here
+                void setIncome(int number);
+                     ^
+../src/testing.cpp:39:10: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        cout << character.getIncome() << endl;
+                ^~~~~~~~~
+                         ()
+../src/testing.cpp:39:20: error: 'getIncome' is a private member of 'myClass'
+        cout << character.getIncome() << endl;
+                          ^
+../src/testing.cpp:25:7: note: declared private here
+                int getIncome();
+                    ^
+1 warning and 5 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:31:05 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:2: error: expected expression
+        public:
+        ^
+../src/testing.cpp:37:19: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        myClass character();
+                         ^~
+../src/testing.cpp:38:2: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        character.setIncome(5);
+        ^~~~~~~~~
+                 ()
+../src/testing.cpp:38:12: error: 'setIncome' is a private member of 'myClass'
+        character.setIncome(5);
+                  ^
+../src/testing.cpp:24:8: note: declared private here
+                void setIncome(int number);
+                     ^
+../src/testing.cpp:39:10: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        cout << character.getIncome() << endl;
+                ^~~~~~~~~
+                         ()
+../src/testing.cpp:39:20: error: 'getIncome' is a private member of 'myClass'
+        cout << character.getIncome() << endl;
+                          ^
+../src/testing.cpp:25:7: note: declared private here
+                int getIncome();
+                    ^
+1 warning and 5 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:31:36 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:2: error: expected expression
+        public:
+        ^
+../src/testing.cpp:37:19: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        myClass character();
+                         ^~
+../src/testing.cpp:38:2: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        character.setIncome(5);
+        ^~~~~~~~~
+                 ()
+../src/testing.cpp:38:12: error: 'setIncome' is a private member of 'myClass'
+        character.setIncome(5);
+                  ^
+../src/testing.cpp:24:8: note: declared private here
+                void setIncome(int number);
+                     ^
+../src/testing.cpp:39:10: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        cout << character.getIncome() << endl;
+                ^~~~~~~~~
+                         ()
+../src/testing.cpp:39:20: error: 'getIncome' is a private member of 'myClass'
+        cout << character.getIncome() << endl;
+                          ^
+../src/testing.cpp:25:7: note: declared private here
+                int getIncome();
+                    ^
+1 warning and 5 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:31:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:2: error: expected expression
+        public:
+        ^
+../src/testing.cpp:37:19: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        myClass character();
+                         ^~
+../src/testing.cpp:38:2: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        character.setIncome(5);
+        ^~~~~~~~~
+                 ()
+../src/testing.cpp:38:12: error: 'setIncome' is a private member of 'myClass'
+        character.setIncome(5);
+                  ^
+../src/testing.cpp:24:8: note: declared private here
+                void setIncome(int number);
+                     ^
+../src/testing.cpp:39:10: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        cout << character.getIncome() << endl;
+                ^~~~~~~~~
+                         ()
+../src/testing.cpp:39:20: error: 'getIncome' is a private member of 'myClass'
+        cout << character.getIncome() << endl;
+                          ^
+../src/testing.cpp:25:7: note: declared private here
+                int getIncome();
+                    ^
+../src/testing.cpp:19:9: warning: private field 'test_char' is not used [-Wunused-private-field]
+                char* test_char:
+                      ^
+2 warnings and 5 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:32:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:2: error: expected expression
+        public:
+        ^
+../src/testing.cpp:37:19: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        myClass character();
+                         ^~
+../src/testing.cpp:38:2: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        character.setIncome(5);
+        ^~~~~~~~~
+                 ()
+../src/testing.cpp:38:12: error: 'setIncome' is a private member of 'myClass'
+        character.setIncome(5);
+                  ^
+../src/testing.cpp:24:8: note: declared private here
+                void setIncome(int number);
+                     ^
+../src/testing.cpp:39:10: error: base of member reference is a function; perhaps you meant to call it with no arguments?
+        cout << character.getIncome() << endl;
+                ^~~~~~~~~
+                         ()
+../src/testing.cpp:39:20: error: 'getIncome' is a private member of 'myClass'
+        cout << character.getIncome() << endl;
+                          ^
+../src/testing.cpp:25:7: note: declared private here
+                int getIncome();
+                    ^
+../src/testing.cpp:19:9: warning: private field 'test_char' is not used [-Wunused-private-field]
+                char* test_char:
+                      ^
+2 warnings and 5 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:32:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:21:2: error: expected expression
+        public:
+        ^
+../src/testing.cpp:37:19: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        myClass character();
+                         ^~
+../src/testing.cpp:19:9: warning: private field 'test_char' is not used [-Wunused-private-field]
+                char* test_char:
+                      ^
+2 warnings and 1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:33:34 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:36:19: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        myClass character();
+                         ^~
+../src/testing.cpp:36:19: note: remove parentheses to declare a variable
+        myClass character();
+                         ^~
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+20:34:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "myClass::myClass()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:34:26 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "myClass::myClass()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:34:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "myClass::myClass()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:35:22 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "myClass::myClass()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:35:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+20:35:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+20:36:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+20:36:47 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+21:16:51 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+21:16:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+21:16:56 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+21:21:07 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:17:16: warning: default member initializer for non-static data member is a C++11 extension [-Wc++11-extensions]
+                char* zeiger = nullptr;
+                             ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+21:26:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+07:42:00 **** Clean-only build of configuration Debug for project testing ****
+make clean 
+rm -rf ./src/testing.d ./src/testing.o
+rm -rf testing
+ 
+07:42:00 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+07:42:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+07:43:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+07:43:30 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:34:53 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:32:2: error: use of undeclared identifier 'myClass'
+        myClass::printCounter();
+        ^
+../src/testing.cpp:34:2: error: unknown type name 'myClass'
+        myClass objekt_1;
+        ^
+../src/testing.cpp:35:2: error: use of undeclared identifier 'myClass'
+        myClass::printCounter();
+        ^
+../src/testing.cpp:38:2: error: unknown type name 'myClass'
+        myClass objekt_2;
+        ^
+../src/testing.cpp:39:2: error: use of undeclared identifier 'myClass'
+        myClass::printCounter();
+        ^
+5 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:35:00 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:38:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:42:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:35:13: error: out-of-line definition of 'vPrintProperties' does not match any declaration in 'Train'
+void Train::vPrintProperties(Train objekt)
+            ^~~~~~~~~~~~~~~~
+../src/testing.cpp:26:8: note: member declaration does not match because it is const qualified
+                void vPrintProperties(Train objekt) const;
+                     ^                              ~~~~~
+../src/testing.cpp:37:62: error: expected ';' after expression
+        cout << "Passenger counter: " << p_iPassengerCounter << endl:
+                                                                    ^
+                                                                    ;
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:43:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:37:62: error: expected ';' after expression
+        cout << "Passenger counter: " << p_iPassengerCounter << endl:
+                                                                    ^
+                                                                    ;
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:43:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Train::Train()", referenced from:
+      _main in testing.o
+  "Train::~Train()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:44:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:40:8: error: no matching constructor for initialization of 'Train'
+        Train objekt_standard;
+              ^
+../src/testing.cpp:28:8: note: candidate constructor not viable: requires single argument 'passengerCounter', but no arguments were provided
+Train::Train(int passengerCounter)
+       ^
+../src/testing.cpp:13:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were provided
+class Train
+      ^
+../src/testing.cpp:13:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 0 were provided
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:45:53 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Train::~Train()", referenced from:
+      _main in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:48:21 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:48:25 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:48:46 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:48:47 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:48:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:35:10: error: expected expression
+        cout << ;
+                ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:49:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:49:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:49:18 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:49:33 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:49:34 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:49:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:49:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:50:31 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:50:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:02:43 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:02:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:11:25 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:12:42 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:12:59 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:14: error: non-const static data member must be initialized out of line
+                static int p_iIDcounter = 0;
+                           ^              ~
+../src/testing.cpp:19:14: error: non-const static data member must be initialized out of line
+                static int p_iID = 0;
+                           ^       ~
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:13:03 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:14: error: non-const static data member must be initialized out of line
+                static int p_iIDcounter = 0;
+                           ^              ~
+../src/testing.cpp:19:14: error: non-const static data member must be initialized out of line
+                static int p_iID = 0;
+                           ^       ~
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:13:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:13:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:14:19 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:14:20 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:14:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:14:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:17:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:17:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:18:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:18:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:19:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:19:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:20:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:20:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:20:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:20:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:21:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:21:05 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:21:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:21:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:21:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:21:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:22:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:18:14: error: non-const static data member must be initialized out of line
+                static int p_iIDcounter = 0;
+                           ^              ~
+../src/testing.cpp:19:14: error: non-const static data member must be initialized out of line
+                static int p_iID = 0;
+                           ^       ~
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:22:19 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:27:09 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:27:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:28:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:28:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:33:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:33:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:37:26 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:37:26 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:38:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:38:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:08:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:38:1: error: 'static' can only be specified inside the class definition
+static int Train::getTotaleID()
+^~~~~~~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:08:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:26:21: error: extra qualification on member 'getTotaleID'
+                static int Train::getTotaleID()
+                           ~~~~~~~^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:08:51 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:08:52 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:09:14 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:09:15 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:09:21 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:09:22 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:09:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:09:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:10:34 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:10:34 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:15:36 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:15:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
