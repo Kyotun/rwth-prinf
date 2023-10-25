@@ -1825,3 +1825,105 @@ Finished building target: testing
 15:15:37 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+15:42:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:25:4: error: function definition is not allowed here
+                        {
+                        ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:43:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:24:18: error: non-member function cannot have 'const' qualifier
+                        double area() const;
+                                      ^~~~~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:44:07 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:24:18: error: non-member function cannot have 'const' qualifier
+                        double area() const;
+                                      ^~~~~
+../src/testing.cpp:29:15: error: no member named 'area' in 'Shape'
+double Shape::area const {
+       ~~~~~~~^
+../src/testing.cpp:29:19: error: expected ';' after top level declarator
+double Shape::area const {
+                  ^
+                  ;
+../src/testing.cpp:29:26: error: expected unqualified-id
+double Shape::area const {
+                         ^
+4 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:44:59 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:49:46 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:42:7: error: called object type 'double' is not a function or function pointer
+                        p_w(w);
+                        ~~~^
+../src/testing.cpp:43:7: error: called object type 'double' is not a function or function pointer
+                        p_h(h);
+                        ~~~^
+../src/testing.cpp:63:11: error: called object type 'double' is not a function or function pointer
+                        p_end_x(end_x);
+                        ~~~~~~~^
+../src/testing.cpp:64:11: error: called object type 'double' is not a function or function pointer
+                        p_end_y(end_y);
+                        ~~~~~~~^
+4 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:51:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:52:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:52:30 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.

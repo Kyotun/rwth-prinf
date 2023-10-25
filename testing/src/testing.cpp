@@ -10,85 +10,68 @@
 using namespace std;
 
 
-class Train
+class Shape
 {
-	private:
-		int p_iPassengerCounter = 0;
-		float p_fDelay = 0;
-		static inline int p_iIDcounter = 0; // Wie funktioniert diese Zeile?
-		const int p_iID = p_iIDcounter++; // Wie funktioniert diese Zeile?
-
+	protected:
+		double p_x = 0.0;
+		double p_y = 0.0;
 	public:
-		Train() = default;
-		Train(int passengers);
-		virtual ~Train() = default;
-
-		static int getTotaleID()
+		Shape() = default;
+		Shape(double x, double y)
 		{
-			return p_iIDcounter;
+			this->p_x = x;
+			this->p_y = y;
 		}
-		int getID();
-		void vPrintProperties() const;
-		float fStation(int passengersIn, int passengersOut);
+		double area() const {
+			return 0.0;
+		}
+
 };
 
-Train::Train(int passengerCounter)
-{
-	cout << "Ein neuer Train Objekt mit Passengercounter wurde erzeugt" << endl;
-	this->p_iPassengerCounter = passengerCounter;
-}
+class Box : public Shape{
+
+	private:
+		double p_w = 0.0;
+		double p_h = 0.0;
+
+	public:
+		Box() = default;
+		Box(double x, double y, double w, double h)
+		{
+			Shape(x,y);
+			this-> p_w = w;
+			this-> p_h = h;
+		}
+		double area() const
+		{
+			return p_w * p_h;
+		}
 
 
-int Train::getID()
-{
-	return p_iID;
-}
-void Train::vPrintProperties() const
-{
-	cout << "Passenger counter: " << p_iPassengerCounter << endl;
-	cout << "Delay: " << p_fDelay << " Minuten" << endl;
-	cout << "Totale ID's: " << p_iIDcounter << endl;
-	cout << "ID: " << p_iID << endl;
-}
+};
 
-float Train::fStation(int passengersIn, int passengersOut)
-{
-	int personen_zahl = p_iPassengerCounter + passengersIn - passengersOut;
-	if(personen_zahl < 0)
-	{
-		return 0;
-	}else
-	{
-		p_iPassengerCounter = p_iPassengerCounter + passengersIn - passengersOut;
-		float verbringte_Zeit = 120 - passengersIn*10 + passengersOut*5;
-		p_fDelay = (p_fDelay - verbringte_Zeit < 0) ? 0 : (p_fDelay - verbringte_Zeit)/60;
-		return p_fDelay;
-	}
-}
+class Line : public Shape {
+	private:
+    	double p_end_x = 0.0;
+    	double p_end_y = 0.0;
+
+    public:
+		Line() = default;
+		Line(double x, double y, double end_x, double end_y)
+		{
+			Shape(x, y);
+			this-> p_end_x = end_x;
+			this-> p_end_y = end_y;
+		}
+};
 
 int main()
 {
-	Train objekt_standard;
-	cout << "Totale ID's: " << Train::getTotaleID() << endl;
-	cout << "Totale ID's mit einem Objekt: " << objekt_standard.getTotaleID() << endl << endl;
-	Train objekt_mit_counter(10);
-	cout << "Train mit counter:" << endl;
-	objekt_mit_counter.vPrintProperties();
-	cout << endl;
+	Box box(10.0, 10.0, 6.0, 7.0);
+	Line line(10.0, 10.0, 30.0, 30.0);
 
-	cout << "Standard Train" << endl;
-	objekt_standard.vPrintProperties();
-	cout << endl;
-
-	objekt_mit_counter.fStation(15, 10);
-	cout << "Train mit counter:" << endl;
-	objekt_mit_counter.vPrintProperties();
-	cout << endl;
-
-	objekt_standard.fStation(3,12);
-	cout << "Standard Train" << endl;
-	objekt_standard.vPrintProperties();
-	cout << endl;
+	cout << "Box area:\t" << box.area() << endl << endl;
+	cout << "Line area:\t" << line.area() << endl << endl;
 
 	return 0;
 
