@@ -1927,3 +1927,1198 @@ Finished building target: testing
 15:52:30 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+16:09:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:09:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:17:14 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:17:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:17:34 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:17:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:19:14 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:19:14 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:20:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:77:7: error: invalid operands to binary expression ('std::ostream' (aka 'basic_ostream<char>') and 'Shape')
+        cout << shape_ref1;
+        ~~~~ ^  ~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef:116:3: note: candidate function template not viable: no known conversion from 'std::ostream' (aka 'basic_ostream<char>') to 'std::byte' for 1st argument
+  operator<< (byte  __lhs, _Integer __shift) noexcept
+  ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:793:1: note: candidate function template not viable: no known conversion from 'Shape' to 'char' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, char __cn)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:826:1: note: candidate function template not viable: no known conversion from 'Shape' to 'char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:833:1: note: candidate function template not viable: no known conversion from 'Shape' to 'signed char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, signed char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:840:1: note: candidate function template not viable: no known conversion from 'Shape' to 'unsigned char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, unsigned char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:854:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const char *' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const char* __strn)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:900:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:907:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const signed char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const signed char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:915:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const unsigned char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const unsigned char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1100:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const std::error_code' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __ec)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:786:1: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'Shape')
+operator<<(basic_ostream<_CharT, _Traits>& __os, _CharT __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:259:1: note: candidate template ignored: could not match 'uniform_int_distribution<_IT>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:847:1: note: candidate template ignored: could not match 'const _CharT *' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const _CharT* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1083:1: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Allocator>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1091:1: note: candidate template ignored: could not match 'basic_string_view<_CharT, _Traits>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1108:1: note: candidate template ignored: could not match 'shared_ptr<_Yp>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, shared_ptr<_Yp> const& __p)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1127:1: note: candidate template ignored: could not match 'bitset<_Size>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const bitset<_Size>& __x)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1075:11: note: candidate template ignored: requirement 'integral_constant<bool, false>::value' was not satisfied [with _Stream = std::ostream &, _Tp = Shape]
+_Stream&& operator<<(_Stream&& __os, const _Tp& __x)
+          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1120:1: note: candidate template ignored: could not match 'unique_ptr<_Yp, _Dp>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, unique_ptr<_Yp, _Dp> const& __p)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:222:20: note: candidate function not viable: no known conversion from 'Shape' to 'std::ostream &(*)(std::ostream &)' for 1st argument
+    basic_ostream& operator<<(basic_ostream& (*__pf)(basic_ostream&))
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:226:20: note: candidate function not viable: no known conversion from 'Shape' to 'basic_ios<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> &(*)(basic_ios<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> &)' (aka 'basic_ios<char, std::char_traits<char>> &(*)(basic_ios<char, std::char_traits<char>> &)') for 1st argument
+    basic_ostream& operator<<(basic_ios<char_type, traits_type>&
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:231:20: note: candidate function not viable: no known conversion from 'Shape' to 'std::ios_base &(*)(std::ios_base &)' for 1st argument
+    basic_ostream& operator<<(ios_base& (*__pf)(ios_base&))
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:234:20: note: candidate function not viable: no known conversion from 'Shape' to 'bool' for 1st argument
+    basic_ostream& operator<<(bool __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:235:20: note: candidate function not viable: no known conversion from 'Shape' to 'short' for 1st argument
+    basic_ostream& operator<<(short __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:236:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned short' for 1st argument
+    basic_ostream& operator<<(unsigned short __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:237:20: note: candidate function not viable: no known conversion from 'Shape' to 'int' for 1st argument
+    basic_ostream& operator<<(int __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:238:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned int' for 1st argument
+    basic_ostream& operator<<(unsigned int __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:239:20: note: candidate function not viable: no known conversion from 'Shape' to 'long' for 1st argument
+    basic_ostream& operator<<(long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:240:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned long' for 1st argument
+    basic_ostream& operator<<(unsigned long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:241:20: note: candidate function not viable: no known conversion from 'Shape' to 'long long' for 1st argument
+    basic_ostream& operator<<(long long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:242:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned long long' for 1st argument
+    basic_ostream& operator<<(unsigned long long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:243:20: note: candidate function not viable: no known conversion from 'Shape' to 'float' for 1st argument
+    basic_ostream& operator<<(float __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:244:20: note: candidate function not viable: no known conversion from 'Shape' to 'double' for 1st argument
+    basic_ostream& operator<<(double __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:245:20: note: candidate function not viable: no known conversion from 'Shape' to 'long double' for 1st argument
+    basic_ostream& operator<<(long double __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:246:20: note: candidate function not viable: no known conversion from 'Shape' to 'const void *' for 1st argument; take the address of the argument with &
+    basic_ostream& operator<<(const void* __p);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:255:20: note: candidate function not viable: no known conversion from 'Shape' to 'basic_streambuf<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> *' (aka 'basic_streambuf<char, std::char_traits<char>> *') for 1st argument
+    basic_ostream& operator<<(basic_streambuf<char_type, traits_type>* __sb);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:261:20: note: candidate function not viable: no known conversion from 'Shape' to 'nullptr_t' (aka 'std::nullptr_t') for 1st argument
+    basic_ostream& operator<<(nullptr_t)
+                   ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:20:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:77:7: error: invalid operands to binary expression ('std::ostream' (aka 'basic_ostream<char>') and 'Shape')
+        cout << shape_ref1;
+        ~~~~ ^  ~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef:116:3: note: candidate function template not viable: no known conversion from 'std::ostream' (aka 'basic_ostream<char>') to 'std::byte' for 1st argument
+  operator<< (byte  __lhs, _Integer __shift) noexcept
+  ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:793:1: note: candidate function template not viable: no known conversion from 'Shape' to 'char' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, char __cn)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:826:1: note: candidate function template not viable: no known conversion from 'Shape' to 'char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:833:1: note: candidate function template not viable: no known conversion from 'Shape' to 'signed char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, signed char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:840:1: note: candidate function template not viable: no known conversion from 'Shape' to 'unsigned char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, unsigned char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:854:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const char *' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const char* __strn)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:900:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:907:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const signed char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const signed char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:915:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const unsigned char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const unsigned char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1100:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const std::error_code' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __ec)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:786:1: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'Shape')
+operator<<(basic_ostream<_CharT, _Traits>& __os, _CharT __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:259:1: note: candidate template ignored: could not match 'uniform_int_distribution<_IT>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:847:1: note: candidate template ignored: could not match 'const _CharT *' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const _CharT* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1083:1: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Allocator>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1091:1: note: candidate template ignored: could not match 'basic_string_view<_CharT, _Traits>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1108:1: note: candidate template ignored: could not match 'shared_ptr<_Yp>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, shared_ptr<_Yp> const& __p)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1127:1: note: candidate template ignored: could not match 'bitset<_Size>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const bitset<_Size>& __x)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1075:11: note: candidate template ignored: requirement 'integral_constant<bool, false>::value' was not satisfied [with _Stream = std::ostream &, _Tp = Shape]
+_Stream&& operator<<(_Stream&& __os, const _Tp& __x)
+          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1120:1: note: candidate template ignored: could not match 'unique_ptr<_Yp, _Dp>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, unique_ptr<_Yp, _Dp> const& __p)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:222:20: note: candidate function not viable: no known conversion from 'Shape' to 'std::ostream &(*)(std::ostream &)' for 1st argument
+    basic_ostream& operator<<(basic_ostream& (*__pf)(basic_ostream&))
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:226:20: note: candidate function not viable: no known conversion from 'Shape' to 'basic_ios<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> &(*)(basic_ios<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> &)' (aka 'basic_ios<char, std::char_traits<char>> &(*)(basic_ios<char, std::char_traits<char>> &)') for 1st argument
+    basic_ostream& operator<<(basic_ios<char_type, traits_type>&
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:231:20: note: candidate function not viable: no known conversion from 'Shape' to 'std::ios_base &(*)(std::ios_base &)' for 1st argument
+    basic_ostream& operator<<(ios_base& (*__pf)(ios_base&))
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:234:20: note: candidate function not viable: no known conversion from 'Shape' to 'bool' for 1st argument
+    basic_ostream& operator<<(bool __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:235:20: note: candidate function not viable: no known conversion from 'Shape' to 'short' for 1st argument
+    basic_ostream& operator<<(short __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:236:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned short' for 1st argument
+    basic_ostream& operator<<(unsigned short __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:237:20: note: candidate function not viable: no known conversion from 'Shape' to 'int' for 1st argument
+    basic_ostream& operator<<(int __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:238:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned int' for 1st argument
+    basic_ostream& operator<<(unsigned int __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:239:20: note: candidate function not viable: no known conversion from 'Shape' to 'long' for 1st argument
+    basic_ostream& operator<<(long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:240:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned long' for 1st argument
+    basic_ostream& operator<<(unsigned long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:241:20: note: candidate function not viable: no known conversion from 'Shape' to 'long long' for 1st argument
+    basic_ostream& operator<<(long long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:242:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned long long' for 1st argument
+    basic_ostream& operator<<(unsigned long long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:243:20: note: candidate function not viable: no known conversion from 'Shape' to 'float' for 1st argument
+    basic_ostream& operator<<(float __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:244:20: note: candidate function not viable: no known conversion from 'Shape' to 'double' for 1st argument
+    basic_ostream& operator<<(double __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:245:20: note: candidate function not viable: no known conversion from 'Shape' to 'long double' for 1st argument
+    basic_ostream& operator<<(long double __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:246:20: note: candidate function not viable: no known conversion from 'Shape' to 'const void *' for 1st argument; take the address of the argument with &
+    basic_ostream& operator<<(const void* __p);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:255:20: note: candidate function not viable: no known conversion from 'Shape' to 'basic_streambuf<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> *' (aka 'basic_streambuf<char, std::char_traits<char>> *') for 1st argument
+    basic_ostream& operator<<(basic_streambuf<char_type, traits_type>* __sb);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:261:20: note: candidate function not viable: no known conversion from 'Shape' to 'nullptr_t' (aka 'std::nullptr_t') for 1st argument
+    basic_ostream& operator<<(nullptr_t)
+                   ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:20:51 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:77:7: error: invalid operands to binary expression ('std::ostream' (aka 'basic_ostream<char>') and 'Shape')
+        cout << shape_ref1;
+        ~~~~ ^  ~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef:116:3: note: candidate function template not viable: no known conversion from 'std::ostream' (aka 'basic_ostream<char>') to 'std::byte' for 1st argument
+  operator<< (byte  __lhs, _Integer __shift) noexcept
+  ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:793:1: note: candidate function template not viable: no known conversion from 'Shape' to 'char' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, char __cn)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:826:1: note: candidate function template not viable: no known conversion from 'Shape' to 'char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:833:1: note: candidate function template not viable: no known conversion from 'Shape' to 'signed char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, signed char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:840:1: note: candidate function template not viable: no known conversion from 'Shape' to 'unsigned char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, unsigned char __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:854:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const char *' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const char* __strn)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:900:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:907:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const signed char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const signed char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:915:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const unsigned char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const unsigned char* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1100:1: note: candidate function template not viable: no known conversion from 'Shape' to 'const std::error_code' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __ec)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:786:1: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'Shape')
+operator<<(basic_ostream<_CharT, _Traits>& __os, _CharT __c)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:259:1: note: candidate template ignored: could not match 'uniform_int_distribution<_IT>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:847:1: note: candidate template ignored: could not match 'const _CharT *' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const _CharT* __str)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1083:1: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Allocator>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1091:1: note: candidate template ignored: could not match 'basic_string_view<_CharT, _Traits>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1108:1: note: candidate template ignored: could not match 'shared_ptr<_Yp>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, shared_ptr<_Yp> const& __p)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1127:1: note: candidate template ignored: could not match 'bitset<_Size>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const bitset<_Size>& __x)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1075:11: note: candidate template ignored: requirement 'integral_constant<bool, false>::value' was not satisfied [with _Stream = std::ostream &, _Tp = Shape]
+_Stream&& operator<<(_Stream&& __os, const _Tp& __x)
+          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:1120:1: note: candidate template ignored: could not match 'unique_ptr<_Yp, _Dp>' against 'Shape'
+operator<<(basic_ostream<_CharT, _Traits>& __os, unique_ptr<_Yp, _Dp> const& __p)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:222:20: note: candidate function not viable: no known conversion from 'Shape' to 'std::ostream &(*)(std::ostream &)' for 1st argument
+    basic_ostream& operator<<(basic_ostream& (*__pf)(basic_ostream&))
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:226:20: note: candidate function not viable: no known conversion from 'Shape' to 'basic_ios<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> &(*)(basic_ios<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> &)' (aka 'basic_ios<char, std::char_traits<char>> &(*)(basic_ios<char, std::char_traits<char>> &)') for 1st argument
+    basic_ostream& operator<<(basic_ios<char_type, traits_type>&
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:231:20: note: candidate function not viable: no known conversion from 'Shape' to 'std::ios_base &(*)(std::ios_base &)' for 1st argument
+    basic_ostream& operator<<(ios_base& (*__pf)(ios_base&))
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:234:20: note: candidate function not viable: no known conversion from 'Shape' to 'bool' for 1st argument
+    basic_ostream& operator<<(bool __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:235:20: note: candidate function not viable: no known conversion from 'Shape' to 'short' for 1st argument
+    basic_ostream& operator<<(short __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:236:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned short' for 1st argument
+    basic_ostream& operator<<(unsigned short __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:237:20: note: candidate function not viable: no known conversion from 'Shape' to 'int' for 1st argument
+    basic_ostream& operator<<(int __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:238:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned int' for 1st argument
+    basic_ostream& operator<<(unsigned int __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:239:20: note: candidate function not viable: no known conversion from 'Shape' to 'long' for 1st argument
+    basic_ostream& operator<<(long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:240:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned long' for 1st argument
+    basic_ostream& operator<<(unsigned long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:241:20: note: candidate function not viable: no known conversion from 'Shape' to 'long long' for 1st argument
+    basic_ostream& operator<<(long long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:242:20: note: candidate function not viable: no known conversion from 'Shape' to 'unsigned long long' for 1st argument
+    basic_ostream& operator<<(unsigned long long __n);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:243:20: note: candidate function not viable: no known conversion from 'Shape' to 'float' for 1st argument
+    basic_ostream& operator<<(float __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:244:20: note: candidate function not viable: no known conversion from 'Shape' to 'double' for 1st argument
+    basic_ostream& operator<<(double __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:245:20: note: candidate function not viable: no known conversion from 'Shape' to 'long double' for 1st argument
+    basic_ostream& operator<<(long double __f);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:246:20: note: candidate function not viable: no known conversion from 'Shape' to 'const void *' for 1st argument; take the address of the argument with &
+    basic_ostream& operator<<(const void* __p);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:255:20: note: candidate function not viable: no known conversion from 'Shape' to 'basic_streambuf<std::basic_ostream<char>::char_type, std::basic_ostream<char>::traits_type> *' (aka 'basic_streambuf<char, std::char_traits<char>> *') for 1st argument
+    basic_ostream& operator<<(basic_streambuf<char_type, traits_type>* __sb);
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:261:20: note: candidate function not viable: no known conversion from 'Shape' to 'nullptr_t' (aka 'std::nullptr_t') for 1st argument
+    basic_ostream& operator<<(nullptr_t)
+                   ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:21:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:21:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:23:42 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:81:9: warning: unused variable 'shape_ref2' [-Wunused-variable]
+        Shape& shape_ref2 = line; // Adresse von line Objekt
+               ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:27:06 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:27:07 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:27:27 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:27:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:28:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:28:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:28:16 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:28:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+16:34:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+16:34:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:50:39 **** Clean-only build of configuration Debug for project testing ****
+make clean 
+rm -rf ./src/testing.d ./src/testing.o
+rm -rf testing
+ 
+10:50:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:30:16: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                virtual void method();
+                             ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Base::~Base()", referenced from:
+      Derived::~Derived() in testing.o
+  "vtable for Base", referenced from:
+      Base::Base() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Derived", referenced from:
+      Derived::Derived() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:50:56 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:30:16: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                virtual void method();
+                             ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Derived::~Derived()", referenced from:
+      _main in testing.o
+  "vtable for Base", referenced from:
+      Base::Base() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Derived", referenced from:
+      Derived::Derived() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:51:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:34:16: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                virtual void method();
+                             ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Derived::~Derived()", referenced from:
+      _main in testing.o
+  "vtable for Derived", referenced from:
+      Derived::Derived() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:52:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:34:16: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                virtual void method();
+                             ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Derived::~Derived()", referenced from:
+      vtable for Derived in testing.o
+  "Derived::~Derived()", referenced from:
+      _main in testing.o
+      vtable for Derived in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:52:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Derived::~Derived()", referenced from:
+      _main in testing.o
+  "vtable for Derived", referenced from:
+      Derived::Derived() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:52:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+2 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Base::~Base()", referenced from:
+      vtable for Base in testing.o
+  "Base::~Base()", referenced from:
+      Derived::~Derived() in testing.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:53:20 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+4 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:53:27 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:54:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:34:8: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                void method();
+                     ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:54:19 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:54:34 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:34:16: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                virtual void method();
+                             ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:54:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:54:46 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:35:11: error: '~Derived' cannot be the name of a variable or data member
+                virtual ~Derived = default;
+                        ^
+../src/testing.cpp:34:16: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                virtual void method();
+                             ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings and 1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:54:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:34:16: warning: 'Derived::method' hides overloaded virtual function [-Woverloaded-virtual]
+                virtual void method();
+                             ^
+../src/testing.cpp:19:16: note: hidden overloaded virtual function 'Base::method' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:54:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:55:19 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+4 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:55:20 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:55:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+4 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:55:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:55:45 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+4 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:55:46 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:55:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:31:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:32:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+4 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:55:56 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:57:15 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:42:8: warning: 'Derived::method_zwei' hides overloaded virtual function [-Woverloaded-virtual]
+                void method_zwei();
+                     ^
+../src/testing.cpp:20:16: note: hidden overloaded virtual function 'Base::method_zwei' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method_zwei() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:38:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:39:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:57:15 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:57:26 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:42:8: warning: 'Derived::method_zwei' hides overloaded virtual function [-Woverloaded-virtual]
+                void method_zwei();
+                     ^
+../src/testing.cpp:20:16: note: hidden overloaded virtual function 'Base::method_zwei' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method_zwei() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:38:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:39:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:57:26 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:57:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:42:8: warning: 'Derived::method_zwei' hides overloaded virtual function [-Woverloaded-virtual]
+                void method_zwei();
+                     ^
+../src/testing.cpp:20:16: note: hidden overloaded virtual function 'Base::method_zwei' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method_zwei() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:38:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:39:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:57:42 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:58:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:48:8: warning: 'Derived::method_zwei' hides overloaded virtual function [-Woverloaded-virtual]
+                void method_zwei();
+                     ^
+../src/testing.cpp:20:16: note: hidden overloaded virtual function 'Base::method_zwei' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method_zwei() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:44:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:45:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:58:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+10:59:03 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:48:8: warning: 'Derived::method_zwei' hides overloaded virtual function [-Woverloaded-virtual]
+                void method_zwei();
+                     ^
+../src/testing.cpp:20:16: note: hidden overloaded virtual function 'Base::method_zwei' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method_zwei() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:44:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:45:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+10:59:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+11:00:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:53:8: warning: 'Derived::method_zwei' hides overloaded virtual function [-Woverloaded-virtual]
+                void method_zwei();
+                     ^
+../src/testing.cpp:20:16: note: hidden overloaded virtual function 'Base::method_zwei' declared here: different qualifiers ('const' vs unqualified)
+                virtual void method_zwei() const;
+                             ^
+../src/testing.cpp:16:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:17:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+../src/testing.cpp:49:10: warning: private field 'p_x' is not used [-Wunused-private-field]
+                double p_x = 0.0;
+                       ^
+../src/testing.cpp:50:10: warning: private field 'p_y' is not used [-Wunused-private-field]
+                double p_y = 0.0;
+                       ^
+5 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:00:55 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.

@@ -10,68 +10,79 @@
 using namespace std;
 
 
-class Shape
+class Base
 {
-	protected:
+	private:
 		double p_x = 0.0;
 		double p_y = 0.0;
 	public:
-		Shape() = default;
-		Shape(double x, double y)
-		{
-			this->p_x = x;
-			this->p_y = y;
-		}
-		double area() const {
-			return 0.0;
-		}
+		virtual void method() const;
+		virtual void method_zwei() const;
+		void method_drei();
+		void method_vier() const;
+		virtual ~Base() = default;
 
 };
 
-class Box : public Shape{
+void Base::method() const
+{
+	cout << "Base" << endl;
+}
 
+void Base::method_zwei() const
+{
+	cout << "Base_zwei" << endl;
+}
+
+void Base::method_drei()
+{
+	cout << "Base_drei" << endl;
+}
+
+void Base::method_vier() const
+{
+	cout << "Base_vier" << endl;
+}
+class Derived : public Base
+{
 	private:
-		double p_w = 0.0;
-		double p_h = 0.0;
-
+		double p_x = 0.0;
+		double p_y = 0.0;
 	public:
-		Box() = default;
-		Box(double x, double y, double w, double h)
-		{
-			Shape(x,y);
-			this-> p_w = w;
-			this-> p_h = h;
-		}
-		double area() const
-		{
-			return p_w * p_h;
-		}
-
-
+		void method() const;
+		void method_zwei();
+		void method_drei();
+		void method_vier() const;
 };
 
-class Line : public Shape {
-	private:
-    	double p_end_x = 0.0;
-    	double p_end_y = 0.0;
+void Derived::method() const
+{
+	cout << "Derived" << endl;
+}
 
-    public:
-		Line() = default;
-		Line(double x, double y, double end_x, double end_y)
-		{
-			Shape(x, y);
-			this-> p_end_x = end_x;
-			this-> p_end_y = end_y;
-		}
-};
+void Derived::method_zwei(){
+	cout << "Derived_zwei" << endl;
+}
+
+void Derived::method_drei()
+{
+	cout << "Derived_drei" << endl;
+}
+
+void Derived::method_vier() const
+{
+	cout << "Derived_vier" << endl;
+
+}
 
 int main()
 {
-	Box box(10.0, 10.0, 6.0, 7.0);
-	Line line(10.0, 10.0, 30.0, 30.0);
-
-	cout << "Box area:\t" << box.area() << endl << endl;
-	cout << "Line area:\t" << line.area() << endl << endl;
+	Derived d;
+	Base& base = d;
+	base.method();
+	base.method_zwei();
+	base.method_drei();
+	base.method_vier();
 
 	return 0;
 
