@@ -44,8 +44,10 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.macosx.exe.debug.2104987734.817233572" name="testing.cpp" rcbsApplicability="disable" resourcePath="src/testing.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1114554183.364665609">
-						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1114554183.364665609" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1114554183"/>
+					<fileInfo id="cdt.managedbuild.config.gnu.macosx.exe.debug.2104987734.1868617736" name="test.cpp" rcbsApplicability="disable" resourcePath="src/test.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1114554183.1309582938">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1114554183.1309582938" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.1114554183">
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.375635556" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
 					</fileInfo>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>

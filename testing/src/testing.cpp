@@ -133,13 +133,11 @@ void FreightTrain::vLoadCharge(float amount)
 	}
 }
 
-#define OPERATOR operator<<
-std::ostream & OPERATOR(std::ostream& out, Train& train)
+std::ostream & operator<<(std::ostream& out, Train& train)
 {
 	train.vPrintProperties(out);
 	return out;
 }
-#undef OPERATOR
 
 int main()
 {
