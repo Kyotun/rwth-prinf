@@ -3122,3 +3122,846 @@ Finished building target: testing
 11:00:55 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+11:29:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+11:29:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+12:44:36 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:38:33: error: non-virtual member function marked 'override' hides virtual member function
+                void vPrintProperties() const override;
+                                              ^
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different number of parameters (1 vs 0)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:45:27 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:45:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:45:43 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:49:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:38:54: error: only virtual member functions can be marked 'override'
+                void vPrintProperties(std::ostream& ausgabe) const override;
+                                                                   ^~~~~~~~
+../src/testing.cpp:52:54: error: only virtual member functions can be marked 'override'
+                void vPrintProperties(std::ostream& ausgabe) const override;
+                                                                   ^~~~~~~~
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:50:15 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:52:48: error: non-virtual member function marked 'override' hides virtual member function
+                void vPrintProperties(std::ostream& ausgabe) override;
+                                                             ^
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:50:21 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain(float, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in testing.o
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:51:36 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain(float, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in testing.o
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:51:37 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain(float, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in testing.o
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:56:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain(float, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in testing.o
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain(int) in testing.o
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:56:50 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain(float, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in testing.o
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain(int) in testing.o
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:56:51 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Undefined symbols for architecture arm64:
+  "vtable for FreightTrain", referenced from:
+      FreightTrain::FreightTrain(float, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) in testing.o
+      FreightTrain::FreightTrain() in testing.o
+      FreightTrain::~FreightTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for PassengerTrain", referenced from:
+      PassengerTrain::PassengerTrain(int) in testing.o
+      PassengerTrain::PassengerTrain() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for Train", referenced from:
+      Train::Train() in testing.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [testing] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:58:11 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:38:48: error: non-virtual member function marked 'override' hides virtual member function
+                void vPrintProperties(std::ostream& ausgabe) override;
+                                                             ^
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+../src/testing.cpp:57:48: error: non-virtual member function marked 'override' hides virtual member function
+                void vPrintProperties(std::ostream& ausgabe) override;
+                                                             ^
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:58:47 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:38:48: error: non-virtual member function marked 'override' hides virtual member function
+                void vPrintProperties(std::ostream& ausgabe) override;
+                                                             ^
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+../src/testing.cpp:57:16: error: 'vPrintProperties' marked 'override' but does not override any member functions
+                virtual void vPrintProperties(std::ostream& ausgabe) override;
+                             ^
+../src/testing.cpp:57:16: warning: 'FreightTrain::vPrintProperties' hides overloaded virtual function [-Woverloaded-virtual]
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+1 warning and 2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:58:53 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:38:16: error: 'vPrintProperties' marked 'override' but does not override any member functions
+                virtual void vPrintProperties(std::ostream& ausgabe) override;
+                             ^
+../src/testing.cpp:38:16: warning: 'PassengerTrain::vPrintProperties' hides overloaded virtual function [-Woverloaded-virtual]
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+../src/testing.cpp:57:16: error: 'vPrintProperties' marked 'override' but does not override any member functions
+                virtual void vPrintProperties(std::ostream& ausgabe) override;
+                             ^
+../src/testing.cpp:57:16: warning: 'FreightTrain::vPrintProperties' hides overloaded virtual function [-Woverloaded-virtual]
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+2 warnings and 2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:59:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:38:16: error: 'vPrintProperties' marked 'override' but does not override any member functions
+                virtual void vPrintProperties(std::ostream& ausgabe) override;
+                             ^
+../src/testing.cpp:38:16: warning: 'PassengerTrain::vPrintProperties' hides overloaded virtual function [-Woverloaded-virtual]
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+../src/testing.cpp:57:16: error: 'vPrintProperties' marked 'override' but does not override any member functions
+                virtual void vPrintProperties(std::ostream& ausgabe) override;
+                             ^
+../src/testing.cpp:57:16: warning: 'FreightTrain::vPrintProperties' hides overloaded virtual function [-Woverloaded-virtual]
+../src/testing.cpp:24:16: note: hidden overloaded virtual function 'Train::vPrintProperties' declared here: different qualifiers ('const' vs unqualified)
+                virtual void vPrintProperties(std::ostream& ausgabe) const;
+                             ^
+2 warnings and 2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:03:11 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:14:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:17:30 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:25:05 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:25:06 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:25:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:25:42 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:27:05 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:27:06 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:43:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:64:8: warning: unused variable 'secondsChange' [-Wunused-variable]
+        float secondsChange = 120 - passengersIn*10 - passengersOut*5;
+              ^
+../src/testing.cpp:105:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+2 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:43:49 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:44:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:64:8: warning: unused variable 'secondsChange' [-Wunused-variable]
+        float secondsChange = 120 - passengersIn*10 - passengersOut*5;
+              ^
+../src/testing.cpp:105:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+2 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:44:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:44:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:64:8: warning: unused variable 'secondsChange' [-Wunused-variable]
+        float secondsChange = 120 - passengersIn*10 - passengersOut*5;
+              ^
+../src/testing.cpp:105:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+2 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:44:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+13:47:03 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:64:8: warning: unused variable 'secondsChange' [-Wunused-variable]
+        float secondsChange = 120 - passengersIn*10 - passengersOut*5;
+              ^
+../src/testing.cpp:105:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+../src/testing.cpp:114:43: error: use of undeclared identifier 'setprecision'
+        cout << "Totale Verpseatung dafür: " << setprecision(3) << pt.fStation(10,5))/60 << " Minuten." << endl;
+                                                ^
+../src/testing.cpp:114:79: error: expected ';' after expression
+        cout << "Totale Verpseatung dafür: " << setprecision(3) << pt.fStation(10,5))/60 << " Minuten." << endl;
+                                                                                    ^
+                                                                                    ;
+../src/testing.cpp:114:79: error: expected expression
+2 warnings and 3 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:47:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:65:8: warning: unused variable 'secondsChange' [-Wunused-variable]
+        float secondsChange = 120 - passengersIn*10 - passengersOut*5;
+              ^
+../src/testing.cpp:106:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+2 warnings generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+13:47:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:09:36 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:70:25: error: expected ';' after return statement
+        return secondsChange/60
+                               ^
+                               ;
+../src/testing.cpp:117:65: error: 'p_fDelay' is a protected member of 'Train'
+        cout << "Totale Verpseatung dafür: " << setprecision(3) << pt.p_fDelay << " Minuten." << endl;
+                                                                      ^
+../src/testing.cpp:18:9: note: declared protected here
+                float p_fDelay = 0.0;
+                      ^
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:10:05 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:70:25: error: expected ';' after return statement
+        return secondsChange/60
+                               ^
+                               ;
+../src/testing.cpp:118:65: error: 'p_fDelay' is a protected member of 'Train'
+        cout << "Totale Verpseatung dafür: " << setprecision(3) << pt.p_fDelay << " Minuten." << endl;
+                                                                      ^
+../src/testing.cpp:18:9: note: declared protected here
+                float p_fDelay = 0.0;
+                      ^
+2 errors generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:13:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:114:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+../src/testing.cpp:124:65: error: 'p_fDelay' is a protected member of 'Train'
+        cout << "Totale Verpseatung dafür: " << setprecision(3) << pt.p_fDelay << " Minuten." << endl;
+                                                                      ^
+../src/testing.cpp:18:9: note: declared protected here
+                float p_fDelay = 0.0;
+                      ^
+1 warning and 1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:14:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:114:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:14:21 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:113:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:14:21 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:14:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:113:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:14:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:16:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:113:1: warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+1 warning generated.
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:16:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:25:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:112:21: error: out-of-line definition of 'fStation' does not match any declaration in 'FreightTrain'
+float FreightTrain::fStation(float amount){
+                    ^~~~~~~~
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:26:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+../src/testing.cpp:112:21: error: return type of out-of-line definition of 'FreightTrain::vLoadCharge' differs from that in the declaration
+float FreightTrain::vLoadCharge(float amount){
+~~~~~               ^
+../src/testing.cpp:97:8: note: previous declaration is here
+                void vLoadCharge(float amount);
+                ~~~~ ^
+1 error generated.
+make: *** [src/testing.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:26:56 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+15:26:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:41:08 **** Clean-only build of configuration Debug for project testing ****
+make clean 
+rm -rf ./src/testing.d ./src/testing.o
+rm -rf testing
+ 
+14:41:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:41:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:44:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:44:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:53:16 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:53:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:53:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:53:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:56:22 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:56:22 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:56:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:56:59 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:57:07 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:57:07 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:57:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+Building file: ../src/testing.cpp
+Invoking: GCC C++ Compiler
+g++ --std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.cpp"
+Finished building: ../src/testing.cpp
+ 
+Building target: testing
+Invoking: MacOS X C++ Linker
+g++  -o "testing"  ./src/testing.o   
+Finished building target: testing
+ 
+14:57:33 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
