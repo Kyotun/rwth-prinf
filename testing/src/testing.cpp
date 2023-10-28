@@ -13,27 +13,55 @@
 
 using namespace std;
 
-int squareIt(std::shared_ptr<int>& s) {
-    return (*s)*(*s);
+class Animal{
+private:
+	string species;
+	int age;
+	double weight;
+public:
+	string getSpecies(){return species;}
+	int getAge(){return age;}
+	double getWeight(){return weight;}
+	Animal() = default;
+	Animal(string species, int age, double weight);
+};
+
+Animal::Animal(string species, int age, double weight){
+	this->species = species;
+	this->age = age;
+	this->weight = weight;
 }
 
 int main()
 {
-	std::shared_ptr<int> i_number = std::make_shared<int>(15);
+	vector<shared_ptr<Animal>> animalVector;
+	shared_ptr<Animal> cat = make_shared<Animal>("Cat", 7, 3.9);
+	shared_ptr<Animal> dog = make_shared<Animal>("Dog", 11, 36.4);
+	shared_ptr<Animal> turtle = make_shared<Animal>("Turtle", 52, 1.5);
+	animalVector.push_back(cat);
+	animalVector.push_back(dog);
+	animalVector.push_back(turtle);
 
-	if(i_number){
-		std::cout << "Der Pointer `i_number` existiert noch und hat den Inhalt: " << *i_number << std::endl;
+	if(cat){
+		std::cout << "Der Pointer `cat` existiert noch mit Inhalt: " << cat->getSpecies() << ", age: " << cat->getAge() << ", weight: " << cat->getWeight() << std::endl;
 	} else {
-		std::cout << "Der Pointer `i_number` existiert nicht mehr." << std::endl;
+		std::cout << "Der ursprüngliche Pointer `cat` ist jetzt nullpointer." << std::endl;
 	}
 
-	int numberSquared = squareIt(i_number);
-	std::cout << "Der Wert des Pointers wurde zur Berechnung übergeben: " << numberSquared << std::endl;
-
-	if(i_number){
-		std::cout << "Der Pointer `i_number` existiert noch und hat den Inhalt: " << *i_number << std::endl;
+	if(dog){
+		std::cout << "Der Pointer `dog` existiert noch mit Inhalt: "  << dog->getSpecies() << ", age: " << dog->getAge() << ", weight: " << dog->getWeight() << std::endl;
 	} else {
-		std::cout << "Der Pointer `i_number` existiert nicht mehr." << std::endl;
+		std::cout << "Der ursprüngliche Pointer `dog` ist jetzt nullpointer." << std::endl;
+	}
+	if(turtle){
+		std::cout << "Der Pointer `turtle` existiert noch mit Inhalt: " << turtle->getSpecies() << ", age: " << turtle->getAge() << ", weight: " << turtle->getWeight() << std::endl;
+	} else {
+		std::cout << "Der ursprüngliche Pointer `turtle` ist jetzt nullpointer." << std::endl;
+	}
+
+
+	for(auto& i : animalVector){
+		std::cout << "Species: " << i->getSpecies() << ", Age: " << i->getAge() << " years,  Weight: " << i->getWeight() << " kg" << std::endl;
 	}
 
 	return 0;
