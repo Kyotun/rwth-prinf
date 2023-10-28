@@ -8,61 +8,58 @@
 
 #include <memory>
 #include <string>
-#include <iostream>
+#include <list>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
-class Animal{
-private:
-	string species;
-	int age;
-	double weight;
-public:
-	string getSpecies(){return species;}
-	int getAge(){return age;}
-	double getWeight(){return weight;}
-	Animal() = default;
-	Animal(string species, int age, double weight);
+class Person
+{
+    public :
+        Person() = delete ;
+        Person(std::string name , std::shared_ptr<Person> father = nullptr , std::shared_ptr<Person> mother = nullptr) ;
+        virtual ~Person() ;
+        void setSibling(std::weak_ptr<Person> sibling);
+    private :
+        std::shared_ptr<Person> p_father;
+        std::shared_ptr<Person> p_mother;
+        std::string p_sName;
+        std::vector<std::weak_ptr<Person>> p_siblings;
 };
 
-Animal::Animal(string species, int age, double weight){
-	this->species = species;
-	this->age = age;
-	this->weight = weight;
+Person::Person(string name, shared_ptr<Person> father, shared_ptr<Person> mother){
+	p_sName = name;
+	p_father = father;
+	p_mother = mother;
 }
+
+void Person::setSibling(weak_ptr<Person> brosis){
+	p_siblings.push_back(brosis);
+}
+
+Person::~Person(){
+	p_siblings.clear();
+	std::cout << "Geloescht: " << p_sName << std::endl;
+}
+
+void test1 ()
+{
+    auto m1 = std::make_shared<Person>("Josef");
+    auto f1 = std::make_shared<Person>("Maria");
+    auto m2 = std::make_shared<Person>("Peter", m1 , f1 );
+    auto f2 = std::make_shared<Person>("Birgit", m1 , f1 );
+    m2->setSibling(f2);
+    f2->setSibling(m2);
+}
+
 
 int main()
 {
-	vector<shared_ptr<Animal>> animalVector;
-	shared_ptr<Animal> cat = make_shared<Animal>("Cat", 7, 3.9);
-	shared_ptr<Animal> dog = make_shared<Animal>("Dog", 11, 36.4);
-	shared_ptr<Animal> turtle = make_shared<Animal>("Turtle", 52, 1.5);
-	animalVector.push_back(cat);
-	animalVector.push_back(dog);
-	animalVector.push_back(turtle);
 
-	if(cat){
-		std::cout << "Der Pointer `cat` existiert noch mit Inhalt: " << cat->getSpecies() << ", age: " << cat->getAge() << ", weight: " << cat->getWeight() << std::endl;
-	} else {
-		std::cout << "Der ursprüngliche Pointer `cat` ist jetzt nullpointer." << std::endl;
-	}
-
-	if(dog){
-		std::cout << "Der Pointer `dog` existiert noch mit Inhalt: "  << dog->getSpecies() << ", age: " << dog->getAge() << ", weight: " << dog->getWeight() << std::endl;
-	} else {
-		std::cout << "Der ursprüngliche Pointer `dog` ist jetzt nullpointer." << std::endl;
-	}
-	if(turtle){
-		std::cout << "Der Pointer `turtle` existiert noch mit Inhalt: " << turtle->getSpecies() << ", age: " << turtle->getAge() << ", weight: " << turtle->getWeight() << std::endl;
-	} else {
-		std::cout << "Der ursprüngliche Pointer `turtle` ist jetzt nullpointer." << std::endl;
-	}
-
-
-	for(auto& i : animalVector){
-		std::cout << "Species: " << i->getSpecies() << ", Age: " << i->getAge() << " years,  Weight: " << i->getWeight() << " kg" << std::endl;
-	}
+	std::cout << "Anfang" << std::endl;
+	test1();
+	std::cout << "Ende" << std::endl;
 
 	return 0;
 
