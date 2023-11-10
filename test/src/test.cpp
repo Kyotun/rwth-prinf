@@ -6,31 +6,44 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <iostream>
+#include <memory>
 #include <string>
-#include<iomanip>
+#include <list>
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
-void Function(int a){
-	a = 5;
+unique_ptr<int[]> reverseArray(unique_ptr<int[]> unique_array)
+{
+    auto reversed_array = make_unique<int[]>(10);
+    for(int i = 0; i < 10; i++){
+        reversed_array[i] = 9 - unique_array[i];
+    }
+
+    return reversed_array;
 }
 
-void Function_zwei(int &a){
-	int* b = nullptr;
-	b = &a;
-	a = 5;
-	cout << "Das ist *b: " << *b << endl;
-	cout << "Das ist b: " << b << endl;
-
-}
 int main()
 {
-	int a = 0;
-	Function(a);
-	cout << "Von der normalen Funktion: " << a << endl;
-	Function_zwei(a);
-	cout << "Von der call by reference Funktion: " << a << endl;
+
+	auto unique_array = make_unique<int[]>(10);
+	for(int i = 0; i < 10; i++){
+		unique_array[i] = i;
+	}
+
+	cout << "Das ursprüngliche Array:" << endl;
+	for(int i = 0; i < 10; i++){
+		cout << "Stelle: " << i << " Inhalt: " << unique_array[i] << endl;
+	}
+
+	auto reversed_array = reverseArray(move(unique_array));
+
+	cout << "Das umgedrehte neue Array:" << std::endl;
+
+	for(int i = 0; i < 10; i++){
+		cout << "Stelle: " << i << " Inhalt: " << reversed_array[i] << endl;
+		}
 	return 0;
 
 }
