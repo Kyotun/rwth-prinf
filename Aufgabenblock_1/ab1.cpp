@@ -39,15 +39,9 @@ ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug){
 
 int main(){
 	try{
-		GlobaleZeit++;
-		Fahrrad fahrrad{"Fahrrad",15};
-		fahrrad.vSimulieren();
-		GlobaleZeit++;
-		fahrrad.vSimulieren();
-		GlobaleZeit++;
-		fahrrad.vSimulieren();
-		cout << fahrrad.getMaxGeschwindigkeit() << endl;
-		cout << fahrrad << endl;
+		Fahrrad fahrrad1("Fahrrad1", 20);
+		Fahrrad fahrrad2 = fahrrad1;
+		cout << fahrrad2;
 
 		//fahrrad.getMaxGeschwindigkeit();
 		/*double dMaxGeschwindigkeit = 0.0;
