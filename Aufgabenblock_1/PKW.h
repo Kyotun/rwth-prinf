@@ -18,7 +18,6 @@ using namespace std;
 extern double GlobaleZeit;
 
 class PKW : public Fahrzeug {
-
 	public:
 		//Konstruktoren
 		PKW() = default;
@@ -31,19 +30,21 @@ class PKW : public Fahrzeug {
 		//Destruktoren
 		virtual ~PKW() = default;
 
+		//Getter
+		double getGesamtVerbrauch() const override;
+		double getTankinhalt() const override;
+
 		//Double
 		double dTanken(double dMenge = 1.0) override;
 
 		//Void&Print Funktionen
-		void vSimulieren() override;
+		void vSimulieren(double Zeitdifferenz) override;
 		void vAusgeben(std::ostream& ausgabe) const override;
 
 	private:
 		double p_dVerbrauch = 0.0; // Liter / 100 km
 		double p_dTankvolumen = 55.0; // Default = 55 Liter
 		double p_dTankinhalt = 0.5; // 0.5 = 27.5 Liter
-
 };
-
 
 #endif /* PKW_H_ */

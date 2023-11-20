@@ -17,9 +17,7 @@
 using namespace std;
 extern double GlobaleZeit;
 
-
 class Fahrrad : public Fahrzeug {
-
 	public:
 		//Konstruktoren
 		Fahrrad() = default;
@@ -34,15 +32,9 @@ class Fahrrad : public Fahrzeug {
 
 		//Void&Print
 		void vAusgeben(std::ostream& ausgabe) const override;
-		void vSimulieren() override;
-
+		void vSimulieren(double Zeitdifferenz) override;
 
 	private:
 		int p_iZeahler = 0;
-
 };
-
-
-
-
 #endif /* FAHRRAD_H_ */

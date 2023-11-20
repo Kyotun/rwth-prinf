@@ -23,16 +23,13 @@ Fahrrad::Fahrrad(string p_sName, double p_dMaxGeschwindigkeit):
 
 double Fahrrad::dGeschwindigkeit(){
 
-	int n = 0;
-
 	if((p_dMaxGeschwindigkeit*(0.9)) < 12){
 		p_dMaxGeschwindigkeit = 12;
 	} else{
-		n = p_dGesamtstrecke / 20;
-		if(p_iZeahler == n){
-			;
+		if(p_iZeahler == (int)p_dGesamtstrecke/20){
+			; // Der Fahrrad konnte noch nicht die 20km zurücklegen.
 		} else{
-			p_iZeahler = n;
+			p_iZeahler = p_dGesamtstrecke/20;
 			p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit * (0.9);
 		}
 	}
@@ -40,20 +37,17 @@ double Fahrrad::dGeschwindigkeit(){
 }
 
 void Fahrrad::vAusgeben(std::ostream& ausgabe) const{
-	ausgabe << p_iID << "\t"
-			<< p_sName << "\t"
-			<< p_dMaxGeschwindigkeit << "\t\t\t"
-			<< p_dGesamtstrecke << "\n";
+	Fahrzeug::vAusgeben(ausgabe);
 }
 
-void Fahrrad::vSimulieren(){
+void Fahrrad::vSimulieren(double Zeitdifferenz){
 
 	if(p_dZeit == GlobaleZeit){
 		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
 	}else{
-		p_dZeit = GlobaleZeit;
-		p_dGesamtZeit++;
-		dGeschwindigkeit();
+		p_dGesamtZeit += Zeitdifferenz;
 		p_dGesamtstrecke = p_dMaxGeschwindigkeit * p_dGesamtZeit;
+		dGeschwindigkeit();
+		p_dZeit = GlobaleZeit;
 	}
 }

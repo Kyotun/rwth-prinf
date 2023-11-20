@@ -28,6 +28,16 @@ PKW::PKW(string p_sName, double p_dMaxGeschwindigkeit,
 					Fahrzeug(p_sName, p_dMaxGeschwindigkeit),
 					p_dVerbrauch(p_dVerbrauch), p_dTankvolumen(p_dTankvolumen){}
 
+double PKW::getGesamtVerbrauch() const{
+	// Gesamtstrecke in km erste Klammer
+	// Zweite Klammer = Gesamtverbrauch in 1 km
+	return (p_dMaxGeschwindigkeit*p_dGesamtZeit)*(p_dVerbrauch/100);
+}
+
+double PKW::getTankinhalt() const{
+	return p_dTankinhalt;
+}
+
 double PKW::dTanken(double dMenge){
 
 	if(!(0.0 <= dMenge && dMenge <= 1.0)){
@@ -39,16 +49,18 @@ double PKW::dTanken(double dMenge){
 	return p_dTankvolumen*p_dTankinhalt;
 }
 
-void PKW::vSimulieren() {
+void PKW::vSimulieren(double Zeitdifferenz) {
+
+	double d_aktuelleVolumen = p_dTankinhalt*p_dTankvolumen;
 	// 1 km/h -> 2,77 m/s
 	if(p_dZeit == GlobaleZeit){
-		//throw runtime_error("Ein Fahrzeug darf in einer Zyklus nur einmal simuliert werden.\n");
 		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
 	} else {
 		if(p_dTankinhalt > 0){
 			p_dZeit = GlobaleZeit;
-			p_dGesamtZeit++;
-			p_dTankinhalt -= 0.1;
+			p_dGesamtZeit += Zeitdifferenz;
+			d_aktuelleVolumen -= (p_dMaxGeschwindigkeit*Zeitdifferenz)*(p_dVerbrauch/100);
+			p_dTankinhalt = d_aktuelleVolumen/p_dTankvolumen;
 			p_dGesamtstrecke = p_dMaxGeschwindigkeit * p_dGesamtZeit;
 		} else{
 			p_dZeit = GlobaleZeit;
@@ -61,11 +73,7 @@ void PKW::vSimulieren() {
 }
 
 void PKW::vAusgeben(std::ostream& ausgabe) const{
-	//p_iID, p_sName, p_dMaxGeschwindigkeit, p_dGesamtstrecke
-
-	ausgabe << "Verbrauch: " << p_dVerbrauch << ", "
-			<< "Tankvolumen: " << p_dTankvolumen
-			<< " ,Tankinhalt: " << p_dTankinhalt << endl;
+	Fahrzeug::vAusgeben(ausgabe);
 }
 
 
