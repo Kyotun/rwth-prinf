@@ -10,6 +10,7 @@
 #include <string>
 #include <list>
 #include <vector>
+#include <iomanip>
 #include <iostream>
 
 using namespace std;
@@ -17,6 +18,7 @@ using namespace std;
 
 int main()
 {
+	std::cout << std::setw(10) << "Hello " << "World" << endl;
 
 	return 0;
 

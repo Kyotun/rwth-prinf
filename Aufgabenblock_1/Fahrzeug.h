@@ -54,7 +54,11 @@ public:
 
 	//Überladen
 	bool operator<(const Fahrzeug& andere) const {
-		return this->p_dGesamtstrecke < andere.p_dGesamtstrecke;
+		if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+			return true;
+		} else{
+			return false;
+		}
 	}
 
 	Fahrzeug& operator=(const Fahrzeug& other) {

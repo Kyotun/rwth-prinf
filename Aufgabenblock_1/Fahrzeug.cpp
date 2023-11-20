@@ -41,7 +41,7 @@ Fahrzeug::Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit): p_sName(p_sNam
 }
 
 void Fahrzeug::vAusgeben(std::ostream& ausgabe) const{
-	ausgabe << setprecision(2) << fixed << setw(7) << getID()
+	ausgabe << setiosflags(ios::left) << setprecision(2) << fixed << setw(7) << getID()
 			<< setw(10) << getName()
 			<< resetiosflags(ios::left) << setiosflags(ios::right)
 			<< setw(15) << getMaxGeschwindigkeit()

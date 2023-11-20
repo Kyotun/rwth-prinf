@@ -22,9 +22,11 @@ double GlobaleZeit = 0.0;
 void vAufgabe_1();
 void vAufgabe_1a();
 void vAufgabe_2();
+void vAufgabe_3();
 ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 int main(){
+	vAufgabe_3();
 	return 0;
 }
 
@@ -149,6 +151,34 @@ void vAufgabe_2(){
 		}
 
 	}
+}
+
+void vAufgabe_3(){
+	//Unterschied zwischen ptr Objekt und nicht ptr Objekt zu beachten.
+	//Es ist nicht gut, traditionaller Pointer zu nutzen. Lieber kann man smart Pointers benutzen.
+
+	Fahrrad* fahrrad1 = new Fahrrad("fahrrad1", 25.3);
+	Fahrrad* fahrrad2 = new Fahrrad("fahrrad2", 22.9);
+	PKW pkw1("pkw1", 159.3, 8.3, 44.9);
+	PKW pkw2("pkw2", 100.5, 8, 32.5);
+	Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+	pkw1.setGesamtstrecke(100);
+	pkw2.setGesamtstrecke(200);
+
+
+	if(pkw1 < pkw2){
+		cout << "\nGesamtstrecke von pkw1: " << pkw1.getGesamtstrecke() << endl;
+		cout << "Gesamtstrecke von fahrzeug1: " << fahrzeug1->getGesamtstrecke() << endl;
+		cout << "Bedingung war pkw1 < fahrzeug1. Die Bedingung wurde erfüllt und diese Zeile ist im If-Block\n" << endl;
+	}
+
+	pkw1 = pkw2;
+	fahrrad1 = fahrrad2;
+
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
+	cout << *fahrrad1 << endl;
+	cout << *fahrrad2 << endl;
 }
 
 ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug){
