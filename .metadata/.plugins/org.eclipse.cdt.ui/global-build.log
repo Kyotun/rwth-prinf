@@ -8323,3 +8323,3572 @@ Finished building target: Aufgabenblock_1
 23:49:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
 make all 
 make: Nothing to be done for `all'.
+08:10:15 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+2 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:10:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:10:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:164:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:10:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:12:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:12:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:12:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:12:36 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:12:37 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:23:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+In file included from ../Fahrrad.h:11:
+../Fahrzeug.h:65:12: error: functions that differ only in their return type cannot be overloaded
+        Fahrzeug& operator=(const Fahrzeug& other);
+        ~~~~~~~~~ ^
+../Fahrzeug.h:54:7: note: previous declaration is here
+        void operator =(const Fahrzeug& fahrzeug);
+        ~~~~ ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:25:02 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:80:15: error: use of undeclared identifier 'other'
+        if (this == &other) {
+                     ^
+../Fahrzeug.cpp:81:3: error: void function 'operator=' should not return a value [-Wreturn-type]
+                return *this;
+                ^      ~~~~~
+../Fahrzeug.cpp:84:18: error: use of undeclared identifier 'other'
+        this->p_sName = other.p_sName;
+                        ^
+../Fahrzeug.cpp:85:32: error: use of undeclared identifier 'other'
+        this->p_dMaxGeschwindigkeit = other.p_dMaxGeschwindigkeit;
+                                      ^
+../Fahrzeug.cpp:86:27: error: use of undeclared identifier 'other'
+        this->p_dGesamtstrecke = other.p_dGesamtstrecke;
+                                 ^
+../Fahrzeug.cpp:87:18: error: use of undeclared identifier 'other'
+        this->p_dZeit = other.p_dZeit;
+                        ^
+../Fahrzeug.cpp:88:24: error: use of undeclared identifier 'other'
+        this->p_dGesamtZeit = other.p_dGesamtZeit;
+                              ^
+../Fahrzeug.cpp:106:40: error: non-member function cannot have 'const' qualifier
+bool operator<(const Fahrzeug& andere) const {
+                                       ^~~~~~
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere) const {
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+../Fahrzeug.cpp:107:37: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                           ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+11 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:25:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:81:3: error: void function 'operator=' should not return a value [-Wreturn-type]
+                return *this;
+                ^      ~~~~~
+../Fahrzeug.cpp:84:18: error: use of undeclared identifier 'other'
+        this->p_sName = other.p_sName;
+                        ^
+../Fahrzeug.cpp:85:32: error: use of undeclared identifier 'other'
+        this->p_dMaxGeschwindigkeit = other.p_dMaxGeschwindigkeit;
+                                      ^
+../Fahrzeug.cpp:86:27: error: use of undeclared identifier 'other'
+        this->p_dGesamtstrecke = other.p_dGesamtstrecke;
+                                 ^
+../Fahrzeug.cpp:87:18: error: use of undeclared identifier 'other'
+        this->p_dZeit = other.p_dZeit;
+                        ^
+../Fahrzeug.cpp:88:24: error: use of undeclared identifier 'other'
+        this->p_dGesamtZeit = other.p_dGesamtZeit;
+                              ^
+../Fahrzeug.cpp:106:40: error: non-member function cannot have 'const' qualifier
+bool operator<(const Fahrzeug& andere) const {
+                                       ^~~~~~
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere) const {
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+../Fahrzeug.cpp:107:37: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                           ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+10 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:25:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:81:3: error: void function 'operator=' should not return a value [-Wreturn-type]
+                return this;
+                ^      ~~~~
+../Fahrzeug.cpp:84:18: error: use of undeclared identifier 'other'
+        this->p_sName = other.p_sName;
+                        ^
+../Fahrzeug.cpp:85:32: error: use of undeclared identifier 'other'
+        this->p_dMaxGeschwindigkeit = other.p_dMaxGeschwindigkeit;
+                                      ^
+../Fahrzeug.cpp:86:27: error: use of undeclared identifier 'other'
+        this->p_dGesamtstrecke = other.p_dGesamtstrecke;
+                                 ^
+../Fahrzeug.cpp:87:18: error: use of undeclared identifier 'other'
+        this->p_dZeit = other.p_dZeit;
+                        ^
+../Fahrzeug.cpp:88:24: error: use of undeclared identifier 'other'
+        this->p_dGesamtZeit = other.p_dGesamtZeit;
+                              ^
+../Fahrzeug.cpp:106:40: error: non-member function cannot have 'const' qualifier
+bool operator<(const Fahrzeug& andere) const {
+                                       ^~~~~~
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere) const {
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+../Fahrzeug.cpp:107:37: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                           ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+10 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:26:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:83:19: error: use of undeclared identifier 'other'
+                this->p_sName = other.p_sName;
+                                ^
+../Fahrzeug.cpp:84:33: error: use of undeclared identifier 'other'
+                this->p_dMaxGeschwindigkeit = other.p_dMaxGeschwindigkeit;
+                                              ^
+../Fahrzeug.cpp:85:28: error: use of undeclared identifier 'other'
+                this->p_dGesamtstrecke = other.p_dGesamtstrecke;
+                                         ^
+../Fahrzeug.cpp:86:19: error: use of undeclared identifier 'other'
+                this->p_dZeit = other.p_dZeit;
+                                ^
+../Fahrzeug.cpp:87:25: error: use of undeclared identifier 'other'
+                this->p_dGesamtZeit = other.p_dGesamtZeit;
+                                      ^
+../Fahrzeug.cpp:106:40: error: non-member function cannot have 'const' qualifier
+bool operator<(const Fahrzeug& andere) const {
+                                       ^~~~~~
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere) const {
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+../Fahrzeug.cpp:107:37: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                           ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+9 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:26:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:40: error: non-member function cannot have 'const' qualifier
+bool operator<(const Fahrzeug& andere) const {
+                                       ^~~~~~
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere) const {
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+../Fahrzeug.cpp:107:37: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                           ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+4 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:26:55 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+../Fahrzeug.cpp:107:37: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                           ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+3 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:28:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+../Fahrzeug.cpp:107:37: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                           ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+3 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:28:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:31: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                     ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'p_dGesamtstrecke'
+        if(p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+3 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:28:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:31: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                     ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'p_dGesamtstrecke'
+        if(p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+3 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:29:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:31: error: 'p_dGesamtstrecke' is a protected member of 'Fahrzeug'
+        if(p_dGesamtstrecke < andere.p_dGesamtstrecke){
+                                     ^
+../Fahrzeug.h:67:9: note: declared protected here
+        double p_dGesamtstrecke = 0.0;
+               ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'p_dGesamtstrecke'
+        if(p_dGesamtstrecke < andere.p_dGesamtstrecke){
+           ^
+3 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:30:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'p_dGesamtstrecke'
+        if(p_dGesamtstrecke < andere.getGesamtstrecke()){
+           ^
+2 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:30:25 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'getGesamtstrecke'
+        if(getGesamtstrecke() < andere.getGesamtstrecke()){
+           ^
+2 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:30:38 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: invalid use of 'this' outside of a non-static member function
+        if(this.getGesamtstrecke() < andere.getGesamtstrecke()){
+           ^
+2 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:31:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'getGesamtstrecke'
+        if(getGesamtstrecke() < andere.getGesamtstrecke()){
+           ^
+2 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:32:21 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'getGesamtstrecke'
+        if(getGesamtstrecke() < andere->getGesamtstrecke()){
+           ^
+../Fahrzeug.cpp:107:32: error: member reference type 'const Fahrzeug' is not a pointer; did you mean to use '.'?
+        if(getGesamtstrecke() < andere->getGesamtstrecke()){
+                                ~~~~~~^~
+                                      .
+3 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:32:26 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'getGesamtstrecke'
+        if(getGesamtstrecke() < andere.getGesamtstrecke()){
+           ^
+2 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:33:12 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:6: error: overloaded 'operator<' must be a binary operator (has 1 parameter)
+bool operator<(const Fahrzeug& andere){
+     ^
+../Fahrzeug.cpp:107:5: error: use of undeclared identifier 'getGesamtstrecke'
+        if(getGesamtstrecke() < andere.getGesamtstrecke()){
+           ^
+2 errors generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:40:15 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:106:16: error: out-of-line definition of 'operator<' does not match any declaration in 'Fahrzeug'
+bool Fahrzeug::operator<(const Fahrzeug& andere){
+               ^~~~~~~~
+../Fahrzeug.h:57:7: note: member declaration does not match because it is const qualified
+        bool operator<(const Fahrzeug& andere) const;
+             ^                                 ~~~~~
+1 error generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:40:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:41:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:41:14 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:41:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:41:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:42:09 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:42:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:42:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:185:2: error: cannot delete expression of type 'Fahrrad'
+        delete *fahrrad1;
+        ^      ~~~~~~~~~
+../ab1.cpp:186:2: error: cannot delete expression of type 'Fahrrad'
+        delete *fahrrad2;
+        ^      ~~~~~~~~~
+2 warnings and 2 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:42:31 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:44:09 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:44:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:45:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:45:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:45:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:45:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:45:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:45:42 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:46:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:46:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:46:54 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:46:55 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:47:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:47:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:47:26 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:47:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:52:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:51:36: error: expected ';' after expression
+                                        << setw(15) << getTankinhalt()
+                                                                      ^
+                                                                      ;
+1 error generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:52:38 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Undefined symbols for architecture arm64:
+  "Fahrzeug::vKopf()", referenced from:
+      vAufgabe_3() in ab1.o
+      vAufgabe_1a() in ab1.o
+      vAufgabe_2() in ab1.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Aufgabenblock_1] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:53:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Undefined symbols for architecture arm64:
+  "Fahrzeug::vKopf()", referenced from:
+      vAufgabe_3() in ab1.o
+      vAufgabe_1a() in ab1.o
+      vAufgabe_2() in ab1.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Aufgabenblock_1] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:53:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:53:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:54:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:54:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:54:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:54:28 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:54:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:54:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:54:54 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:54:54 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:55:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+../Fahrzeug.cpp:45:13: error: no matching function for call to 'setiosflags'
+        ausgabe << setiosflags(ios_base::adjustfield, ios::left)
+                   ^~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip:125:1: note: candidate function not viable: requires single argument '__mask', but 2 arguments were provided
+setiosflags(ios_base::fmtflags __mask)
+^
+1 error generated.
+make: *** [Fahrzeug.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+08:55:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:55:28 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:56:32 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:56:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:56:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:56:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:56:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:56:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:56:58 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:56:58 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:57:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:57:36 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:58:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:58:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:59:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:59:12 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:59:25 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:59:25 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:59:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:59:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:59:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:59:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+08:59:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+08:59:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:00:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:00:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:00:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:00:24 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:00:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:00:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:00:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:00:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:00:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:00:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:00:43 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:00:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:00:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:00:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:01:03 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:01:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:01:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:01:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:01:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:01:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:02:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:02:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:02:09 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:02:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:02:19 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:02:20 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:02:25 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:02:26 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:04:36 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:04:37 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:06:49 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:06:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:28:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:27:6: warning: unused variable 'i_anzahl20kms' [-Wunused-variable]
+        int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+            ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Undefined symbols for architecture arm64:
+  "Fahrzeug::multiple_power(double, double, int)", referenced from:
+      vtable for Fahrrad in Fahrrad.o
+      vtable for Fahrzeug in Fahrzeug.o
+      vtable for PKW in PKW.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Aufgabenblock_1] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:28:36 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:27:6: warning: unused variable 'i_anzahl20kms' [-Wunused-variable]
+        int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+            ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:29:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:27:6: warning: unused variable 'i_anzahl20kms' [-Wunused-variable]
+        int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+            ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Undefined symbols for architecture arm64:
+  "Fahrrad::multiple_power(double, double, int)", referenced from:
+      vtable for Fahrrad in Fahrrad.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Aufgabenblock_1] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:31:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:27:6: warning: unused variable 'i_anzahl20kms' [-Wunused-variable]
+        int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+            ^
+../Fahrrad.cpp:45:10: warning: unused variable 'result' [-Wunused-variable]
+                double result = pow(base,exponent);
+                       ^
+../Fahrrad.cpp:47:9: error: use of undeclared identifier 'result'
+        return result;
+               ^
+2 warnings and 1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:31:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:27:6: warning: unused variable 'i_anzahl20kms' [-Wunused-variable]
+        int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+            ^
+../Fahrrad.cpp:44:15: error: expected ';' at end of declaration
+        double result 0.0;
+                     ^
+                     ;
+1 warning and 1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:31:30 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:27:6: warning: unused variable 'i_anzahl20kms' [-Wunused-variable]
+        int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+            ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Undefined symbols for architecture arm64:
+  "Fahrrad::multiple_power(double, double, int)", referenced from:
+      vtable for Fahrrad in Fahrrad.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Aufgabenblock_1] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:32:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:27:6: warning: unused variable 'i_anzahl20kms' [-Wunused-variable]
+        int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+            ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:46:15 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:32:66: error: only virtual member functions can be marked 'override'
+                double mehrfach_power(double base, double exponent, int times) override{return 0.0;};
+                                                                               ^~~~~~~~
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:46:53 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:32:66: error: only virtual member functions can be marked 'override'
+                double mehrfach_power(double base, double exponent, int times) override{return 0.0;};
+                                                                               ^~~~~~~~
+../Fahrrad.cpp:39:64: error: 'override' specifier is not allowed outside a class definition
+double mehrfach_power(double base, double exponent, int times) override{
+                                                               ^~~~~~~~
+2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:46:58 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:32:66: error: only virtual member functions can be marked 'override'
+                double mehrfach_power(double base, double exponent, int times) override{return 0.0;};
+                                                                               ^~~~~~~~
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:47:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:51:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:52:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:52:08 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:53:20 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:53:20 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:54:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:54:36 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:54:43 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:54:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:55:14 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:55:14 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:55:32 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:55:32 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:55:57 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+09:55:57 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:56:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:52:22: error: 'this' argument to member function 'dGeschwindigkeit' has type 'const Fahrrad', but function is not marked const
+        cout << setw(20) << dGeschwindigkeit()
+                            ^~~~~~~~~~~~~~~~
+../Fahrrad.cpp:24:17: note: 'dGeschwindigkeit' declared here
+double Fahrrad::dGeschwindigkeit(){
+                ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:57:14 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:52:31: error: 'this' argument to member function 'dGeschwindigkeit' has type 'const Fahrrad', but function is not marked const
+        cout << setw(20) << Fahrrad::dGeschwindigkeit()
+                                     ^~~~~~~~~~~~~~~~
+../Fahrrad.cpp:24:17: note: 'dGeschwindigkeit' declared here
+double Fahrrad::dGeschwindigkeit(){
+                ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:57:26 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:52:22: error: 'this' argument to member function 'dGeschwindigkeit' has type 'const Fahrrad', but function is not marked const
+        cout << setw(20) << this->dGeschwindigkeit()
+                            ^~~~
+../Fahrrad.cpp:24:17: note: 'dGeschwindigkeit' declared here
+double Fahrrad::dGeschwindigkeit(){
+                ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:58:15 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:52:26: error: member reference type 'const Fahrrad *' is a pointer; did you mean to use '->'?
+        cout << setw(20) << this.dGeschwindigkeit()
+                            ~~~~^
+                                ->
+../Fahrrad.cpp:52:22: error: 'this' argument to member function 'dGeschwindigkeit' has type 'const Fahrrad', but function is not marked const
+        cout << setw(20) << this.dGeschwindigkeit()
+                            ^~~~
+../Fahrrad.cpp:24:17: note: 'dGeschwindigkeit' declared here
+double Fahrrad::dGeschwindigkeit(){
+                ^
+2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:58:21 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:52:22: error: 'this' argument to member function 'dGeschwindigkeit' has type 'const Fahrrad', but function is not marked const
+        cout << setw(20) << this->dGeschwindigkeit()
+                            ^~~~
+../Fahrrad.cpp:24:17: note: 'dGeschwindigkeit' declared here
+double Fahrrad::dGeschwindigkeit(){
+                ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:59:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:35:41: error: non-virtual member function marked 'override' hides virtual member function
+                void vAusgeben(std::ostream& ausgabe) override;
+                                                      ^
+../Fahrzeug.h:51:15: note: hidden overloaded virtual function 'Fahrzeug::vAusgeben' declared here: different qualifiers ('const' vs unqualified)
+        virtual void vAusgeben(std::ostream& ausgabe) const;
+                     ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:59:58 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:52:22: error: 'this' argument to member function 'dGeschwindigkeit' has type 'const Fahrrad', but function is not marked const
+        cout << setw(20) << this->dGeschwindigkeit()
+                            ^~~~
+../Fahrrad.cpp:24:17: note: 'dGeschwindigkeit' declared here
+double Fahrrad::dGeschwindigkeit(){
+                ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:03:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:31:35: error: non-virtual member function marked 'override' hides virtual member function
+                double dGeschwindigkeit() const override; // Minimal 12km /h , pro 20km %10 Abnahme
+                                                ^
+../Fahrzeug.h:46:17: note: hidden overloaded virtual function 'Fahrzeug::dGeschwindigkeit' declared here: different qualifiers (unqualified vs 'const')
+        virtual double dGeschwindigkeit(){return p_dMaxGeschwindigkeit;}; // @suppress("No return")
+                       ^
+../Fahrrad.cpp:29:30: error: 'this' argument to member function 'mehrfach_power' has type 'const Fahrrad', but function is not marked const
+        d_aktuelleGeschwindigkeit = mehrfach_power(p_dMaxGeschwindigkeit, 0.9, i_anzahl20kms);
+                                    ^~~~~~~~~~~~~~
+../Fahrrad.h:32:10: note: 'mehrfach_power' declared here
+                double mehrfach_power(double base, double exponent, int times) override{return 0.0;};
+                       ^
+2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:03:24 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:29:30: error: 'this' argument to member function 'mehrfach_power' has type 'const Fahrrad', but function is not marked const
+        d_aktuelleGeschwindigkeit = mehrfach_power(p_dMaxGeschwindigkeit, 0.9, i_anzahl20kms);
+                                    ^~~~~~~~~~~~~~
+../Fahrrad.h:32:10: note: 'mehrfach_power' declared here
+                double mehrfach_power(double base, double exponent, int times) override{return 0.0;};
+                       ^
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning and 1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:03:59 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:32:72: error: non-virtual member function marked 'override' hides virtual member function
+                double mehrfach_power(double base, double exponent, int times) const override{return 0.0;};
+                                                                                     ^
+../Fahrzeug.h:48:17: note: hidden overloaded virtual function 'Fahrzeug::mehrfach_power' declared here: different qualifiers (unqualified vs 'const')
+        virtual double mehrfach_power(double base, double exponent, int times){return 0.0;}
+                       ^
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning and 1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:04:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:04:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:39:64: error: non-member function cannot have 'const' qualifier
+double mehrfach_power(double base, double exponent, int times) const{
+                                                               ^~~~~
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning and 1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:04:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:04:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:24:17: error: out-of-line definition of 'dGeschwindigkeit' does not match any declaration in 'Fahrrad'
+double Fahrrad::dGeschwindigkeit() {
+                ^~~~~~~~~~~~~~~~
+../Fahrrad.h:31:10: note: member declaration does not match because it is const qualified
+                double dGeschwindigkeit() const override; // Minimal 12km /h , pro 20km %10 Abnahme
+                       ^                        ~~~~~~~~
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:05:31 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:31:29: error: non-virtual member function marked 'override' hides virtual member function
+                double dGeschwindigkeit() override; // Minimal 12km /h , pro 20km %10 Abnahme
+                                          ^
+../Fahrzeug.h:46:17: note: hidden overloaded virtual function 'Fahrzeug::dGeschwindigkeit' declared here: different qualifiers ('const' vs unqualified)
+        virtual double dGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}; // @suppress("No return")
+                       ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:06:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:24:17: error: out-of-line definition of 'dGeschwindigkeit' does not match any declaration in 'Fahrrad'
+double Fahrrad::dGeschwindigkeit() {
+                ^~~~~~~~~~~~~~~~
+../Fahrrad.h:31:10: note: member declaration does not match because it is const qualified
+                double dGeschwindigkeit() const override; // Minimal 12km /h , pro 20km %10 Abnahme
+                       ^                        ~~~~~~~~
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:06:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:06:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:30:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:30:17: error: no member named 'getMaxGeschwindigkeit' in 'std::unique_ptr<Fahrrad>'; did you mean to use '->' instead of '.'?
+        cout << fahrrad.getMaxGeschwindigkeit();
+                       ^
+                       ->
+../ab1.cpp:37:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:39:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:166:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings and 1 error generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:30:43 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:37:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:39:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:166:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:30:43 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:31:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:38:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:40:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:167:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:31:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:31:08 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:38:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:40:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:167:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:31:09 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:31:26 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning generated.
+Finished building: ../Fahrrad.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:31:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:32:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:39:17: error: redefinition of 'mehrfach_power'
+double Fahrrad::mehrfach_power(double base, double exponent, int times) const{
+                ^
+../Fahrrad.h:32:10: note: previous definition is here
+                double mehrfach_power(double base, double exponent, int times) const override{return 0.0;};
+                       ^
+../Fahrrad.cpp:43:2: error: expected expression
+        for(int i = 0; i < times; i++){
+        ^
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning and 2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:33:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:29:30: error: use of undeclared identifier 'mehrfach_power'; did you mean 'dMehrfachPower'?
+        d_aktuelleGeschwindigkeit = mehrfach_power(p_dMaxGeschwindigkeit, 0.9, i_anzahl20kms);
+                                    ^~~~~~~~~~~~~~
+                                    dMehrfachPower
+../Fahrrad.h:32:10: note: 'dMehrfachPower' declared here
+                double dMehrfachPower(double base, double exponent, int times) const override{return 0.0;};
+                       ^
+../Fahrrad.cpp:39:17: error: out-of-line definition of 'dMehrfachPower' does not match any declaration in 'Fahrrad'
+double Fahrrad::dMehrfachPower(double base, double exponent, int times) {
+                ^~~~~~~~~~~~~~
+../Fahrrad.h:32:10: note: member declaration does not match because it is const qualified
+                double dMehrfachPower(double base, double exponent, int times) const override{return 0.0;};
+                       ^                                                                                 ~
+../Fahrrad.cpp:43:2: error: expected expression
+        for(int i = 0; i < times; i++){
+        ^
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning and 3 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:33:59 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:39:17: error: out-of-line definition of 'dMehrfachPower' does not match any declaration in 'Fahrrad'
+double Fahrrad::dMehrfachPower(double base, double exponent, int times) {
+                ^~~~~~~~~~~~~~
+../Fahrrad.h:32:10: note: member declaration does not match because it is const qualified
+                double dMehrfachPower(double base, double exponent, int times) const override{return 0.0;};
+                       ^                                                                                 ~
+../Fahrrad.cpp:43:2: error: expected expression
+        for(int i = 0; i < times; i++){
+        ^
+In file included from ../Fahrrad.cpp:9:
+../Fahrrad.h:39:10: warning: private field 'p_daktuelleGeschwindigkeit' is not used [-Wunused-private-field]
+                double p_daktuelleGeschwindigkeit = 0.0;
+                       ^
+1 warning and 2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:34:09 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:39:17: error: out-of-line definition of 'dMehrfachPower' does not match any declaration in 'Fahrrad'
+double Fahrrad::dMehrfachPower(double base, double exponent, int times) {
+                ^~~~~~~~~~~~~~
+../Fahrrad.h:32:10: note: member declaration does not match because it is const qualified
+                double dMehrfachPower(double base, double exponent, int times) const override{return 0.0;};
+                       ^                                                                                 ~
+../Fahrrad.cpp:43:2: error: expected expression
+        for(int i = 0; i < times; i++){
+        ^
+2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:34:22 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:39:17: error: out-of-line definition of 'dMehrfachPower' does not match any declaration in 'Fahrrad'
+double Fahrrad::dMehrfachPower(double base, double exponent, int times) {const
+                ^~~~~~~~~~~~~~
+../Fahrrad.h:32:10: note: member declaration does not match because it is const qualified
+                double dMehrfachPower(double base, double exponent, int times) const override{return 0.0;};
+                       ^                                                                                 ~
+../Fahrrad.cpp:43:2: error: expected expression
+        for(int i = 0; i < times; i++){
+        ^
+2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:34:30 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:39:17: error: redefinition of 'dMehrfachPower'
+double Fahrrad::dMehrfachPower(double base, double exponent, int times) const{
+                ^
+../Fahrrad.h:32:10: note: previous definition is here
+                double dMehrfachPower(double base, double exponent, int times) const override{return 0.0;};
+                       ^
+../Fahrrad.cpp:43:2: error: expected expression
+        for(int i = 0; i < times; i++){
+        ^
+2 errors generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:35:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:43:2: error: expected expression
+        for(int i = 0; i < times; i++){
+        ^
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:36:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:38:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:40:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:167:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:36:14 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:36:53 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:39:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:41:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:168:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:36:54 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:37:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:40:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:42:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:169:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:37:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:37:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:40:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:42:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:169:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:37:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:38:30 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+../Fahrrad.cpp:39:17: error: out-of-line definition of 'dMehrfachPower' does not match any declaration in 'Fahrrad'
+double Fahrrad::dMehrfachPower(double base, double exponent, int times) const{
+                ^~~~~~~~~~~~~~
+1 error generated.
+make: *** [Fahrrad.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:38:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:40:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:42:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:169:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:42:03 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:42:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:40:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:42:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:169:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:42:25 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:42:38 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:39:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:41:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:168:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:42:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:43:02 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:39:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:41:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:168:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:43:03 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:43:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:39:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:41:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:168:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:43:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:44:43 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:44:56 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:44:57 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:45:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:36:13: warning: unused variable 'staticElement' [-Wunused-variable]
+        static int staticElement = 1;
+                   ^
+../ab1.cpp:38:13: warning: unused variable 'staticElement2' [-Wunused-variable]
+        static int staticElement2 = 2;
+                   ^
+../ab1.cpp:165:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+10:45:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:08:50 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:168:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:09:48 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:35:12: warning: unused variable 'fahrrad2' [-Wunused-variable]
+        Fahrzeug* fahrrad2 = new Fahrzeug("fahrrad2(p)", 30.9);
+                  ^
+../ab1.cpp:169:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+2 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:09:57 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:35:12: warning: unused variable 'fahrrad2' [-Wunused-variable]
+        Fahrzeug* fahrrad2 = new Fahrzeug("fahrrad2(p)", 30.9);
+                  ^
+../ab1.cpp:169:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+2 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:10:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:170:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:10:05 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:12:21 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:175:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:12:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:13:19 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:176:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:13:20 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:13:56 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:177:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:13:57 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:14:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:177:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:14:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:14:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:177:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:14:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:15:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:178:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:15:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:16:28 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:46:23: error: call to implicitly-deleted copy constructor of 'unique_ptr<Fahrzeug>'
+        unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
+                             ^            ~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+../ab1.cpp:48:31: error: no viable conversion from '<overloaded function type>' to 'vector<unique_ptr<Fahrzeug>>'
+        vector<unique_ptr<Fahrzeug>> vectorFahrzeuge = make_unique<Fahrzeug>;
+                                     ^                 ~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:441:35: note: candidate constructor not viable: no overload of 'make_unique' matching 'const std::vector<std::unique_ptr<Fahrzeug>> &' for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 vector(const vector& __x);
+                                  ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:448:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'initializer_list<std::vector<std::unique_ptr<Fahrzeug>>::value_type>' (aka 'initializer_list<std::unique_ptr<Fahrzeug>>') for 1st argument
+    vector(initializer_list<value_type> __il);
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:459:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'std::vector<std::unique_ptr<Fahrzeug>> &&' for 1st argument
+    vector(vector&& __x)
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:368:70: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY explicit vector(const allocator_type& __a)
+                                                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:378:44: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 explicit vector(size_type __n);
+                                           ^
+../ab1.cpp:183:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning and 2 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:48 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../Fahrrad.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrrad.d" -MT"Fahrrad.o" -o "Fahrrad.o" "../Fahrrad.cpp"
+Finished building: ../Fahrrad.cpp
+ 
+Building file: ../Fahrzeug.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Fahrzeug.d" -MT"Fahrzeug.o" -o "Fahrzeug.o" "../Fahrzeug.cpp"
+Finished building: ../Fahrzeug.cpp
+ 
+Building file: ../PKW.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PKW.d" -MT"PKW.o" -o "PKW.o" "../PKW.cpp"
+Finished building: ../PKW.cpp
+ 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:46:23: error: call to implicitly-deleted copy constructor of 'unique_ptr<Fahrzeug>'
+        unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
+                             ^            ~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+../ab1.cpp:48:31: error: no viable conversion from '<overloaded function type>' to 'vector<unique_ptr<Fahrzeug>>'
+        vector<unique_ptr<Fahrzeug>> vectorFahrzeuge = make_unique<Fahrzeug>;
+                                     ^                 ~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:441:35: note: candidate constructor not viable: no overload of 'make_unique' matching 'const std::vector<std::unique_ptr<Fahrzeug>> &' for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 vector(const vector& __x);
+                                  ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:448:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'initializer_list<std::vector<std::unique_ptr<Fahrzeug>>::value_type>' (aka 'initializer_list<std::unique_ptr<Fahrzeug>>') for 1st argument
+    vector(initializer_list<value_type> __il);
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:459:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'std::vector<std::unique_ptr<Fahrzeug>> &&' for 1st argument
+    vector(vector&& __x)
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:368:70: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY explicit vector(const allocator_type& __a)
+                                                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:378:44: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 explicit vector(size_type __n);
+                                           ^
+../ab1.cpp:183:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning and 2 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:50 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:46:23: error: call to implicitly-deleted copy constructor of 'unique_ptr<Fahrzeug>'
+        unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
+                             ^            ~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+../ab1.cpp:48:31: error: no viable conversion from '<overloaded function type>' to 'vector<unique_ptr<Fahrzeug>>'
+        vector<unique_ptr<Fahrzeug>> vectorFahrzeuge = make_unique<Fahrzeug>;
+                                     ^                 ~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:441:35: note: candidate constructor not viable: no overload of 'make_unique' matching 'const std::vector<std::unique_ptr<Fahrzeug>> &' for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 vector(const vector& __x);
+                                  ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:448:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'initializer_list<std::vector<std::unique_ptr<Fahrzeug>>::value_type>' (aka 'initializer_list<std::unique_ptr<Fahrzeug>>') for 1st argument
+    vector(initializer_list<value_type> __il);
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:459:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'std::vector<std::unique_ptr<Fahrzeug>> &&' for 1st argument
+    vector(vector&& __x)
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:368:70: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY explicit vector(const allocator_type& __a)
+                                                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:378:44: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 explicit vector(size_type __n);
+                                           ^
+../ab1.cpp:183:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning and 2 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:16:52 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:46:23: error: call to implicitly-deleted copy constructor of 'unique_ptr<Fahrzeug>'
+        unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
+                             ^            ~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+../ab1.cpp:48:31: error: no viable conversion from '<overloaded function type>' to 'vector<unique_ptr<Fahrzeug>>'
+        vector<unique_ptr<Fahrzeug>> vectorFahrzeuge = make_unique<Fahrzeug>;
+                                     ^                 ~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:441:35: note: candidate constructor not viable: no overload of 'make_unique' matching 'const std::vector<std::unique_ptr<Fahrzeug>> &' for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 vector(const vector& __x);
+                                  ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:448:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'initializer_list<std::vector<std::unique_ptr<Fahrzeug>>::value_type>' (aka 'initializer_list<std::unique_ptr<Fahrzeug>>') for 1st argument
+    vector(initializer_list<value_type> __il);
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:459:5: note: candidate constructor not viable: no overload of 'make_unique' matching 'std::vector<std::unique_ptr<Fahrzeug>> &&' for 1st argument
+    vector(vector&& __x)
+    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:368:70: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY explicit vector(const allocator_type& __a)
+                                                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:378:44: note: explicit constructor is not a candidate
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 explicit vector(size_type __n);
+                                           ^
+../ab1.cpp:183:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning and 2 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:17:50 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:46:23: error: call to implicitly-deleted copy constructor of 'unique_ptr<Fahrzeug>'
+        unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
+                             ^            ~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+../ab1.cpp:183:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+1 warning and 1 error generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:19:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:46:23: error: call to implicitly-deleted copy constructor of 'unique_ptr<Fahrzeug>'
+        unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
+                             ^            ~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+../ab1.cpp:49:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:53:18: error: no matching member function for call to 'push_back'
+        vectorFahrzeuge.push_back((fahrzeug_s));
+        ~~~~~~~~~~~~~~~~^~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:582:66: note: candidate function not viable: no known conversion from 'shared_ptr<Fahrzeug>' to 'const std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'const std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(const_reference __x);
+                                                                 ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:584:66: note: candidate function not viable: no known conversion from 'shared_ptr<Fahrzeug>' to 'std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(value_type&& __x);
+                                                                 ^
+../ab1.cpp:189:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+In file included from ../ab1.cpp:8:
+In file included from ../Fahrzeug.h:10:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:41:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ios:221:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale:18:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:848:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator.h:165:28: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<Fahrzeug>'
+        ::new ((void*)__p) _Up(_VSTD::forward<_Args>(__args)...);
+                           ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator_traits.h:290:13: note: in instantiation of function template specialization 'std::allocator<std::unique_ptr<Fahrzeug>>::construct<std::unique_ptr<Fahrzeug>, const std::unique_ptr<Fahrzeug> &>' requested here
+        __a.construct(__p, _VSTD::forward<_Args>(__args)...);
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:808:21: note: in instantiation of function template specialization 'std::allocator_traits<std::allocator<std::unique_ptr<Fahrzeug>>>::construct<std::unique_ptr<Fahrzeug>, const std::unique_ptr<Fahrzeug> &, void>' requested here
+    __alloc_traits::construct(this->__alloc(), _VSTD::__to_address(__tx.__pos_),
+                    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:1550:9: note: in instantiation of function template specialization 'std::vector<std::unique_ptr<Fahrzeug>>::__construct_one_at_end<const std::unique_ptr<Fahrzeug> &>' requested here
+        __construct_one_at_end(__x);
+        ^
+../ab1.cpp:51:18: note: in instantiation of member function 'std::vector<std::unique_ptr<Fahrzeug>>::push_back' requested here
+        vectorFahrzeuge.push_back((fahrzeug1));
+                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+3 warnings and 3 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:20:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:49:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:53:18: error: no matching member function for call to 'push_back'
+        vectorFahrzeuge.push_back((fahrzeug_s));
+        ~~~~~~~~~~~~~~~~^~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:582:66: note: candidate function not viable: no known conversion from 'shared_ptr<Fahrzeug>' to 'const std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'const std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(const_reference __x);
+                                                                 ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:584:66: note: candidate function not viable: no known conversion from 'shared_ptr<Fahrzeug>' to 'std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(value_type&& __x);
+                                                                 ^
+../ab1.cpp:189:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+In file included from ../ab1.cpp:8:
+In file included from ../Fahrzeug.h:10:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:41:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ios:221:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale:18:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:848:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator.h:165:28: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<Fahrzeug>'
+        ::new ((void*)__p) _Up(_VSTD::forward<_Args>(__args)...);
+                           ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator_traits.h:290:13: note: in instantiation of function template specialization 'std::allocator<std::unique_ptr<Fahrzeug>>::construct<std::unique_ptr<Fahrzeug>, const std::unique_ptr<Fahrzeug> &>' requested here
+        __a.construct(__p, _VSTD::forward<_Args>(__args)...);
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:808:21: note: in instantiation of function template specialization 'std::allocator_traits<std::allocator<std::unique_ptr<Fahrzeug>>>::construct<std::unique_ptr<Fahrzeug>, const std::unique_ptr<Fahrzeug> &, void>' requested here
+    __alloc_traits::construct(this->__alloc(), _VSTD::__to_address(__tx.__pos_),
+                    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:1550:9: note: in instantiation of function template specialization 'std::vector<std::unique_ptr<Fahrzeug>>::__construct_one_at_end<const std::unique_ptr<Fahrzeug> &>' requested here
+        __construct_one_at_end(__x);
+        ^
+../ab1.cpp:51:18: note: in instantiation of member function 'std::vector<std::unique_ptr<Fahrzeug>>::push_back' requested here
+        vectorFahrzeuge.push_back((fahrzeug1));
+                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+3 warnings and 2 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:20:20 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:49:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:53:18: error: no matching member function for call to 'push_back'
+        vectorFahrzeuge.push_back(fahrzeug_s);
+        ~~~~~~~~~~~~~~~~^~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:582:66: note: candidate function not viable: no known conversion from 'shared_ptr<Fahrzeug>' to 'const std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'const std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(const_reference __x);
+                                                                 ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:584:66: note: candidate function not viable: no known conversion from 'shared_ptr<Fahrzeug>' to 'std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(value_type&& __x);
+                                                                 ^
+../ab1.cpp:189:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+In file included from ../ab1.cpp:8:
+In file included from ../Fahrzeug.h:10:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:41:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ios:221:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale:18:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:848:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator.h:165:28: error: call to implicitly-deleted copy constructor of 'std::unique_ptr<Fahrzeug>'
+        ::new ((void*)__p) _Up(_VSTD::forward<_Args>(__args)...);
+                           ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator_traits.h:290:13: note: in instantiation of function template specialization 'std::allocator<std::unique_ptr<Fahrzeug>>::construct<std::unique_ptr<Fahrzeug>, const std::unique_ptr<Fahrzeug> &>' requested here
+        __a.construct(__p, _VSTD::forward<_Args>(__args)...);
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:808:21: note: in instantiation of function template specialization 'std::allocator_traits<std::allocator<std::unique_ptr<Fahrzeug>>>::construct<std::unique_ptr<Fahrzeug>, const std::unique_ptr<Fahrzeug> &, void>' requested here
+    __alloc_traits::construct(this->__alloc(), _VSTD::__to_address(__tx.__pos_),
+                    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:1550:9: note: in instantiation of function template specialization 'std::vector<std::unique_ptr<Fahrzeug>>::__construct_one_at_end<const std::unique_ptr<Fahrzeug> &>' requested here
+        __construct_one_at_end(__x);
+        ^
+../ab1.cpp:51:18: note: in instantiation of member function 'std::vector<std::unique_ptr<Fahrzeug>>::push_back' requested here
+        vectorFahrzeuge.push_back(fahrzeug1);
+                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:201:3: note: copy constructor is implicitly deleted because 'unique_ptr<Fahrzeug>' has a user-declared move constructor
+  unique_ptr(unique_ptr&& __u) _NOEXCEPT
+  ^
+3 warnings and 2 errors generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:21:56 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:194:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:23:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:61:2: error: unknown type name 'clear'
+        clear vectorFahrzeuge;
+        ^
+../ab1.cpp:197:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings and 1 error generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:24:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:52:18: error: no matching member function for call to 'push_back'
+        vectorFahrzeuge.push_back(fahrrad1);
+        ~~~~~~~~~~~~~~~~^~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:582:66: note: candidate function not viable: no known conversion from 'Fahrzeug' to 'const std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'const std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(const_reference __x);
+                                                                 ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:584:66: note: candidate function not viable: no known conversion from 'Fahrzeug' to 'std::vector<std::unique_ptr<Fahrzeug>>::value_type' (aka 'std::unique_ptr<Fahrzeug>') for 1st argument
+    _LIBCPP_CONSTEXPR_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY void push_back(value_type&& __x);
+                                                                 ^
+../ab1.cpp:200:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+3 warnings and 1 error generated.
+make: *** [ab1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:26:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:68:34: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+                                        ^
+                                        std::
+../ab1.cpp:208:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+4 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:26:38 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:26:49 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:68:34: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+                                        ^
+                                        std::
+../ab1.cpp:208:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+4 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:26:50 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:27:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:68:34: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+                                        ^
+                                        std::
+../ab1.cpp:208:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+4 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:27:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:27:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:68:34: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+                                        ^
+                                        std::
+../ab1.cpp:208:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+4 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:27:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:28:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:68:34: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+                                        ^
+                                        std::
+../ab1.cpp:208:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+4 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:28:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:28:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:68:34: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+                                        ^
+                                        std::
+../ab1.cpp:208:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+4 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:28:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:34:03 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+Building file: ../ab1.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ab1.d" -MT"ab1.o" -o "ab1.o" "../ab1.cpp"
+../ab1.cpp:50:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug1));
+                                  ^
+                                  std::
+../ab1.cpp:51:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorFahrzeuge.push_back(move(fahrzeug2));
+                                  ^
+                                  std::
+../ab1.cpp:77:34: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+        vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+                                        ^
+                                        std::
+../ab1.cpp:213:12: warning: unused variable 'fahrzeug1' [-Wunused-variable]
+        Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+                  ^
+4 warnings generated.
+Finished building: ../ab1.cpp
+ 
+Building target: Aufgabenblock_1
+Invoking: MacOS X C++ Linker
+g++  -o "Aufgabenblock_1"  ./Fahrrad.o ./Fahrzeug.o ./PKW.o ./ab1.o   
+Finished building target: Aufgabenblock_1
+ 
+11:34:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+make all 
+make: Nothing to be done for `all'.

@@ -21,11 +21,10 @@ public:
 	Fahrzeug(); // @suppress("Class members should be properly initialized")
 	Fahrzeug(string p_sName); // @suppress("Class members should be properly initialized")
 	Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit);
+	//Fahrzeug(const Fahrzeug&) = delete;
 
 	//Destruktoren
 	virtual ~Fahrzeug();
-
-	Fahrzeug(const Fahrzeug&) = delete;
 
 	//Getters
 	string getName() const{return p_sName;};
@@ -44,37 +43,20 @@ public:
 	void setZeit(double p_dZeit){this->p_dZeit = p_dZeit;};
 
 	//Double
-	virtual double dGeschwindigkeit(){return p_dMaxGeschwindigkeit;}; // @suppress("No return")
+	virtual double dGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}; // @suppress("No return")
 	virtual double dTanken(double dMenge = 1.0){return 0.0;};
+	virtual double dMehrfachMultiplikation(double base, double konstant, int mal) const{return 0.0;}
 
 	//Void&Print Funktionen
 	virtual void vAusgeben(std::ostream& ausgabe) const;
 	static void vKopf();
 	virtual void vSimulieren(double Zeitdifferenz);
+	void operator =(const Fahrzeug& fahrzeug);
 
 	//Überladen
-	bool operator<(const Fahrzeug& andere) const {
-		if(this->p_dGesamtstrecke < andere.p_dGesamtstrecke){
-			return true;
-		} else{
-			return false;
-		}
-	}
+	bool operator<(const Fahrzeug& andere) const;
 
-	Fahrzeug& operator=(const Fahrzeug& other) {
-		//Kontrolliere ob das Objekt selbst aufruft.
-		if (this == &other) {
-			return *this;
-		}
-
-		this->p_sName = other.p_sName;
-		this->p_dMaxGeschwindigkeit = other.p_dMaxGeschwindigkeit;
-		this->p_dGesamtstrecke = other.p_dGesamtstrecke;
-		this->p_dZeit = other.p_dZeit;
-		this->p_dGesamtZeit = other.p_dGesamtZeit;
-
-		return *this;
-	}
+	//Fahrzeug& operator=(const Fahrzeug& other);
 
 protected:
 	//Strings
@@ -94,6 +76,7 @@ private:
 
 };
 
+// Überladung von '<<' (Ausgabe) Operator.
 std::ostream& operator<<(std::ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 #endif /* FAHRZEUG_H_ */

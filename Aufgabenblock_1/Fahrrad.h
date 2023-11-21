@@ -28,13 +28,14 @@ class Fahrrad : public Fahrzeug {
 		virtual ~Fahrrad() = default;
 
 		//Double
-		double dGeschwindigkeit() override; // Minimal 12km /h , pro 20km %10 Abnahme
+		double dGeschwindigkeit() const override; // Minimal 12km /h , pro 20km %10 Abnahme
+		double dMehrfachMultiplikation(double base, double konstant, int mal) const override;
 
 		//Void&Print
 		void vAusgeben(std::ostream& ausgabe) const override;
 		void vSimulieren(double Zeitdifferenz) override;
 
 	private:
-		int p_iZeahler = 0;
+
 };
 #endif /* FAHRRAD_H_ */
