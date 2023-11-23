@@ -209,28 +209,30 @@ void vAufgabe_3(){
 	//Unterschied zwischen ptr Objekt und nicht ptr Objekt zu beachten.
 	//Es ist nicht gut, traditionaller Pointer zu nutzen. Lieber kann man smart Pointers benutzen.
 
-	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("fahrzeug2", 200.3);
+	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1", 200.3);
 	Fahrrad* fahrrad1 = new Fahrrad("fahrrad1", 25.3);
 	Fahrrad* fahrrad2 = new Fahrrad("fahrrad2", 22.9);
 	PKW pkw1("pkw1", 159.3, 8.3, 44.9);
 	PKW pkw2("pkw2", 100.5, 8, 32.5);
-	Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+	Fahrzeug* fahrzeug2 = new Fahrzeug("fahrzeug2", 88.3);
 
 	Fahrzeug::vKopf();
-	cout << pkw1 << endl;
-	cout << pkw2 << endl;
+	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
 	cout << *fahrrad2 << endl;
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
 	pkw1.setGesamtstrecke(100);
 	pkw2.setGesamtstrecke(200);
 
 	Fahrzeug::vKopf();
-	cout << pkw1 << endl;
-	cout << pkw2 << endl;
+	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
 	cout << *fahrrad2 << endl;
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
 	if(pkw1 < pkw2){
@@ -244,11 +246,11 @@ void vAufgabe_3(){
 
 
 	Fahrzeug::vKopf();
-	cout << pkw1 << endl;
-	cout << pkw2 << endl;
+	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
 	cout << *fahrrad2 << endl;
-	cout << *fahrzeug1 << endl << endl;
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
 	//Da die Fahrräder Pointers sind, kann die Übertragung der IDs nicht vermieden werden.
@@ -256,16 +258,16 @@ void vAufgabe_3(){
 	fahrrad1 = fahrrad2;
 
 	Fahrzeug::vKopf();
-	cout << pkw1 << endl;
-	cout << pkw2 << endl;
+	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
 	cout << *fahrrad2 << endl;
-	cout << *fahrzeug1 << endl << endl;
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
 	delete fahrrad1;
 	delete fahrrad2;
-	delete fahrzeug1;
+	delete fahrzeug2;
 }
 
 // Überladung von '<<' (Ausgabe) Operator.

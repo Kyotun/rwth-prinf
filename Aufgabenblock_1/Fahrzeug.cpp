@@ -46,10 +46,12 @@ Fahrzeug::Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit): p_sName(p_sNam
 // Ausgabe Funktion, die zum Ausgeben von der Eigenschaften der Objekten dient.
 // Es reicht nur das Objekt zu cout zu geben.
 void Fahrzeug::vAusgeben(ostream& ausgabe) const{
-	ausgabe << setiosflags(ios_base::adjustfield) << left
+	ausgabe << resetiosflags(ios::adjustfield)
+			<< setiosflags(ios::left)
 			<< setprecision(2) << fixed
 			<< setw(8) << getID()
 			<< setw(15) << getName()
+			<< setiosflags(ios::right)
 			<< setw(20) << getMaxGeschwindigkeit()
 			<< setw(20) << getGesamtstrecke()
 			<< setw(20) << dGeschwindigkeit();
@@ -59,10 +61,12 @@ void Fahrzeug::vAusgeben(ostream& ausgabe) const{
 // Es ist eine Objektmethode.
 void Fahrzeug::vAusgeben() const{
 
-	cout << setiosflags(ios_base::adjustfield) << left
+	cout << resetiosflags(ios::adjustfield)
+		 << setiosflags(ios::left)
 		 << setprecision(2) << fixed
 		 << setw(8) << getID()
 	     << setw(15) << getName()
+		 << setiosflags(ios::right)
 		 << setw(20) << getMaxGeschwindigkeit()
 		 << setw(20) << getGesamtstrecke()
 		 << setw(20) << dGeschwindigkeit();
@@ -71,9 +75,11 @@ void Fahrzeug::vAusgeben() const{
 // Kopf Funktion wird vor der Funktion Ausgeben aufgerufen,
 // damit ist die Ausgaben(Eigenschaften der Objekten) besser und deutlich zu sehen.
 void Fahrzeug::vKopf(){
-	cout << setiosflags(ios_base::adjustfield) << left
+	cout << resetiosflags(ios::adjustfield)
+		 << setiosflags(ios::left)
 		 << setw(8) << "ID"
 		 << setw(15) << "Name"
+		 << setiosflags(ios::right)
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"
 		 << setw(20) << "Geschwindigkeit"
