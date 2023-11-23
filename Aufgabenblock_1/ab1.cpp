@@ -14,19 +14,21 @@
 #include <string>
 #include <limits>
 #include <vector>
-
+#include <cmath>
 
 using namespace std;
-double GlobaleZeit = 0.0;
+double dGlobaleZeit = 0.0;
 
 void vAufgabe_1();
 void vAufgabe_1a();
 void vAufgabe_2();
 void vAufgabe_3();
+
 ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 int main(){
-	vAufgabe_1();
+	vAufgabe_3();
+
 	return 0;
 }
 
@@ -53,7 +55,7 @@ void vAufgabe_1(){
 
 	//Diese Zeilen würden error ausgeben.
 	/*
-	vectorFahrzeuge.push_back(fahrrad1);
+	vectorFahrzeuge.push_back(fahrzeug1);
 	vectorFahrzeuge.push_back(fahrzeug3);
 	vectorFahrzeuge.push_back(fahrzeug4);
 	vectorFahrzeuge.push_back(fahrzeug_s);
@@ -87,23 +89,28 @@ void vAufgabe_1(){
 // Simuliere diese Objekte und gibt die Eigenschaften dieser Objekte in jeder Zeittakt aufm Bildschirm aus.
 void vAufgabe_1a(){
 
+	double dStunden = 0.0;
+	cout << "Bitte geben Sie die Simulationzeit in Studen ein: ";
+	cin >> dStunden;
+	double Epsilon = 0.3;
 	double dMaxGeschwindigkeit = 0.0;
-	string name = "";
+	string sName = "";
+
 
 	cout << "Geben Sie bitte den Namen und MaxGeschwindigkeit des erstes Fahrzeuges:" << endl;
-	cin >> name;
+	cin >> sName;
 	cin >> dMaxGeschwindigkeit;
-	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>(name,dMaxGeschwindigkeit);
+	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
 	cout << "Geben Sie bitte den Namen und MaxGeschwindigkeit des zweites Fahrzeuges" << endl;
-	cin >> name;
+	cin >> sName;
 	cin >> dMaxGeschwindigkeit;
-	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>(name,dMaxGeschwindigkeit);
+	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
 	cout << "Geben Sie bitte den Namen und MaxGeschwindigkeit des drittes Fahrzeuges" << endl;
-	cin >> name;
+	cin >> sName;
 	cin >> dMaxGeschwindigkeit;
-	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrzeug>(name,dMaxGeschwindigkeit);
+	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
 	vector<unique_ptr<Fahrzeug>>fahrzeuge;
 	fahrzeuge.push_back(std::move(fahrzeug1));
@@ -112,12 +119,10 @@ void vAufgabe_1a(){
 
 	Fahrzeug::vKopf();
 
-	for(double Epsilon = 0.0; Epsilon < 10; Epsilon+= 0.3){
-		GlobaleZeit+=0.3;
-		for(const auto& i : fahrzeuge){
-			GlobaleZeit += Epsilon;
-			i->vSimulieren(Epsilon);
-			cout << *i << endl;
+	for(dGlobaleZeit = Epsilon; dGlobaleZeit < dStunden; dGlobaleZeit += Epsilon){
+		for(const auto& fahrzeug: fahrzeuge){
+			fahrzeug->vSimulieren();
+			cout << *fahrzeug << endl;
 		}
 
 	}
@@ -128,71 +133,69 @@ void vAufgabe_1a(){
 // Erzeuge die Objekte mit der gegebenen Eigenschaften und nach gegebenen Typen.
 // Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 void vAufgabe_2(){
-	int pkw_anzahl = 0;
-	int fahrrad_anzahl = 0;
+	int iPkwAnzahl, iFahrradAnzahl;
 
-	string name = "";
-	double geschwindigkeit = 0.0;
-	double verbrauch = 0.0;
-	string tankVolumen = "";
+	string sName = "";
+	double dGeschwindigkeit = 0.0;
+	double Epsilon = 0.3;
+	double dVerbrauch = 0.0;
+	string sTankVolumen = "";
 
 	vector<unique_ptr<Fahrzeug>> fahrzeuge;
 
 	cout << "Wie viele PKWs möchten Sie erstellen?" << endl;
-	cin >> pkw_anzahl;
+	cin >> iPkwAnzahl;
 
 	cout << "Wie viele Fahrräder möchten Sie erstellen?" << endl;
-	cin >> fahrrad_anzahl;
+	cin >> iFahrradAnzahl;
 
 	cout << "Bitte geben Sie jetzt die Eigenschaften der PKWs vom Ersten bis Letzem ein.\n";
-	for(int i = 0; i < pkw_anzahl; i++){
+	for(int i = 0; i < iPkwAnzahl; i++){
 		cout << "1) Name: ";
-		cin >> name;
+		cin >> sName;
 
 		cout << "2) Maximale Geschwindigkeit: ";
-		cin >> geschwindigkeit;
+		cin >> dGeschwindigkeit;
 
 		cout << "3) Verbrauch: ";
-		cin >> verbrauch;
+		cin >> dVerbrauch;
 
-		getline(cin, tankVolumen);
+		getline(cin, sTankVolumen);
 		cout << "4) Tankvolumen(optinal, default 55 liter angenommen.): ";
-		getline(cin, tankVolumen);
+		getline(cin, sTankVolumen);
 
-		if(tankVolumen == ""){
-			unique_ptr<PKW> pkw = make_unique<PKW>(name, geschwindigkeit, verbrauch);
+		if(sTankVolumen == ""){
+			unique_ptr<PKW> pkw = make_unique<PKW>(sName, dGeschwindigkeit, dVerbrauch);
 			fahrzeuge.push_back(std::move(pkw));
 		} else{
-			unique_ptr<PKW> pkw = make_unique<PKW>(name, geschwindigkeit, verbrauch, stod(tankVolumen));
+			unique_ptr<PKW> pkw = make_unique<PKW>(sName, dGeschwindigkeit, dVerbrauch, stod(sTankVolumen));
 			fahrzeuge.push_back(std::move(pkw));
 		}
 	}
 
 	cout << "Bitte geben Sie nun die Eigenschaften der Fahrräder vom Ersten bis Letzem ein.\n";
-	for(int j = 0; j < fahrrad_anzahl; j++){
+	for(int j = 0; j < iFahrradAnzahl; j++){
 		cout << "1) Name: ";
-		cin >> name;
+		cin >> sName;
 
 		cout << "2) Maximale Geschwindigkeit: ";
-		cin >> geschwindigkeit;
+		cin >> dGeschwindigkeit;
 
-		unique_ptr<Fahrrad> fahrrad = make_unique<Fahrrad>(name, geschwindigkeit);
+		unique_ptr<Fahrrad> fahrrad = make_unique<Fahrrad>(sName, dGeschwindigkeit);
 		fahrzeuge.push_back(std::move(fahrrad));
 	}
 
 	Fahrzeug::vKopf();
-	GlobaleZeit = 0.1;
-	for(double Epsilon = 0.0; Epsilon < 10; Epsilon+=0.3){
-		GlobaleZeit+=0.3;
+	for(dGlobaleZeit = Epsilon; dGlobaleZeit < 10; dGlobaleZeit += Epsilon){
 
-		for(const auto& i : fahrzeuge){
-			i->vSimulieren(GlobaleZeit-Epsilon);
-			cout << *i;
+		for(const auto& fahrzeug : fahrzeuge){
+			fahrzeug->vSimulieren();
+			cout << *fahrzeug;
 		}
 
-		if((int)GlobaleZeit % 3 == 0 && GlobaleZeit >= 3.0){
-			for(const auto& i : fahrzeuge){
-				i->dTanken();
+		if((int)dGlobaleZeit % 3 == 0 && dGlobaleZeit >= 3.0){
+			for(const auto& fahrzeug : fahrzeuge){
+				fahrzeug->dTanken();
 			}
 		}
 
@@ -212,18 +215,41 @@ void vAufgabe_3(){
 	PKW pkw1("pkw1", 159.3, 8.3, 44.9);
 	PKW pkw2("pkw2", 100.5, 8, 32.5);
 	Fahrzeug* fahrzeug1 = new Fahrzeug("fahrzeug1", 88.3);
+
+	Fahrzeug::vKopf();
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
+	cout << *fahrrad1 << endl;
+	cout << *fahrrad2 << endl;
+	cout << *fahrzeug2 << endl << endl;
+
 	pkw1.setGesamtstrecke(100);
 	pkw2.setGesamtstrecke(200);
 
+	Fahrzeug::vKopf();
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
+	cout << *fahrrad1 << endl;
+	cout << *fahrrad2 << endl;
+	cout << *fahrzeug2 << endl << endl;
 
 	if(pkw1 < pkw2){
 		cout << "\nGesamtstrecke von pkw1: " << pkw1.getGesamtstrecke() << endl;
-		cout << "Gesamtstrecke von pkw2: " << pkw2.getGesamtstrecke() << endl;
+		cout << "GesamStstrecke von pkw2: " << pkw2.getGesamtstrecke() << endl;
 		cout << "Bedingung war pkw1 < pkw2. Die Bedingung wurde erfüllt und diese Zeile ist im If-Block\n" << endl;
 	}
 
-	cout << "Operation: pkw1=pkw2" << endl;
+	cout << "Operation: pkw1=pkw2" << endl << endl;
 	pkw1 = pkw2;
+
+
+	Fahrzeug::vKopf();
+	cout << pkw1 << endl;
+	cout << pkw2 << endl;
+	cout << *fahrrad1 << endl;
+	cout << *fahrrad2 << endl;
+	cout << *fahrzeug1 << endl << endl;
+	cout << *fahrzeug2 << endl << endl;
 
 	//Da die Fahrräder Pointers sind, kann die Übertragung der IDs nicht vermieden werden.
 	cout << "Operation: fahrrad1=fahrrad2\n" << endl;
@@ -234,10 +260,12 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrrad1 << endl;
 	cout << *fahrrad2 << endl;
-	cout << *fahrzeug2 << endl;
+	cout << *fahrzeug1 << endl << endl;
+	cout << *fahrzeug2 << endl << endl;
 
 	delete fahrrad1;
 	delete fahrrad2;
+	delete fahrzeug1;
 }
 
 // Überladung von '<<' (Ausgabe) Operator.

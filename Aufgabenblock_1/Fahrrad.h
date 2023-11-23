@@ -15,7 +15,7 @@
 #include <limits>
 
 using namespace std;
-extern double GlobaleZeit;
+extern double dGlobaleZeit;
 
 class Fahrrad : public Fahrzeug {
 	public:
@@ -29,11 +29,11 @@ class Fahrrad : public Fahrzeug {
 
 		//Double
 		double dGeschwindigkeit() const override; // Minimal 12km /h , pro 20km %10 Abnahme
-		double dMehrfachMultiplikation(double base, double konstant, int mal) const override;
 
 		//Void&Print
+		void vAusgeben() const override;
 		void vAusgeben(std::ostream& ausgabe) const override;
-		void vSimulieren(double Zeitdifferenz) override;
+		void vSimulieren() override;
 
 	private:
 

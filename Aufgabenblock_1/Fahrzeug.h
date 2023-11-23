@@ -13,7 +13,7 @@
 #include <limits>
 
 using namespace std;
-extern double GlobaleZeit;
+extern double dGlobaleZeit;
 
 class Fahrzeug {
 public:
@@ -21,7 +21,9 @@ public:
 	Fahrzeug(); // @suppress("Class members should be properly initialized")
 	Fahrzeug(string p_sName); // @suppress("Class members should be properly initialized")
 	Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit);
-	//Fahrzeug(const Fahrzeug&) = delete;
+
+	// Verbieten von Copy-Konstruktor
+	Fahrzeug(const Fahrzeug&) = delete;
 
 	//Destruktoren
 	virtual ~Fahrzeug();
@@ -48,9 +50,10 @@ public:
 	virtual double dMehrfachMultiplikation(double base, double konstant, int mal) const{return 0.0;}
 
 	//Void&Print Funktionen
+	virtual void vAusgeben() const;
 	virtual void vAusgeben(std::ostream& ausgabe) const;
 	static void vKopf();
-	virtual void vSimulieren(double Zeitdifferenz);
+	virtual void vSimulieren();
 	void operator =(const Fahrzeug& fahrzeug);
 
 	//Überladen

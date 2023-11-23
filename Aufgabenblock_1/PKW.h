@@ -15,7 +15,7 @@
 #include <limits>
 
 using namespace std;
-extern double GlobaleZeit;
+extern double dGlobaleZeit;
 
 class PKW : public Fahrzeug {
 	public:
@@ -38,7 +38,8 @@ class PKW : public Fahrzeug {
 		double dTanken(double dMenge = 1.0) override;
 
 		//Void&Print Funktionen
-		void vSimulieren(double Zeitdifferenz) override;
+		void vSimulieren() override;
+		void vAusgeben() const override;
 		void vAusgeben(std::ostream& ausgabe) const override;
 
 	private:

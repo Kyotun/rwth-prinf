@@ -13,7 +13,7 @@
 #include <limits>
 
 using namespace std;
-extern double GlobaleZeit;
+extern double dGlobaleZeit;
 
 // Konstruktor mit dem Name, erbt von der Klasse Fahrzeug
 Fahrrad::Fahrrad(string p_sName): Fahrzeug(p_sName){
@@ -30,9 +30,9 @@ Fahrrad::Fahrrad(string p_sName, double p_dMaxGeschwindigkeit):
 double Fahrrad::dGeschwindigkeit() const{
 
 	double d_aktuelleGeschwindigkeit = 0.0;
-	int i_anzahl20kms = (int)p_dGesamtstrecke/20;
+	int iAnzahlAbschnitt = (int)p_dGesamtstrecke/20;
 
-	d_aktuelleGeschwindigkeit = dMehrfachMultiplikation(p_dMaxGeschwindigkeit, 0.9, i_anzahl20kms);
+	d_aktuelleGeschwindigkeit = p_dMaxGeschwindigkeit * pow(0.9, iAnzahlAbschnitt);
 
 	if(d_aktuelleGeschwindigkeit <= 12.0){
 		d_aktuelleGeschwindigkeit = 12.0;
@@ -41,38 +41,22 @@ double Fahrrad::dGeschwindigkeit() const{
 	return d_aktuelleGeschwindigkeit;
 }
 
-// Berehcne 0.9 fach von MaxGeschwindigkeit des Fahrrads, basiert auf die Anzahl(p_dGesamtstrecke/20)
-double Fahrrad::dMehrfachMultiplikation(double base, double konstant, int mal) const{
-
-	double result = this->p_dMaxGeschwindigkeit;
-
-	for(int i = 0; i < mal; i++){
-		result *= konstant;
-	}
-
-	return result;
-}
-
-
 // Ausgabefunktion der Klasse Fahrrad, erbt von Fahrzeug und werden einige Fahrradspezifische Eigenschaften addiert.
 void Fahrrad::vAusgeben(std::ostream& ausgabe) const{
 	Fahrzeug::vAusgeben(ausgabe);
-	cout << setw(20) << this->dGeschwindigkeit()
-		<< setw(20) << "-"
+	ausgabe << setw(20) << "-"
 			<< setw(15) << "-" << endl;
+}
+
+void Fahrrad::vAusgeben() const{
+	Fahrzeug::vAusgeben();
+	cout << setw(20) << "-"
+	   	 << setw(15) << "-" << endl;
 }
 
 
 // Simulationfunktion der Klasse Fahrrad.
 // In jeder Zeittakt soll die aktuelle Geschwindigkeit mit der Funktion dGeschwindigkeit() erneut berechnet werden.
-void Fahrrad::vSimulieren(double Zeitdifferenz){
-
-	if(p_dZeit == GlobaleZeit){
-		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
-	}else{
-		p_dGesamtZeit += Zeitdifferenz;
-		p_dGesamtstrecke = p_dMaxGeschwindigkeit * p_dGesamtZeit;
-		dGeschwindigkeit();
-		p_dZeit = GlobaleZeit;
-	}
+void Fahrrad::vSimulieren(){
+	Fahrzeug::vSimulieren();
 }

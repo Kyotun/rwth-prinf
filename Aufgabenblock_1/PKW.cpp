@@ -12,7 +12,7 @@
 #include <limits>
 
 using namespace std;
-extern double GlobaleZeit;
+extern double dGlobaleZeit;
 
 // Konstruktor mit dem Name, erbt von Fahrzeug
 PKW::PKW(string p_sName): Fahrzeug(p_sName){}
@@ -24,7 +24,7 @@ PKW::PKW(string p_sName, double p_dMaxGeschwindigkeit): Fahrzeug(p_sName, p_dMax
 PKW::PKW(double p_dVerbrauch, double p_dTankvolumen):
 		p_dVerbrauch(p_dVerbrauch), p_dTankvolumen(p_dTankvolumen){
 	cout << "Ein PKW wurde mit dem Verbrauch '" << p_dVerbrauch
-			<<"' und der Tankvolumen '" << p_dTankvolumen << "' erzeugt" << endl;
+		 <<"' und der Tankvolumen '" << p_dTankvolumen << "' erzeugt" << endl;
 }
 
 // Konstruktor mit dem Name, der Geschwindigkeit, dem Verbrauch und dem Tankvolumen.
@@ -53,46 +53,49 @@ double PKW::dTanken(double dMenge){
 
 	if(!(0.0 <= dMenge && dMenge <= 1.0)){
 		cout << "Die getankte Menge soll zwischen 0 und 1 legen." << endl;
-	} else{
-		p_dTankinhalt = dMenge;
+		return 0.0;
 	}
 
+	p_dTankinhalt = dMenge;
 	return p_dTankvolumen*p_dTankinhalt;
 }
 
 // Simulationfunktion von PKWs.
 // In jeder Zeittakt, in der die PKWs similuert werden, nimmt der aktuelle Tankvolumen ab.
 // Kontrolliere ob es größer null ist, wenn nicht, darf das PKW nicht weiter simuliert.
-void PKW::vSimulieren(double Zeitdifferenz) {
+void PKW::vSimulieren() {
 
-	double d_aktuelleVolumen = p_dTankinhalt*p_dTankvolumen;
-	// 1 km/h -> 2,77 m/s
-	if(p_dZeit == GlobaleZeit){
-		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
-	} else {
-		if(p_dTankinhalt > 0){
-			p_dZeit = GlobaleZeit;
-			p_dGesamtZeit += Zeitdifferenz;
-			d_aktuelleVolumen -= (p_dMaxGeschwindigkeit*Zeitdifferenz)*(p_dVerbrauch/100);
-			p_dTankinhalt = d_aktuelleVolumen/p_dTankvolumen;
-			p_dGesamtstrecke = p_dMaxGeschwindigkeit * p_dGesamtZeit;
-		} else{
-			p_dZeit = GlobaleZeit;
-			cout << "Der Tank des Fahrzeugs '"
-				 << p_sName
-				 << "' ist leer. Es darf nicht fahren und soll getankt werden."
-				 << endl;
-		}
+	if(p_dTankinhalt <= 0){
+		p_dZeit = dGlobaleZeit;
+		cout << "Der Tank des Fahrzeugs '"
+			 << p_sName
+			 << "' ist leer. Es darf nicht fahren und soll getankt werden."
+			 << endl;
+		return;
 	}
+
+	double dGesamtstreckeVorher = p_dGesamtstrecke;
+	Fahrzeug::vSimulieren();
+	double dVerbrauchtTankVolumen = (p_dGesamtstrecke - dGesamtstreckeVorher)*(p_dVerbrauch/100);
+	double dAktuellTankVolumen = (p_dTankvolumen*p_dTankinhalt) - dVerbrauchtTankVolumen;
+	if(dAktuellTankVolumen < 0){
+		dAktuellTankVolumen = 0;
+	}
+	p_dTankinhalt = dAktuellTankVolumen / p_dTankvolumen;
 }
 
 // Erbt die Ausgebenfunktion von der Fahrzeugklasse und f
 // üge in der Ausgabefunktion die besondere Einheiten von PKws hinzu.
 void PKW::vAusgeben(std::ostream& ausgabe) const{
 	Fahrzeug::vAusgeben(ausgabe);
-	cout << setw(20) << getMaxGeschwindigkeit()
-			<< setw(20) << getGesamtVerbrauch()
-			<< setw(15) << getTankinhalt() << endl;
+	cout << setw(20) << getGesamtVerbrauch()
+		 << setw(15) << getTankinhalt() << endl;
+}
+
+void PKW::vAusgeben() const {
+	Fahrzeug::vAusgeben();
+	cout << setw(20) << getGesamtVerbrauch()
+		 << setw(15) << getTankinhalt() << endl;
 }
 
 
