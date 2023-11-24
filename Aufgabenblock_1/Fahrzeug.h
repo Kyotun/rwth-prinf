@@ -72,10 +72,10 @@ protected:
 	double p_dGesamtZeit = 0.0;
 
 	//Integers
-	static inline int p_iMaxID = 0;
-	const int p_iID = p_iMaxID++;
+	const int p_iID = ++p_iMaxID;
 
 private:
+	static inline int p_iMaxID = 0;
 
 };
 

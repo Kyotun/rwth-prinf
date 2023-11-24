@@ -78,7 +78,7 @@ void Fahrzeug::vKopf(){
 	cout << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
 		 << setw(8) << "ID"
-		 << setw(15) << "Name"
+		 << setw(10) << "Name"
 		 << setiosflags(ios::right)
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"
@@ -86,7 +86,8 @@ void Fahrzeug::vKopf(){
 		 << setw(20) << "Gesamtverbrauch"
 		 << setw(15) << "Tankinhalt" << endl;
 
-	cout << setw(115) << setfill('-') << '-' << setfill(' ') << endl;
+	cout << setw(8+10+20*4+15) << setfill('-') << '-' << setfill(' ') << endl;
+
 }
 
 // Simulation-Funktion. Wenn die von einem Objekt aufgerufen wird, wird das Objekt eine Zeittakt(Zeitdiffernez) simuliert.

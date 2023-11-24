@@ -27,7 +27,7 @@ void vAufgabe_3();
 ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 int main(){
-	vAufgabe_2();
+	Fahrzeug::vKopf();
 
 	return 0;
 }
