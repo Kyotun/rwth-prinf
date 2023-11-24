@@ -54,12 +54,12 @@ public:
 	virtual void vAusgeben(std::ostream& ausgabe) const;
 	static void vKopf();
 	virtual void vSimulieren();
-	void operator =(const Fahrzeug& fahrzeug);
+	//void operator =(const Fahrzeug& fahrzeug);
 
 	//Überladen
 	bool operator<(const Fahrzeug& andere) const;
 
-	//Fahrzeug& operator=(const Fahrzeug& other);
+	Fahrzeug& operator=(const Fahrzeug& other);
 
 protected:
 	//Strings
@@ -80,6 +80,10 @@ private:
 };
 
 // Überladung von '<<' (Ausgabe) Operator.
+// Dekleration außerhalb der Klasse. Auf diese Weise kann der Ausgabeoperator die private bzw. protected Bereiche
+// nicht erreichen kann.
+// Also keine friend Dekleration.
+// Aber getters werden benötigt, um die private bzw. protected Bereiche erreichen zu können.
 std::ostream& operator<<(std::ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 #endif /* FAHRZEUG_H_ */

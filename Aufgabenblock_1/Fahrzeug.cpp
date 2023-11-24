@@ -104,6 +104,42 @@ void Fahrzeug::vSimulieren(){
 
 }
 
+// Überladung von '<<' (Ausgabe) Operator.
+// Nun können die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
+// einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
+ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug){
+	fahrzeug.vAusgeben(ausgabe);
+	return ausgabe;
+}
+
+// Überladen des '<' (kleiner als) operators
+// Wenn das Vergleichobjekt größer ist, ist diese Bedingung richtig.
+bool Fahrzeug::operator<(const Fahrzeug& andere)const{
+	if(this->getGesamtstrecke() < andere.getGesamtstrecke()){
+		return true;
+	} else{
+		return false;
+	}
+}
+
+// Überladen des Operators '='
+// Außer ID Attribute, wird alles kopiert und übertragen.
+Fahrzeug& Fahrzeug::operator=(const Fahrzeug& other) {
+	//Kontrolliere ob das Objekt selbst aufruft.
+	if (this == &other) {
+		return *this;
+	}
+
+	this->p_sName = other.getName();
+	this->p_dMaxGeschwindigkeit = other.getMaxGeschwindigkeit();
+	this->p_dGesamtstrecke = other.getGesamtstrecke();
+	this->p_dZeit = other.getZeit();
+	this->p_dGesamtZeit = other.getGesamtZeit();
+
+	return *this;
+}
+
+/*
 // Überladen des Operators '='
 // Außer ID Attribute, wird alles kopiert und übertragen.
 void Fahrzeug::operator=(const Fahrzeug& andere) {
@@ -118,28 +154,5 @@ void Fahrzeug::operator=(const Fahrzeug& andere) {
 		this->p_dGesamtZeit = andere.getGesamtZeit();
 	}
 }
+*/
 
-/*Fahrzeug& operator=(const Fahrzeug& other) {
-	//Kontrolliere ob das Objekt selbst aufruft.
-	if (this == &other) {
-		return *this;
-	}
-
-	this->p_sName = other.p_sName;
-	this->p_dMaxGeschwindigkeit = other.p_dMaxGeschwindigkeit;
-	this->p_dGesamtstrecke = other.p_dGesamtstrecke;
-	this->p_dZeit = other.p_dZeit;
-	this->p_dGesamtZeit = other.p_dGesamtZeit;
-
-	return *this;
-}*/
-
-// Überladen des '<' (kleiner als) operators
-// Wenn das Vergleichobjekt größer ist, ist diese Bedingung richtig.
-bool Fahrzeug::operator<(const Fahrzeug& andere)const{
-	if(this->getGesamtstrecke() < andere.getGesamtstrecke()){
-		return true;
-	} else{
-		return false;
-	}
-}

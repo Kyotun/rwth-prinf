@@ -27,7 +27,7 @@ void vAufgabe_3();
 ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 int main(){
-	vAufgabe_3();
+	vAufgabe_2();
 
 	return 0;
 }
@@ -189,15 +189,18 @@ void vAufgabe_2(){
 	for(dGlobaleZeit = Epsilon; dGlobaleZeit < 10; dGlobaleZeit += Epsilon){
 
 		for(const auto& fahrzeug : fahrzeuge){
+			if((int)dGlobaleZeit % 3 == 0 && dGlobaleZeit >= 3.0){
+				fahrzeug->dTanken();
+			}
 			fahrzeug->vSimulieren();
 			cout << *fahrzeug;
 		}
 
-		if((int)dGlobaleZeit % 3 == 0 && dGlobaleZeit >= 3.0){
+		/*if((int)dGlobaleZeit % 3 == 0 && dGlobaleZeit >= 3.0){
 			for(const auto& fahrzeug : fahrzeuge){
 				fahrzeug->dTanken();
 			}
-		}
+		}*/
 
 	}
 }
@@ -268,12 +271,4 @@ void vAufgabe_3(){
 	delete fahrrad1;
 	delete fahrrad2;
 	delete fahrzeug2;
-}
-
-// Überladung von '<<' (Ausgabe) Operator.
-// Nun können die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
-// einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
-ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug){
-	fahrzeug.vAusgeben(ausgabe);
-	return ausgabe;
 }
