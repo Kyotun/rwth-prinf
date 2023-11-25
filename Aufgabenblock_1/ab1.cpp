@@ -24,13 +24,16 @@ void vAufgabe_1a();
 void vAufgabe_2();
 void vAufgabe_3();
 
-ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug);
-
 int main(){
-	Fahrzeug::vKopf();
+	//vAufgabe_1();
+	//vAufgabe_1a();
+	//vAufgabe_2();
+	//vAufgabe_3();
 
 	return 0;
 }
+
+
 
 void vAufgabe_1(){
 	Fahrzeug fahrrad1("fahrrad1", 25.3);
@@ -49,8 +52,8 @@ void vAufgabe_1(){
 
 	//In einer unique vector darf nur die Unique-Pointers speichert werden.
 	vector<unique_ptr<Fahrzeug>> vectorFahrzeuge;
-	vectorFahrzeuge.push_back(move(fahrzeug1));
-	vectorFahrzeuge.push_back(move(fahrzeug2));
+	vectorFahrzeuge.push_back(std::move(fahrzeug1));
+	vectorFahrzeuge.push_back(std::move(fahrzeug2));
 	//fahrzeug1 und fahrzeug2 werden nun geloescht und in der Vektor gespeichert.
 
 	//Diese Zeilen würden error ausgeben.
@@ -61,6 +64,7 @@ void vAufgabe_1(){
 	vectorFahrzeuge.push_back(fahrzeug_s);
 	*/
 
+	// Lösche den Intahl des Vektors. Die Objekte werden durch der Destruktor gelöscht.
 	vectorFahrzeuge.clear();
 
 
@@ -76,27 +80,27 @@ void vAufgabe_1(){
 	cout << "Vor dem Speichern des Objekts, Count von fahrzeug4: " << fahrzeug4.use_count() << endl;
 	vector<shared_ptr<Fahrzeug>> vectorSharedFahrzeuge;
 	vectorSharedFahrzeuge.push_back(fahrzeug3);
-	vectorSharedFahrzeuge.push_back(move(fahrzeug4));
+	vectorSharedFahrzeuge.push_back(std::move(fahrzeug4));
 	cout << "Nach dem Speichern des Objekts, Count von fahrzeug3: " << fahrzeug3.use_count() << endl;
 	cout << "Nach dem Speichern des Objekts, Count von fahrzeug4: " << fahrzeug4.use_count() << endl << endl;
 	vectorSharedFahrzeuge.clear();
 }
 
 
-// Lass Benutzer Eigenschaften der 3 Objekte eingeben.
-// Erzeuge die Objekte(im Smart-Pointer Format) nach den gegebenen Eigenschaften.
-// Speichere diese Objekte in einer Unique(Smart Pointer Typ) Vektor
-// Simuliere diese Objekte und gibt die Eigenschaften dieser Objekte in jeder Zeittakt aufm Bildschirm aus.
+
 void vAufgabe_1a(){
 
 	double dStunden = 0.0;
-	cout << "Bitte geben Sie die Simulationzeit in Studen ein: ";
+	// Lese die gewünschte Simulationzeit ein.(Benutzerfreundlciher)
+	cout << "Bitte geben Sie die Simulationzeit in Stunden ein: ";
 	cin >> dStunden;
 	double Epsilon = 0.3;
 	double dMaxGeschwindigkeit = 0.0;
 	string sName = "";
 
 
+	// Lass Benutzer Eigenschaften der 3 Objekte eingeben.
+	// Erzeuge die Objekte(im Smart-Pointer Format) nach den gegebenen Eigenschaften.
 	cout << "Geben Sie bitte den Namen und MaxGeschwindigkeit des erstes Fahrzeuges:" << endl;
 	cin >> sName;
 	cin >> dMaxGeschwindigkeit;
@@ -112,43 +116,44 @@ void vAufgabe_1a(){
 	cin >> dMaxGeschwindigkeit;
 	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
+	// Speichere diese Objekte, die von der Smart-Pointern gezeigt werden, in einer Unique Vektor
+	// Da die Unique Pointers in einer Unique-Vektor gespeichert werden dürfen.
 	vector<unique_ptr<Fahrzeug>>fahrzeuge;
 	fahrzeuge.push_back(std::move(fahrzeug1));
 	fahrzeuge.push_back(std::move(fahrzeug2));
 	fahrzeuge.push_back(std::move(fahrzeug3));
 
+	// Simuliere diese Objekte und gibt die Eigenschaften dieser Objekte in jeder Zeittakt aufm Bildschirm aus.
 	Fahrzeug::vKopf();
-
 	for(dGlobaleZeit = Epsilon; dGlobaleZeit < dStunden; dGlobaleZeit += Epsilon){
 		for(const auto& fahrzeug: fahrzeuge){
 			fahrzeug->vSimulieren();
 			cout << *fahrzeug << endl;
 		}
-
 	}
 
 }
 
-// Fragt nach dem Benutzer, wie viele Anzahl der Objekte er erzeugen will.
-// Erzeuge die Objekte mit der gegebenen Eigenschaften und nach gegebenen Typen.
-// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
+
+
 void vAufgabe_2(){
 	int iPkwAnzahl, iFahrradAnzahl;
 
 	string sName = "";
 	double dGeschwindigkeit = 0.0;
-	double Epsilon = 0.3;
 	double dVerbrauch = 0.0;
 	string sTankVolumen = "";
 
 	vector<unique_ptr<Fahrzeug>> fahrzeuge;
 
+	// Fragt nach dem Benutzer, wie viele Anzahl der Objekte er erzeugen will.
 	cout << "Wie viele PKWs möchten Sie erstellen?" << endl;
 	cin >> iPkwAnzahl;
 
 	cout << "Wie viele Fahrräder möchten Sie erstellen?" << endl;
 	cin >> iFahrradAnzahl;
 
+	// Erzeuge die Objekte mit der gegebenen Eigenschaften und nach gegebenen Typen.
 	cout << "Bitte geben Sie jetzt die Eigenschaften der PKWs vom Ersten bis Letzem ein.\n";
 	for(int i = 0; i < iPkwAnzahl; i++){
 		cout << "1) Name: ";
@@ -173,6 +178,7 @@ void vAufgabe_2(){
 		}
 	}
 
+	// Erzeuge die Objekte mit der gegebenen Eigenschaften und nach gegebenen Typen.
 	cout << "Bitte geben Sie nun die Eigenschaften der Fahrräder vom Ersten bis Letzem ein.\n";
 	for(int j = 0; j < iFahrradAnzahl; j++){
 		cout << "1) Name: ";
@@ -185,33 +191,30 @@ void vAufgabe_2(){
 		fahrzeuge.push_back(std::move(fahrrad));
 	}
 
+
+	double dTankZeit = 3.0; // In jeder 3 Stunden sollen die PKWs getankt werden.
+	double Epsilon = 0.247; // Zeittakt.
+	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = Epsilon; dGlobaleZeit < 10; dGlobaleZeit += Epsilon){
-
 		for(const auto& fahrzeug : fahrzeuge){
-			if((int)dGlobaleZeit % 3 == 0 && dGlobaleZeit >= 3.0){
-				fahrzeug->dTanken();
-			}
-			fahrzeug->vSimulieren();
 			cout << *fahrzeug;
-		}
-
-		/*if((int)dGlobaleZeit % 3 == 0 && dGlobaleZeit >= 3.0){
-			for(const auto& fahrzeug : fahrzeuge){
+			fahrzeug->vSimulieren();
+			if(fmod(dGlobaleZeit,dTankZeit)<Epsilon){
 				fahrzeug->dTanken();
 			}
-		}*/
-
+		}
 	}
+
 }
 
 
-//Erzeuge einige Fahrzeuge/PKWs und Fahrräder Objekte.
-//Beachte der operator< und operator=
+
 void vAufgabe_3(){
-	//Unterschied zwischen ptr Objekt und nicht ptr Objekt zu beachten.
+	//Unterschied zwischen ptr Objekt(fahrrad1, fahrrad2, fahrzeug2) und nicht ptr Objekt(pkw1, pkw2) zu beachten.
 	//Es ist nicht gut, traditionaller Pointer zu nutzen. Lieber kann man smart Pointers benutzen.
 
+	//Erzeuge einige Fahrzeuge/PKWs und Fahrräder Objekte.
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1", 200.3);
 	Fahrrad* fahrrad1 = new Fahrrad("fahrrad1", 25.3);
 	Fahrrad* fahrrad2 = new Fahrrad("fahrrad2", 22.9);
@@ -219,6 +222,7 @@ void vAufgabe_3(){
 	PKW pkw2("pkw2", 100.5, 8, 32.5);
 	Fahrzeug* fahrzeug2 = new Fahrzeug("fahrzeug2", 88.3);
 
+	// Gibt die Eigenschaften dieser Objekte aufm Bildschrim aus.
 	Fahrzeug::vKopf();
 	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
@@ -227,9 +231,11 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
+	// Set die Gesamtstrecke von zwei PKWs, um das Verhealtnis des überladenden operator< beobachten zu können.
 	pkw1.setGesamtstrecke(100);
 	pkw2.setGesamtstrecke(200);
 
+	// Gibt die Eigenschaften dieser Objekte aufm Bildschrim aus.
 	Fahrzeug::vKopf();
 	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
@@ -238,16 +244,20 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
+	//Beachte der operator<
 	if(pkw1 < pkw2){
 		cout << "\nGesamtstrecke von pkw1: " << pkw1.getGesamtstrecke() << endl;
 		cout << "GesamStstrecke von pkw2: " << pkw2.getGesamtstrecke() << endl;
 		cout << "Bedingung war pkw1 < pkw2. Die Bedingung wurde erfüllt und diese Zeile ist im If-Block\n" << endl;
 	}
 
+	// Beachte der operator=
+	// Da pkw1 und pkw1 Objekte sind, können die alle Eigenschaften außer ID übertragen werden.
 	cout << "Operation: pkw1=pkw2" << endl << endl;
 	pkw1 = pkw2;
 
 
+	// Gibt die Eigenschaften dieser Objekte aufm Bildschrim aus.
 	Fahrzeug::vKopf();
 	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
@@ -260,6 +270,7 @@ void vAufgabe_3(){
 	cout << "Operation: fahrrad1=fahrrad2\n" << endl;
 	fahrrad1 = fahrrad2;
 
+	// Gibt die Eigenschaften dieser Objekte aufm Bildschrim aus.
 	Fahrzeug::vKopf();
 	cout << *fahrzeug1 << endl << endl;
 	cout << *fahrrad1 << endl;
@@ -268,6 +279,7 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
+	// Löschen der dynamischen Objekte(Pointers, um von der undefinierten Verhealtnissen vermeiden zu können.)
 	delete fahrrad1;
 	delete fahrrad2;
 	delete fahrzeug2;

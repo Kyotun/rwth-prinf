@@ -75,10 +75,10 @@ void Fahrzeug::vAusgeben() const{
 // Kopf Funktion wird vor der Funktion Ausgeben aufgerufen,
 // damit ist die Ausgaben(Eigenschaften der Objekten) besser und deutlich zu sehen.
 void Fahrzeug::vKopf(){
-	cout << resetiosflags(ios::adjustfield)
+	cout << endl << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
 		 << setw(8) << "ID"
-		 << setw(10) << "Name"
+		 << setw(15) << "Name"
 		 << setiosflags(ios::right)
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"

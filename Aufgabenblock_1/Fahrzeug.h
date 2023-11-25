@@ -75,6 +75,8 @@ protected:
 	const int p_iID = ++p_iMaxID;
 
 private:
+	// Inline = To be able to initialize
+	// const != cause we want to increment ID value. Cannot assign the const to a const.
 	static inline int p_iMaxID = 0;
 
 };
