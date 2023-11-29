@@ -23,66 +23,105 @@ void vAufgabe_1();
 void vAufgabe_1a();
 void vAufgabe_2();
 void vAufgabe_3();
+void vAufgabe_AB1();
 
 int main(){
-	//vAufgabe_1();
-	//vAufgabe_1a();
-	//vAufgabe_2();
-	//vAufgabe_3();
-
+//	vAufgabe_1();
+//	vAufgabe_1a();
+//	vAufgabe_2();
+//	vAufgabe_3();
+//	vAufgabe_AB1();
 	return 0;
 }
 
 
 
 void vAufgabe_1(){
+	// Statisches Erzeugen eines Elements
 	Fahrzeug fahrrad1("fahrrad1", 25.3);
+
+	// Dynamisch erzeugtes Element
 	Fahrzeug* fahrrad2 = new Fahrzeug("fahrrad2(p)", 30.9);
+
+	// Loeschen des dynamisch erzeugteten Elements
 	delete fahrrad2;
 
+	// Erzeugen der Smart Pointern
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1(up)", 33.3);
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("fahrzeug2(up)", 29.7);
 	shared_ptr<Fahrzeug> fahrzeug3 = make_shared<Fahrzeug>("fahrzeug3(sp)", 22.5);
-	shared_ptr<Fahrzeug> fahrzeug4 = make_shared<Fahrzeug>("fahrzeug4(sp)", 19.1);
+	shared_ptr<Fahrzeug> fahrzeug4 = make_shared<PKW>("fahrzeug4(sp)", 19.1);
 	cout << "\nVor dem Erzeugen des neues Objekts(Shared-Ptr) durch die Zuweisung, Count von fahrzeug4: " << fahrzeug4.use_count() << endl;
-	shared_ptr<Fahrzeug> fahrzeug_s = fahrzeug4;
-	cout << "Nach dem Erzeugen des neues Objekts(Shared-Ptr) durch die Zuweisung, Count von fahrzeug4: " << fahrzeug4.use_count() << endl << endl;
 
+	// Speichern des Objekts, das vom fahrzeug4 shared ptr gezeigt wird, im Shared-Ptr fahrzeug_s
+	shared_ptr<Fahrzeug> fahrzeug_s = fahrzeug4;
+	cout << "Nach dem Erzeugen des neues Objekts(Shared-Ptr) durch die Zuweisung, Count von fahrzeug4: " << fahrzeug_s.use_count() << endl << endl;
+
+	// Error: Unique-Ptr darf nicht zugewiesen werden.
 	//unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
 
-	//In einer unique vector darf nur die Unique-Pointers speichert werden.
+	cout << "Vor dem Speichern der Unique-Ptrs in der Unique-Vector:" << endl;
+	cout << *fahrzeug1 << endl;
+	cout << *fahrzeug2 << endl << endl;
+
+
+	//In einer Unique-Vektor dürfen nur die Objekte, die von Unique-Pointers gezeigt werden, gespeichert werden.
+	//Da andernsfall würde das Objekt durch zwei Unique-Ptrs gleichzeigit angezeigt werden.
 	vector<unique_ptr<Fahrzeug>> vectorFahrzeuge;
 	vectorFahrzeuge.push_back(std::move(fahrzeug1));
 	vectorFahrzeuge.push_back(std::move(fahrzeug2));
-	//fahrzeug1 und fahrzeug2 werden nun geloescht und in der Vektor gespeichert.
 
-	//Diese Zeilen würden error ausgeben.
-	/*
-	vectorFahrzeuge.push_back(fahrzeug1);
-	vectorFahrzeuge.push_back(fahrzeug3);
-	vectorFahrzeuge.push_back(fahrzeug4);
-	vectorFahrzeuge.push_back(fahrzeug_s);
-	*/
 
-	// Lösche den Intahl des Vektors. Die Objekte werden durch der Destruktor gelöscht.
+	// Kompilier weist diese Unique-Ptrs nach dem Speichern kein Speichernpplatz mehr zu.
+	// Aber Sie existieren noch. Nur zeigen ihre Zeigern auf eine leere.
+	cout << "Nach dem Speichern der Unique-Ptrs in der Unique-Vector:" << endl;
+	cout << "Fahrzeug1: " <<fahrzeug1 << endl;
+	cout << "Fahrzeug2: " <<fahrzeug2 << endl << endl;
+
+
+	//cout << *fahrzeug1 << endl; -> Nach dieser Zeile dürfen die andere Code nicht gezeigt werden.
+	cout << "Objekte aus der Unique-Vector: " << endl;
+	cout << *vectorFahrzeuge[0] << endl; // -> Fahrzeug1 Objekt.
+	cout << *vectorFahrzeuge[1] << endl << endl; // -> Fahrzeug2 Objekt.
+
+
+//	Diese Zeilen würden error ausgeben.
+//	vectorFahrzeuge.push_back(fahrzeug1);
+//	vectorFahrzeuge.push_back(fahrzeug3);
+//	vectorFahrzeuge.push_back(fahrzeug4);
+//	vectorFahrzeuge.push_back(fahrzeug_s);
+
+
+
+
+	// Loesche den Intahl des Vektors. Die Objekte werden durch der Destruktor gelöscht.
 	vectorFahrzeuge.clear();
 
 
-
-	// Count von fahrzeug3 wird sich erhöhen, weil ohne move Funktion die Objekte nicht verschoben werden können.
+	// Count von fahrzeug3 wird sich erhöhen, weil ohne move Funktion die Ptrs Ihren Besitz aufm Objekt nicht verlieren.
 	// Deswegen gewinnt dieses Objekt noch einen Pointer.
-	// Mit "Count" wird gemeint, von wie viele Pointers dieses Objekt gezeigt wird?
+	// Mit "Count" wird gemeint, von wie viele Pointers dieses Objekt gezeigt wird.
 
-	// Es gibt kein fahrzeug4 Pointer Objekt mehr,
-	// da es geloescht und das Objekt, das vom Pointer gezeigt wurde, nun im Shared_Ptr Vektor gespeichert wurde.
-
+	// Mit move Funktion verliert der Zeiger seinen Besitz aufm Objekt.
+	// Der Besitzsrecht wird aufm neuen Zeiger übertragen, der eigentlich eine Vektor ist.
+	// Shared-Ptr Fahrzeug4 zeigt nun auf die Leere.
 	cout << "\nVor dem Speichern des Objekts, Count von fahrzeug3: " << fahrzeug3.use_count() << endl;
-	cout << "Vor dem Speichern des Objekts, Count von fahrzeug4: " << fahrzeug4.use_count() << endl;
+	cout << "Vor dem Speichern des Objekts mit move(), Count von fahrzeug4: " << fahrzeug4.use_count() << endl;
+
 	vector<shared_ptr<Fahrzeug>> vectorSharedFahrzeuge;
 	vectorSharedFahrzeuge.push_back(fahrzeug3);
 	vectorSharedFahrzeuge.push_back(std::move(fahrzeug4));
+
 	cout << "Nach dem Speichern des Objekts, Count von fahrzeug3: " << fahrzeug3.use_count() << endl;
 	cout << "Nach dem Speichern des Objekts, Count von fahrzeug4: " << fahrzeug4.use_count() << endl << endl;
+
+
+	// Hier kann man eine Unique-Ptr in einer Shared-Vector speichern. Da die Shared-Typ flexibler als Unique-Typ ist.
+	// Bei Unique-Ptr & Unique-Vector war das Gegenteil.
+	cout << endl << "Erzeugen einer Unique-Ptr." << endl;
+	unique_ptr<Fahrzeug> fahrzeug5 = make_unique<Fahrzeug>("fahrzeug5(up)", 35.7);
+	vectorSharedFahrzeuge.push_back(std::move(fahrzeug5));
+	cout << "Unique-Ptr wird in Shared-Vektor verschoben." << endl << endl;
 	vectorSharedFahrzeuge.clear();
 }
 
@@ -94,7 +133,6 @@ void vAufgabe_1a(){
 	// Lese die gewünschte Simulationzeit ein.(Benutzerfreundlciher)
 	cout << "Bitte geben Sie die Simulationzeit in Stunden ein: ";
 	cin >> dStunden;
-	double Epsilon = 0.3;
 	double dMaxGeschwindigkeit = 0.0;
 	string sName = "";
 
@@ -102,18 +140,15 @@ void vAufgabe_1a(){
 	// Lass Benutzer Eigenschaften der 3 Objekte eingeben.
 	// Erzeuge die Objekte(im Smart-Pointer Format) nach den gegebenen Eigenschaften.
 	cout << "Geben Sie bitte den Namen und MaxGeschwindigkeit des erstes Fahrzeuges:" << endl;
-	cin >> sName;
-	cin >> dMaxGeschwindigkeit;
+	cin >> sName >> dMaxGeschwindigkeit;
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
 	cout << "Geben Sie bitte den Namen und MaxGeschwindigkeit des zweites Fahrzeuges" << endl;
-	cin >> sName;
-	cin >> dMaxGeschwindigkeit;
+	cin >> sName >> dMaxGeschwindigkeit;
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
 	cout << "Geben Sie bitte den Namen und MaxGeschwindigkeit des drittes Fahrzeuges" << endl;
-	cin >> sName;
-	cin >> dMaxGeschwindigkeit;
+	cin >> sName >> dMaxGeschwindigkeit;
 	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
 	// Speichere diese Objekte, die von der Smart-Pointern gezeigt werden, in einer Unique Vektor
@@ -123,12 +158,17 @@ void vAufgabe_1a(){
 	fahrzeuge.push_back(std::move(fahrzeug2));
 	fahrzeuge.push_back(std::move(fahrzeug3));
 
+	double dEpsilon = 0.0;
+	// Einlesen der Zeittakt vom Benutzer.
+	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
+
 	// Simuliere diese Objekte und gibt die Eigenschaften dieser Objekte in jeder Zeittakt aufm Bildschirm aus.
 	Fahrzeug::vKopf();
-	for(dGlobaleZeit = Epsilon; dGlobaleZeit < dStunden; dGlobaleZeit += Epsilon){
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < dStunden; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug: fahrzeuge){
-			fahrzeug->vSimulieren();
 			cout << *fahrzeug << endl;
+			fahrzeug->vSimulieren();
 		}
 	}
 
@@ -147,13 +187,14 @@ void vAufgabe_2(){
 	vector<unique_ptr<Fahrzeug>> fahrzeuge;
 
 	// Fragt nach dem Benutzer, wie viele Anzahl der Objekte er erzeugen will.
+	// Einlesen der Anzahlen von PKWs und Fahrräder
 	cout << "Wie viele PKWs möchten Sie erstellen?" << endl;
 	cin >> iPkwAnzahl;
 
 	cout << "Wie viele Fahrräder möchten Sie erstellen?" << endl;
 	cin >> iFahrradAnzahl;
 
-	// Erzeuge die Objekte mit der gegebenen Eigenschaften und nach gegebenen Typen.
+	// Erzeuge die Objekte mit der eingelesenen Eigenschaften und nach gegebenen Typen.
 	cout << "Bitte geben Sie jetzt die Eigenschaften der PKWs vom Ersten bis Letzem ein.\n";
 	for(int i = 0; i < iPkwAnzahl; i++){
 		cout << "1) Name: ";
@@ -178,7 +219,7 @@ void vAufgabe_2(){
 		}
 	}
 
-	// Erzeuge die Objekte mit der gegebenen Eigenschaften und nach gegebenen Typen.
+	// Erzeuge die Objekte mit der eingelesene Eigenschaften nach gegebenen Typen.
 	cout << "Bitte geben Sie nun die Eigenschaften der Fahrräder vom Ersten bis Letzem ein.\n";
 	for(int j = 0; j < iFahrradAnzahl; j++){
 		cout << "1) Name: ";
@@ -191,21 +232,27 @@ void vAufgabe_2(){
 		fahrzeuge.push_back(std::move(fahrrad));
 	}
 
+	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+	double dTankZeit = 0.0;
+	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+	cin >> dTankZeit;
 
-	double dTankZeit = 3.0; // In jeder 3 Stunden sollen die PKWs getankt werden.
-	double Epsilon = 0.247; // Zeittakt.
+	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
+	double dEpsilon = 0.0; // Zeittakt.
+	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
+
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
-	for(dGlobaleZeit = Epsilon; dGlobaleZeit < 10; dGlobaleZeit += Epsilon){
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 10; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : fahrzeuge){
 			cout << *fahrzeug;
 			fahrzeug->vSimulieren();
-			if(fmod(dGlobaleZeit,dTankZeit)<Epsilon){
+			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 				fahrzeug->dTanken();
 			}
 		}
 	}
-
 }
 
 
@@ -284,3 +331,37 @@ void vAufgabe_3(){
 	delete fahrrad2;
 	delete fahrzeug2;
 }
+
+//void vAufgabe_AB1() {
+//
+//    int l = 0; // Laufindex für gezielte AUsgabe
+//    vector<int> ausgabe{15};
+//    double dTakt = 0.3;
+//
+//    std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
+//    vecFahrzeuge.push_back(make_unique <PKW>("Audi", 229, 9.6));
+//    vecFahrzeuge.push_back(make_unique <Fahrrad>("BMX", 24.7));
+//    for (dGlobaleZeit = 0; dGlobaleZeit < 10; dGlobaleZeit += dTakt)
+//    {
+//        auto itL = find(ausgabe.begin(), ausgabe.end(), l);
+//        if (itL != ausgabe.end()) {
+//            std::cout << std::endl << l <<  " Globalezeit = " << dGlobaleZeit << std::endl;
+//            Fahrzeug::vKopf();
+//        }
+//
+//        for (int i = 0; i < (int) vecFahrzeuge.size(); i++)
+//        {
+//            vecFahrzeuge[i]->vSimulieren();
+//            if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
+//            {
+//                vecFahrzeuge[i]->dTanken();
+//            }
+//            if (itL != ausgabe.end()) {
+//                std::cout << *vecFahrzeuge[i] << endl;
+//            }
+//        }
+//        l++;
+//    }
+//    char c;
+//    std::cin >> c;
+//}

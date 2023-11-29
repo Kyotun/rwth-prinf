@@ -11,6 +11,8 @@
 #include <iomanip>
 #include <string>
 #include <limits>
+#include <vector>
+#include <cmath>
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -46,7 +48,7 @@ public:
 
 	//Double
 	virtual double dGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}; // @suppress("No return")
-	virtual double dTanken(double dMenge = 1.0){return 0.0;};
+	virtual double dTanken(double dMenge = std::numeric_limits<double>::infinity()){return 0.0;};
 	virtual double dMehrfachMultiplikation(double base, double konstant, int mal) const{return 0.0;}
 
 	//Void&Print Funktionen
@@ -86,6 +88,7 @@ private:
 // nicht erreichen kann.
 // Also keine friend Dekleration.
 // Aber getters werden benötigt, um die private bzw. protected Bereiche erreichen zu können.
+
 std::ostream& operator<<(std::ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 #endif /* FAHRZEUG_H_ */

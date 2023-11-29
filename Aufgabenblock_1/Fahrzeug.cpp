@@ -10,6 +10,8 @@
 #include <iomanip>
 #include <string>
 #include <limits>
+#include <vector>
+#include <cmath>
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -51,6 +53,7 @@ void Fahrzeug::vAusgeben(ostream& ausgabe) const{
 			<< setprecision(2) << fixed
 			<< setw(8) << getID()
 			<< setw(15) << getName()
+			<< resetiosflags(ios::left)
 			<< setiosflags(ios::right)
 			<< setw(20) << getMaxGeschwindigkeit()
 			<< setw(20) << getGesamtstrecke()
@@ -66,6 +69,7 @@ void Fahrzeug::vAusgeben() const{
 		 << setprecision(2) << fixed
 		 << setw(8) << getID()
 	     << setw(15) << getName()
+		 << resetiosflags(ios::left)
 		 << setiosflags(ios::right)
 		 << setw(20) << getMaxGeschwindigkeit()
 		 << setw(20) << getGesamtstrecke()
@@ -79,6 +83,7 @@ void Fahrzeug::vKopf(){
 		 << setiosflags(ios::left)
 		 << setw(8) << "ID"
 		 << setw(15) << "Name"
+		 << resetiosflags(ios::left)
 		 << setiosflags(ios::right)
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"
@@ -86,7 +91,7 @@ void Fahrzeug::vKopf(){
 		 << setw(20) << "Gesamtverbrauch"
 		 << setw(15) << "Tankinhalt" << endl;
 
-	cout << setw(8+10+20*4+15) << setfill('-') << '-' << setfill(' ') << endl;
+	cout << setw(8+15+20*4+15) << setfill('-') << '-' << setfill(' ') << endl;
 
 }
 
@@ -96,6 +101,7 @@ void Fahrzeug::vSimulieren(){
 	// Zeitdifferenz ist der Differenz zwischen t(t) und t(t+1)
 	if(p_dZeit == dGlobaleZeit){
 		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
+		return;
 	}else{
 		double dZeitdifferenz = dGlobaleZeit - p_dZeit;
 		p_dGesamtZeit += dZeitdifferenz;
@@ -108,6 +114,7 @@ void Fahrzeug::vSimulieren(){
 // Überladung von '<<' (Ausgabe) Operator.
 // Nun können die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
 // einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
+
 ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug){
 	fahrzeug.vAusgeben(ausgabe);
 	return ausgabe;

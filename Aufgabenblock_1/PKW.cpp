@@ -10,6 +10,8 @@
 #include <iomanip>
 #include <string>
 #include <limits>
+#include <vector>
+#include <cmath>
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -51,13 +53,19 @@ double PKW::getTankinhalt() const{
 // die aber noch wieder gefüllt werden sollen, um weitersimuliert werden zu können.
 double PKW::dTanken(double dMenge){
 
-	if(!(0.0 <= dMenge && dMenge <= 1.0)){
-		cout << "Die getankte Menge soll zwischen 0 und 1 legen." << endl;
+	if(dMenge > p_dTankvolumen){
+		dMenge = p_dTankvolumen;
+		cout << "Der Tankvolumenlimit ist überschritten, der Tank ist voll!" << endl;
+	}
+	if(0.0 > dMenge){
+		cout << "Die getankte Menge darf nicht kleiner als 0 sein." << endl;
 		return 0.0;
 	}
 
+	double dTankinhaltVorher = p_dTankinhalt;
 	p_dTankinhalt = dMenge;
-	return p_dTankvolumen*p_dTankinhalt;
+
+	return (p_dTankinhalt - dTankinhaltVorher);
 }
 
 // Simulationfunktion von PKWs.
@@ -77,11 +85,11 @@ void PKW::vSimulieren() {
 	double dGesamtstreckeVorher = p_dGesamtstrecke;
 	Fahrzeug::vSimulieren();
 	double dVerbrauchtTankVolumen = (p_dGesamtstrecke - dGesamtstreckeVorher)*(p_dVerbrauch/100);
-	double dAktuellTankVolumen = (p_dTankvolumen*p_dTankinhalt) - dVerbrauchtTankVolumen;
+	double dAktuellTankVolumen = p_dTankinhalt - dVerbrauchtTankVolumen;
 	if(dAktuellTankVolumen < 0){
 		dAktuellTankVolumen = 0;
 	}
-	p_dTankinhalt = dAktuellTankVolumen / p_dTankvolumen;
+	p_dTankinhalt = dAktuellTankVolumen;
 }
 
 // Erbt die Ausgebenfunktion von der Fahrzeugklasse und f

@@ -13,6 +13,9 @@
 #include <iomanip>
 #include <string>
 #include <limits>
+#include <vector>
+#include <cmath>
+
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -33,9 +36,11 @@ class PKW : public Fahrzeug {
 		//Getter
 		double getGesamtVerbrauch() const override;
 		double getTankinhalt() const override;
+		double getTankVolumen(){return p_dTankvolumen;};
+		double getVerbrauch(){return p_dVerbrauch;};
 
 		//Double
-		double dTanken(double dMenge = 1.0) override;
+		double dTanken(double dMenge = std::numeric_limits<double>::infinity()) override;
 
 		//Void&Print Funktionen
 		void vSimulieren() override;
@@ -45,7 +50,7 @@ class PKW : public Fahrzeug {
 	private:
 		double p_dVerbrauch = 0.0; // Liter / 100 km
 		double p_dTankvolumen = 55.0; // Default = 55 Liter
-		double p_dTankinhalt = 0.5; // 0.5 = 27.5 Liter
+		double p_dTankinhalt = p_dTankvolumen / 2; // Default = 27.5 Liter
 };
 
 #endif /* PKW_H_ */
