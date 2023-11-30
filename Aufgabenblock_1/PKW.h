@@ -36,7 +36,7 @@ class PKW : public Fahrzeug {
 		//Getter
 		double getGesamtVerbrauch() const override;
 		double getTankinhalt() const override;
-		double getTankVolumen(){return p_dTankvolumen;};
+		double getTankvolumen() const override{return p_dTankvolumen;};
 		double getVerbrauch(){return p_dVerbrauch;};
 
 		//Double

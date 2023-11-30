@@ -39,6 +39,7 @@ public:
 	int getID() const {return p_iID;};
 	virtual double getGesamtVerbrauch() const {return 0.0;};
 	virtual double getTankinhalt() const {return 0.0;};
+	virtual double getTankvolumen() const {return 0.0;};
 
 	//Setters
 	void setName(string p_sName){ this->p_sName = p_sName;};

@@ -29,7 +29,7 @@ int main(){
 //	vAufgabe_1();
 //	vAufgabe_1a();
 //	vAufgabe_2();
-//	vAufgabe_3();
+	vAufgabe_3();
 //	vAufgabe_AB1();
 	return 0;
 }
@@ -61,8 +61,12 @@ void vAufgabe_1(){
 	//unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
 
 	cout << "Vor dem Speichern der Unique-Ptrs in der Unique-Vector:" << endl;
-	cout << *fahrzeug1 << endl;
+	cout << *fahrzeug1 << endl; // das Objekt
 	cout << *fahrzeug2 << endl << endl;
+	cout << "Fahrzeug1: " << fahrzeug1 << endl;  // Adresse vom Objekt
+	cout << "Fahrzeug2: " << fahrzeug2 << endl << endl;
+	cout << "Fahrzeug1&: " << &fahrzeug1 << endl; // Adresse vom Pointer
+	cout << "Fahrzeug2&: " << &fahrzeug2 << endl << endl;
 
 
 	//In einer Unique-Vektor dürfen nur die Objekte, die von Unique-Pointers gezeigt werden, gespeichert werden.
@@ -75,8 +79,8 @@ void vAufgabe_1(){
 	// Kompilier weist diese Unique-Ptrs nach dem Speichern kein Speichernpplatz mehr zu.
 	// Aber Sie existieren noch. Nur zeigen ihre Zeigern auf eine leere.
 	cout << "Nach dem Speichern der Unique-Ptrs in der Unique-Vector:" << endl;
-	cout << "Fahrzeug1: " <<fahrzeug1 << endl;
-	cout << "Fahrzeug2: " <<fahrzeug2 << endl << endl;
+	cout << "Fahrzeug1: " << fahrzeug1 << endl;
+	cout << "Fahrzeug2: " << fahrzeug2 << endl << endl;
 
 
 	//cout << *fahrzeug1 << endl; -> Nach dieser Zeile dürfen die andere Code nicht gezeigt werden.
@@ -249,7 +253,7 @@ void vAufgabe_2(){
 			cout << *fahrzeug;
 			fahrzeug->vSimulieren();
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
-				fahrzeug->dTanken();
+				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 			}
 		}
 	}
@@ -303,6 +307,9 @@ void vAufgabe_3(){
 	cout << "Operation: pkw1=pkw2" << endl << endl;
 	pkw1 = pkw2;
 
+	cout << "Adresse von pkw1: " << &pkw1 << endl;
+	cout << "Adresse von pkw2: " << &pkw2 << endl;
+
 
 	// Gibt die Eigenschaften dieser Objekte aufm Bildschrim aus.
 	Fahrzeug::vKopf();
@@ -316,6 +323,9 @@ void vAufgabe_3(){
 	//Da die Fahrräder Pointers sind, kann die Übertragung der IDs nicht vermieden werden.
 	cout << "Operation: fahrrad1=fahrrad2\n" << endl;
 	fahrrad1 = fahrrad2;
+
+	cout << fahrrad1 << endl;
+	cout << fahrrad2 << endl;
 
 	// Gibt die Eigenschaften dieser Objekte aufm Bildschrim aus.
 	Fahrzeug::vKopf();
@@ -332,36 +342,36 @@ void vAufgabe_3(){
 	delete fahrzeug2;
 }
 
-//void vAufgabe_AB1() {
-//
-//    int l = 0; // Laufindex für gezielte AUsgabe
-//    vector<int> ausgabe{15};
-//    double dTakt = 0.3;
-//
-//    std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
-//    vecFahrzeuge.push_back(make_unique <PKW>("Audi", 229, 9.6));
-//    vecFahrzeuge.push_back(make_unique <Fahrrad>("BMX", 24.7));
-//    for (dGlobaleZeit = 0; dGlobaleZeit < 10; dGlobaleZeit += dTakt)
-//    {
-//        auto itL = find(ausgabe.begin(), ausgabe.end(), l);
-//        if (itL != ausgabe.end()) {
-//            std::cout << std::endl << l <<  " Globalezeit = " << dGlobaleZeit << std::endl;
-//            Fahrzeug::vKopf();
-//        }
-//
-//        for (int i = 0; i < (int) vecFahrzeuge.size(); i++)
-//        {
-//            vecFahrzeuge[i]->vSimulieren();
-//            if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
-//            {
-//                vecFahrzeuge[i]->dTanken();
-//            }
-//            if (itL != ausgabe.end()) {
-//                std::cout << *vecFahrzeuge[i] << endl;
-//            }
-//        }
-//        l++;
-//    }
-//    char c;
-//    std::cin >> c;
-//}
+void vAufgabe_AB1() {
+
+    int l = 0; // Laufindex für gezielte AUsgabe
+    vector<int> ausgabe{15};
+    double dTakt = 0.3;
+
+    std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
+    vecFahrzeuge.push_back(make_unique <PKW>("Audi", 229, 9.6));
+    vecFahrzeuge.push_back(make_unique <Fahrrad>("BMX", 24.7));
+    for (dGlobaleZeit = 0; dGlobaleZeit < 10; dGlobaleZeit += dTakt)
+    {
+        auto itL = find(ausgabe.begin(), ausgabe.end(), l);
+        if (itL != ausgabe.end()) {
+            std::cout << std::endl << l <<  " Globalezeit = " << dGlobaleZeit << std::endl;
+            Fahrzeug::vKopf();
+        }
+
+        for (int i = 0; i < (int) vecFahrzeuge.size(); i++)
+        {
+            vecFahrzeuge[i]->vSimulieren();
+            if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
+            {
+                vecFahrzeuge[i]->dTanken();
+            }
+            if (itL != ausgabe.end()) {
+                std::cout << *vecFahrzeuge[i] << endl;
+            }
+        }
+        l++;
+    }
+    char c;
+    std::cin >> c;
+}
