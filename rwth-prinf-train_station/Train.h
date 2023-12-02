@@ -23,14 +23,13 @@ class Train
     private:
         static inline int p_iIDCounter = 0;
         shared_ptr<Station> p_pIsAt = nullptr;
+        const int p_iID = p_iIDCounter++;
 
     protected:
         float p_fDelay = 0;
-        const int p_iID = p_iIDCounter++;
 
     public:
         Train() = default;
-        Train(int speed, bool electric);
         virtual ~Train() = default;
 
         virtual void vPrintProperties(ostream& ausgabe) const;
@@ -38,14 +37,9 @@ class Train
 
 };
 
-//#define OPERATOR operator<<
-//
-//std::ostream & OPERATOR(std::ostream& out, const Train& train)
-//{
-//    train.vPrintProperties(out);
-//    return out;
-//}
-//
-//#undef OPERATOR
+
+
+ostream & operator<<(ostream& out, const Train& train);
+
 
 #endif /* TRAIN_STATION_TRAIN_H_ */

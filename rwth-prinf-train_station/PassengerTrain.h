@@ -25,7 +25,7 @@ class PassengerTrain : public Train
         PassengerTrain(int p_iPassengerCounter);
         virtual ~PassengerTrain() = default;
 
-        void vPrintProperties(ostream& ausgabe) const;
+        void vPrintProperties(ostream& ausgabe) const override;
         float fStation(int passengersIn, int passengersOut);
 
     private:

@@ -29,7 +29,7 @@ class FreightTrain : public Train
         FreightTrain(float chargeQuantity, string chargeType);
         virtual ~FreightTrain() = default;
 
-        void vPrintProperties(ostream& ausgabe) const;
+        void vPrintProperties(ostream& ausgabe) const override;
         void vLoadCharge(float amount);
 };
 

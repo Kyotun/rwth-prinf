@@ -25,18 +25,18 @@ void Train::vPrintProperties(ostream& ausgabe) const
 
 void Train::vGoTo(shared_ptr<Station> to)
 {
-	if(p_pIsAt==nullptr)
-	{
-		p_pIsAt = to;
-		cout << "Zug wurde auf " << p_pIsAt->getName() << " gesetzt." << endl;
-	}
-	else if((p_pIsAt->getDestination())->getName() == to->getName())
+	if(p_pIsAt==nullptr || p_pIsAt->isNeighbor(to))
 	{
 		p_pIsAt = to;
 		cout << "Zug ist nach " << p_pIsAt->getName() << " gefahren." << endl;
-	}
-	else
-	{
+	} else{
 		cout << "Der Zug kann nicht nach " << to->getName() << " fahren, das es keine Verbindung gibt." << endl;
 	}
+}
+
+
+ostream & operator<<(ostream& out, const Train& train)
+{
+    train.vPrintProperties(out);
+    return out;
 }
