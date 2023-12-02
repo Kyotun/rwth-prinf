@@ -7,6 +7,7 @@
 
 #include "Train.h"
 #include "Station.h"
+#include "TrainException.h"
 
 #include <memory>
 #include <string>
@@ -30,6 +31,7 @@ void Train::vGoTo(shared_ptr<Station> to)
 		p_pIsAt = to;
 		cout << "Zug ist nach " << p_pIsAt->getName() << " gefahren." << endl;
 	} else{
+		throw TrainException(to);
 		cout << "Der Zug kann nicht nach " << to->getName() << " fahren, das es keine Verbindung gibt." << endl;
 	}
 }
