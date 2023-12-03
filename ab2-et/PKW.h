@@ -23,15 +23,11 @@ extern double dGlobaleZeit;
 class PKW : public Fahrzeug {
 	public:
 		//Konstruktoren
-		PKW() = default;
 		PKW(string p_sName);
 		PKW(string p_sName, double p_dMaxGeschwindigkeit);
 		PKW(double p_dVerbrauch, double p_dTankvolumen = 55.0);
 		PKW(string p_sName, double p_dMaxGeschwindigkeit,
 				double p_dVerbrauch, double p_dTankvolumen = 55.0);
-
-		//Destruktoren
-		virtual ~PKW() = default;
 
 		//Getter
 		double getGesamtVerbrauch() const override;

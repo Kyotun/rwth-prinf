@@ -16,28 +16,12 @@
 using namespace std;
 extern double dGlobaleZeit;
 
-//Standard-Konstruktor
-Fahrzeug::Fahrzeug(){
-	cout << "Ein Fahrzeug wurde mit der ID '" << p_iID
-		 << "' erzeugt." << endl;
-}
-
-// Standard-Destruktor
-Fahrzeug::~Fahrzeug(){
-	cout << "Ein Fahrzeug wurde mit dem Name '" << p_sName
-		 << "' und mit der ID " << p_iID
-		 << " gelöscht." << endl;
-}
-
 // Fahrzeug-Objekt mit dem Name
-Fahrzeug::Fahrzeug(string p_sName): p_sName(p_sName){
-	cout << "Ein Fahrzeug wurde mit dem Name '" << p_sName
-		 << "' und mit der ID " << p_iID
-		 << " erzeugt." << endl;
+Fahrzeug::Fahrzeug(string p_sName): Simulationsobjekt(p_sName){
 }
 
 // Fahrzeug-Objekt Konstruktor mit dem Name und der Geschwindigkeit
-Fahrzeug::Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit): p_sName(p_sName),
+Fahrzeug::Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit): Simulationsobjekt(p_sName),
 		p_dMaxGeschwindigkeit((p_dMaxGeschwindigkeit > 0) ? p_dMaxGeschwindigkeit : 0){
 	cout << "Ein Fahrzeug wurde mit dem Name '" << p_sName
 		 << "', der ID '" << p_iID << "' und der MaxGeschwindigkeit '"
@@ -48,12 +32,9 @@ Fahrzeug::Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit): p_sName(p_sNam
 // Ausgabe Funktion, die zum Ausgeben von der Eigenschaften der Objekten dient.
 // Es reicht nur das Objekt zu cout zu geben.
 void Fahrzeug::vAusgeben(ostream& ausgabe) const{
-	ausgabe << resetiosflags(ios::adjustfield)
-			<< setiosflags(ios::left)
-			<< setprecision(2) << fixed
-			<< setw(8) << getID()
-			<< setw(15) << getName()
-			<< resetiosflags(ios::left)
+
+	Simulationsobjekt::vAusgeben(ausgabe);
+	ausgabe << resetiosflags(ios::left)
 			<< setiosflags(ios::right)
 			<< setw(20) << getMaxGeschwindigkeit()
 			<< setw(20) << getGesamtstrecke()
@@ -64,12 +45,8 @@ void Fahrzeug::vAusgeben(ostream& ausgabe) const{
 // Es ist eine Objektmethode.
 void Fahrzeug::vAusgeben() const{
 
-	cout << resetiosflags(ios::adjustfield)
-		 << setiosflags(ios::left)
-		 << setprecision(2) << fixed
-		 << setw(8) << getID()
-	     << setw(15) << getName()
-		 << resetiosflags(ios::left)
+	Simulationsobjekt::vAusgeben();
+	cout << resetiosflags(ios::left)
 		 << setiosflags(ios::right)
 		 << setw(20) << getMaxGeschwindigkeit()
 		 << setw(20) << getGesamtstrecke()
@@ -134,11 +111,7 @@ bool Fahrzeug::operator<(const Fahrzeug& andere)const{
 // Außer ID Attribute, wird alles kopiert und übertragen.
 Fahrzeug& Fahrzeug::operator=(const Fahrzeug& other) {
 	//Kontrolliere ob das Objekt selbst aufruft.
-	if (this == &other) {
-		return *this;
-	}
-
-	this->p_sName = other.getName();
+	Simulationsobjekt::operator =(other);
 	this->p_dMaxGeschwindigkeit = other.getMaxGeschwindigkeit();
 	this->p_dGesamtstrecke = other.getGesamtstrecke();
 	this->p_dZeit = other.getZeit();

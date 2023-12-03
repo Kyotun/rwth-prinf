@@ -8,6 +8,9 @@
 #include "Fahrzeug.h"
 #include "Fahrrad.h"
 #include "PKW.h"
+#include "Weg.h"
+#include "Simulationsobjekt.h"
+
 
 #include <iostream>
 #include <iomanip>
@@ -29,8 +32,17 @@ int main(){
 //	vAufgabe_1();
 //	vAufgabe_1a();
 //	vAufgabe_2();
-	vAufgabe_3();
+//	vAufgabe_3();
 //	vAufgabe_AB1();
+	Weg weg("weg", 100.5);
+	unique_ptr<Fahrzeug> fahrzeug = make_unique<Fahrzeug>("BMW");
+	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("Porsche");
+	list<unique_ptr<Fahrzeug>> list1;
+
+	list1.push_back(std::move(fahrzeug2));
+	list1.push_back(std::move(fahrzeug));
+	weg.setFahrzeugList(std::move(list1));
+	weg.vAusgeben();
 	return 0;
 }
 

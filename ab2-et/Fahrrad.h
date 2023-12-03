@@ -22,12 +22,8 @@ extern double dGlobaleZeit;
 class Fahrrad : public Fahrzeug {
 	public:
 		//Konstruktoren
-		Fahrrad() = default;
 		Fahrrad(string p_sName);
 		Fahrrad(string p_sName, double p_dMaxGeschwindigkeit);
-
-		//Destruktoren
-		virtual ~Fahrrad() = default;
 
 		//Double
 		double dGeschwindigkeit() const override; // Minimal 12km /h , pro 20km %10 Abnahme

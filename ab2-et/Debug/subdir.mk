@@ -7,18 +7,24 @@ CPP_SRCS += \
 ../Fahrrad.cpp \
 ../Fahrzeug.cpp \
 ../PKW.cpp \
+../Simulationsobjekt.cpp \
+../Weg.cpp \
 ../main.cpp 
 
 CPP_DEPS += \
 ./Fahrrad.d \
 ./Fahrzeug.d \
 ./PKW.d \
+./Simulationsobjekt.d \
+./Weg.d \
 ./main.d 
 
 OBJS += \
 ./Fahrrad.o \
 ./Fahrzeug.o \
 ./PKW.o \
+./Simulationsobjekt.o \
+./Weg.o \
 ./main.o 
 
 
@@ -34,7 +40,7 @@ OBJS += \
 clean: clean--2e-
 
 clean--2e-:
-	-$(RM) ./Fahrrad.d ./Fahrrad.o ./Fahrzeug.d ./Fahrzeug.o ./PKW.d ./PKW.o ./main.d ./main.o
+	-$(RM) ./Fahrrad.d ./Fahrrad.o ./Fahrzeug.d ./Fahrzeug.o ./PKW.d ./PKW.o ./Simulationsobjekt.d ./Simulationsobjekt.o ./Weg.d ./Weg.o ./main.d ./main.o
 
 .PHONY: clean--2e-
 
