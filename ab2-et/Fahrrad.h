@@ -5,19 +5,13 @@
  *      Author: kyotun
  */
 
+#pragma once
+#include "Fahrzeug.h"
+
 #ifndef FAHRRAD_H_
 #define FAHRRAD_H_
 
-#include "Fahrzeug.h"
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
-
 using namespace std;
-extern double dGlobaleZeit;
 
 class Fahrrad : public Fahrzeug {
 	public:
@@ -30,7 +24,7 @@ class Fahrrad : public Fahrzeug {
 
 		//Void&Print
 		void vAusgeben() const override;
-		void vAusgeben(std::ostream& ausgabe) const override;
+		void vAusgeben(ostream& ausgabe) const override;
 		void vSimulieren() override;
 
 	private:

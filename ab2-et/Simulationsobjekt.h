@@ -8,14 +8,9 @@
 #ifndef SIMULATIONSOBJEKT_H_
 #define SIMULATIONSOBJEKT_H_
 
-#include <iostream>
-#include <iomanip>
 #include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
+
 using namespace std;
-extern double dGlobaleZeit;
 
 class Simulationsobjekt{
 public:

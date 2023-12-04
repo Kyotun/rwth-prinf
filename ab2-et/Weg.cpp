@@ -5,6 +5,9 @@
  *      Author: kyotun
  */
 
+#include "Weg.h"
+#include "Fahrzeug.h"
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -14,20 +17,50 @@
 using namespace std;
 extern double dGlobaleZeit;
 
-#include "Weg.h"
 
 Weg::Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit):
 		Simulationsobjekt(p_sName), p_dLaenge(p_dLaenge), p_eTempolimit(p_eTempolimit){}
 
+void Weg::vAusgeben(ostream& ausgabe) const{
+	Simulationsobjekt::vAusgeben(ausgabe);
+	ausgabe << setw(0) << ": "
+			<< setw(15) << getLaenge()
+			<< setw(0) << "( "
+			<< setw(0);
+			getFahrzeuge();
+	ausgabe << ")";
+}
+
 void Weg::vAusgeben() const{
 	Simulationsobjekt::vAusgeben();
-	cout << resetiosflags(ios::left)
-		 << setiosflags(ios::right)
-		 << setw(10) << getLaenge()
-		 << setw(15) << "( ";
+	cout << resetiosflags(ios::adjustfield)
+		 << setiosflags(ios::left)
+		 << setw(10) << ": " << getLaenge()
+		 << setw(10) << "( ";
 			getFahrzeuge();
-	cout << ")" << endl;
+	cout << ")";
+}
 
+void Weg::vKopf(){
+	cout << endl << resetiosflags(ios::adjustfield)
+		 << setiosflags(ios::left)
+		 << setw(5) << "ID"
+		 << setw(15) << "| Name"
+		 << setw(15) << "| Laenge"
+		 << setw(15) << "| Fahrzeuge" << endl;
+
+	cout << setw(8+15*3) << setfill('-') << '-' << setfill(' ') << endl;
+
+}
+
+void Weg::vAnnahme(unique_ptr<Fahrzeug>fahrzeug){
+	fahrzeug->vNeueStrecke(*this);
+	p_pFahrzeuge.push_back(std::move(fahrzeug));
+}
+
+void Weg::vAnnahme(unique_ptr<Fahrzeug>fahrzeug, double dStartZeitpunkt){
+	fahrzeug->vNeueStrecke(*this, dStartZeitpunkt);
+	p_pFahrzeuge.push_front(std::move(fahrzeug));
 }
 
 void Weg::setFahrzeug(unique_ptr<Fahrzeug> fahrzeug){

@@ -4,20 +4,15 @@
  *  Created on: 10.11.2023
  *      Author: kyotun
  */
+#pragma once
+#include <iostream>
+#include "Weg.h"
+#include "Verhalten.h"
 
 #ifndef FAHRZEUG_H_
 #define FAHRZEUG_H_
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
-using namespace std;
 extern double dGlobaleZeit;
-
-#include "Simulationsobjekt.h"
 
 class Fahrzeug : public Simulationsobjekt{
 public:
@@ -50,6 +45,12 @@ public:
 	virtual double dMehrfachMultiplikation(double base, double konstant, int mal) const{return 0.0;}
 
 	//Void&Print Funktionen
+
+		//Fuer fahrendes Fahrzeug
+	void vNeueStrecke(Weg& weg);
+		//Fuer parkendes Fahrzeug
+	void vNeueStrecke(Weg& weg, double dStartZeitpunkt);
+
 	virtual void vAusgeben() const override;
 	virtual void vAusgeben(std::ostream& ausgabe) const override;
 	static void vKopf();
@@ -66,6 +67,14 @@ protected:
 	double p_dMaxGeschwindigkeit = 0.0;
 	double p_dGesamtstrecke = 0.0;
 	double p_dGesamtZeit = 0.0;
+
+	// Speichern auf dem aktuellen Weg zurückgelegte Strecke
+	// Wenn Fahrzeug in einen neuen Weg eintritt, beträgt dieser Wert zu 0.
+	double p_dAbschnittStrecke = 0.0;
+
+
+	//Parkendes oder fahrendes Fahrzeug?
+	unique_ptr<Verhalten> p_pVerhalten;
 
 private:
 

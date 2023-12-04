@@ -6,6 +6,8 @@
  */
 
 
+#include "Simulationsobjekt.h"
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -14,8 +16,6 @@
 #include <cmath>
 using namespace std;
 extern double dGlobaleZeit;
-
-#include "Simulationsobjekt.h"
 
 //Standard-Konstruktor
 Simulationsobjekt::Simulationsobjekt(){
@@ -43,16 +43,16 @@ void Simulationsobjekt::vAusgeben(ostream& ausgabe) const{
 	ausgabe << resetiosflags(ios::adjustfield)
 			 << setiosflags(ios::left)
 			 << setprecision(2) << fixed
-			 << setw(8) << getID()
-		     << setw(15) << getName();
+			 << setw(7) << getID()
+		     << setw(13) << getName();
 }
 
 void Simulationsobjekt::vAusgeben() const{
 	cout << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
 		 << setprecision(2) << fixed
-		 << setw(8) << getID()
-		 << setw(15) << getName();
+		 << setw(7) << getID()
+		 << setw(13) << getName();
 }
 
 

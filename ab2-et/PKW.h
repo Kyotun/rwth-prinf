@@ -1,24 +1,20 @@
-/*
+	/*
  * PKW.h
  *
  *  Created on: 16.11.2023
  *      Author: kyotun
  */
 
+#pragma once
+#include <limits>
+#include "Fahrzeug.h"
+#include "Verhalten.h"
+#include "Weg.h"
+
 #ifndef PKW_H_
 #define PKW_H_
 
-#include "Fahrzeug.h"
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
-
-
 using namespace std;
-extern double dGlobaleZeit;
 
 class PKW : public Fahrzeug {
 	public:

@@ -5,28 +5,24 @@
  *      Author: kyotun
  */
 
+#include <iostream>
+#include <list>
+#include "Simulationsobjekt.h"
+#include "Tempolimit.h"
+#include "Fahrzeug.h"
+
 #ifndef WEG_H_
 #define WEG_H_
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <list>
-#include <cmath>
+class Fahrzeug;
+
 using namespace std;
 extern double dGlobaleZeit;
 
-#include "Simulationsobjekt.h"
-#include "Fahrzeug.h"
-#include "Tempolimit.h"
 
 class Weg : public Simulationsobjekt{
 public:
-	Weg() = default; // @suppress("Class members should be properly initialized")
-	Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit=Tempolimit::Autobahn);
-	~Weg() = default;
+	Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit= Tempolimit::Autobahn);
 
 	//Getters
 	double getTempolimit() const;
@@ -41,6 +37,10 @@ public:
 
 	//Void
 	void vAusgeben() const override;
+	void vAusgeben(ostream& ausgabes) const override;
+	void static vKopf();
+	void vAnnahme(unique_ptr<Fahrzeug> fahrzeug);
+	void vAnnahme(unique_ptr<Fahrzeug>, double dStartZeitpunkt);
 
 protected:
 private:

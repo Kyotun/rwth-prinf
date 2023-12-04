@@ -4,17 +4,17 @@
  *  Created on: 16.11.2023
  *      Author: kyotun
  */
-
-#include "Fahrzeug.h"
 #include <iostream>
 #include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
+#include "Fahrzeug.h"
+#include "Verhalten.h"
+#include "Parken.h"
+#include "Fahren.h"
 
 using namespace std;
 extern double dGlobaleZeit;
+
+
 
 // Fahrzeug-Objekt mit dem Name
 Fahrzeug::Fahrzeug(string p_sName): Simulationsobjekt(p_sName){
@@ -22,12 +22,7 @@ Fahrzeug::Fahrzeug(string p_sName): Simulationsobjekt(p_sName){
 
 // Fahrzeug-Objekt Konstruktor mit dem Name und der Geschwindigkeit
 Fahrzeug::Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit): Simulationsobjekt(p_sName),
-		p_dMaxGeschwindigkeit((p_dMaxGeschwindigkeit > 0) ? p_dMaxGeschwindigkeit : 0){
-	cout << "Ein Fahrzeug wurde mit dem Name '" << p_sName
-		 << "', der ID '" << p_iID << "' und der MaxGeschwindigkeit '"
-		 << p_dMaxGeschwindigkeit <<"' erzeugt." << endl;
-
-}
+		p_dMaxGeschwindigkeit((p_dMaxGeschwindigkeit > 0) ? p_dMaxGeschwindigkeit : 0){}
 
 // Ausgabe Funktion, die zum Ausgeben von der Eigenschaften der Objekten dient.
 // Es reicht nur das Objekt zu cout zu geben.
@@ -81,10 +76,47 @@ void Fahrzeug::vSimulieren(){
 		return;
 	}else{
 		double dZeitdifferenz = dGlobaleZeit - p_dZeit;
+
+		//Aktuell gefahrende Strecke
+		static double dTeilStrecke = p_pVerhalten->dStrecke(*this, dZeitdifferenz);
+
+		//Laenge des Wegs
+		double dLaenge = (p_pVerhalten->getpWeg())->getLaenge();
+
+		//Verbleibendes Weg
+		double dVerbleibend = dLaenge-p_dAbschnittStrecke;
+
+		if(dTeilStrecke > dVerbleibend){
+			this->vNeueStrecke(* (p_pVerhalten->getpWeg()) );
+			p_dAbschnittStrecke += dTeilStrecke - dVerbleibend;
+		} else{
+			p_dAbschnittStrecke += dTeilStrecke;
+			p_dGesamtstrecke += dTeilStrecke;
+		}
+
+		p_dGesamtstrecke += dTeilStrecke;
 		p_dGesamtZeit += dZeitdifferenz;
-		p_dGesamtstrecke += dGeschwindigkeit() * dZeitdifferenz;
 		p_dZeit = dGlobaleZeit; // Die Letzte Zeit, in der das Fahrzeug sich bewegt hat.
 	}
+
+}
+
+void Fahrzeug::vNeueStrecke(Weg& weg){
+	if(p_pVerhalten){
+		p_pVerhalten.reset();
+	}
+	p_pVerhalten = make_unique<Fahren>(weg);
+	p_dAbschnittStrecke = 0.0;
+	cout << "vNeueStrecke: Neuer Weg fahren." << endl;
+}
+
+void Fahrzeug::vNeueStrecke(Weg&weg, double dStartZeitpunkt){
+	if(p_pVerhalten){
+		p_pVerhalten.reset();
+	}
+	p_pVerhalten = make_unique<Parken>(weg, dStartZeitpunkt);
+	p_dAbschnittStrecke = 0.0;
+	cout << "vNeueStrecke: Neuer Weg parken." << endl;
 
 }
 

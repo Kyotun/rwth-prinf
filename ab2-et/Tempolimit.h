@@ -4,13 +4,13 @@
  *  Created on: 02.12.2023
  *      Author: kyotun
  */
+#include <limits>
+#include <iostream>
 
 #ifndef TEMPOLIMIT_H_
 #define TEMPOLIMIT_H_
 
-#include <limits>
-
-enum class Tempolimit{
+enum Tempolimit{
 		Innerorts=50,
 		Landstrasse=100,
 		Autobahn=std::numeric_limits<int>::max()

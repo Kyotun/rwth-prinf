@@ -11,7 +11,6 @@
 #include "Weg.h"
 #include "Simulationsobjekt.h"
 
-
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -27,6 +26,7 @@ void vAufgabe_1a();
 void vAufgabe_2();
 void vAufgabe_3();
 void vAufgabe_AB1();
+void vAufgabe_4();
 
 int main(){
 //	vAufgabe_1();
@@ -34,15 +34,7 @@ int main(){
 //	vAufgabe_2();
 //	vAufgabe_3();
 //	vAufgabe_AB1();
-	Weg weg("weg", 100.5);
-	unique_ptr<Fahrzeug> fahrzeug = make_unique<Fahrzeug>("BMW");
-	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("Porsche");
-	list<unique_ptr<Fahrzeug>> list1;
-
-	list1.push_back(std::move(fahrzeug2));
-	list1.push_back(std::move(fahrzeug));
-	weg.setFahrzeugList(std::move(list1));
-	weg.vAusgeben();
+	vAufgabe_4();
 	return 0;
 }
 
@@ -386,4 +378,10 @@ void vAufgabe_AB1() {
     }
     char c;
     std::cin >> c;
+}
+
+void vAufgabe_4(){
+	Weg weg1("weg", 105.99);
+	Weg::vKopf();
+	cout << weg1 << endl << endl;
 }
