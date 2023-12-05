@@ -21,12 +21,12 @@ Weg::Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit):
 		Simulationsobjekt(p_sName), p_dLaenge(p_dLaenge), p_eTempolimit(p_eTempolimit){}
 
 void Weg::vSimulieren(){
-	try{
-		for (auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
+	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
+		try{
 			(*it)->vSimulieren();
+		} catch (Fahrausnahme *streckenEnde){
+			streckenEnde->vBearbeiten();
 		}
-	} catch (Fahrausnahme& e){
-		e.vBearbeiten();
 	}
 }
 

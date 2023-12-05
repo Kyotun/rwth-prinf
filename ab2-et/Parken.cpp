@@ -15,11 +15,12 @@ using namespace std;
 extern double dGlobaleZeit;
 
 #include "Parken.h"
-#include "Verhalten.h"
+#include "Fahrzeug.h"
+#include "Losfahren.h"
 
 double Parken::dStrecke(Fahrzeug& aFahrzeug, double dStartZeit) const{
 	if(dGlobaleZeit > dStartZeit){
-		cout << "Fahrzeug fangt an zu fahren." << endl;
+		throw new Losfahren(aFahrzeug, *p_pWeg);
 	}
 	return 0.0;
 }

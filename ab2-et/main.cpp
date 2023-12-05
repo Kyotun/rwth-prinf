@@ -426,7 +426,6 @@ void vAufgabe_5(){
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 10; dGlobaleZeit += dEpsilon){
-		weg_ptr1->vSimulieren();
 		for(const auto& fahrzeug : weg_ptr1->getFahrzeugList()){
 			cout << *fahrzeug;
 
@@ -434,6 +433,7 @@ void vAufgabe_5(){
 				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 			}
 		}
+		weg_ptr1->vSimulieren();
 	}
 
 

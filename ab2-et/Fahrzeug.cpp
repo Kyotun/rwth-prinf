@@ -79,20 +79,9 @@ void Fahrzeug::vSimulieren(){
 		double dZeitdifferenz = dGlobaleZeit - p_dZeit;
 
 		//Aktuell gefahrende Strecke
-		static double dTeilStrecke = p_pVerhalten->dStrecke(*this, dZeitdifferenz);
+		double dTeilStrecke = p_pVerhalten->dStrecke(*this, dZeitdifferenz);
 
-		//Laenge des Wegs
-		double dLaenge = (p_pVerhalten->getpWeg())->getLaenge();
-
-		//Verbleibendes Weg
-		double dVerbleibend = dLaenge-p_dAbschnittStrecke;
-
-		if(dTeilStrecke > dVerbleibend){
-			p_dAbschnittStrecke = (p_pVerhalten->getpWeg())->getLaenge();
-		} else{
-			p_dAbschnittStrecke += dTeilStrecke;
-		}
-
+		p_dAbschnittStrecke += dTeilStrecke;
 		p_dGesamtstrecke += dTeilStrecke;
 		p_dGesamtZeit += dZeitdifferenz;
 		p_dZeit = dGlobaleZeit; // Die Letzte Zeit, in der das Fahrzeug sich bewegt hat.

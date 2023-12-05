@@ -39,11 +39,11 @@ public:
 	//Setters
 	void setMaxGeschwindigkeit(double p_dMaxGeschwindigkeit){this->p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit;};
 	void setGesamtstrecke(double p_dGesamtstrecke){this->p_dGesamtstrecke = p_dGesamtstrecke;};
+	void setAbschnittStrecke(double dAbschnittStrecke){this->p_dAbschnittStrecke = dAbschnittStrecke;};
 
 	//Double
 	virtual double dGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}; // @suppress("No return")
 	virtual double dTanken(double dMenge = std::numeric_limits<double>::infinity()){return 0.0;};
-	virtual double dMehrfachMultiplikation(double base, double konstant, int mal) const{return 0.0;}
 
 	//Void&Print Funktionen
 

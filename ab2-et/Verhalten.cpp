@@ -6,7 +6,6 @@
  */
 
 #include "Verhalten.h"
-#include "Fahrzeug.h"
 
 #include <iostream>
 #include <iomanip>
