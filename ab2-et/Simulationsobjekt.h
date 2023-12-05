@@ -37,7 +37,7 @@ public:
 	//Void
 	virtual void vAusgeben() const;
 	virtual void vAusgeben(ostream& ausgabe) const;
-//	virtual void vSimulieren() = 0;
+	virtual void vSimulieren() = 0;
 
 	//Operatoren Überladen
 	bool operator==(const Simulationsobjekt& andere);

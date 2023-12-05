@@ -10,6 +10,7 @@
 #include "Verhalten.h"
 #include "Parken.h"
 #include "Fahren.h"
+#include "Fahrausnahme.h"
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -87,11 +88,9 @@ void Fahrzeug::vSimulieren(){
 		double dVerbleibend = dLaenge-p_dAbschnittStrecke;
 
 		if(dTeilStrecke > dVerbleibend){
-			this->vNeueStrecke(* (p_pVerhalten->getpWeg()) );
-			p_dAbschnittStrecke += dTeilStrecke - dVerbleibend;
+			p_dAbschnittStrecke = (p_pVerhalten->getpWeg())->getLaenge();
 		} else{
 			p_dAbschnittStrecke += dTeilStrecke;
-			p_dGesamtstrecke += dTeilStrecke;
 		}
 
 		p_dGesamtstrecke += dTeilStrecke;
@@ -107,7 +106,7 @@ void Fahrzeug::vNeueStrecke(Weg& weg){
 	}
 	p_pVerhalten = make_unique<Fahren>(weg);
 	p_dAbschnittStrecke = 0.0;
-	cout << "vNeueStrecke: Neuer Weg fahren." << endl;
+	cout << "Fahrzeug " << p_sName << " ist in den Weg " << weg.getName() << " zum Fahren angekommen." << endl;
 }
 
 void Fahrzeug::vNeueStrecke(Weg&weg, double dStartZeitpunkt){

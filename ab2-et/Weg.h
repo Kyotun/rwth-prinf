@@ -26,8 +26,9 @@ public:
 
 	//Getters
 	double getTempolimit() const;
-	double getLaenge() const{return p_dLaenge;};
+	double getLaenge() const{return p_dLaenge;}
 	void getFahrzeuge() const;
+	const list<unique_ptr<Fahrzeug>>& getFahrzeugList() const{return p_pFahrzeuge;}
 
 	//Setters
 	void setFahrzeug(unique_ptr<Fahrzeug> fahrzeug);
@@ -36,6 +37,7 @@ public:
 	//String
 
 	//Void
+	void vSimulieren() override;
 	void vAusgeben() const override;
 	void vAusgeben(ostream& ausgabes) const override;
 	void static vKopf();

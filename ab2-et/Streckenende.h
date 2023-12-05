@@ -10,8 +10,11 @@
 
 #include "Fahrausnahme.h"
 
-class Streckende : public Fahrausnahme{
+class Streckenende : public Fahrausnahme{
 public:
+	Streckenende(Fahrzeug& fahrzeug, Weg& weg): Fahrausnahme(fahrzeug, weg){}
+
+	void vBearbeiten() const override;
 protected:
 private:
 };

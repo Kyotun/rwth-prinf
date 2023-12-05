@@ -34,6 +34,7 @@ public:
 	virtual double getGesamtVerbrauch() const {return 0.0;};
 	virtual double getTankinhalt() const {return 0.0;};
 	virtual double getTankvolumen() const {return 0.0;};
+	double getAbschnittStrecke() const{return p_dAbschnittStrecke;};
 
 	//Setters
 	void setMaxGeschwindigkeit(double p_dMaxGeschwindigkeit){this->p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit;};
@@ -54,7 +55,7 @@ public:
 	virtual void vAusgeben() const override;
 	virtual void vAusgeben(std::ostream& ausgabe) const override;
 	static void vKopf();
-	virtual void vSimulieren();
+	virtual void vSimulieren() override;
 	//void operator =(const Fahrzeug& fahrzeug);
 
 	//Überladen

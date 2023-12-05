@@ -27,6 +27,7 @@ void vAufgabe_2();
 void vAufgabe_3();
 void vAufgabe_AB1();
 void vAufgabe_4();
+void vAufgabe_5();
 
 int main(){
 //	vAufgabe_1();
@@ -34,7 +35,8 @@ int main(){
 //	vAufgabe_2();
 //	vAufgabe_3();
 //	vAufgabe_AB1();
-	vAufgabe_4();
+//	vAufgabe_4();
+	vAufgabe_5();
 	return 0;
 }
 
@@ -381,7 +383,60 @@ void vAufgabe_AB1() {
 }
 
 void vAufgabe_4(){
-	Weg weg1("weg", 105.99);
+	Weg weg1("weg", 105.99, Innerorts);
+	unique_ptr<Weg> weg_ptr = make_unique<Weg>("weg_ptr",287.34, Autobahn);
+
+	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1");
+
+	cout << "\nVor dem Annahme:";
 	Weg::vKopf();
-	cout << weg1 << endl << endl;
+	cout << weg1 << endl;
+	cout << *weg_ptr << endl << endl;
+
+	cout << "Nach dem Annahme von fahrzeug1 im weg1:" << endl;
+	weg1.vAnnahme(std::move(fahrzeug1));
+	Weg::vKopf();
+	cout << weg1 << endl;
+	cout << *weg_ptr << endl << endl;
 }
+
+void vAufgabe_5(){
+	unique_ptr<Weg> weg_ptr1 = make_unique<Weg>("weg_ptr1", 255.55, Innerorts);
+
+	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
+	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
+	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrrad>("Fahrrad", 30);
+
+	cout << endl;
+	weg_ptr1->vAnnahme(std::move(fahrzeug));
+	weg_ptr1->vAnnahme(std::move(fahrzeug2));
+	weg_ptr1->vAnnahme(std::move(fahrzeug3));
+
+
+	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+	double dTankZeit = 0.0;
+	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+	cin >> dTankZeit;
+
+	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
+	double dEpsilon = 0.0; // Zeittakt.
+	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
+
+	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
+	Fahrzeug::vKopf();
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 10; dGlobaleZeit += dEpsilon){
+		weg_ptr1->vSimulieren();
+		for(const auto& fahrzeug : weg_ptr1->getFahrzeugList()){
+			cout << *fahrzeug;
+
+			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+			}
+		}
+	}
+
+
+
+}
+

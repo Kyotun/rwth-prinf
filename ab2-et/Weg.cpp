@@ -5,21 +5,30 @@
  *      Author: kyotun
  */
 
-#include "Weg.h"
-#include "Fahrzeug.h"
-
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
+#include "Simulationsobjekt.h"
+#include "Weg.h"
+#include "Tempolimit.h"
+#include "Fahrausnahme.h"
+
 using namespace std;
 extern double dGlobaleZeit;
 
 
 Weg::Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit):
 		Simulationsobjekt(p_sName), p_dLaenge(p_dLaenge), p_eTempolimit(p_eTempolimit){}
+
+void Weg::vSimulieren(){
+	try{
+		for (auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
+			(*it)->vSimulieren();
+		}
+	} catch (Fahrausnahme& e){
+		e.vBearbeiten();
+	}
+}
 
 void Weg::vAusgeben(ostream& ausgabe) const{
 	Simulationsobjekt::vAusgeben(ausgabe);

@@ -4,20 +4,19 @@
  *  Created on: 03.12.2023
  *      Author: kyotun
  */
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
-using namespace std;
-extern double dGlobaleZeit;
 
 #include "Fahren.h"
 #include "Verhalten.h"
+#include "Streckenende.h"
 
 double Fahren::dStrecke(Fahrzeug& fahrzeug, double dZeitDifferenz)const{
-	return fahrzeug.dGeschwindigkeit()*dZeitDifferenz;
+	double dTeilStrecke = fahrzeug.dGeschwindigkeit()*dZeitDifferenz;
+
+	if(fahrzeug.getAbschnittStrecke() >= p_pWeg->getLaenge()){
+		throw new Streckenende(fahrzeug, *p_pWeg);
+	}
+	return dTeilStrecke;
+
 }
 
 
