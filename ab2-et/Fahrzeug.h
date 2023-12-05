@@ -31,6 +31,8 @@ public:
 	virtual double getMaxGeschwindigkeit() const{return p_dMaxGeschwindigkeit;};
 	double getGesamtstrecke() const {return p_dGesamtstrecke;};
 	double getGesamtZeit() const {return p_dGesamtZeit;};
+	double getZeit() const {return p_dZeit;};
+	double getGlobaleZeit() const {return dGlobaleZeit;};
 	virtual double getGesamtVerbrauch() const {return 0.0;};
 	virtual double getTankinhalt() const {return 0.0;};
 	virtual double getTankvolumen() const {return 0.0;};

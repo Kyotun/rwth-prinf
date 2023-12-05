@@ -43,16 +43,16 @@ void Simulationsobjekt::vAusgeben(ostream& ausgabe) const{
 	ausgabe << resetiosflags(ios::adjustfield)
 			 << setiosflags(ios::left)
 			 << setprecision(2) << fixed
-			 << setw(7) << getID()
-		     << setw(13) << getName();
+			 << setw(8) << getID()
+		     << setw(15) << getName();
 }
 
 void Simulationsobjekt::vAusgeben() const{
 	cout << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
 		 << setprecision(2) << fixed
-		 << setw(7) << getID()
-		 << setw(13) << getName();
+		 << setw(8) << getID()
+		 << setw(15) << getName();
 }
 
 

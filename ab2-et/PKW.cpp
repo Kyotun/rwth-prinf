@@ -40,7 +40,7 @@ PKW::PKW(string p_sName, double p_dMaxGeschwindigkeit,
 double PKW::getGesamtVerbrauch() const{
 	// Gesamtstrecke in km erste Klammer
 	// Zweite Klammer = Gesamtverbrauch in 1 km
-	return (p_dMaxGeschwindigkeit*p_dGesamtZeit)*(p_dVerbrauch/100);
+	return (p_dGesamtstrecke)*(p_dVerbrauch/100);
 }
 
 // Gibt den aktuellen Tankinhalt zurück
@@ -92,18 +92,31 @@ void PKW::vSimulieren() {
 	p_dTankinhalt = dAktuellTankVolumen;
 }
 
+double PKW::dGeschwindigkeit() const{
+	double erlaubte_max_geschwindigkeit = (p_pVerhalten->getpWeg())->getTempolimit();
+
+	if(erlaubte_max_geschwindigkeit > getMaxGeschwindigkeit()){
+		return getMaxGeschwindigkeit();
+	}
+	return erlaubte_max_geschwindigkeit;
+}
+
 // Erbt die Ausgebenfunktion von der Fahrzeugklasse und f
 // üge in der Ausgabefunktion die besondere Einheiten von PKws hinzu.
 void PKW::vAusgeben(std::ostream& ausgabe) const{
 	Fahrzeug::vAusgeben(ausgabe);
-	cout << setw(20) << getGesamtVerbrauch()
-		 << setw(15) << getTankinhalt() << endl;
+	ausgabe << setw(20) << getGesamtVerbrauch()
+			<< setw(15) << getTankinhalt()
+		    << setw(10) << getZeit()
+		    << setw(15) << getGlobaleZeit() << endl;
 }
 
 void PKW::vAusgeben() const {
 	Fahrzeug::vAusgeben();
 	cout << setw(20) << getGesamtVerbrauch()
-		 << setw(15) << getTankinhalt() << endl;
+		 << setw(15) << getTankinhalt()
+		 << setw(10) << getZeit()
+		 << setw(15) << getGlobaleZeit() << endl;
 }
 
 

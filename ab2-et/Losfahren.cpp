@@ -11,7 +11,9 @@
 #include "Fahrzeug.h"
 
 void Losfahren::vBearbeiten()const{
-	cout << "Das Fahrzeug " << p_pFahrzeug.getID() << " fangt jetzt auf dem Weg " << p_pWeg.getID() << " zu fahren." << endl;
+	cout << "Das Fahrzeug " << p_pFahrzeug.getName()
+			<< " fangt jetzt auf dem Weg " << p_pWeg.getName()
+			<< " zu fahren." << endl;
 }
 
 

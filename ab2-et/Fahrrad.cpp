@@ -47,13 +47,17 @@ double Fahrrad::dGeschwindigkeit() const{
 void Fahrrad::vAusgeben(std::ostream& ausgabe) const{
 	Fahrzeug::vAusgeben(ausgabe);
 	ausgabe << setw(20) << "-"
-			<< setw(15) << "-" << endl;
+			<< setw(15) << "-"
+			<< setw(10) << getZeit()
+			<< setw(15) << getGlobaleZeit() << endl;
 }
 
 void Fahrrad::vAusgeben() const{
 	Fahrzeug::vAusgeben();
 	cout << setw(20) << "-"
-	   	 << setw(15) << "-" << endl;
+	   	 << setw(15) << "-"
+		 << setw(10) << getZeit()
+		 << setw(15) << getGlobaleZeit() << endl;
 }
 
 

@@ -28,6 +28,7 @@ void vAufgabe_3();
 void vAufgabe_AB1();
 void vAufgabe_4();
 void vAufgabe_5();
+void vAufgabe_6();
 
 int main(){
 //	vAufgabe_1();
@@ -36,7 +37,8 @@ int main(){
 //	vAufgabe_3();
 //	vAufgabe_AB1();
 //	vAufgabe_4();
-	vAufgabe_5();
+//	vAufgabe_5();
+	vAufgabe_6();
 	return 0;
 }
 
@@ -406,11 +408,14 @@ void vAufgabe_5(){
 	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
 	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrrad>("Fahrrad", 30);
+	unique_ptr<Fahrzeug> fahrzeug4 = make_unique<PKW>("PKW3", 121.3, 12.33, 34.37);
 
 	cout << endl;
 	weg_ptr1->vAnnahme(std::move(fahrzeug));
 	weg_ptr1->vAnnahme(std::move(fahrzeug2));
 	weg_ptr1->vAnnahme(std::move(fahrzeug3));
+	weg_ptr1->vAnnahme(std::move(fahrzeug4),2);
+
 
 
 	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
@@ -435,8 +440,67 @@ void vAufgabe_5(){
 		}
 		weg_ptr1->vSimulieren();
 	}
+}
+
+void vAufgabe_6(){
+	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 155.3);
+	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 33.5, Innerorts);
+
+	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
+	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
+	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<PKW>("PKW3", 133.39, 12.22);
+	unique_ptr<Fahrzeug> fahrzeug4 = make_unique<PKW>("PKW4", 188.32, 16.37);
+
+	unique_ptr<Fahrzeug> fahrzeug5 = make_unique<Fahrrad>("Fahrrad1", 30.33);
+	unique_ptr<Fahrzeug> fahrzeug6 = make_unique<Fahrrad>("Fahrrad2", 25.35);
+
+
+	cout << endl;
+	autobahn->vAnnahme(std::move(fahrzeug));
+	autobahn->vAnnahme(std::move(fahrzeug2),2);
+	autobahn->vAnnahme(std::move(fahrzeug5));
+
+	innerort->vAnnahme(std::move(fahrzeug3));
+	innerort->vAnnahme(std::move(fahrzeug4),1.5);
+	innerort->vAnnahme(std::move(fahrzeug6));
 
 
 
+	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+	double dTankZeit = 0.0;
+	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+	cin >> dTankZeit;
+
+	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
+	double dEpsilon = 0.0; // Zeittakt.
+	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
+
+	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
+	Fahrzeug::vKopf();
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
+		for(const auto& fahrzeug : autobahn->getFahrzeugList()){
+			cout << *fahrzeug;
+
+			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+			}
+		}
+		autobahn->vSimulieren();
+	}
+	dGlobaleZeit = 0;
+
+	cout << "\n\nAutobahn wurde Simuliert. Nun wird der Innerort simuliert." << endl;
+	Fahrzeug::vKopf();
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
+		for(const auto& fahrzeug : innerort->getFahrzeugList()){
+			cout << *fahrzeug;
+
+			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+			}
+		}
+		innerort->vSimulieren();
+	}
 }
 

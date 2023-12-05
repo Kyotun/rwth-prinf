@@ -32,6 +32,7 @@ class PKW : public Fahrzeug {
 		double getVerbrauch(){return p_dVerbrauch;};
 
 		//Double
+		double dGeschwindigkeit() const override;
 		double dTanken(double dMenge = std::numeric_limits<double>::infinity()) override;
 
 		//Void&Print Funktionen

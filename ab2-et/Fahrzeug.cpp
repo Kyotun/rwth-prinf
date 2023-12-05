@@ -56,15 +56,17 @@ void Fahrzeug::vKopf(){
 		 << setiosflags(ios::left)
 		 << setw(8) << "ID"
 		 << setw(15) << "Name"
-		 << resetiosflags(ios::left)
+		 << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::right)
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"
 		 << setw(20) << "Geschwindigkeit"
 		 << setw(20) << "Gesamtverbrauch"
-		 << setw(15) << "Tankinhalt" << endl;
+		 << setw(15) << "Tankinhalt"
+		 << setw(10) << "Zeit"
+		 << setw(15) << "GlobaleZeit" << endl;
 
-	cout << setw(8+15+20*4+15) << setfill('-') << '-' << setfill(' ') << endl;
+	cout << setw(8+10+15*3+20*4) << setfill('-') << '-' << setfill(' ') << endl;
 
 }
 
