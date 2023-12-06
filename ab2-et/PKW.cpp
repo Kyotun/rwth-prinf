@@ -93,11 +93,12 @@ void PKW::vSimulieren() {
 }
 
 double PKW::dGeschwindigkeit() const{
-	double erlaubte_max_geschwindigkeit = (p_pVerhalten->getpWeg())->getTempolimit();
+	double erlaubte_max_geschwindigkeit = p_pVerhalten->getpWeg()->getTempolimit();
 
 	if(erlaubte_max_geschwindigkeit > getMaxGeschwindigkeit()){
 		return getMaxGeschwindigkeit();
 	}
+
 	return erlaubte_max_geschwindigkeit;
 }
 

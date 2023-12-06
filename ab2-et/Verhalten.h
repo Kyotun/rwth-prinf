@@ -23,13 +23,13 @@ public:
 	virtual ~Verhalten() = default;
 
 	//Getters
-	shared_ptr<Weg> getpWeg() const{return p_pWeg;}
+	Weg* getpWeg() const{return p_pWeg;}
 
 	//Double
-	virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) const= 0;
+	virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
 
 protected:
-	shared_ptr<Weg> p_pWeg;
+	Weg* p_pWeg;
 private:
 };
 

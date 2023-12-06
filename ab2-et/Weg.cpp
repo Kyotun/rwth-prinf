@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <string>
 #include "Simulationsobjekt.h"
+#include "vertagt_liste.h"
 #include "Weg.h"
 #include "Tempolimit.h"
 #include "Fahrausnahme.h"
@@ -17,17 +18,24 @@ using namespace std;
 extern double dGlobaleZeit;
 
 
-Weg::Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit):
+Weg::Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit): // @suppress("Member declaration not found")
 		Simulationsobjekt(p_sName), p_dLaenge(p_dLaenge), p_eTempolimit(p_eTempolimit){}
 
 void Weg::vSimulieren(){
-	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
+
+	p_pFahrzeuge.vAktualisieren();
+
+	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end();){
 		try{
 			(*it)->vSimulieren();
-		} catch (Fahrausnahme *streckenEnde){
-			streckenEnde->vBearbeiten();
+			it++;
+		} catch (Fahrausnahme *fahrausnahme){
+			it++;
+			fahrausnahme->vBearbeiten();
 		}
 	}
+
+	p_pFahrzeuge.vAktualisieren();
 }
 
 void Weg::vAusgeben(ostream& ausgabe) const{
@@ -50,7 +58,7 @@ void Weg::vAusgeben() const{
 	cout << ")";
 }
 
-void Weg::vKopf(){
+void Weg::vKopf() {
 	cout << endl << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
 		 << setw(5) << "ID"
@@ -65,20 +73,39 @@ void Weg::vKopf(){
 void Weg::vAnnahme(unique_ptr<Fahrzeug>fahrzeug){
 	fahrzeug->vNeueStrecke(*this);
 	p_pFahrzeuge.push_back(std::move(fahrzeug));
+	p_pFahrzeuge.vAktualisieren();
 }
 
 void Weg::vAnnahme(unique_ptr<Fahrzeug>fahrzeug, double dStartZeitpunkt){
 	fahrzeug->vNeueStrecke(*this, dStartZeitpunkt);
 	p_pFahrzeuge.push_front(std::move(fahrzeug));
+	p_pFahrzeuge.vAktualisieren();
+}
+
+unique_ptr<Fahrzeug> Weg::pAbgabe(Fahrzeug& fahrzeug_gesucht){
+	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++) {
+		// Überprüfen des Iterationselementes mit gewünschtem Fahrzeug
+		if((*it).get() == &fahrzeug_gesucht) {
+			// Lokale Variable zur Zwischenspeicherung
+			std::unique_ptr<Fahrzeug> lokal_fahrzeug = std::move(*it);
+			// Löschen des Fahrzeugs aus der Liste
+			p_pFahrzeuge.erase(it);
+			p_pFahrzeuge.vAktualisieren();
+			return lokal_fahrzeug;
+		}
+	}
+	return nullptr;
 }
 
 void Weg::setFahrzeug(unique_ptr<Fahrzeug> fahrzeug){
 	p_pFahrzeuge.push_back(std::move(fahrzeug));
+	p_pFahrzeuge.vAktualisieren();
 }
 
 void Weg::setFahrzeugList(list<unique_ptr<Fahrzeug>> fahrzeugList){
 	for(auto&& fahrzeugPtr : fahrzeugList){
 		p_pFahrzeuge.push_back(std::move(fahrzeugPtr));
+		p_pFahrzeuge.vAktualisieren();
 	}
 
 //	p_pFahrzeuge.insert(p_pFahrzeuge.end(),

@@ -18,7 +18,7 @@ extern double dGlobaleZeit;
 #include "Fahrzeug.h"
 #include "Losfahren.h"
 
-double Parken::dStrecke(Fahrzeug& aFahrzeug, double dStartZeit) const{
+double Parken::dStrecke(Fahrzeug& aFahrzeug, double dStartZeit){
 	if(dGlobaleZeit >= p_dStartZeit){
 		throw new Losfahren(aFahrzeug, *p_pWeg);
 	}

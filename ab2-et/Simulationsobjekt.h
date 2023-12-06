@@ -45,7 +45,7 @@ public:
 
 protected:
 	//Strings
-	string p_sName = "";
+	string p_sName;
 
 	//Integers
 	const int p_iID = ++p_iMaxID;
@@ -59,7 +59,7 @@ private:
 	static inline int p_iMaxID = 0;
 };
 
-ostream& operator<<(ostream& ausgabe, const Simulationsobjekt& simulationsobjekt);
+ostream& operator<<(ostream& ausgabe,const Simulationsobjekt& simulationsobjekt);
 
 
 #endif /* SIMULATIONSOBJEKT_H_ */

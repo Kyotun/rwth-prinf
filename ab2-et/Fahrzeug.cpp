@@ -27,7 +27,7 @@ Fahrzeug::Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit): Simulationsobj
 
 // Ausgabe Funktion, die zum Ausgeben von der Eigenschaften der Objekten dient.
 // Es reicht nur das Objekt zu cout zu geben.
-void Fahrzeug::vAusgeben(ostream& ausgabe) const{
+void Fahrzeug::vAusgeben(ostream& ausgabe) const {
 
 	Simulationsobjekt::vAusgeben(ausgabe);
 	ausgabe << resetiosflags(ios::left)
@@ -92,29 +92,25 @@ void Fahrzeug::vSimulieren(){
 }
 
 void Fahrzeug::vNeueStrecke(Weg& weg){
-	if(p_pVerhalten){
-		p_pVerhalten.reset();
-	}
 	p_pVerhalten = make_unique<Fahren>(weg);
-	p_dAbschnittStrecke = 0.0;
+	this->vResetAbschnittStrecke();
 	cout << "Fahrzeug " << p_sName << " ist in den Weg " << weg.getName() << " zum Fahren angekommen." << endl;
 }
 
-void Fahrzeug::vNeueStrecke(Weg&weg, double dStartZeitpunkt){
+void Fahrzeug::vNeueStrecke(Weg& weg, double dStartZeitpunkt){
 	if(p_pVerhalten){
 		p_pVerhalten.reset();
 	}
 	p_pVerhalten = make_unique<Parken>(weg, dStartZeitpunkt);
-	p_dAbschnittStrecke = 0.0;
-	cout << "vNeueStrecke: Neuer Weg parken." << endl;
-
+	this->vResetAbschnittStrecke();
+	cout << "Fahrzeug " << p_sName << " ist in den Weg " << weg.getName() << " zum Parken angekommen." << endl;
 }
 
 // Überladung von '<<' (Ausgabe) Operator.
 // Nun können die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
 // einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
 
-ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug){
+ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug) {
 	fahrzeug.vAusgeben(ausgabe);
 	return ausgabe;
 }

@@ -8,6 +8,7 @@
 #include <iostream>
 #include <list>
 #include "Simulationsobjekt.h"
+#include "vertagt_liste.h"
 #include "Tempolimit.h"
 #include "Fahrzeug.h"
 
@@ -17,6 +18,7 @@
 class Fahrzeug;
 
 using namespace std;
+using namespace vertagt;
 extern double dGlobaleZeit;
 
 
@@ -24,11 +26,13 @@ class Weg : public Simulationsobjekt{
 public:
 	Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit= Tempolimit::Autobahn);
 
+	virtual ~Weg() = default;
+
 	//Getters
 	double getTempolimit() const;
 	double getLaenge() const{return p_dLaenge;}
 	void getFahrzeuge() const;
-	const list<unique_ptr<Fahrzeug>>& getFahrzeugList() const{return p_pFahrzeuge;}
+	VListe<unique_ptr<Fahrzeug>>* getFahrzeugList(){return &p_pFahrzeuge;}
 
 	//Setters
 	void setFahrzeug(unique_ptr<Fahrzeug> fahrzeug);
@@ -44,11 +48,14 @@ public:
 	void vAnnahme(unique_ptr<Fahrzeug> fahrzeug);
 	void vAnnahme(unique_ptr<Fahrzeug>, double dStartZeitpunkt);
 
+	//Pointers
+	unique_ptr<Fahrzeug> pAbgabe(Fahrzeug& fahrzeug_gesucht);
+
 protected:
 private:
 	//Double
 	double p_dLaenge = 0.0;
-	list<unique_ptr<Fahrzeug>> p_pFahrzeuge;
+	VListe<unique_ptr<Fahrzeug>> p_pFahrzeuge;
 	Tempolimit p_eTempolimit;
 
 };

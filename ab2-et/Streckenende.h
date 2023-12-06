@@ -12,9 +12,11 @@
 
 class Streckenende : public Fahrausnahme{
 public:
+	Streckenende() = default;
 	Streckenende(Fahrzeug& fahrzeug, Weg& weg): Fahrausnahme(fahrzeug, weg){}
 
-	void vBearbeiten() const override;
+	virtual void vBearbeiten() override;
+	virtual ~Streckenende() = default;
 protected:
 private:
 };

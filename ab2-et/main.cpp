@@ -5,18 +5,21 @@
  *      Author: kyotun
  */
 
+
+#include <iostream>
+#include <memory>
+#include <iomanip>
+#include <vector>
+#include <cmath>
+#include <random>
 #include "Fahrzeug.h"
 #include "Fahrrad.h"
 #include "PKW.h"
 #include "Weg.h"
 #include "Simulationsobjekt.h"
-
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
+#include "Tempolimit.h"
+//#include "SimuClient.h"
+#include "vertagt_liste.h"
 
 using namespace std;
 double dGlobaleZeit = 0.0;
@@ -29,6 +32,7 @@ void vAufgabe_AB1();
 void vAufgabe_4();
 void vAufgabe_5();
 void vAufgabe_6();
+void vAufgabe_6a();
 
 int main(){
 //	vAufgabe_1();
@@ -39,6 +43,7 @@ int main(){
 //	vAufgabe_4();
 //	vAufgabe_5();
 	vAufgabe_6();
+//	vAufgabe_6a();
 	return 0;
 }
 
@@ -58,7 +63,7 @@ void vAufgabe_1(){
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1(up)", 33.3);
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("fahrzeug2(up)", 29.7);
 	shared_ptr<Fahrzeug> fahrzeug3 = make_shared<Fahrzeug>("fahrzeug3(sp)", 22.5);
-	shared_ptr<Fahrzeug> fahrzeug4 = make_shared<PKW>("fahrzeug4(sp)", 19.1);
+	shared_ptr<Fahrzeug> fahrzeug4 = make_shared<Fahrzeug>("fahrzeug4(sp)", 19.1);
 	cout << "\nVor dem Erzeugen des neues Objekts(Shared-Ptr) durch die Zuweisung, Count von fahrzeug4: " << fahrzeug4.use_count() << endl;
 
 	// Speichern des Objekts, das vom fahrzeug4 shared ptr gezeigt wird, im Shared-Ptr fahrzeug_s
@@ -146,7 +151,7 @@ void vAufgabe_1a(){
 	cout << "Bitte geben Sie die Simulationzeit in Stunden ein: ";
 	cin >> dStunden;
 	double dMaxGeschwindigkeit = 0.0;
-	string sName = "";
+	string sName;
 
 
 	// Lass Benutzer Eigenschaften der 3 Objekte eingeben.
@@ -191,10 +196,10 @@ void vAufgabe_1a(){
 void vAufgabe_2(){
 	int iPkwAnzahl, iFahrradAnzahl;
 
-	string sName = "";
+	string sName;
 	double dGeschwindigkeit = 0.0;
 	double dVerbrauch = 0.0;
-	string sTankVolumen = "";
+	string sTankVolumen;
 
 	vector<unique_ptr<Fahrzeug>> fahrzeuge;
 
@@ -386,7 +391,7 @@ void vAufgabe_AB1() {
 
 void vAufgabe_4(){
 	Weg weg1("weg", 105.99, Innerorts);
-	unique_ptr<Weg> weg_ptr = make_unique<Weg>("weg_ptr",287.34, Autobahn);
+	unique_ptr<Weg> weg_ptr = make_unique<Weg>("weg_ptr", 287.34, Autobahn);
 
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1");
 
@@ -431,7 +436,7 @@ void vAufgabe_5(){
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 10; dGlobaleZeit += dEpsilon){
-		for(const auto& fahrzeug : weg_ptr1->getFahrzeugList()){
+		for(const auto& fahrzeug : *weg_ptr1->getFahrzeugList()){
 			cout << *fahrzeug;
 
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
@@ -443,8 +448,8 @@ void vAufgabe_5(){
 }
 
 void vAufgabe_6(){
-	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 155.3);
-	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 33.5, Innerorts);
+	Weg* autobahn = new Weg("Autobahn", 155.3);
+	Weg* innerort = new Weg("Innerort", 33.5, Innerorts);
 
 	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
@@ -461,7 +466,7 @@ void vAufgabe_6(){
 	autobahn->vAnnahme(std::move(fahrzeug5));
 
 	innerort->vAnnahme(std::move(fahrzeug3));
-	innerort->vAnnahme(std::move(fahrzeug4),1.5);
+	innerort->vAnnahme(std::move(fahrzeug4),3);
 	innerort->vAnnahme(std::move(fahrzeug6));
 
 
@@ -479,7 +484,7 @@ void vAufgabe_6(){
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
-		for(const auto& fahrzeug : autobahn->getFahrzeugList()){
+		for(const auto& fahrzeug : *autobahn->getFahrzeugList()){
 			cout << *fahrzeug;
 
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
@@ -493,7 +498,7 @@ void vAufgabe_6(){
 	cout << "\n\nAutobahn wurde Simuliert. Nun wird der Innerort simuliert." << endl;
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
-		for(const auto& fahrzeug : innerort->getFahrzeugList()){
+		for(const auto& fahrzeug : *innerort->getFahrzeugList()){
 			cout << *fahrzeug;
 
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
@@ -502,5 +507,148 @@ void vAufgabe_6(){
 		}
 		innerort->vSimulieren();
 	}
+	delete autobahn;
+	delete innerort;
+}
+
+//void vAufgabe_6(){
+//	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 500.0);
+//	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 500.0, Innerorts);
+//
+//	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
+//	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
+//	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<PKW>("PKW3", 133.39, 12.22);
+//	unique_ptr<Fahrzeug> fahrzeug4 = make_unique<PKW>("PKW4", 188.32, 16.37);
+//
+//	unique_ptr<Fahrzeug> fahrzeug5 = make_unique<Fahrrad>("Fahrrad1", 30.33);
+//	unique_ptr<Fahrzeug> fahrzeug6 = make_unique<Fahrrad>("Fahrrad2", 25.35);
+//
+//	// Intialisierung der Grafik auf dem SimuServer
+//	bInitialisiereGrafik(800, 500);
+//
+//	// Setzen der Koordinaten für die Straße, gerade Linie
+//	int koordinaten[4] = { 700, 250, 100, 250 };
+//
+//	// Zeichnen der Straße
+//	bZeichneStrasse(autobahn->getName(), innerort->getName(), autobahn->getLaenge(), 2, koordinaten);
+//
+//
+//	cout << endl;
+//	autobahn->vAnnahme(std::move(fahrzeug));
+//	autobahn->vAnnahme(std::move(fahrzeug2),2);
+//	autobahn->vAnnahme(std::move(fahrzeug5));
+//
+//	innerort->vAnnahme(std::move(fahrzeug3));
+//	innerort->vAnnahme(std::move(fahrzeug4),1.5);
+//	innerort->vAnnahme(std::move(fahrzeug6));
+//
+//
+//
+//	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+//	double dTankZeit = 0.0;
+//	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+//	cin >> dTankZeit;
+//
+//	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
+//	double dEpsilon = 0.0; // Zeittakt.
+//	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+//	cin >> dEpsilon;
+//
+//	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
+//	Fahrzeug::vKopf();
+//	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
+//		vSetzeZeit(dGlobaleZeit);
+//		//Printen des Autobahns
+//		for(const auto& fahrzeug : autobahn->getFahrzeugList()){
+//			cout << *fahrzeug;
+//
+//			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+//				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+//			}
+//		}
+//
+//		//Printen des Innerorts
+//		for(const auto& fahrzeug : innerort->getFahrzeugList()){
+//			cout << *fahrzeug;
+//
+//			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+//				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+//			}
+//		}
+//
+//		innerort->vSimulieren();
+//		autobahn->vSimulieren();
+//		vSleep(100);
+//	}
+//	vBeendeGrafik();
+//}
+
+void vAufgabe_6a(){
+	using namespace vertagt;
+	VListe<int> VListe;
+
+	static std::mt19937 device(0);
+	std::uniform_int_distribution<int> dist(1, 10);
+
+	//Zahlen in die Liste eingeben.
+	cout << "Zahlen werden in die Liste eingetragen.:\n\n";
+	for(int i = 1; i < 10; i++){
+		VListe.push_back(dist(device));
+	}
+
+	//Zahlen ausgeben
+	cout << "Liste vor dem Aktualisieren:\n";
+	for(auto it = VListe.begin(); it != VListe.end(); it++) {
+		std::cout << (*it) << " ";
+	}
+
+	cout << "\nListe wurde aktualisiert.\n\n";
+	VListe.vAktualisieren();
+
+	cout << "Liste nach dem aktualiseren:\n";
+	for(auto it = VListe.begin(); it != VListe.end(); it++) {
+		std::cout << (*it) << " ";
+	}
+
+
+	for(auto it = VListe.begin(); it != VListe.end(); it++) {
+		if((*it) > 5) {
+			VListe.erase(it);
+		}
+	}
+
+	cout << "\n\nElemente groeßer als 5 wurden geloescht aber nicht aktualisiert..\n";
+	cout << "Liste:\n";
+	// Ausgabe sollte die gleiche sein, da vAktualisieren noch nicht durchgeführt wurde
+	for(auto it = VListe.begin(); it != VListe.end(); it++) {
+		std::cout << (*it) << " ";
+	}
+
+	VListe.vAktualisieren();
+
+	cout << "\n\nListe wurde aktualisiert. Liste:\n";
+	// Ausgabe sollte sich geändert haben
+	for(auto it = VListe.begin(); it != VListe.end(); it++) {
+		std::cout << (*it) << " ";
+	}
+
+	VListe.push_back(dist(device));
+	VListe.push_front(dist(device));
+
+	cout << "\n\nEine Zahl vorne und eine Zahl hinter werden hinzugefuegt.\n";
+	cout << "Vor dem aktualiseren:\n";
+	for(auto it = VListe.begin(); it != VListe.end(); it++) {
+		std::cout << (*it) << " ";
+	}
+
+	VListe.vAktualisieren();
+
+	cout << "\n\nNach dem aktualisieren. Liste:\n";
+	// Ausgabe sollte sich geändert haben
+	for(auto it = VListe.begin(); it != VListe.end(); it++) {
+		std::cout << (*it) << " ";
+	}
+
+
 }
 

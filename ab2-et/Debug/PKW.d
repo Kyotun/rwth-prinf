@@ -1,5 +1,5 @@
 PKW.o: ../PKW.cpp ../PKW.h ../Fahrzeug.h ../Weg.h ../Simulationsobjekt.h \
-  ../Tempolimit.h ../Verhalten.h
+  ../vertagt_liste.h ../vertagt_aktion.h ../Tempolimit.h ../Verhalten.h
 
 ../PKW.h:
 
@@ -8,6 +8,10 @@ PKW.o: ../PKW.cpp ../PKW.h ../Fahrzeug.h ../Weg.h ../Simulationsobjekt.h \
 ../Weg.h:
 
 ../Simulationsobjekt.h:
+
+../vertagt_liste.h:
+
+../vertagt_aktion.h:
 
 ../Tempolimit.h:
 

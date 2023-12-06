@@ -7,8 +7,9 @@
 #include <iostream>
 #include <memory>
 #include "Streckenende.h"
+#include "vertagt_liste.h"
 
-void Streckenende::vBearbeiten()const{
+void Streckenende::vBearbeiten(){
 	cout << "Das Fahrzeug " << p_pFahrzeug.getName() << " ist jetzt am Ende des Wegs " << p_pWeg.getName() << "." << endl;
 }
 

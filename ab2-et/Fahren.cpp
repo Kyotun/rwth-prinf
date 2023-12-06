@@ -9,7 +9,7 @@
 #include "Verhalten.h"
 #include "Streckenende.h"
 
-double Fahren::dStrecke(Fahrzeug& fahrzeug, double dZeitDifferenz)const{
+double Fahren::dStrecke(Fahrzeug& fahrzeug, double dZeitDifferenz){
 	double dTeilStrecke = fahrzeug.dGeschwindigkeit()*dZeitDifferenz;
 	double dLaenge = p_pWeg->getLaenge();
 	double dAbschnittStrecke = fahrzeug.getAbschnittStrecke();

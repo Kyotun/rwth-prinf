@@ -16,9 +16,11 @@ using namespace std;
 
 class Fahren : public Verhalten {
 public:
+	Fahren() = default;
 	Fahren(Weg& weg): Verhalten(weg){}
 
-	double dStrecke(Fahrzeug& fahrzeug, double dZeitDifferenz) const;
+	virtual double dStrecke(Fahrzeug& fahrzeug, double dZeitDifferenz) override;
+	virtual ~Fahren() = default;
 
 protected:
 private:

@@ -74,7 +74,7 @@ bool Simulationsobjekt::operator==(const Simulationsobjekt& andere){
 
 }
 
-ostream& operator<<(ostream& ausgabe, const Simulationsobjekt& simulationsobjekt){
+ostream& operator<<(ostream& ausgabe,const Simulationsobjekt& simulationsobjekt){
 	simulationsobjekt.vAusgeben(ausgabe);
 	return ausgabe;
 }

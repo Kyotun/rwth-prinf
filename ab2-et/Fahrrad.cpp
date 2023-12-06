@@ -5,14 +5,17 @@
  *      Author: kyotun
  */
 
-
-#include "Fahrrad.h"
-#include <iostream>
+#include <math.h>
 #include <iomanip>
+#include "Fahrrad.h"
+//#include "SimuClient.h"
+#include <iostream>
 #include <string>
 #include <limits>
 #include <vector>
 #include <cmath>
+
+
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -42,6 +45,7 @@ double Fahrrad::dGeschwindigkeit() const{
 
 	return d_aktuelleGeschwindigkeit;
 }
+
 
 // Ausgabefunktion der Klasse Fahrrad, erbt von Fahrzeug und werden einige Fahrradspezifische Eigenschaften addiert.
 void Fahrrad::vAusgeben(std::ostream& ausgabe) const{

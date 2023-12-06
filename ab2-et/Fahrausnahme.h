@@ -14,9 +14,10 @@
 
 class Fahrausnahme : public std::exception{
 public:
+	Fahrausnahme();
 	Fahrausnahme(Fahrzeug& fahrzeug, Weg& weg);
 
-	virtual void vBearbeiten() const = 0;
+	virtual void vBearbeiten()= 0;
 
 	virtual ~Fahrausnahme() = default;
 protected:

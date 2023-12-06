@@ -7,10 +7,11 @@
 #pragma once
 #include <iostream>
 #include "Weg.h"
-#include "Verhalten.h"
 
 #ifndef FAHRZEUG_H_
 #define FAHRZEUG_H_
+
+#include "Verhalten.h"
 
 extern double dGlobaleZeit;
 
@@ -42,6 +43,7 @@ public:
 	void setMaxGeschwindigkeit(double p_dMaxGeschwindigkeit){this->p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit;};
 	void setGesamtstrecke(double p_dGesamtstrecke){this->p_dGesamtstrecke = p_dGesamtstrecke;};
 	void setAbschnittStrecke(double dAbschnittStrecke){this->p_dAbschnittStrecke = dAbschnittStrecke;};
+	void vResetAbschnittStrecke(){this->p_dAbschnittStrecke = 0;};
 
 	//Double
 	virtual double dGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}; // @suppress("No return")
@@ -55,9 +57,10 @@ public:
 	void vNeueStrecke(Weg& weg, double dStartZeitpunkt);
 
 	virtual void vAusgeben() const override;
-	virtual void vAusgeben(std::ostream& ausgabe) const override;
+	virtual void vAusgeben(std::ostream& ausgabe)const override;
 	static void vKopf();
 	virtual void vSimulieren() override;
+//	virtual void vZeichnen(const Weg&){};
 	//void operator =(const Fahrzeug& fahrzeug);
 
 	//Überladen
@@ -89,7 +92,6 @@ private:
 // Also keine friend Dekleration.
 // Aber getters werden benötigt, um die private bzw. protected Bereiche erreichen zu können.
 
-ostream& operator<<(ostream& ausgabe, const Fahrzeug& fahrzeug);
 
 #endif /* FAHRZEUG_H_ */
 

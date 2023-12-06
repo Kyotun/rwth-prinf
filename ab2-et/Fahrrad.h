@@ -16,6 +16,7 @@ using namespace std;
 class Fahrrad : public Fahrzeug {
 	public:
 		//Konstruktoren
+//		Fahrrad() = default;
 		Fahrrad(string p_sName);
 		Fahrrad(string p_sName, double p_dMaxGeschwindigkeit);
 
@@ -26,6 +27,8 @@ class Fahrrad : public Fahrzeug {
 		void vAusgeben() const override;
 		void vAusgeben(ostream& ausgabe) const override;
 		void vSimulieren() override;
+
+		virtual ~Fahrrad() = default;
 
 	private:
 
