@@ -9,11 +9,15 @@
 #include "Verhalten.h"
 #include "Streckenende.h"
 
+//Ausrechnen der aktuelle zuruckgelegten Strecke des fahrenden Fahrzeuges
 double Fahren::dStrecke(Fahrzeug& fahrzeug, double dZeitDifferenz){
 	double dTeilStrecke = fahrzeug.dGeschwindigkeit()*dZeitDifferenz;
 	double dLaenge = p_pWeg->getLaenge();
 	double dAbschnittStrecke = fahrzeug.getAbschnittStrecke();
 
+	//Kontrolliere, was wurde passieren, wenn der letzte Teil auch gefahren wurde?
+	//Wenn der noch gefahren werden kann, return einfach die TeilStrecke
+	//Wenn nicht, gibt eine Meldung durch die Ausnahmeklasse Streckenende aus.
 	if(dLaenge-dAbschnittStrecke < dTeilStrecke){
 		fahrzeug.setAbschnittStrecke(dLaenge);
 		throw new Streckenende(fahrzeug, *p_pWeg);

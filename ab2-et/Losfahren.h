@@ -15,7 +15,7 @@ class Fahrzeug;
 class Losfahren : public Fahrausnahme{
 public:
 	Losfahren() = default;
-	virtual void vBearbeiten() override;
+	void vBearbeiten() override;
 	Losfahren(Fahrzeug& fahrzeug, Weg& weg): Fahrausnahme(fahrzeug, weg){}
 	virtual ~Losfahren() = default;
 protected:

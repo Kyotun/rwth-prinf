@@ -10,6 +10,7 @@
 #ifndef TEMPOLIMIT_H_
 #define TEMPOLIMIT_H_
 
+//Vorhandene Tempolimits fuer unterschiedliche Wegtypen.
 enum Tempolimit{
 		Innerorts=50,
 		Landstrasse=100,

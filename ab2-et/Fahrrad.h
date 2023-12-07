@@ -16,7 +16,7 @@ using namespace std;
 class Fahrrad : public Fahrzeug {
 	public:
 		//Konstruktoren
-//		Fahrrad() = default;
+		Fahrrad() = default;
 		Fahrrad(string p_sName);
 		Fahrrad(string p_sName, double p_dMaxGeschwindigkeit);
 

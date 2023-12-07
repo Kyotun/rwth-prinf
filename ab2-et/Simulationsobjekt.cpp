@@ -35,10 +35,7 @@ Simulationsobjekt::Simulationsobjekt(string p_sName): p_sName(p_sName){
 			 << " erzeugt." << endl;
 }
 
-//void Simulationsobjekt::vSimulieren(){
-//
-//}
-
+//Ausgeben von Objekten einfach mit cout<<
 void Simulationsobjekt::vAusgeben(ostream& ausgabe) const{
 	ausgabe << resetiosflags(ios::adjustfield)
 			 << setiosflags(ios::left)
@@ -47,6 +44,7 @@ void Simulationsobjekt::vAusgeben(ostream& ausgabe) const{
 		     << setw(15) << getName();
 }
 
+//Ausgeben von Objekten mit Punktoperator und die Methode vAusgeben.
 void Simulationsobjekt::vAusgeben() const{
 	cout << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
@@ -55,7 +53,7 @@ void Simulationsobjekt::vAusgeben() const{
 		 << setw(15) << getName();
 }
 
-
+//Ueberladen des Zuweisungsoperators
 Simulationsobjekt& Simulationsobjekt::operator=(const Simulationsobjekt& other) {
 	//Kontrolliere ob das Objekt selbst aufruft.
 	if (this == &other) {
@@ -66,6 +64,8 @@ Simulationsobjekt& Simulationsobjekt::operator=(const Simulationsobjekt& other) 
 
 	return *this;
 }
+
+//Ueberladen des Gleichheitoperators
 bool Simulationsobjekt::operator==(const Simulationsobjekt& andere){
 	if(this->p_iID == andere.p_iID){
 		return true;
@@ -74,7 +74,9 @@ bool Simulationsobjekt::operator==(const Simulationsobjekt& andere){
 
 }
 
-ostream& operator<<(ostream& ausgabe,const Simulationsobjekt& simulationsobjekt){
-	simulationsobjekt.vAusgeben(ausgabe);
+//Ueberladen des Ausgabeoperators
+//Dank dieses Ueberladen, darf die Fahrzeuge einfach mit cout<< ausgegeben werden.
+ostream& operator<<(ostream& ausgabe,const Simulationsobjekt& simuobjekt) {
+	simuobjekt.vAusgeben(ausgabe);
 	return ausgabe;
 }

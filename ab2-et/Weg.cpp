@@ -107,11 +107,8 @@ void Weg::setFahrzeugList(list<unique_ptr<Fahrzeug>> fahrzeugList){
 		p_pFahrzeuge.push_back(std::move(fahrzeugPtr));
 		p_pFahrzeuge.vAktualisieren();
 	}
-
-//	p_pFahrzeuge.insert(p_pFahrzeuge.end(),
-//			make_move_iterator(fahrzeugList.begin()),
-//			make_move_iterator(fahrzeugList.end()));
 }
+
 void Weg::getFahrzeuge() const{
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
 		const Fahrzeug* fahrzeug = it->get();
@@ -126,6 +123,11 @@ void Weg::getFahrzeuge() const{
 double Weg::getTempolimit() const{
 	cout << fixed << setprecision(2);
 	return (double)p_eTempolimit;
+}
+
+ostream& operator<<(ostream& ausgabe,const Weg& weg){
+	weg.vAusgeben(ausgabe);
+	return ausgabe;
 }
 
 

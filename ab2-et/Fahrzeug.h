@@ -12,6 +12,8 @@
 #define FAHRZEUG_H_
 
 #include "Verhalten.h"
+#include "Fahren.h"
+
 
 extern double dGlobaleZeit;
 
@@ -80,7 +82,7 @@ protected:
 
 
 	//Parkendes oder fahrendes Fahrzeug?
-	unique_ptr<Verhalten> p_pVerhalten;
+	unique_ptr<Verhalten> p_pVerhalten = nullptr;
 
 private:
 
@@ -91,7 +93,7 @@ private:
 // nicht erreichen kann.
 // Also keine friend Dekleration.
 // Aber getters werden benötigt, um die private bzw. protected Bereiche erreichen zu können.
-
+ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug);
 
 #endif /* FAHRZEUG_H_ */
 

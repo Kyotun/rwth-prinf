@@ -5,6 +5,7 @@
  *      Author: kyotun
  */
 
+// Gui, boost klasor erisim
 
 #include <iostream>
 #include <memory>
@@ -28,7 +29,7 @@ void vAufgabe_1();
 void vAufgabe_1a();
 void vAufgabe_2();
 void vAufgabe_3();
-void vAufgabe_AB1();
+//void vAufgabe_AB1();
 void vAufgabe_4();
 void vAufgabe_5();
 void vAufgabe_6();
@@ -42,8 +43,9 @@ int main(){
 //	vAufgabe_AB1();
 //	vAufgabe_4();
 //	vAufgabe_5();
-	vAufgabe_6();
+//	vAufgabe_6();
 //	vAufgabe_6a();
+	// ECE SORU SORACAK
 	return 0;
 }
 
@@ -223,10 +225,17 @@ void vAufgabe_2(){
 		cout << "3) Verbrauch: ";
 		cin >> dVerbrauch;
 
+		//Mann muss vorsicht sein, wenn die Stringeingaben eingelesen werden.
+		//Das Verhalten des cin Operators ist anders fuer Strings.
+		//Hier soll getline Methode benutzt werden.
 		getline(cin, sTankVolumen);
 		cout << "4) Tankvolumen(optinal, default 55 liter angenommen.): ";
 		getline(cin, sTankVolumen);
 
+		//Kontrolliere ob der Benutzer optionalen Eingabe eingegeben hat.
+		//Wenn ja, erzeuge das PKW mit 3 Parametern.
+		//Wenn nein, formt den Eingabe von string um den double Wert um und dann erzeuge das PKW.
+		//Letztes gibt das Objekt in die Vektor ein.
 		if(sTankVolumen == ""){
 			unique_ptr<PKW> pkw = make_unique<PKW>(sName, dGeschwindigkeit, dVerbrauch);
 			fahrzeuge.push_back(std::move(pkw));
@@ -245,6 +254,8 @@ void vAufgabe_2(){
 		cout << "2) Maximale Geschwindigkeit: ";
 		cin >> dGeschwindigkeit;
 
+		//Erzeuge das Fahrrad Objekt.
+		//Dann gibt das Objekt in die Vektor ein.
 		unique_ptr<Fahrrad> fahrrad = make_unique<Fahrrad>(sName, dGeschwindigkeit);
 		fahrzeuge.push_back(std::move(fahrrad));
 	}
@@ -261,7 +272,7 @@ void vAufgabe_2(){
 
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
-	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 10; dGlobaleZeit += dEpsilon){
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : fahrzeuge){
 			cout << *fahrzeug;
 			fahrzeug->vSimulieren();
@@ -355,51 +366,58 @@ void vAufgabe_3(){
 	delete fahrzeug2;
 }
 
-void vAufgabe_AB1() {
-
-    int l = 0; // Laufindex für gezielte AUsgabe
-    vector<int> ausgabe{15};
-    double dTakt = 0.3;
-
-    std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
-    vecFahrzeuge.push_back(make_unique <PKW>("Audi", 229, 9.6));
-    vecFahrzeuge.push_back(make_unique <Fahrrad>("BMX", 24.7));
-    for (dGlobaleZeit = 0; dGlobaleZeit < 10; dGlobaleZeit += dTakt)
-    {
-        auto itL = find(ausgabe.begin(), ausgabe.end(), l);
-        if (itL != ausgabe.end()) {
-            std::cout << std::endl << l <<  " Globalezeit = " << dGlobaleZeit << std::endl;
-            Fahrzeug::vKopf();
-        }
-
-        for (int i = 0; i < (int) vecFahrzeuge.size(); i++)
-        {
-            vecFahrzeuge[i]->vSimulieren();
-            if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
-            {
-                vecFahrzeuge[i]->dTanken();
-            }
-            if (itL != ausgabe.end()) {
-                std::cout << *vecFahrzeuge[i] << endl;
-            }
-        }
-        l++;
-    }
-    char c;
-    std::cin >> c;
-}
+//void vAufgabe_AB1() {
+//
+//    int l = 0; // Laufindex für gezielte AUsgabe
+//    vector<int> ausgabe{15};
+//    double dTakt = 0.3;
+//
+//    std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
+//    vecFahrzeuge.push_back(make_unique <PKW>("Audi", 229, 9.6));
+//    vecFahrzeuge.push_back(make_unique <Fahrrad>("BMX", 24.7));
+//    for (dGlobaleZeit = 0; dGlobaleZeit < 5; dGlobaleZeit += dTakt)
+//    {
+//        auto itL = find(ausgabe.begin(), ausgabe.end(), l);
+//        if (itL != ausgabe.end()) {
+//            std::cout << std::endl << l <<  " Globalezeit = " << dGlobaleZeit << std::endl;
+//            Fahrzeug::vKopf();
+//        }
+//
+//        for (int i = 0; i < (int) vecFahrzeuge.size(); i++)
+//        {
+//            vecFahrzeuge[i]->vSimulieren();
+//            if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
+//            {
+//                vecFahrzeuge[i]->dTanken();
+//            }
+//            if (itL != ausgabe.end()) {
+//                std::cout << *vecFahrzeuge[i] << endl;
+//            }
+//        }
+//        l++;
+//    }
+//    char c;
+//    std::cin >> c;
+//}
 
 void vAufgabe_4(){
+
+	//Statisches erzeugen eines Wegs "Innerorts"
 	Weg weg1("weg", 105.99, Innerorts);
+
+	//Dynamisches erzeugen(mit Smart-Ptr) eines wegs "Autobahn"
 	unique_ptr<Weg> weg_ptr = make_unique<Weg>("weg_ptr", 287.34, Autobahn);
 
+	//Dynamisches erzeugen eines Fahrzeugs.
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1");
 
+	//Weg sollte leer sein.
 	cout << "\nVor dem Annahme:";
 	Weg::vKopf();
 	cout << weg1 << endl;
 	cout << *weg_ptr << endl << endl;
 
+	//Nach diesen Zeilen soll Weg fahrzeug1 enthalten.
 	cout << "Nach dem Annahme von fahrzeug1 im weg1:" << endl;
 	weg1.vAnnahme(std::move(fahrzeug1));
 	Weg::vKopf();
@@ -408,13 +426,16 @@ void vAufgabe_4(){
 }
 
 void vAufgabe_5(){
+
+	//Dynamisches Erzeugen verschiedenen Elementen
 	unique_ptr<Weg> weg_ptr1 = make_unique<Weg>("weg_ptr1", 255.55, Innerorts);
 
 	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
-	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrrad>("Fahrrad", 30);
+	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrrad>("Fahrrad", 27.89);
 	unique_ptr<Fahrzeug> fahrzeug4 = make_unique<PKW>("PKW3", 121.3, 12.33, 34.37);
 
+	//Weg akzeptiert die Fahrzeuge.
 	cout << endl;
 	weg_ptr1->vAnnahme(std::move(fahrzeug));
 	weg_ptr1->vAnnahme(std::move(fahrzeug2));
@@ -434,8 +455,10 @@ void vAufgabe_5(){
 	cin >> dEpsilon;
 
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
+	// In jeder Zeittakt, gibt die Informationen der Fahrzeugen vor dem Simulieren aus.
+	// Dann simuliere alle Fahrzeuge.
 	Fahrzeug::vKopf();
-	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 10; dGlobaleZeit += dEpsilon){
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : *weg_ptr1->getFahrzeugList()){
 			cout << *fahrzeug;
 
@@ -448,8 +471,10 @@ void vAufgabe_5(){
 }
 
 void vAufgabe_6(){
-	Weg* autobahn = new Weg("Autobahn", 155.3);
-	Weg* innerort = new Weg("Innerort", 33.5, Innerorts);
+
+	//Dynamisches Erzeugen aller Objekte.
+	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 250);
+	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 250, Innerorts);
 
 	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
@@ -460,6 +485,7 @@ void vAufgabe_6(){
 	unique_ptr<Fahrzeug> fahrzeug6 = make_unique<Fahrrad>("Fahrrad2", 25.35);
 
 
+	//Wege akzeptieren die Fahrzeuge.
 	cout << endl;
 	autobahn->vAnnahme(std::move(fahrzeug));
 	autobahn->vAnnahme(std::move(fahrzeug2),2);
@@ -483,32 +509,37 @@ void vAufgabe_6(){
 
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
-	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : *autobahn->getFahrzeugList()){
+			//Gibt die Fahrzeuge aus.
 			cout << *fahrzeug;
 
+			//Kontrolliere ob die TankZeit gekommen ist.
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 			}
 		}
+		//Simuliere den Weg.
 		autobahn->vSimulieren();
 	}
 	dGlobaleZeit = 0;
 
+	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	cout << "\n\nAutobahn wurde Simuliert. Nun wird der Innerort simuliert." << endl;
 	Fahrzeug::vKopf();
-	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : *innerort->getFahrzeugList()){
+			//Gibt die Fahrzeuge aus.
 			cout << *fahrzeug;
 
+			//Kontrolliere ob die TankZeit gekommen ist.
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 			}
 		}
+		//Simuliere den Weg.
 		innerort->vSimulieren();
 	}
-	delete autobahn;
-	delete innerort;
 }
 
 //void vAufgabe_6(){
@@ -584,9 +615,14 @@ void vAufgabe_6(){
 //}
 
 void vAufgabe_6a(){
+
+	//Wir mochten namespace vertagt benutzen, da alle Angaben unter diesem Name definiert wurden.
 	using namespace vertagt;
+
+	//Erstellen eine Liste vom Typ VListe
 	VListe<int> VListe;
 
+	//Zur Erstellung einer zufaelligen Zahl
 	static std::mt19937 device(0);
 	std::uniform_int_distribution<int> dist(1, 10);
 
@@ -602,15 +638,17 @@ void vAufgabe_6a(){
 		std::cout << (*it) << " ";
 	}
 
+	//Liste soll aktualisiert wernde, sonst konnten die Zahlen in die Liste nicht rein.
 	cout << "\nListe wurde aktualisiert.\n\n";
 	VListe.vAktualisieren();
 
+	//Ausgeben nach dem Aktualisieren, soll sich gaeendert worden sein.
 	cout << "Liste nach dem aktualiseren:\n";
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		std::cout << (*it) << " ";
 	}
 
-
+	//Loeschen der Elementen grosser als 5 sind.
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		if((*it) > 5) {
 			VListe.erase(it);
@@ -627,11 +665,12 @@ void vAufgabe_6a(){
 	VListe.vAktualisieren();
 
 	cout << "\n\nListe wurde aktualisiert. Liste:\n";
-	// Ausgabe sollte sich geändert haben
+	//Ausgeben nach dem Aktualisieren, soll sich gaeendert worden sein.
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		std::cout << (*it) << " ";
 	}
 
+	//Eingeben in die Liste zwei mehr zufaellige Zahlen
 	VListe.push_back(dist(device));
 	VListe.push_front(dist(device));
 
@@ -641,6 +680,7 @@ void vAufgabe_6a(){
 		std::cout << (*it) << " ";
 	}
 
+	//Liste soll aktualisiert werden.
 	VListe.vAktualisieren();
 
 	cout << "\n\nNach dem aktualisieren. Liste:\n";

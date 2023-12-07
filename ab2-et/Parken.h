@@ -19,7 +19,7 @@ class Parken : public Verhalten{
 public:
 	Parken() = default;
 	Parken(Weg& weg, double dStartZeit): Verhalten(weg), p_dStartZeit(dStartZeit){}
-	virtual double dStrecke(Fahrzeug& aFahrzeug, double dStartZeit) override;
+	double dStrecke(Fahrzeug& aFahrzeug, double dStartZeit) override;
 	virtual ~Parken() = default;
 
 protected:

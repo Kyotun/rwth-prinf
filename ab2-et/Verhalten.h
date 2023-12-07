@@ -29,7 +29,7 @@ public:
 	virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
 
 protected:
-	Weg* p_pWeg;
+	Weg* p_pWeg = nullptr;
 private:
 };
 

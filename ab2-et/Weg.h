@@ -26,8 +26,6 @@ class Weg : public Simulationsobjekt{
 public:
 	Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit= Tempolimit::Autobahn);
 
-	virtual ~Weg() = default;
-
 	//Getters
 	double getTempolimit() const;
 	double getLaenge() const{return p_dLaenge;}
@@ -60,6 +58,7 @@ private:
 
 };
 
+ostream& operator<<(ostream& ausgabe,const Weg& weg);
 
 
 

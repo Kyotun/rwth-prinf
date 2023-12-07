@@ -78,25 +78,39 @@ void Fahrzeug::vSimulieren(){
 		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
 		return;
 	}else{
+		//Zeitdifferenz zwischen Globalezeit und letzte simulierende Zeit.
 		double dZeitdifferenz = dGlobaleZeit - p_dZeit;
 
 		//Aktuell gefahrende Strecke
-		double dTeilStrecke = p_pVerhalten->dStrecke(*this, dZeitdifferenz);
 
-		p_dAbschnittStrecke += dTeilStrecke;
-		p_dGesamtstrecke += dTeilStrecke;
+		//wenn es ein Verhalten gibt, soll die Geschwindigkeit nach diesem Verhalten ausrechnet werden.
+		if(p_pVerhalten){
+			double dTeilStrecke = p_pVerhalten->dStrecke(*this, dZeitdifferenz);
+			p_dAbschnittStrecke += dTeilStrecke;
+			p_dGesamtstrecke += dTeilStrecke;
+		}else{
+			double dTeilStrecke = dGeschwindigkeit()*dZeitdifferenz;
+			p_dAbschnittStrecke += dTeilStrecke;
+			p_dGesamtstrecke += dTeilStrecke;
+		}
+
 		p_dGesamtZeit += dZeitdifferenz;
 		p_dZeit = dGlobaleZeit; // Die Letzte Zeit, in der das Fahrzeug sich bewegt hat.
-	}
 
+	}
 }
 
+//Wenn ein Fahrzeug von einem Weg akzeptiert wurde, soll es auch diesen Weg in sich selbst anerkannt machen.
+//Diese Method für die fahrende Fahrzeuge
 void Fahrzeug::vNeueStrecke(Weg& weg){
 	p_pVerhalten = make_unique<Fahren>(weg);
 	this->vResetAbschnittStrecke();
 	cout << "Fahrzeug " << p_sName << " ist in den Weg " << weg.getName() << " zum Fahren angekommen." << endl;
 }
 
+//Wenn ein Fahrzeug von einem Weg akzeptiert wurde, soll es auch diesen Weg in sich selbst anerkannt machen.
+//Diese Method für die parkende Fahrzeuge.
+//Parkende Fahrzeuge warten bis die Globalezeit gleich Startzeitpunkt ist.
 void Fahrzeug::vNeueStrecke(Weg& weg, double dStartZeitpunkt){
 	if(p_pVerhalten){
 		p_pVerhalten.reset();
@@ -104,15 +118,6 @@ void Fahrzeug::vNeueStrecke(Weg& weg, double dStartZeitpunkt){
 	p_pVerhalten = make_unique<Parken>(weg, dStartZeitpunkt);
 	this->vResetAbschnittStrecke();
 	cout << "Fahrzeug " << p_sName << " ist in den Weg " << weg.getName() << " zum Parken angekommen." << endl;
-}
-
-// Überladung von '<<' (Ausgabe) Operator.
-// Nun können die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
-// einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
-
-ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug) {
-	fahrzeug.vAusgeben(ausgabe);
-	return ausgabe;
 }
 
 // Überladen des '<' (kleiner als) operators
@@ -136,6 +141,16 @@ Fahrzeug& Fahrzeug::operator=(const Fahrzeug& other) {
 	this->p_dGesamtZeit = other.getGesamtZeit();
 
 	return *this;
+}
+
+
+// Überladung von '<<' (Ausgabe) Operator.
+// Nun können die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
+// einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
+
+ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug) {
+	fahrzeug.vAusgeben(ausgabe);
+	return ausgabe;
 }
 
 /*

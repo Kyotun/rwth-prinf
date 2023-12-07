@@ -12,5 +12,8 @@ extern double dGlobaleZeit;
 
 // dStrecke Funktion, die ermittelt, wie weit ein Fahrzeug innerhalb des ubergebenen Zeitintervalls fahren kann,
 // ohne das Wegende zu uberschreiten
+double Verhalten::dStrecke(Fahrzeug& fahrzeug, double dZeitIntervall){
+	return fahrzeug.dGeschwindigkeit()*dZeitIntervall;
+}
 
 

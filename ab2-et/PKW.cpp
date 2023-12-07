@@ -92,8 +92,18 @@ void PKW::vSimulieren() {
 	p_dTankinhalt = dAktuellTankVolumen;
 }
 
+//Ausrechnen der Geschwindigkeit von PKWs
 double PKW::dGeschwindigkeit() const{
-	double erlaubte_max_geschwindigkeit = p_pVerhalten->getpWeg()->getTempolimit();
+	double erlaubte_max_geschwindigkeit = 0.0;
+	erlaubte_max_geschwindigkeit = getMaxGeschwindigkeit();
+
+	//Wenn dieses Objekt ein Verhalten hat, heisst das, dieses Objekt auf einem Weg sich befindet.
+	//Die hochste erlaubte Geschwindigkeit soll rausgenommen werden.(erlaubte_max_geschwindigkeit)
+	//Wenn diese Geschwindigkeit riesig gross ist, muss das Fahrzeug mit seiner maxGeschwindigkeit weiterfahren.
+	//Wenn es kleiner ist, darf maximal mit dieser Geschwindigkeit gefahren werden.
+	if(p_pVerhalten){
+		erlaubte_max_geschwindigkeit = p_pVerhalten->getpWeg()->getTempolimit();
+	}
 
 	if(erlaubte_max_geschwindigkeit > getMaxGeschwindigkeit()){
 		return getMaxGeschwindigkeit();
