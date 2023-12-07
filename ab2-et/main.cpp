@@ -45,7 +45,6 @@ int main(){
 //	vAufgabe_5();
 //	vAufgabe_6();
 //	vAufgabe_6a();
-	// ECE SORU SORACAK
 	return 0;
 }
 
