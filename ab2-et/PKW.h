@@ -42,6 +42,7 @@ class PKW : public Fahrzeug {
 		void vSimulieren() override;
 		void vAusgeben()const override;
 		void vAusgeben(std::ostream& ausgabe) const override;
+		void vZeichnen(const Weg& weg) override;
 
 	private:
 		double p_dVerbrauch = 0.0; // Liter / 100 km

@@ -15,8 +15,6 @@
 #include <vector>
 #include <cmath>
 
-
-
 using namespace std;
 extern double dGlobaleZeit;
 
@@ -86,4 +84,9 @@ void Fahrrad::vAusgeben() const{
 // In jeder Zeittakt soll die aktuelle Geschwindigkeit mit der Funktion dGeschwindigkeit() erneut berechnet werden.
 void Fahrrad::vSimulieren(){
 	Fahrzeug::vSimulieren();
+}
+
+void Fahrrad::vZeichnen(const Weg& weg){
+	double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
+//	bZeichneFahrrad(getName(), weg.getName(), relativePosition, dGeschwindigkeit());
 }

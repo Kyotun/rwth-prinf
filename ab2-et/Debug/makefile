@@ -64,7 +64,7 @@ main-build: ab2-et
 ab2-et: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C++ Linker'
-	g++  -o "ab2-et" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/Users/kyotun/boost/libs -o "ab2-et" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

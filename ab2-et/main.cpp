@@ -42,12 +42,11 @@ int main(){
 //	vAufgabe_3();
 //	vAufgabe_AB1();
 //	vAufgabe_4();
-//	vAufgabe_5();
+	vAufgabe_5();
 //	vAufgabe_6();
 //	vAufgabe_6a();
 	return 0;
 }
-
 
 
 void vAufgabe_1(){
@@ -427,7 +426,7 @@ void vAufgabe_4(){
 void vAufgabe_5(){
 
 	//Dynamisches Erzeugen verschiedenen Elementen
-	unique_ptr<Weg> weg_ptr1 = make_unique<Weg>("weg_ptr1", 255.55, Innerorts);
+	unique_ptr<Weg> weg_ptr1 = make_unique<Weg>("WEG", 255.55, Innerorts);
 
 	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
 	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
@@ -542,6 +541,8 @@ void vAufgabe_6(){
 }
 
 //void vAufgabe_6(){
+//
+//	//Dynamisches Erzeugen der Elementen
 //	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 500.0);
 //	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 500.0, Innerorts);
 //
@@ -563,6 +564,7 @@ void vAufgabe_6(){
 //	bZeichneStrasse(autobahn->getName(), innerort->getName(), autobahn->getLaenge(), 2, koordinaten);
 //
 //
+//	//Annehmen der Fahrzeuge in die Wege.
 //	cout << endl;
 //	autobahn->vAnnahme(std::move(fahrzeug));
 //	autobahn->vAnnahme(std::move(fahrzeug2),2);
@@ -588,10 +590,14 @@ void vAufgabe_6(){
 //	Fahrzeug::vKopf();
 //	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
 //		vSetzeZeit(dGlobaleZeit);
+//
 //		//Printen des Autobahns
 //		for(const auto& fahrzeug : autobahn->getFahrzeugList()){
+//
+//			//Gibt die Eigenschaften der Fahrzeuge aus.
 //			cout << *fahrzeug;
 //
+//			//Kontrolliere ob die TankZeit gekommen ist.
 //			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 //				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 //			}
@@ -599,8 +605,12 @@ void vAufgabe_6(){
 //
 //		//Printen des Innerorts
 //		for(const auto& fahrzeug : innerort->getFahrzeugList()){
+//
+//			//Gibt die Eigensschaften der Fahrzeuge aus.
 //			cout << *fahrzeug;
 //
+//
+//			//Kontrolliere ob die TankZeit gekommen ist.
 //			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 //				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 //			}
@@ -666,7 +676,7 @@ void vAufgabe_6a(){
 	cout << "\n\nListe wurde aktualisiert. Liste:\n";
 	//Ausgeben nach dem Aktualisieren, soll sich gaeendert worden sein.
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
-		std::cout << (*it) << " ";
+		cout << (*it) << " ";
 	}
 
 	//Eingeben in die Liste zwei mehr zufaellige Zahlen
@@ -676,7 +686,7 @@ void vAufgabe_6a(){
 	cout << "\n\nEine Zahl vorne und eine Zahl hinter werden hinzugefuegt.\n";
 	cout << "Vor dem aktualiseren:\n";
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
-		std::cout << (*it) << " ";
+		cout << (*it) << " ";
 	}
 
 	//Liste soll aktualisiert werden.

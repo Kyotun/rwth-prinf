@@ -5,13 +5,14 @@
  *      Author: kyotun
  */
 
-#include "PKW.h"
-#include <iostream>
 #include <iomanip>
+#include <cmath>
+#include "PKW.h"
+//#include "SimuClient.h"
+#include <iostream>
 #include <string>
 #include <limits>
 #include <vector>
-#include <cmath>
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -128,6 +129,11 @@ void PKW::vAusgeben() const {
 		 << setw(15) << getTankinhalt()
 		 << setw(10) << getZeit()
 		 << setw(15) << getGlobaleZeit() << endl;
+}
+
+void PKW::vZeichnen(const Weg& weg){
+	double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
+//	bZeichnePKW(getName(), weg.getName(), relativePosition, dGeschwindigkeit(), getTankinhalt());
 }
 
 

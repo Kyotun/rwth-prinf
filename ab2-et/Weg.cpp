@@ -32,6 +32,7 @@ void Weg::vSimulieren(){
 	//Wenn nein, mach einfach weiter.
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end();){
 		try{
+			(*it)->vZeichnen(*this);
 			(*it)->vSimulieren();
 			it++;
 		} catch (Fahrausnahme *fahrausnahme){
@@ -70,7 +71,7 @@ void Weg::vAusgeben() const{
 void Weg::vKopf() {
 	cout << endl << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
-		 << setw(5) << "ID"
+		 << setw(8) << "ID"
 		 << setw(15) << "| Name"
 		 << setw(15) << "| Laenge"
 		 << setw(15) << "| Fahrzeuge" << endl;

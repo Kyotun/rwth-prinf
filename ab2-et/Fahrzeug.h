@@ -62,7 +62,7 @@ public:
 	virtual void vAusgeben(std::ostream& ausgabe)const override;
 	static void vKopf();
 	virtual void vSimulieren() override;
-//	virtual void vZeichnen(const Weg&){};
+	virtual void vZeichnen(const Weg& weg){};
 	//void operator =(const Fahrzeug& fahrzeug);
 
 	//Überladen
