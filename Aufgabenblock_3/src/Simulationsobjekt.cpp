@@ -17,7 +17,7 @@
 using namespace std;
 extern double dGlobaleZeit;
 
-//Standard-Konstruktor
+// Standard-Konstruktor
 Simulationsobjekt::Simulationsobjekt(){
 	cout << "Ein Simulationsobjekt wurde mit der ID '" << p_iID
 		 << "' erzeugt." << endl;
@@ -29,13 +29,14 @@ Simulationsobjekt::~Simulationsobjekt(){
 		 << "' und mit der ID " << p_iID
 		 << " gelöscht." << endl;
 }
+
 Simulationsobjekt::Simulationsobjekt(string p_sName): p_sName(p_sName){
 	cout << "Ein Simulationsobjekt wurde mit dem Name '" << p_sName
 			 << "' und mit der ID " << p_iID
 			 << " erzeugt." << endl;
 }
 
-//Ausgeben von Objekten einfach mit cout<<
+// Ausgeben von Objekten einfach mit cout<< (opreator<<)
 void Simulationsobjekt::vAusgeben(ostream& ausgabe) const{
 	ausgabe << resetiosflags(ios::adjustfield)
 			 << setiosflags(ios::left)
@@ -44,7 +45,7 @@ void Simulationsobjekt::vAusgeben(ostream& ausgabe) const{
 		     << setw(15) << getName();
 }
 
-//Ausgeben von Objekten mit Punktoperator und die Methode vAusgeben.
+// Ausgeben von Objekten mit Punktoperator und die Methode vAusgeben.
 void Simulationsobjekt::vAusgeben() const{
 	cout << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
@@ -67,7 +68,7 @@ void Simulationsobjekt::vEinlesen(istream& is){
 
 }
 
-//Ueberladen des Zuweisungsoperators
+// Ueberladen des Zuweisungsoperators
 Simulationsobjekt& Simulationsobjekt::operator=(const Simulationsobjekt& other) {
 	//Kontrolliere ob das Objekt selbst aufruft.
 	if (this == &other) {
@@ -79,7 +80,7 @@ Simulationsobjekt& Simulationsobjekt::operator=(const Simulationsobjekt& other) 
 	return *this;
 }
 
-//Ueberladen des Gleichheitoperators
+// Ueberladen des Gleichheitoperators
 bool Simulationsobjekt::operator==(const Simulationsobjekt& andere){
 	if(this->p_iID == andere.p_iID){
 		return true;
@@ -88,8 +89,8 @@ bool Simulationsobjekt::operator==(const Simulationsobjekt& andere){
 
 }
 
-//Ueberladen des Ausgabeoperators
-//Dank dieses Ueberladen, darf die Fahrzeuge einfach mit cout<< ausgegeben werden.
+// Ueberladen des Ausgabeoperators
+// Dank dieses Ueberladen, darf die Fahrzeuge einfach mit cout<<(operator <<) ausgegeben werden.
 ostream& operator<<(ostream& ausgabe,const Simulationsobjekt& simuobjekt) {
 	simuobjekt.vAusgeben(ausgabe);
 	return ausgabe;

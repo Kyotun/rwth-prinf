@@ -10,7 +10,6 @@
 #include "vertagt_liste.h"
 extern double dGlobaleZeit;
 
-// Ausnahme Streckenende
 // Wenn ein Fahrzeug am Ende eines Wegs gefahren ist, wird diese Methode von der Methode des Wegs vSimulieren aufgerufen.
 // Durch try-catch Block.
 void Streckenende::vBearbeiten(){
@@ -31,10 +30,13 @@ void Streckenende::vBearbeiten(){
 	// Nimmt einen zufaelligen Weg, der von der Kreuzung anfangt.
 	shared_ptr<Weg> lokalZufaelligerWeg = lokalKreuzung->pZufaelligerWeg(p_pWeg);
 
-	//
+	// Tanken vom neu in der Kreuzung gefahrenden Fahrzeug.
 	lokalKreuzung->vTanken(*lokalFahrzeug);
+
+	// Umziehen vom Fahrzeug in den neuen Weg.
 	lokalZufaelligerWeg->vAnnahme(move(lokalFahrzeug));
 
+	// Gibt die Informationen aus.
 	cout << "Das Fahrzeug mit der ID " << p_pFahrzeug.getID()
 		 << " hat auf dem Weg mit der ID " << p_pWeg.getID()
 		 << " das Streckenede erreicht." << std::endl;

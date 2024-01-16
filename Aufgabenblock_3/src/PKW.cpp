@@ -38,26 +38,26 @@ PKW::PKW(string p_sName, double p_dMaxGeschwindigkeit,
 					p_dVerbrauch(p_dVerbrauch),
 					p_dTankvolumen(p_dTankvolumen){}
 
-// Rechne den Gesamtverbrauch und gibt es zurück.
+// Rechne den Gesamtverbrauch und gibt es zurueck.
 double PKW::getGesamtVerbrauch() const{
 	// Gesamtstrecke in km erste Klammer
 	// Zweite Klammer = Gesamtverbrauch in 1 km
 	return (p_dGesamtstrecke)*(p_dVerbrauch/100);
 }
 
-// Gibt den aktuellen Tankinhalt zurück
+// Gibt den aktuellen Tankinhalt zurueck
 double PKW::getTankinhalt() const{
 	return p_dTankinhalt;
 }
 
 // Tanken Funktion, die zur Tanken von PKWs dient.
 // Im Laufe der Zeit nimmt der Tankinhalt der PKWs ab,
-// die aber noch wieder gefüllt werden sollen, um weitersimuliert werden zu können.
+// die aber noch wieder gefuellt werden sollen, um weitersimuliert werden zu koennen.
 double PKW::dTanken(double dMenge){
 
 	if(dMenge > p_dTankvolumen){
 		dMenge = p_dTankvolumen;
-		cout << "Der Tankvolumenlimit ist überschritten, der Tank ist voll!" << endl;
+		cout << "Der Tankvolumenlimit ist ueberschritten, der Tank ist voll!" << endl;
 	}
 	if(0.0 > dMenge){
 		cout << "Die getankte Menge darf nicht kleiner als 0 sein." << endl;
@@ -72,7 +72,7 @@ double PKW::dTanken(double dMenge){
 
 // Simulationfunktion von PKWs.
 // In jeder Zeittakt, in der die PKWs similuert werden, nimmt der aktuelle Tankvolumen ab.
-// Kontrolliere ob es größer null ist, wenn nicht, darf das PKW nicht weiter simuliert.
+// Kontrolliere ob es groeßer null ist, wenn nicht, darf das PKW nicht weiter simuliert.
 void PKW::vSimulieren() {
 
 	if(p_dTankinhalt <= 0){
@@ -94,15 +94,15 @@ void PKW::vSimulieren() {
 	p_dTankinhalt = dAktuellTankVolumen;
 }
 
-//Ausrechnen der Geschwindigkeit von PKWs
+// Ausrechnen der Geschwindigkeit von PKWs
 double PKW::dGeschwindigkeit() const{
 	double erlaubte_max_geschwindigkeit = 0.0;
 	erlaubte_max_geschwindigkeit = getMaxGeschwindigkeit();
 
-	//Wenn dieses Objekt ein Verhalten hat, heisst das, dieses Objekt auf einem Weg sich befindet.
-	//Die hochste erlaubte Geschwindigkeit soll rausgenommen werden.(erlaubte_max_geschwindigkeit)
-	//Wenn diese Geschwindigkeit riesig gross ist, muss das Fahrzeug mit seiner maxGeschwindigkeit weiterfahren.
-	//Wenn es kleiner ist, darf maximal mit dieser Geschwindigkeit gefahren werden.
+	// Wenn dieses Objekt ein Verhalten hat, heisst das, dieses Objekt auf einem Weg sich befindet.
+	// Die hochste erlaubte Geschwindigkeit soll rausgenommen werden.(erlaubte_max_geschwindigkeit)
+	// Wenn diese Geschwindigkeit riesig gross ist, muss das Fahrzeug mit seiner maxGeschwindigkeit weiterfahren.
+	// Wenn es kleiner ist, darf maximal mit dieser Geschwindigkeit gefahren werden.
 	if(p_pVerhalten){
 		erlaubte_max_geschwindigkeit = p_pVerhalten->getpWeg()->getTempolimit();
 	}
@@ -115,7 +115,7 @@ double PKW::dGeschwindigkeit() const{
 }
 
 // Erbt die Ausgebenfunktion von der Fahrzeugklasse und f
-// üge in der Ausgabefunktion die besondere Einheiten von PKws hinzu.
+// uege in der Ausgabefunktion die besondere Einheiten von PKws hinzu.
 void PKW::vAusgeben(ostream& ausgabe) const{
 	Fahrzeug::vAusgeben(ausgabe);
 	ausgabe << setw(20) << getGesamtVerbrauch()
