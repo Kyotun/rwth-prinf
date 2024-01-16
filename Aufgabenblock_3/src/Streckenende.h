@@ -12,11 +12,12 @@
 
 class Streckenende : public Fahrausnahme{
 public:
-	Streckenende() = default;
+	// Konstruktoren
 	Streckenende(Fahrzeug& fahrzeug, Weg& weg): Fahrausnahme(fahrzeug, weg){}
 
+	// Voids
 	virtual void vBearbeiten() override;
-	virtual ~Streckenende() = default;
+
 protected:
 private:
 };

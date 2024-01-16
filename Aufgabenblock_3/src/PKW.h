@@ -19,15 +19,11 @@ using namespace std;
 class PKW : public Fahrzeug {
 public:
 	// Konstruktoren
-	PKW() = default;
 	PKW(string p_sName);
 	PKW(string p_sName, double p_dMaxGeschwindigkeit);
 	PKW(double p_dVerbrauch, double p_dTankvolumen = 55.0);
 	PKW(string p_sName, double p_dMaxGeschwindigkeit,
 			double p_dVerbrauch, double p_dTankvolumen = 55.0);
-
-	// Destruktor
-	virtual ~PKW() = default;
 
 	// Getters
 	double getGesamtVerbrauch() const override;

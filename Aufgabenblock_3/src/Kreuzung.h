@@ -21,8 +21,8 @@ using namespace std;
 
 class Kreuzung: public Simulationsobjekt{
 public:
+	// Konstruktoren
 	Kreuzung(string sName, double dTankstelle = 0);
-
 
 	// PTR Funktionen
 	shared_ptr<Weg>pZufaelligerWeg(Weg& weg);

@@ -18,11 +18,7 @@ using namespace std;
 class Parken : public Verhalten{
 public:
 	// Konstruktoren
-	Parken() = default;
 	Parken(Weg& weg, double dStartZeit): Verhalten(weg), p_dStartZeit(dStartZeit){}
-
-	// Destruktor
-	virtual ~Parken() = default;
 
 	// Doubles
 	double dStrecke(Fahrzeug& aFahrzeug, double dStartZeit) override;

@@ -77,11 +77,11 @@ void Fahrzeug::vSimulieren(){
 		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
 		return;
 	}else{
-		//Zeitdifferenz zwischen Globalezeit und letzte simulierende Zeit.
+		// Zeitdifferenz zwischen Globalezeit und letzte simulierende Zeit.
 		double dZeitdifferenz = dGlobaleZeit - p_dZeit;
 
-		//Aktuell gefahrende Strecke
-		//wenn es ein Verhalten gibt, soll die Geschwindigkeit nach diesem Verhalten ausrechnet werden.
+		// Aktuell gefahrende Strecke
+		// wenn es ein Verhalten gibt, soll die Geschwindigkeit nach diesem Verhalten ausrechnet werden.
 		if(p_pVerhalten){
 			// TielStrecke wird nach der Geschwindigkeit und des Zeitdifferenz ausgerechnet.
 			// Dann werden die Abschnitt- und Gesamtstrecke inkrementiert.
@@ -112,17 +112,17 @@ void Fahrzeug::vSimulieren(){
 	}
 }
 
-//Wenn ein Fahrzeug von einem Weg akzeptiert wurde, soll es auch diesen Weg in sich selbst anerkannt machen.
-//Diese Method für die fahrende Fahrzeuge
+// Wenn ein Fahrzeug von einem Weg akzeptiert wurde, soll es auch diesen Weg in sich selbst anerkannt machen.
+// Diese Method fuer die fahrende Fahrzeuge
 void Fahrzeug::vNeueStrecke(Weg& weg){
 	p_pVerhalten = make_unique<Fahren>(weg);
 	this->vResetAbschnittStrecke();
 	cout << "Fahrzeug " << p_sName << " ist in den Weg " << weg.getName() << " zum Fahren angekommen." << endl;
 }
 
-//Wenn ein Fahrzeug von einem Weg akzeptiert wurde, soll es auch diesen Weg in sich selbst anerkannt machen.
-//Diese Method für die parkende Fahrzeuge.
-//Parkende Fahrzeuge warten bis die Globalezeit gleich Startzeitpunkt ist.
+// Wenn ein Fahrzeug von einem Weg akzeptiert wurde, soll es auch diesen Weg in sich selbst anerkannt machen.
+// Diese Method fuer die parkende Fahrzeuge.
+// Parkende Fahrzeuge warten bis die Globalezeit gleich Startzeitpunkt ist.
 void Fahrzeug::vNeueStrecke(Weg& weg, double dStartZeitpunkt){
 	if(p_pVerhalten){
 		p_pVerhalten.reset();
@@ -147,8 +147,8 @@ void Fahrzeug::vEinlesen(istream& is){
 	}
 }
 
-// Überladen des '<' (kleiner als) operators
-// Wenn das Vergleichobjekt größer ist, ist diese Bedingung richtig.
+// Ueberladen des '<' (kleiner als) operators
+// Wenn das Vergleichobjekt groesser ist, ist diese Bedingung richtig.
 bool Fahrzeug::operator<(const Fahrzeug& andere)const{
 	if(this->getGesamtstrecke() < andere.getGesamtstrecke()){
 		return true;
@@ -157,10 +157,10 @@ bool Fahrzeug::operator<(const Fahrzeug& andere)const{
 	}
 }
 
-// Überladen des Operators '='
-// Außer ID Attribute, wird alles kopiert und übertragen.
+// ueberladen des Operators '='
+// Ausser ID Attribute, wird alles kopiert und uebertragen.
 Fahrzeug& Fahrzeug::operator=(const Fahrzeug& other) {
-	//Kontrolliere ob das Objekt selbst aufruft.
+	// Kontrolliere ob das Objekt selbst aufruft.
 	Simulationsobjekt::operator =(other);
 	this->p_dMaxGeschwindigkeit = other.getMaxGeschwindigkeit();
 	this->p_dGesamtstrecke = other.getGesamtstrecke();
@@ -171,8 +171,8 @@ Fahrzeug& Fahrzeug::operator=(const Fahrzeug& other) {
 }
 
 
-// Überladung von '<<' (Ausgabe) Operator.
-// Nun können die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
+// Ueberladung von '<<' (Ausgabe) Operator.
+// Nun koennen die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
 // einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
 
 ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug) {
@@ -181,8 +181,8 @@ ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug) {
 }
 
 /*
-// Überladen des Operators '='
-// Außer ID Attribute, wird alles kopiert und übertragen.
+// Ueberladen des Operators '='
+// Ausser ID Attribute, wird alles kopiert und uebertragen.
 void Fahrzeug::operator=(const Fahrzeug& andere) {
 	//Kontrolliere ob das Objekt selbst aufruft.
 	if (this == &andere) {

@@ -71,7 +71,7 @@ void vAufgabe_1(){
 	cout << "Nach dem Erzeugen des neues Objekts(Shared-Ptr) durch die Zuweisung, Count von fahrzeug4: " << fahrzeug_s.use_count() << endl << endl;
 
 	// Error: Unique-Ptr darf nicht zugewiesen werden.
-	//unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
+	// unique_ptr<Fahrzeug> fahrzeug_u = fahrzeug2;
 
 	cout << "Vor dem Speichern der Unique-Ptrs in der Unique-Vector:" << endl;
 	cout << *fahrzeug1 << endl; // das Objekt
@@ -82,8 +82,8 @@ void vAufgabe_1(){
 	cout << "Fahrzeug2&: " << &fahrzeug2 << endl << endl;
 
 
-	//In einer Unique-Vektor dürfen nur die Objekte, die von Unique-Pointers gezeigt werden, gespeichert werden.
-	//Da andernsfall würde das Objekt durch zwei Unique-Ptrs gleichzeigit angezeigt werden.
+	// In einer Unique-Vektor duerfen nur die Objekte, die von Unique-Pointers gezeigt werden, gespeichert werden.
+	// Da andernsfall wuerde das Objekt durch zwei Unique-Ptrs gleichzeigit angezeigt werden.
 	vector<unique_ptr<Fahrzeug>> vectorFahrzeuge;
 	vectorFahrzeuge.push_back(std::move(fahrzeug1));
 	vectorFahrzeuge.push_back(std::move(fahrzeug2));
@@ -96,13 +96,13 @@ void vAufgabe_1(){
 	cout << "Fahrzeug2: " << fahrzeug2 << endl << endl;
 
 
-	//cout << *fahrzeug1 << endl; -> Nach dieser Zeile dürfen die andere Code nicht gezeigt werden.
+	// cout << *fahrzeug1 << endl; -> Nach dieser Zeile duerfen die andere Code nicht gezeigt werden.
 	cout << "Objekte aus der Unique-Vector: " << endl;
 	cout << *vectorFahrzeuge[0] << endl; // -> Fahrzeug1 Objekt.
 	cout << *vectorFahrzeuge[1] << endl << endl; // -> Fahrzeug2 Objekt.
 
 
-//	Diese Zeilen würden error ausgeben.
+//	Diese Zeilen wuerden error ausgeben.
 //	vectorFahrzeuge.push_back(fahrzeug1);
 //	vectorFahrzeuge.push_back(fahrzeug3);
 //	vectorFahrzeuge.push_back(fahrzeug4);
@@ -111,16 +111,16 @@ void vAufgabe_1(){
 
 
 
-	// Loesche den Intahl des Vektors. Die Objekte werden durch der Destruktor gelöscht.
+	// Lsche den Intahl des Vektors. Die Objekte werden durch der Destruktor geloescht.
 	vectorFahrzeuge.clear();
 
 
-	// Count von fahrzeug3 wird sich erhöhen, weil ohne move Funktion die Ptrs Ihren Besitz aufm Objekt nicht verlieren.
+	// Count von fahrzeug3 wird sich erhoehen, weil ohne move Funktion die Ptrs Ihren Besitz aufm Objekt nicht verlieren.
 	// Deswegen gewinnt dieses Objekt noch einen Pointer.
 	// Mit "Count" wird gemeint, von wie viele Pointers dieses Objekt gezeigt wird.
 
 	// Mit move Funktion verliert der Zeiger seinen Besitz aufm Objekt.
-	// Der Besitzsrecht wird aufm neuen Zeiger übertragen, der eigentlich eine Vektor ist.
+	// Der Besitzsrecht wird aufm neuen Zeiger uebertragen, der eigentlich eine Vektor ist.
 	// Shared-Ptr Fahrzeug4 zeigt nun auf die Leere.
 	cout << "\nVor dem Speichern des Objekts, Count von fahrzeug3: " << fahrzeug3.use_count() << endl;
 	cout << "Vor dem Speichern des Objekts mit move(), Count von fahrzeug4: " << fahrzeug4.use_count() << endl;
@@ -147,7 +147,7 @@ void vAufgabe_1(){
 void vAufgabe_1a(){
 
 	double dStunden = 0.0;
-	// Lese die gewünschte Simulationzeit ein.(Benutzerfreundlciher)
+	// Lese die gewuenschte Simulationzeit ein.(Benutzerfreundlciher)
 	cout << "Bitte geben Sie die Simulationzeit in Stunden ein: ";
 	cin >> dStunden;
 	double dMaxGeschwindigkeit = 0.0;
@@ -169,7 +169,7 @@ void vAufgabe_1a(){
 	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrzeug>(sName,dMaxGeschwindigkeit);
 
 	// Speichere diese Objekte, die von der Smart-Pointern gezeigt werden, in einer Unique Vektor
-	// Da die Unique Pointers in einer Unique-Vektor gespeichert werden dürfen.
+	// Da die Unique Pointers in einer Unique-Vektor gespeichert werden duerfen.
 	vector<unique_ptr<Fahrzeug>>fahrzeuge;
 	fahrzeuge.push_back(std::move(fahrzeug1));
 	fahrzeuge.push_back(std::move(fahrzeug2));
@@ -177,7 +177,7 @@ void vAufgabe_1a(){
 
 	double dEpsilon = 0.0;
 	// Einlesen der Zeittakt vom Benutzer.
-	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 	cin >> dEpsilon;
 
 	// Simuliere diese Objekte und gibt die Eigenschaften dieser Objekte in jeder Zeittakt aufm Bildschirm aus.
@@ -204,11 +204,11 @@ void vAufgabe_2(){
 	vector<unique_ptr<Fahrzeug>> fahrzeuge;
 
 	// Fragt nach dem Benutzer, wie viele Anzahl der Objekte er erzeugen will.
-	// Einlesen der Anzahlen von PKWs und Fahrräder
-	cout << "Wie viele PKWs möchten Sie erstellen?" << endl;
+	// Einlesen der Anzahlen von PKWs und Fahrraeder
+	cout << "Wie viele PKWs moechten Sie erstellen?" << endl;
 	cin >> iPkwAnzahl;
 
-	cout << "Wie viele Fahrräder möchten Sie erstellen?" << endl;
+	cout << "Wie viele Fahrraeder moechten Sie erstellen?" << endl;
 	cin >> iFahrradAnzahl;
 
 	// Erzeuge die Objekte mit der eingelesenen Eigenschaften und nach gegebenen Typen.
@@ -223,17 +223,17 @@ void vAufgabe_2(){
 		cout << "3) Verbrauch: ";
 		cin >> dVerbrauch;
 
-		//Mann muss vorsicht sein, wenn die Stringeingaben eingelesen werden.
-		//Das Verhalten des cin Operators ist anders fuer Strings.
-		//Hier soll getline Methode benutzt werden.
+		// Mann muss vorsicht sein, wenn die Stringeingaben eingelesen werden.
+		// Das Verhalten des cin Operators ist anders fuer Strings.
+		// Hier soll getline Methode benutzt werden.
 		getline(cin, sTankVolumen);
 		cout << "4) Tankvolumen(optinal, default 55 liter angenommen.): ";
 		getline(cin, sTankVolumen);
 
-		//Kontrolliere ob der Benutzer optionalen Eingabe eingegeben hat.
-		//Wenn ja, erzeuge das PKW mit 3 Parametern.
-		//Wenn nein, formt den Eingabe von string um den double Wert um und dann erzeuge das PKW.
-		//Letztes gibt das Objekt in die Vektor ein.
+		// Kontrolliere ob der Benutzer optionalen Eingabe eingegeben hat.
+		// Wenn ja, erzeuge das PKW mit 3 Parametern.
+		// Wenn nein, formt den Eingabe von string um den double Wert um und dann erzeuge das PKW.
+		// Letztes gibt das Objekt in die Vektor ein.
 		if(sTankVolumen == ""){
 			unique_ptr<PKW> pkw = make_unique<PKW>(sName, dGeschwindigkeit, dVerbrauch);
 			fahrzeuge.push_back(std::move(pkw));
@@ -244,7 +244,7 @@ void vAufgabe_2(){
 	}
 
 	// Erzeuge die Objekte mit der eingelesene Eigenschaften nach gegebenen Typen.
-	cout << "Bitte geben Sie nun die Eigenschaften der Fahrräder vom Ersten bis Letzem ein.\n";
+	cout << "Bitte geben Sie nun die Eigenschaften der Fahrraeder vom Ersten bis Letzem ein.\n";
 	for(int j = 0; j < iFahrradAnzahl; j++){
 		cout << "1) Name: ";
 		cin >> sName;
@@ -252,20 +252,20 @@ void vAufgabe_2(){
 		cout << "2) Maximale Geschwindigkeit: ";
 		cin >> dGeschwindigkeit;
 
-		//Erzeuge das Fahrrad Objekt.
-		//Dann gibt das Objekt in die Vektor ein.
+		// Erzeuge das Fahrrad Objekt.
+		// Dann gibt das Objekt in die Vektor ein.
 		unique_ptr<Fahrrad> fahrrad = make_unique<Fahrrad>(sName, dGeschwindigkeit);
 		fahrzeuge.push_back(std::move(fahrrad));
 	}
 
-	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+	// In jeder x.x Stunden werden die Taenke der PKWs aufgefuellt.
 	double dTankZeit = 0.0;
-	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+	cout << endl << "Bitte geben Sie eine Period fuer Tanken der PKWs: ";
 	cin >> dTankZeit;
 
 	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
 	double dEpsilon = 0.0; // Zeittakt.
-	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 	cin >> dEpsilon;
 
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
@@ -284,10 +284,10 @@ void vAufgabe_2(){
 
 
 void vAufgabe_3(){
-	//Unterschied zwischen ptr Objekt(fahrrad1, fahrrad2, fahrzeug2) und nicht ptr Objekt(pkw1, pkw2) zu beachten.
-	//Es ist nicht gut, traditionaller Pointer zu nutzen. Lieber kann man smart Pointers benutzen.
+	// Unterschied zwischen ptr Objekt(fahrrad1, fahrrad2, fahrzeug2) und nicht ptr Objekt(pkw1, pkw2) zu beachten.
+	// Es ist nicht gut, traditionaller Pointer zu nutzen. Lieber kann man smart Pointers benutzen.
 
-	//Erzeuge einige Fahrzeuge/PKWs und Fahrräder Objekte.
+	// Erzeuge einige Fahrzeuge/PKWs und Fahrraeder Objekte.
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1", 200.3);
 	Fahrrad* fahrrad1 = new Fahrrad("fahrrad1", 25.3);
 	Fahrrad* fahrrad2 = new Fahrrad("fahrrad2", 22.9);
@@ -304,7 +304,7 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
-	// Set die Gesamtstrecke von zwei PKWs, um das Verhealtnis des überladenden operator< beobachten zu können.
+	// Set die Gesamtstrecke von zwei PKWs, um das Verhealtnis des ueberladenden operator< beobachten zu koennen.
 	pkw1.setGesamtstrecke(100);
 	pkw2.setGesamtstrecke(200);
 
@@ -317,15 +317,15 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
-	//Beachte der operator<
+	// Beachte der operator<
 	if(pkw1 < pkw2){
 		cout << "\nGesamtstrecke von pkw1: " << pkw1.getGesamtstrecke() << endl;
 		cout << "GesamStstrecke von pkw2: " << pkw2.getGesamtstrecke() << endl;
-		cout << "Bedingung war pkw1 < pkw2. Die Bedingung wurde erfüllt und diese Zeile ist im If-Block\n" << endl;
+		cout << "Bedingung war pkw1 < pkw2. Die Bedingung wurde erfuellt und diese Zeile ist im If-Block\n" << endl;
 	}
 
 	// Beachte der operator=
-	// Da pkw1 und pkw1 Objekte sind, können die alle Eigenschaften außer ID übertragen werden.
+	// Da pkw1 und pkw1 Objekte sind, koennen die alle Eigenschaften außer ID uebertragen werden.
 	cout << "Operation: pkw1=pkw2" << endl << endl;
 	pkw1 = pkw2;
 
@@ -342,7 +342,7 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
-	//Da die Fahrräder Pointers sind, kann die Übertragung der IDs nicht vermieden werden.
+	// Da die Fahrraeder Pointers sind, kann die uebertragung der IDs nicht vermieden werden.
 	cout << "Operation: fahrrad1=fahrrad2\n" << endl;
 	fahrrad1 = fahrrad2;
 
@@ -358,7 +358,7 @@ void vAufgabe_3(){
 	cout << pkw2 << endl;
 	cout << *fahrzeug2 << endl << endl;
 
-	// Löschen der dynamischen Objekte(Pointers, um von der undefinierten Verhealtnissen vermeiden zu können.)
+	// Loeschen der dynamischen Objekte(Pointers, um von der undefinierten Verhealtnissen vermeiden zu koennen.)
 	delete fahrrad1;
 	delete fahrrad2;
 	delete fahrzeug2;
@@ -366,7 +366,7 @@ void vAufgabe_3(){
 
 //void vAufgabe_AB1() {
 //
-//    int l = 0; // Laufindex für gezielte AUsgabe
+//    int l = 0; // Laufindex fuer gezielte AUsgabe
 //    vector<int> ausgabe{15};
 //    double dTakt = 0.3;
 //
@@ -400,22 +400,22 @@ void vAufgabe_3(){
 
 void vAufgabe_4(){
 
-	//Statisches erzeugen eines Wegs "Innerorts"
+	// Statisches erzeugen eines Wegs "Innerorts"
 	Weg weg1("weg", 105.99, Tempolimit::Innerorts);
 
-	//Dynamisches erzeugen(mit Smart-Ptr) eines wegs "Autobahn"
+	// Dynamisches erzeugen(mit Smart-Ptr) eines wegs "Autobahn"
 	unique_ptr<Weg> weg_ptr = make_unique<Weg>("weg_ptr", 287.34, Autobahn);
 
-	//Dynamisches erzeugen eines Fahrzeugs.
+	// Dynamisches erzeugen eines Fahrzeugs.
 	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1");
 
-	//Weg sollte leer sein.
+	// Weg sollte leer sein.
 	cout << "\nVor dem Annahme:";
 	Weg::vKopf();
 	cout << weg1 << endl;
 	cout << *weg_ptr << endl << endl;
 
-	//Nach diesen Zeilen soll Weg fahrzeug1 enthalten.
+	// Nach diesen Zeilen soll Weg fahrzeug1 enthalten.
 	cout << "Nach dem Annahme von fahrzeug1 im weg1:" << endl;
 	weg1.vAnnahme(std::move(fahrzeug1));
 	Weg::vKopf();
@@ -425,7 +425,7 @@ void vAufgabe_4(){
 
 void vAufgabe_5(){
 
-	//Dynamisches Erzeugen verschiedenen Elementen
+	// Dynamisches Erzeugen verschiedenen Elementen
 	unique_ptr<Weg> weg_ptr1 = make_unique<Weg>("WEG", 255.55, Innerorts);
 
 	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
@@ -433,7 +433,7 @@ void vAufgabe_5(){
 	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrrad>("Fahrrad", 27.89);
 	unique_ptr<Fahrzeug> fahrzeug4 = make_unique<PKW>("PKW3", 121.3, 12.33, 34.37);
 
-	//Weg akzeptiert die Fahrzeuge.
+	// Weg akzeptiert die Fahrzeuge.
 	cout << endl;
 	weg_ptr1->vAnnahme(std::move(fahrzeug));
 	weg_ptr1->vAnnahme(std::move(fahrzeug2));
@@ -442,14 +442,14 @@ void vAufgabe_5(){
 
 
 
-	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+	// In jeder x.x Stunden werden die Taenke der PKWs aufgefuellt.
 	double dTankZeit = 0.0;
-	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+	cout << endl << "Bitte geben Sie eine Period fuer Tanken der PKWs: ";
 	cin >> dTankZeit;
 
 	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
 	double dEpsilon = 0.0; // Zeittakt.
-	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 	cin >> dEpsilon;
 
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
@@ -470,7 +470,7 @@ void vAufgabe_5(){
 
 void vAufgabe_6(){
 
-	//Dynamisches Erzeugen aller Objekte.
+	// Dynamisches Erzeugen aller Objekte.
 	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 250);
 	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 250, Innerorts);
 
@@ -483,7 +483,7 @@ void vAufgabe_6(){
 	unique_ptr<Fahrzeug> fahrzeug6 = make_unique<Fahrrad>("Fahrrad2", 25.35);
 
 
-	//Wege akzeptieren die Fahrzeuge.
+	// Wege akzeptieren die Fahrzeuge.
 	cout << endl;
 	autobahn->vAnnahme(std::move(fahrzeug));
 	autobahn->vAnnahme(std::move(fahrzeug2),2);
@@ -495,29 +495,29 @@ void vAufgabe_6(){
 
 
 
-	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+	// In jeder x.x Stunden werden die Taenke der PKWs aufgefuellt.
 	double dTankZeit = 0.0;
-	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+	cout << endl << "Bitte geben Sie eine Period fuer Tanken der PKWs: ";
 	cin >> dTankZeit;
 
 	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
 	double dEpsilon = 0.0; // Zeittakt.
-	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 	cin >> dEpsilon;
 
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : *autobahn->getFahrzeugList()){
-			//Gibt die Fahrzeuge aus.
+			// Gibt die Fahrzeuge aus.
 			cout << *fahrzeug;
 
-			//Kontrolliere ob die TankZeit gekommen ist.
+			// Kontrolliere ob die TankZeit gekommen ist.
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 			}
 		}
-		//Simuliere den Weg.
+		// Simuliere den Weg.
 		autobahn->vSimulieren();
 	}
 	dGlobaleZeit = 0;
@@ -527,15 +527,15 @@ void vAufgabe_6(){
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : *innerort->getFahrzeugList()){
-			//Gibt die Fahrzeuge aus.
+			// Gibt die Fahrzeuge aus.
 			cout << *fahrzeug;
 
-			//Kontrolliere ob die TankZeit gekommen ist.
+			// Kontrolliere ob die TankZeit gekommen ist.
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 			}
 		}
-		//Simuliere den Weg.
+		// Simuliere den Weg.
 		innerort->vSimulieren();
 	}
 }
@@ -557,7 +557,7 @@ void vAufgabe_6(){
 //	// Intialisierung der Grafik auf dem SimuServer
 //	bInitialisiereGrafik(800, 500);
 //
-//	// Setzen der Koordinaten für die Straße, gerade Linie
+//	// Setzen der Koordinaten fuer die Straße, gerade Linie
 //	int koordinaten[4] = { 700, 250, 100, 250 };
 //
 //	// Zeichnen der Straße
@@ -576,14 +576,14 @@ void vAufgabe_6(){
 //
 //
 //
-//	// In jeder x.x Stunden werden die Tänke der PKWs aufgefüllt.
+//	// In jeder x.x Stunden werden die Taenke der PKWs aufgefuellt.
 //	double dTankZeit = 0.0;
-//	cout << endl << "Bitte geben Sie eine Period für Tanken der PKWs: ";
+//	cout << endl << "Bitte geben Sie eine Period fuer Tanken der PKWs: ";
 //	cin >> dTankZeit;
 //
 //	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
 //	double dEpsilon = 0.0; // Zeittakt.
-//	cout << endl << "Bitte geben Sie eine Period für die Simulation(lieber als Bruchteile von Studen): ";
+//	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 //	cin >> dEpsilon;
 //
 //	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
@@ -625,48 +625,48 @@ void vAufgabe_6(){
 
 void vAufgabe_6a(){
 
-	//Wir mochten namespace vertagt benutzen, da alle Angaben unter diesem Name definiert wurden.
+	// Wir moechten namespace vertagt benutzen, da alle Angaben unter diesem Name definiert wurden.
 	using namespace vertagt;
 
-	//Erstellen eine Liste vom Typ VListe
+	// Erstellen eine Liste vom Typ VListe
 	VListe<int> VListe;
 
-	//Zur Erstellung einer zufaelligen Zahl
+	// Zur Erstellung einer zufaelligen Zahl
 	static std::mt19937 device(0);
 	std::uniform_int_distribution<int> dist(1, 10);
 
-	//Zahlen in die Liste eingeben.
+	// Zahlen in die Liste eingeben.
 	cout << "Zahlen werden in die Liste eingetragen.:\n\n";
 	for(int i = 1; i < 10; i++){
 		VListe.push_back(dist(device));
 	}
 
-	//Zahlen ausgeben
+	// Zahlen ausgeben
 	cout << "Liste vor dem Aktualisieren:\n";
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		std::cout << (*it) << " ";
 	}
 
-	//Liste soll aktualisiert wernde, sonst konnten die Zahlen in die Liste nicht rein.
+	// Liste soll aktualisiert wernde, sonst konnten die Zahlen in die Liste nicht rein.
 	cout << "\nListe wurde aktualisiert.\n\n";
 	VListe.vAktualisieren();
 
-	//Ausgeben nach dem Aktualisieren, soll sich gaeendert worden sein.
+	// Ausgeben nach dem Aktualisieren, soll sich gaeendert worden sein.
 	cout << "Liste nach dem aktualiseren:\n";
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		std::cout << (*it) << " ";
 	}
 
-	//Loeschen der Elementen grosser als 5 sind.
+	// Loeschen der Elementen grosser als 5 sind.
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		if((*it) > 5) {
 			VListe.erase(it);
 		}
 	}
 
-	cout << "\n\nElemente groeßer als 5 wurden geloescht aber nicht aktualisiert..\n";
+	cout << "\n\nElemente grßer als 5 wurden gelscht aber nicht aktualisiert..\n";
 	cout << "Liste:\n";
-	// Ausgabe sollte die gleiche sein, da vAktualisieren noch nicht durchgeführt wurde
+	// Ausgabe sollte die gleiche sein, da vAktualisieren noch nicht durchgefuehrt wurde
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		std::cout << (*it) << " ";
 	}
@@ -674,12 +674,12 @@ void vAufgabe_6a(){
 	VListe.vAktualisieren();
 
 	cout << "\n\nListe wurde aktualisiert. Liste:\n";
-	//Ausgeben nach dem Aktualisieren, soll sich gaeendert worden sein.
+	// Ausgeben nach dem Aktualisieren, soll sich gaeendert worden sein.
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		cout << (*it) << " ";
 	}
 
-	//Eingeben in die Liste zwei mehr zufaellige Zahlen
+	// Eingeben in die Liste zwei mehr zufaellige Zahlen
 	VListe.push_back(dist(device));
 	VListe.push_front(dist(device));
 
@@ -689,11 +689,11 @@ void vAufgabe_6a(){
 		cout << (*it) << " ";
 	}
 
-	//Liste soll aktualisiert werden.
+	// Liste soll aktualisiert werden.
 	VListe.vAktualisieren();
 
 	cout << "\n\nNach dem aktualisieren. Liste:\n";
-	// Ausgabe sollte sich geändert haben
+	// Ausgabe sollte sich geaendert haben
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		std::cout << (*it) << " ";
 	}

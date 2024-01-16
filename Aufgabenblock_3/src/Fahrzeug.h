@@ -19,18 +19,18 @@ extern double dGlobaleZeit;
 
 class Fahrzeug : public Simulationsobjekt{
 public:
-	//Konstruktoren
+	// Konstruktoren
 	Fahrzeug() = default;
 	Fahrzeug(string p_sName); // @suppress("Class members should be properly initialized")
 	Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit);
 
+	// Destruktor
+	virtual ~Fahrzeug() = default;
+
 	// Verbieten von Copy-Konstruktor
 	Fahrzeug(const Fahrzeug&) = delete;
 
-	//Destruktor
-	virtual ~Fahrzeug() = default;
-
-	//Getters
+	// Getters
 	virtual double getMaxGeschwindigkeit() const{return p_dMaxGeschwindigkeit;};
 	double getGesamtstrecke() const {return p_dGesamtstrecke;};
 	double getGesamtZeit() const {return p_dGesamtZeit;};
@@ -41,17 +41,17 @@ public:
 	virtual double getTankvolumen() const {return 0.0;};
 	double getAbschnittStrecke() const{return p_dAbschnittStrecke;};
 
-	//Setters
+	// Setters
 	void setMaxGeschwindigkeit(double p_dMaxGeschwindigkeit){this->p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit;};
 	void setGesamtstrecke(double p_dGesamtstrecke){this->p_dGesamtstrecke = p_dGesamtstrecke;};
 	void setAbschnittStrecke(double dAbschnittStrecke){this->p_dAbschnittStrecke = dAbschnittStrecke;};
 	void vResetAbschnittStrecke(){this->p_dAbschnittStrecke = 0;};
 
-	//Double
+	// Doubles
 	virtual double dGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}; // @suppress("No return")
 	virtual double dTanken(double dMenge = std::numeric_limits<double>::infinity()){return 0.0;};
 
-	//Void&Print Funktionen
+	// Void&Print Funktionen
 	virtual void vAusgeben() const override;
 	virtual void vAusgeben(ostream& ausgabe)const override;
 	static void vKopf();
@@ -62,13 +62,12 @@ public:
 	virtual void vEinlesen(istream& is) override;
 	//void operator =(const Fahrzeug& fahrzeug);
 
-	//Überladen
+	// Ueberladen der operatoren
 	bool operator<(const Fahrzeug& andere) const;
-
 	Fahrzeug& operator=(const Fahrzeug& other);
 
 protected:
-	//Doubles
+	// Double Variablen
 	double p_dMaxGeschwindigkeit = 0.0;
 	double p_dGesamtstrecke = 0.0;
 	double p_dGesamtZeit = 0.0;
@@ -77,8 +76,7 @@ protected:
 	// Wenn Fahrzeug in einen neuen Weg eintritt, beträgt dieser Wert zu 0.
 	double p_dAbschnittStrecke = 0.0;
 
-
-	//Parkendes oder fahrendes Fahrzeug?
+	// Parkendes oder fahrendes Fahrzeug?
 	unique_ptr<Verhalten> p_pVerhalten = nullptr;
 
 private:
