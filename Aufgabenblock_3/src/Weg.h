@@ -26,10 +26,11 @@ extern double dGlobaleZeit;
 
 class Weg : public Simulationsobjekt{
 public:
+	// Konstruktoren
 	Weg(string sName, double dLaenge, Tempolimit eTempolimit = Tempolimit::Autobahn);
 	Weg(string sName, double dLaenge, weak_ptr<Kreuzung>pZielkreuzung ,Tempolimit eTempolimit= Tempolimit::Autobahn, bool bUeberholverbot = true);
 
-	//Getters
+	// Getters
 	double getTempolimit() const;
 	double getLaenge() const{return p_dLaenge;}
 	double getSchranke()const{return this->p_dSchranke;}
@@ -38,10 +39,9 @@ public:
 	VListe<unique_ptr<Fahrzeug>>* getFahrzeugList(){return &p_pFahrzeuge;}
 	shared_ptr<Weg> getRueckweg();
 	shared_ptr<Kreuzung> getKreuzung() const;
-
 	bool getUeberholverbot()const{return this->p_bUeberholverbot;}
 
-	//Setters
+	// Setters
 	void setLaenge(double dLaenge){this->p_dLaenge = dLaenge;}
 	void setFahrzeug(unique_ptr<Fahrzeug> fahrzeug);
 	void setFahrzeugList(list<unique_ptr<Fahrzeug>> fahrzeugList);
@@ -50,11 +50,10 @@ public:
 	void setSchranke(double dSchranke){this->p_dSchranke = dSchranke;}
 	void setTempolimit(Tempolimit eTempolimit){this->p_eTempolimit = eTempolimit;}
 
-	// Bool
-	bool bSuchtFahrzeug(Fahrzeug& fahrzeug_gesucht);
-	//String
+	// Bools
+	bool bIsLetzteFahrzeug(Fahrzeug& fahrzeug_gesucht);
 
-	//Void
+	// Voids
 	void vSimulieren() override;
 	void vAusgeben() const override;
 	void vAusgeben(ostream& ausgabes) const override;
@@ -62,7 +61,7 @@ public:
 	void vAnnahme(unique_ptr<Fahrzeug> fahrzeug);
 	void vAnnahme(unique_ptr<Fahrzeug>, double dStartZeitpunkt);
 
-	//Pointers
+	// Pointers
 	unique_ptr<Fahrzeug> pAbgabe(Fahrzeug& fahrzeug_gesucht);
 
 protected:
@@ -79,7 +78,6 @@ private:
 };
 
 ostream& operator<<(ostream& ausgabe,const Weg& weg);
-
 
 
 #endif /* WEG_H_ */

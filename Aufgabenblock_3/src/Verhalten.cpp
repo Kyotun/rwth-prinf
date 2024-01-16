@@ -10,8 +10,7 @@
 using namespace std;
 extern double dGlobaleZeit;
 
-// dStrecke Funktion, die ermittelt, wie weit ein Fahrzeug innerhalb des ubergebenen Zeitintervalls fahren kann,
-// ohne das Wegende zu uberschreiten
+// Gibt die gefahrende Strecke vom uebergebenen Fahrzeug innerhalb des gegebenen Zeitintervalls zurueck.
 double Verhalten::dStrecke(Fahrzeug& fahrzeug, double dZeitIntervall){
 	return fahrzeug.dGeschwindigkeit()*dZeitIntervall;
 }

@@ -21,7 +21,4 @@ protected:
 private:
 };
 
-
-
-
 #endif /* STRECKENENDE_H_ */

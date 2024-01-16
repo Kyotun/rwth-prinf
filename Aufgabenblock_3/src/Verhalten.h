@@ -15,24 +15,22 @@ class Weg;
 
 class Verhalten{
 public:
-	//Konstruktoren
+	// Konstruktoren
 	Verhalten() = default;
 	Verhalten(Weg& weg): p_pWeg(&weg){}
 
-	//Destruktor
+	// Destruktor
 	virtual ~Verhalten() = default;
 
-	//Getters
+	// Getters
 	Weg* getpWeg() const{return p_pWeg;}
 
-	//Double
+	// Double
 	virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
 
 protected:
 	Weg* p_pWeg = nullptr;
 private:
 };
-
-
 
 #endif /* VERHALTEN_H_ */

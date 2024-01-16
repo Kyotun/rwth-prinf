@@ -17,7 +17,7 @@
 using namespace std;
 extern double dGlobaleZeit;
 
-//Konstruktor fuer Weg Objekt mit 3 Parametern
+// Konstruktor fuer Weg Objekt mit 3 Parametern
 Weg::Weg(string p_sName, double p_dLaenge, Tempolimit p_eTempolimit): // @suppress("Member declaration not found") // @suppress("Class members should be properly initialized")
 		Simulationsobjekt(p_sName), p_dLaenge(p_dLaenge), p_eTempolimit(p_eTempolimit){}
 
@@ -33,6 +33,7 @@ Weg::Weg(string sName, // @suppress("Class members should be properly initialize
 	p_bUeberholverbot(bUeberholverbot) {
 }
 
+// Gibt den Rueckweg dieses Wegs zurueck.
 shared_ptr<Weg> Weg::getRueckweg(){
 	shared_ptr<Weg> sharedPtr = p_pRueckweg.lock();
 	if (sharedPtr) {
@@ -41,6 +42,8 @@ shared_ptr<Weg> Weg::getRueckweg(){
 		throw runtime_error("Rueckweg Objekt wurde schon geloescht.");
 	}
 }
+
+// Gibt die Zielkreuzung dieses Wegs zurueck.
 shared_ptr<Kreuzung>Weg::getKreuzung() const{
 	shared_ptr<Kreuzung> sharedPtr = p_pZielkreuzung.lock();
 		if (sharedPtr) {
@@ -50,15 +53,15 @@ shared_ptr<Kreuzung>Weg::getKreuzung() const{
 		}
 }
 
-//Simulieren Methode fuer Wegobjekte.
+// Simulieren Methode der Klasse Weg.
 void Weg::vSimulieren(){
 
 	p_pFahrzeuge.vAktualisieren();
 
-	//Simuliere alle vorhandene Fahrzeuge in der Liste p_pFahrzeuge
-	//Waehrend des Simuliieren kontrolliere, ob es einen Ausnahme auftritt.
-	//Wenn ja, bearbeite diesen Ausnahme und mache weiter.
-	//Wenn nein, mach einfach weiter.
+	// Simuliere alle vorhandene Fahrzeuge in der Liste p_pFahrzeuge
+	// Waehrend des Simuliieren kontrolliere, ob es einen Ausnahme auftritt.
+	// Wenn ja, bearbeite diesen Ausnahme und mache weiter.
+	// Wenn nein, mach einfach weiter.
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end();){
 		try{
 			(*it)->vZeichnen(*this);
@@ -72,8 +75,7 @@ void Weg::vSimulieren(){
 	p_pFahrzeuge.vAktualisieren();
 }
 
-//Ausgeben der Wegobjekte einfach mit cout<<
-//Erbt zuerst von der Klasse Simulationsbjekt
+// Ausgeben der Wegobjekte einfach mit cout << (operator<<)
 void Weg::vAusgeben(ostream& ausgabe) const{
 	Simulationsobjekt::vAusgeben(ausgabe);
 	ausgabe << setw(0) << ": "
@@ -84,8 +86,7 @@ void Weg::vAusgeben(ostream& ausgabe) const{
 	ausgabe << ")";
 }
 
-//Ausgeben der Wegobjekte mit der Methode vAusgeben
-//Erbt zuerst von der Klasse Simulationsbjekt
+// Ausgeben der Daten der Wegobjekte
 void Weg::vAusgeben() const{
 	Simulationsobjekt::vAusgeben();
 	cout << resetiosflags(ios::adjustfield)
@@ -96,7 +97,7 @@ void Weg::vAusgeben() const{
 	cout << ")";
 }
 
-//Static(Klassenfunktion vKopf) Funktion vKopf fuer tabellerarische Ausgabe
+// Klassenmethode vKopf, fuer tabellaerische Ausgabe wird diese Methode benutzt.
 void Weg::vKopf() {
 	cout << endl << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::left)
@@ -109,9 +110,7 @@ void Weg::vKopf() {
 
 }
 
-//Annahme Funktion von der Klasse Weg
-//Neue Fahrzeuge werden akzeptiert und in die Liste vom Typ "VListe" p_pFahrzeuge gespeichert.
-//Diese Fahrzeuge zeigen das Verhalten "Fahren"
+// Uebergebene Fahrzeug wird als fahrend in der Liste p_pFahrzeuge gesetzt.
 void Weg::vAnnahme(unique_ptr<Fahrzeug>fahrzeug){
 	fahrzeug->vNeueStrecke(*this);
 	p_pFahrzeuge.push_back(std::move(fahrzeug));
@@ -119,26 +118,24 @@ void Weg::vAnnahme(unique_ptr<Fahrzeug>fahrzeug){
 }
 
 
-//Annahme Funktion von der Klasse Weg
-//Neue Fahrzeuge werden akzeptiert und in die Liste vom Typ "VListe" p_pFahrzeuge gespeichert.
-//Diese Fahrzeuge zeigen das Verhalten "Parken"
+// Uebergebene Fahrzeug wird als parkend bis zur StartZeitpunkt in der Liste p_pFahrzeuge gesetzt.
 void Weg::vAnnahme(unique_ptr<Fahrzeug>fahrzeug, double dStartZeitpunkt){
 	fahrzeug->vNeueStrecke(*this, dStartZeitpunkt);
 	p_pFahrzeuge.push_front(std::move(fahrzeug));
 	p_pFahrzeuge.vAktualisieren();
 }
 
-//Abgabe Methode der Klasse Weg.
-//Diese Methode sucht das gegebene Objekt aus der Liste.
-//Wenn dieses Objekt in der Liste vorhanden ist, wird dieses Objekt geloescht.
-//Loschendes Objekt wird zuruckgegeben durch return.
+
+// Wenn das uebergebene Fahrzeug in der Fahrzeugliste dieses Wegs ist,
+// wird es geloescht und geloeschtes Fahrzeug wird zurueckgegeben.
+// Wenn es nicht in der Liste ist, wird nullptr zurueckgegeben.
 unique_ptr<Fahrzeug> Weg::pAbgabe(Fahrzeug& fahrzeug_gesucht){
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++) {
-		// Überprüfen des Iterationselementes mit gewünschtem Fahrzeug
+		// ueberpruefen des Iterationselementes mit gewuenschtem Fahrzeug
 		if((*it).get() == &fahrzeug_gesucht) {
 			// Lokale Variable zur Zwischenspeicherung
 			unique_ptr<Fahrzeug> lokal_fahrzeug = std::move(*it);
-			// Löschen des Fahrzeugs aus der Liste
+			// Loeschen des Fahrzeugs aus der Liste
 			p_pFahrzeuge.erase(it);
 			p_pFahrzeuge.vAktualisieren();
 			return lokal_fahrzeug;
@@ -147,9 +144,8 @@ unique_ptr<Fahrzeug> Weg::pAbgabe(Fahrzeug& fahrzeug_gesucht){
 	return nullptr;
 }
 
-// Wenn übergebene Parameter das letzte Fahrzeug Element ist, gibt diese Funktion true zurück.
-// Außer dieser Situation, gibt die false zurück.
-bool Weg::bSuchtFahrzeug(Fahrzeug& fahrzeug_gesucht){
+// Wenn das uebergebene Fahrzeg das letzte ist, gibt true zurueck. Wenn nicht false.
+bool Weg::bIsLetzteFahrzeug(Fahrzeug& fahrzeug_gesucht){
 	for (auto rit = p_pFahrzeuge.rbegin(); rit != p_pFahrzeuge.rend(); ++rit) {
 		if ((*rit).get() == &fahrzeug_gesucht){
 			return true;
@@ -161,13 +157,13 @@ bool Weg::bSuchtFahrzeug(Fahrzeug& fahrzeug_gesucht){
 	return false;
 }
 
-// Wird ein Fahrzeug Objekt gegeben, wird dieses gegebende Fahrzeug in die Liste p_pFahrzeuge gespeichert.
+// Setzt das uebergebene Fahrzeug in der Liste p_pFahrzeuge ein.
 void Weg::setFahrzeug(unique_ptr<Fahrzeug> fahrzeug){
 	p_pFahrzeuge.push_back(std::move(fahrzeug));
 	p_pFahrzeuge.vAktualisieren();
 }
 
-// Wird ein Fahrzeuglist gegeben, wird diese gegebende Liste nach hinten der Liste p_pFahrzeuge gemerged.
+// Die uebergebene Liste wird nach der aktuelle Fahrzeugliste p_pFahrzeuge hinzugefuegt.
 void Weg::setFahrzeugList(list<unique_ptr<Fahrzeug>> fahrzeugList){
 	for(auto&& fahrzeugPtr : fahrzeugList){
 		p_pFahrzeuge.push_back(std::move(fahrzeugPtr));
@@ -175,7 +171,7 @@ void Weg::setFahrzeugList(list<unique_ptr<Fahrzeug>> fahrzeugList){
 	}
 }
 
-//Die Namen der Fahrzeuge aus der vorhandenen Liste p_pFahrzeuge werden aufm Bildschirm ausgegeben.
+// Ausgeben der Namen der Fahrzeuge, die in der Liste p_pFahrzeuge sind.
 void Weg::getFahrzeuge() const{
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
 		const Fahrzeug* fahrzeug = it->get();
@@ -187,13 +183,13 @@ void Weg::getFahrzeuge() const{
 	}
 }
 
-// Wird die maximal erlaubende Geschwindigkeit von vorhandenem Weg ausgegeben
+// Wird das Tempolimit des Wegs zurueckgegeben
 double Weg::getTempolimit() const{
 	cout << fixed << setprecision(2);
 	return (double)p_eTempolimit;
 }
 
-//Ueberladen des Ausgabeoperator <<
+// Ueberladen des Ausgabeoperator <<
 ostream& operator<<(ostream& ausgabe,const Weg& weg){
 	weg.vAusgeben(ausgabe);
 	return ausgabe;

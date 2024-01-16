@@ -72,7 +72,6 @@ void Fahrzeug::vKopf(){
 
 // Simulation-Funktion. Wenn die von einem Objekt aufgerufen wird, wird das Objekt eine Zeittakt(Zeitdiffernez) simuliert.
 void Fahrzeug::vSimulieren(){
-	// 1 km/h -> 2,77 m/s
 	// Zeitdifferenz ist der Differenz zwischen t(t) und t(t+1)
 	if(p_dZeit == dGlobaleZeit){
 		cout << "Farhzeug '" << p_sName << "' wurde vorher schon einmal simuliert." << endl;
@@ -82,17 +81,24 @@ void Fahrzeug::vSimulieren(){
 		double dZeitdifferenz = dGlobaleZeit - p_dZeit;
 
 		//Aktuell gefahrende Strecke
-
 		//wenn es ein Verhalten gibt, soll die Geschwindigkeit nach diesem Verhalten ausrechnet werden.
 		if(p_pVerhalten){
+			// TielStrecke wird nach der Geschwindigkeit und des Zeitdifferenz ausgerechnet.
+			// Dann werden die Abschnitt- und Gesamtstrecke inkrementiert.
+			// Falls der Weg ein Ueberholverbot besitzt, soll die Schranke auch beruecksichtigt werden.
 			double dTeilStrecke = p_pVerhalten->dStrecke(*this, dZeitdifferenz);
 			p_dAbschnittStrecke += dTeilStrecke;
 			p_dGesamtstrecke += dTeilStrecke;
 			Weg* pWeg = p_pVerhalten->getpWeg();
-			if(pWeg->bSuchtFahrzeug(*this)){
-				pWeg->setSchranke(0.0);
-			}else{
-				pWeg->setSchranke(p_dAbschnittStrecke);
+			if(pWeg->getUeberholverbot()){
+				// Falls das Fahrzeug ist das letzte ist, soll die Schranke auf 0 gesetzt werden.
+				// Damit das erste Fahrzeug wieder fahren darf, falls die Simulations weiter geht.
+				// Ansonsten, wird die Schranke auf die Abschnittstrecke des Fahrzeugs gesetzt.
+				if(pWeg->bIsLetzteFahrzeug(*this)){
+					pWeg->setSchranke(0.0);
+				}else{
+					pWeg->setSchranke(p_dAbschnittStrecke);
+				}
 			}
 		}else{
 			double dTeilStrecke = dGeschwindigkeit()*dZeitdifferenz;

@@ -20,7 +20,7 @@ namespace vertagt
 		using const_reverse_iterator = typename std::list<T>::const_reverse_iterator;
 
 		// Konstruktoren
-		VListe() = default; // Benötigt man einen Standardkonstruktor?
+		VListe() = default; // Benoetigt man einen Standardkonstruktor?
 		// Destruktor
 		~VListe()
 		{
@@ -76,34 +76,34 @@ namespace vertagt
 		// Schreibfunktionen
 		void push_back(T obj)
 		{
-			// Aktionselement für PushBack auf Liste erzeugen
+			// Aktionselement fuer PushBack auf Liste erzeugen
 			p_aktionen.push_back(make_unique<VPushBack<T>>(p_objekte, std::move(obj)));
 
 		}
 
 		void push_front(T obj)
 		{
-			// Aktionselement für PushBack auf Liste erzeugen
+			// Aktionselement fuer PushBack auf Liste erzeugen
 			p_aktionen.push_back(make_unique<VPushFront<T>>(p_objekte, std::move(obj)));
 
 		}
 
 		void erase(iterator it)
 		{
-			// Aktionselement für PushBack auf Liste erzeugen (hier Iterator statt Objekt !)
+			// Aktionselement fuer PushBack auf Liste erzeugen (hier Iterator statt Objekt !)
 			p_aktionen.push_back(make_unique<VErase<T>>(p_objekte,it));
 		}
 
-		// Änderungen auf Objektliste übertragen
+		// Aenderungen auf Objektliste uebertragen
 		void vAktualisieren()
 		{
-			// Änderungen auf Objektliste übertragen
+			// Aenderungen auf Objektliste uebertragen
 			for (auto& pAktion : p_aktionen)
 			{
-				// Aktion ausführen
+				// Aktion ausfuehren
 				pAktion->vAusfuehren();
 			}
-			// Aktionsliste löschen
+			// Aktionsliste loeschen
 			p_aktionen.clear();
 		}
 	};
