@@ -5,6 +5,9 @@
  *      Author: kyotun
  */
 
+#ifndef TRAINEXCEPTION_H_
+#define TRAINEXCEPTION_H_
+
 #include "Station.h"
 
 #include <iostream>
@@ -27,3 +30,6 @@ public:
 
 };
 
+
+
+#endif /* TRAINEXCEPTION_H_ */

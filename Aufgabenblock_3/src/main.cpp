@@ -401,7 +401,7 @@ void vAufgabe_3(){
 void vAufgabe_4(){
 
 	//Statisches erzeugen eines Wegs "Innerorts"
-	Weg weg1("weg", 105.99, Innerorts);
+	Weg weg1("weg", 105.99, Tempolimit::Innerorts);
 
 	//Dynamisches erzeugen(mit Smart-Ptr) eines wegs "Autobahn"
 	unique_ptr<Weg> weg_ptr = make_unique<Weg>("weg_ptr", 287.34, Autobahn);
