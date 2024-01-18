@@ -40,6 +40,7 @@ public:
 	virtual double getTankinhalt() const {return 0.0;};
 	virtual double getTankvolumen() const {return 0.0;};
 	double getAbschnittStrecke() const{return p_dAbschnittStrecke;};
+	const unique_ptr<Verhalten>& getVerhalten()const{return p_pVerhalten;}
 
 	// Setters
 	void setMaxGeschwindigkeit(double p_dMaxGeschwindigkeit){this->p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit;};

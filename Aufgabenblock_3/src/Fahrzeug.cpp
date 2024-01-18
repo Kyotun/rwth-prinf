@@ -41,6 +41,12 @@ void Fahrzeug::vAusgeben(ostream& ausgabe) const {
 // Es ist eine Objektmethode.
 void Fahrzeug::vAusgeben() const{
 
+//	string sWegName = this->getVerhalten()
+	// Her fahrzeug Startkreuzung, Zielkreuzung ve Weg ismini de ausgeben yapsin
+	// Starkreuzung name: this->getVerhalten->getpWeg->getRueckweg->getZielkreuzung->getName
+	// Zielkreuzung name: this->getVerhalten->getpWeg->getZielkreuzung->getName
+	// Weg name : this->getVerhalten->getpWeg->getName
+
 	Simulationsobjekt::vAusgeben();
 	cout << resetiosflags(ios::left)
 		 << setiosflags(ios::right)
@@ -58,6 +64,7 @@ void Fahrzeug::vKopf(){
 		 << setw(15) << "Name"
 		 << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::right)
+		 << setw(20) << "Simu-Daten"
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"
 		 << setw(20) << "Geschwindigkeit"

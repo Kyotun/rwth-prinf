@@ -44,8 +44,8 @@ void Streckenende::vBearbeiten(){
 	cout << "ZEIT     " << ":" << dGlobaleZeit << endl;
 	cout << "KREUZUNG " << ":" << lokalKreuzung->getName() << " " << lokalKreuzung->getTankstelle() << endl;
 	cout << "WECHSEL  " << ":" << p_pWeg.getName() << " -> " << lokalZufaelligerWeg->getName() << endl;
-	Fahrzeug::vKopf();
-	cout << p_pFahrzeug;
+	cout << "         " << " " << Fahrzeug::vKopf();
+	cout << "FAHRZEUG " << ":" << p_pFahrzeug;
 }
 
 

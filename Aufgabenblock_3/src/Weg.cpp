@@ -33,6 +33,18 @@ Weg::Weg(string sName, // @suppress("Class members should be properly initialize
 	p_bUeberholverbot(bUeberholverbot) {
 }
 
+Tempolimit Weg::gettTempolimit(){
+	switch((int)getTempolimit()){
+		case 50:
+			return Innerorts;
+		case 100:
+			return Landstrasse;
+		default :
+			return Autobahn;
+		}
+
+}
+
 // Gibt den Rueckweg dieses Wegs zurueck.
 shared_ptr<Weg> Weg::getRueckweg(){
 	shared_ptr<Weg> sharedPtr = p_pRueckweg.lock();
@@ -64,6 +76,7 @@ void Weg::vSimulieren(){
 	// Wenn nein, mach einfach weiter.
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end();){
 		try{
+			cout << *it;
 			(*it)->vZeichnen(*this);
 			(*it)->vSimulieren();
 			it++;

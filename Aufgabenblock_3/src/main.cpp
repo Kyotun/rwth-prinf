@@ -12,7 +12,10 @@
 #include <iomanip>
 #include <vector>
 #include <cmath>
+#include <list>
 #include <random>
+#include <chrono>
+#include <thread>
 #include "Fahrzeug.h"
 #include "Fahrrad.h"
 #include "PKW.h"
@@ -34,6 +37,9 @@ void vAufgabe_4();
 void vAufgabe_5();
 void vAufgabe_6();
 void vAufgabe_6a();
+void vAufgabe_7();
+void vAufgabe_8();
+void vAufgabe_9();
 
 int main(){
 //	vAufgabe_1();
@@ -45,13 +51,16 @@ int main(){
 //	vAufgabe_5();
 //	vAufgabe_6();
 //	vAufgabe_6a();
+//	vAufgabe_7();
+//	vAufgabe_8();
+//	vAufgabe_9();
 	return 0;
 }
 
 
 void vAufgabe_1(){
 	// Statisches Erzeugen eines Elements
-	Fahrzeug fahrrad1("fahrrad1", 25.3);
+	Fahrzeug fahrrad1("fahrrad1", 25.33);
 
 	// Dynamisch erzeugtes Element
 	Fahrzeug* fahrrad2 = new Fahrzeug("fahrrad2(p)", 30.9);
@@ -697,7 +706,137 @@ void vAufgabe_6a(){
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
 		std::cout << (*it) << " ";
 	}
+}
 
+void vAufgabe_7(){
+	double dStunden = 0.0;
+	// Lese die gewuenschte Simulationzeit ein.(Benutzerfreundlciher)
+	cout << "Bitte geben Sie die Simulationzeit in Stunden ein: ";
+	cin >> dStunden;
 
+	double dEpsilon = 0.0;
+	// Einlesen der Zeittakt vom Benutzer.
+	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
+
+	// Erzeuge Kreuzungen und deren Strasse
+	shared_ptr<Kreuzung> Kr1 = make_shared<Kreuzung>("Kr1");
+	shared_ptr<Kreuzung> Kr2 = make_shared<Kreuzung>("Kr2", 1000);
+	shared_ptr<Kreuzung> Kr3 = make_shared<Kreuzung>("Kr3", 0);
+	shared_ptr<Kreuzung> Kr4 = make_shared<Kreuzung>("Kr4", 0);
+
+	// Strasse1 -> W12, W21 : 40, Innerorts, false
+	unique_ptr<Weg> W12 = make_unique<Weg>("W12", 40, Kr2, Innerorts, false);
+	unique_ptr<Weg> W21 = make_unique<Weg>("W21", 40, Kr1, Innerorts, false);
+
+	// Strasse2 -> W23a, W32a: 115, Autobahn, true
+	unique_ptr<Weg> W23a = make_unique<Weg>("W23a", 115 , Kr3, Autobahn, true);
+	unique_ptr<Weg> W32a = make_unique<Weg>("W32a", 115 , Kr2, Autobahn, true);
+
+	// Strasse3 -> W23b, W32b: 40, Innerorts, false
+	unique_ptr<Weg> W23b = make_unique<Weg>("W23b", 40, Kr3, Innerorts, false);
+	unique_ptr<Weg> W32b = make_unique<Weg>("W32b", 40, Kr2, Innerorts, false);
+
+	// Strasse4 -> W24, W42: 55, Innerorts, false
+	unique_ptr<Weg> W24 = make_unique<Weg>("W24", 55, Kr4, Innerorts, false);
+	unique_ptr<Weg> W42 = make_unique<Weg>("W42", 55, Kr2, Innerorts, false);
+
+	// Strasse5 -> W34, W43: 85, Autobahn, true
+	unique_ptr<Weg> W34 = make_unique<Weg>("W34", 85, Kr4, Autobahn, true);
+	unique_ptr<Weg> W43 = make_unique<Weg>("W43", 85, Kr3, Autobahn, true);
+
+	// Strasse6 -> W44a, W44b: 130, Landstrasse, true
+	unique_ptr<Weg> W44a = make_unique<Weg>("W44a", 130, Kr4, Landstrasse, true);
+	unique_ptr<Weg> W44b = make_unique<Weg>("W44b", 130, Kr4, Landstrasse, true);
+
+	// Kr1 -> W12
+	// Kr2 -> W21, W23a, W23b, W24
+	// Kr3 -> W32a, W32b, W34
+	// Kr4 -> W42, W43, W44a, W44b,
+	// Verbinde die Kreuzungen und Wege.
+	Kreuzung::vVerbinde(W12->getName(), W21->getName(), W12->getLaenge(), Kr1, Kr2, W12->gettTempolimit(), W12->getUeberholverbot());
+	Kreuzung::vVerbinde(W23a->getName(), W32a->getName(), W23a->getLaenge(), Kr2, Kr3, W23a->gettTempolimit(), W23a->getUeberholverbot());
+	Kreuzung::vVerbinde(W23b->getName(), W32b->getName(), W23b->getLaenge(), Kr2, Kr3, W23b->gettTempolimit(), W23b->getUeberholverbot());
+	Kreuzung::vVerbinde(W24->getName(), W42->getName(), W24->getLaenge(), Kr2, Kr4, W24->gettTempolimit(), W24->getUeberholverbot());
+	Kreuzung::vVerbinde(W34->getName(), W43->getName(), W34->getLaenge(), Kr3, Kr4, W34->gettTempolimit(), W34->getUeberholverbot());
+	Kreuzung::vVerbinde(W44a->getName(), W44b->getName(), W44a->getLaenge(), Kr4, Kr4, W44a->gettTempolimit(), W44a->getUeberholverbot());
+
+	// Erzeuge Fahrzeuge
+	unique_ptr<PKW> pkw1 = make_unique<PKW>("pkw1", 99.83, 11.27);
+	unique_ptr<PKW> pkw2 = make_unique<PKW>("pkw2", 157.24, 15.88, 67.73);
+	unique_ptr<Fahrrad> fahrrad1 = make_unique<Fahrrad>("fahrrad1", 27.34);
+	unique_ptr<Fahrrad> fahrrad2 = make_unique<Fahrrad>("fahrrad2", 15.25);
+	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1", 123.45);
+	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("fahrzeug2", 72.79);
+
+	// KR1 nimmt alle Fahrzeuge an
+	Kr1->vAnnahme(std::move(pkw1),0.0);
+	Kr1->vAnnahme(std::move(pkw2),0.0);
+	Kr1->vAnnahme(std::move(fahrrad1),0.0);
+	Kr1->vAnnahme(std::move(fahrrad2),0.0);
+	Kr1->vAnnahme(std::move(fahrzeug1),0.0);
+	Kr1->vAnnahme(std::move(fahrzeug2),0.0);
+
+	// Erzeuge eine Liste/Vektor dann zieht alle Kreuzungen in diese Liste um.
+	vector<shared_ptr<Kreuzung>>kreuzungen;
+	kreuzungen.push_back(Kr1);
+	kreuzungen.push_back(Kr2);
+	kreuzungen.push_back(Kr3);
+	kreuzungen.push_back(Kr4);
+
+	// Initsialisiere Grafik
+	bInitialisiereGrafik(800, 500);
+
+	// Zeichne Kreuzungen
+	void bZeichneKreuzung(int 680, int 40);
+	void bZeichneKreuzung(int 680, int 300);
+	void bZeichneKreuzung(int 680, int 570);
+	void bZeichneKreuzung(int 320, int 300);
+
+	// Zeichne Strassen
+	// Strasse 1
+	int kS1[] = {680, 40, 680, 300};
+	bZeichneStrasse(W12->getName(), W21->getName(), W12->getLaenge(), 2, kS1);
+
+	// Strasse 2
+	int kS2[] = {680, 300, 850, 300, 970, 390, 970, 500, 850, 570, 680, 570};
+	bZeichneStrasse(W23a->getName(), W32a->getName(), W23a->getLaenge(), 2, kS2);
+
+	// Strasse 3
+	int kS3[] = {680, 300, 680, 570};
+	bZeichneStrasse(W23b->getName(), W32b->getName(), W23b->getLaenge(), 2, kS3);
+
+	// Strasse 4
+	int kS4[] = {680, 300, 320, 300};
+	bZeichneStrasse(W24->getName(), W42->getName(), W24->getLaenge(), 2, kS4);
+
+	// Strasse 5
+	int kS5[] = {680, 570, 500, 570, 350, 510, 320, 420, 320, 300};
+	bZeichneStrasse(W34->getName(), W43->getName(), W34->getLaenge(), 2, kS5);
+
+	// Strasse 6
+	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300};
+	bZeichneStrasse(W44a->getName(), W44a->getName(), W44a->getLaenge(), 2, kS6);
+
+	// Simuliere alle Kreuzungen in dieser Liste in einer For-loop bis ende der gegebenen Zeit.
+	Fahrzeug::vKopf();
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < dStunden; dGlobaleZeit += dEpsilon){
+		for(const auto& kreuzung : kreuzungen){
+			kreuzung->vSimulieren();
+		}
+		vSleep(1000);
+	}
+	vBeendeGrafik();
+}
+
+void vAufgabe_8(){
+	try{
+
+		if(FEHLERFALL){
+			throw runtime_error("FEHLERFALL ACIKLAMASI");
+		}
+	} catch(const runtime_error& e){
+		cerr << "Caught exception: " << e.what() << endl;
+	}
 }
 
