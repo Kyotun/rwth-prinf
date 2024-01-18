@@ -14,8 +14,8 @@
 #include <cmath>
 #include <list>
 #include <random>
-#include <chrono>
-#include <thread>
+#include <fstream>
+#include <stdexcept>
 #include "Fahrzeug.h"
 #include "Fahrrad.h"
 #include "PKW.h"
@@ -830,13 +830,32 @@ void vAufgabe_7(){
 }
 
 void vAufgabe_8(){
+
+	ifstream inputFile("VO.dat");
+
 	try{
 
-		if(FEHLERFALL){
-			throw runtime_error("FEHLERFALL ACIKLAMASI");
+		if(!inputFile.is_open()){
+			throw runtime_error("Fehler bei der Eroerffnung der Datei.");
 		}
+
+		PKW porsche;
+		Fahrrad rennrad;
+		Kreuzung kr1;
+
+		inputFile >> porsche >> rennrad >> kr1;
+
+		Fahrzeug::vKopf();
+		cout << porsche;
+		cout << rennrad;
+		cout << kr1;
+
+		inputFile.close();
+
 	} catch(const runtime_error& e){
-		cerr << "Caught exception: " << e.what() << endl;
+		cerr << "Aufgefangene Exception: " << e.what() << endl;
+	} catch(...){
+		cerr << "Unbekannter Fehler." << endl;
 	}
 }
 
