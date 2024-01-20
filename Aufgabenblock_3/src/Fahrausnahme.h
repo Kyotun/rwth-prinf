@@ -16,7 +16,6 @@
 class Fahrausnahme : public std::exception{
 public:
 	// Konstruktoren
-	Fahrausnahme();
 	Fahrausnahme(Fahrzeug& fahrzeug, Weg& weg);
 
 	// Destruktor

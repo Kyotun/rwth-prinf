@@ -19,6 +19,7 @@ using namespace std;
 class PKW : public Fahrzeug {
 public:
 	// Konstruktoren
+	PKW() : Fahrzeug(){}
 	PKW(string p_sName);
 	PKW(string p_sName, double p_dMaxGeschwindigkeit);
 	PKW(double p_dVerbrauch, double p_dTankvolumen = 55.0);

@@ -22,6 +22,7 @@ using namespace std;
 class Kreuzung: public Simulationsobjekt{
 public:
 	// Konstruktoren
+	Kreuzung() : Simulationsobjekt(){}
 	Kreuzung(string sName, double dTankstelle = 0);
 
 	// PTR Funktionen

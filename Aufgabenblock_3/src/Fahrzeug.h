@@ -20,7 +20,7 @@ extern double dGlobaleZeit;
 class Fahrzeug : public Simulationsobjekt{
 public:
 	// Konstruktoren
-	Fahrzeug() = default;
+	Fahrzeug() : Simulationsobjekt(){}
 	Fahrzeug(string p_sName); // @suppress("Class members should be properly initialized")
 	Fahrzeug(string p_sName, double p_dMaxGeschwindigkeit);
 

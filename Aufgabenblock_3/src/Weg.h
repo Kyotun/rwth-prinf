@@ -27,6 +27,7 @@ extern double dGlobaleZeit;
 class Weg : public Simulationsobjekt{
 public:
 	// Konstruktoren
+	Weg() : Simulationsobjekt(){}
 	Weg(string sName, double dLaenge, Tempolimit eTempolimit = Tempolimit::Autobahn);
 	Weg(string sName, double dLaenge, weak_ptr<Kreuzung>pZielkreuzung ,Tempolimit eTempolimit= Tempolimit::Autobahn, bool bUeberholverbot = true);
 

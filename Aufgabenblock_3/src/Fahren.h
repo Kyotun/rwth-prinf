@@ -19,6 +19,7 @@ using namespace std;
 class Fahren : public Verhalten {
 public:
 	// Konstruktoren
+	Fahren() : Verhalten(){}
 	Fahren(Weg& weg): Verhalten(weg){}
 
 	// Fuer das Ausrechnen der aktuelle zuruckgelegte Strecke.

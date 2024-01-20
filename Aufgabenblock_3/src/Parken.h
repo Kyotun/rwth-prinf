@@ -18,6 +18,7 @@ using namespace std;
 class Parken : public Verhalten{
 public:
 	// Konstruktoren
+	Parken() : Verhalten(){}
 	Parken(Weg& weg, double dStartZeit): Verhalten(weg), p_dStartZeit(dStartZeit){}
 
 	// Doubles
