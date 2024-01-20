@@ -64,7 +64,7 @@ void Fahrzeug::vKopf(){
 		 << setw(15) << "Name"
 		 << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::right)
-		 << setw(20) << "Simu-Daten"
+//		 << setw(20) << "Simu-Daten"
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"
 		 << setw(20) << "Geschwindigkeit"

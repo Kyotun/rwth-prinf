@@ -5,8 +5,6 @@
  *      Author: kyotun
  */
 
-// Gui, boost klasor erisim
-
 #include <iostream>
 #include <memory>
 #include <iomanip>
@@ -794,9 +792,12 @@ void vAufgabe_7(){
 
 }
 
+
+// Lese die Daten der Objekte aus Einer Datei
+// Gibt eine Ausnahme aus, wenn es einen Fehler gibt.(Z.B: Eroeffnung einer Datei)
 void vAufgabe_8(){
 
-	ifstream inputFile("VO.dat");
+	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/VO.dat");
 
 	try{
 
@@ -813,7 +814,7 @@ void vAufgabe_8(){
 		Fahrzeug::vKopf();
 		cout << porsche;
 		cout << rennrad;
-		cout << kr1;
+		cout << kr1 << endl;
 
 		inputFile.close();
 
