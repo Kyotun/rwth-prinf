@@ -33,6 +33,19 @@ Weg::Weg(string sName, // @suppress("Class members should be properly initialize
 	p_bUeberholverbot(bUeberholverbot) {
 }
 
+void Weg::setTempolimiti(int iTempolimit){
+	switch(iTempolimit){
+		case 1:
+			this->p_eTempolimit = Innerorts;
+			break;
+		case 2:
+			this->p_eTempolimit = Landstrasse;
+			break;
+		case 3:
+			this->p_eTempolimit = Autobahn;
+			break;
+	}
+}
 Tempolimit Weg::gettTempolimit(){
 	switch((int)getTempolimit()){
 		case 50:

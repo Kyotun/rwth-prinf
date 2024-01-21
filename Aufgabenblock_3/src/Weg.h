@@ -44,6 +44,7 @@ public:
 	bool getUeberholverbot()const{return this->p_bUeberholverbot;}
 
 	// Setters
+	void setTempolimiti(int iTempolimit);
 	void setLaenge(double dLaenge){this->p_dLaenge = dLaenge;}
 	void setFahrzeug(unique_ptr<Fahrzeug> fahrzeug);
 	void setFahrzeugList(list<unique_ptr<Fahrzeug>> fahrzeugList);

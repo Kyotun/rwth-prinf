@@ -23,51 +23,58 @@ void Simulation::vEinlesen(istream& is, bool bMitGrafik){
 		iss >> firstWord;
 
 		if(firstWord == "KREUZUNG"){
-			// string name;
-			// int dTankstelle;
-			// iss >> name;
-			// vCheckDoppelKreuzung(name);
-			// Kreuzung object olustur
-			// iss >> dTankstelle
-			// Kreuzung.setName(), Kreuzung.setTankstelle()
-			// Mape ekle
+			string name;
+			int dTankstelle;
+			iss >> name;
+			vCheckDoppelKreuzung(name);
+			vCheckKreuzungName(name);
+			shared_ptr<Kreuzung> kreuzung;
+			iss >> dTankstelle;
+			kreuzung->setName(name);
+			kreuzung->setTankstelle(dTankstelle);
+			addKreuzung(name, kreuzung);
 
 		}else if(firstWord == "STRASSE"){
-			// 2 Kreuzung olustur shared_ptr
-			// string Hingweg;
-			// string Rueckweg;
-			// double Laenge;
-			// bool Ueberholverbot;
-			// int Tempolimit;
-			// iss >> Name der ersten Kreuzung
-			// >> Name der zweiten Kreuzung
-			// >> Hinweg >> Rueckweg >> Laenge
-			// >> Tempolimit(need conversion function)
-			// Kreuzung::vVerbinde(Hinweg, Rueckweg,
-			// Startkreuzung, Zielkreuzung, Tempolimit, Ueberholverbot)
+			string sHinwegName;
+			string sRueckwegName;
+			string sStartkreuzungName;
+			string sZielkreuzungName;
+			double dLaenge;
+			bool bUeberholverbot;
+			int iTempolimit;
+			iss >> sStartkreuzungName >> sZielkreuzungName >> sHinwegName >> sRueckwegName >> dLaenge >> iTempolimit >> bUeberholverbot;
+			vCheckKreuzungName(sStartkreuzungName);
+			vCheckKreuzungName(sZielkreuzungName);
+			Kreuzung::vVerbinde(sHinwegName, sRueckwegName, dLaenge,
+					getKreuzung(sStartkreuzungName),
+					getKreuzung(sZielkreuzungName),
+					convertTempolimit(iTempolimit),
+					bUeberholverbot);
 		}else if(firstWord == "PKW"){
-			// PKW Object olustur
-			// string name;
-			// double maxgeschwindigkeit;
-			// double verbrauch;
-			// double Tankvolumen;
-			// string StartkreuzungName;
-			// double Startzeit;
-			// iss >> name >> maxgeschwidngiekit >> verbrauch
-			// >> Tankvolumen >> StartkreuzungName >> StartZeit;
-			// PKW.setS() ...
-			// getKreuzung(StartkreuzungName)->vAnnahme(PKW, Startzeit)
-
+			unique_ptr<PKW> pkw;
+			string sName;
+			double dMaxgeschwindigkeit;
+			double dVerbrauch;
+			double dTankvolumen;
+			string sStartkreuzungName;
+			double dStartzeit;
+			iss >> sName >> dMaxgeschwindigkeit >> dVerbrauch
+			>> dTankvolumen >> sStartkreuzungName >> dStartzeit;
+			pkw->setMaxGeschwindigkeit(dMaxgeschwindigkeit);
+			pkw->setName(sName);
+			pkw->setVerbrauch(dVerbrauch);
+			pkw->setTankvolumen(dTankvolumen);
+			getKreuzung(sStartkreuzungName)->vAnnahme(std::move(pkw), dStartzeit);
 		}else if(firstWord == "FAHRRAD"){
-			// FAHRRAD Object olustur
-			// string name;
-			// double maxgeschwindigkeit;
-			// string StartkreuzungName;
-			// double Startzeit;
-			// iss >> name >> maxgeschwidngiekit
-			// >> StartkreuzungName >> StartZeit;
-			// FAHRRAD.setS() ...
-			// getKreuzung(StartkreuzungName)->vAnnahme(Fahrrad, Startzeit)
+			unique_ptr<Fahrrad> fahrrad;
+			string sName;
+			double dMaxgeschwindigkeit;
+			string sStartkreuzungName;
+			double dStartzeit;
+			iss >> sName >> dMaxgeschwindigkeit >> sStartkreuzungName >> dStartzeit;
+			fahrrad->setMaxGeschwindigkeit(dMaxgeschwindigkeit);
+			fahrrad->setName(sName);
+			getKreuzung(sStartkreuzungName)->vAnnahme(std::move(fahrrad), dStartzeit);
 		}else{
 			throw runtime_error("Kein Objekt kann fuer dieses Schluesselwort erzeugt werden." + to_string(lineNumber));
 		}
@@ -75,9 +82,10 @@ void Simulation::vEinlesen(istream& is, bool bMitGrafik){
 }
 
 void Simulation::vSimulieren(double dDauer, double dZeitschritt){
+	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dZeitschritt; dGlobaleZeit < dDauer; dGlobaleZeit += dZeitschritt){
 		for(auto& pair : kreuzungenMap){
-			pair.second.vSimulieren();
+			pair.second->vSimulieren();
 		}
 	}
 }
@@ -95,19 +103,38 @@ void Simulation::vCheckDoppelKreuzung(const string& name){
 }
 
 // Function to add a Kreuzung to the map
-void Simulation::addKreuzung(const string& name, const Kreuzung& kreuzung) {
+void Simulation::addKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung) {
 	vCheckDoppelKreuzung(name);
 	kreuzungenMap[name] = kreuzung;
 }
 
-const map<string, Kreuzung>& Simulation::getKreuzungenMap() const{
-	return kreuzungenMap;
+shared_ptr<Kreuzung> Simulation::getKreuzung(const string& name) {
+	vCheckKreuzung(name);
+    auto it = kreuzungenMap.find(name);
+    return it->second;
 }
 
-const Kreuzung& Simulation::getKreuzung(const string& name) {
-	vCheckKreuzung(name);
-    auto it = getKreuzungenMap().find(name);
-    return it->second;
+void Simulation::vCheckKreuzungName(string name){
+	if(name.length() != 3){
+		throw runtime_error("Name der Kreuzung soll wie Kr1 aussehen.");
+	}
+}
+
+Tempolimit Simulation::convertTempolimit(int iTempolimit){
+	switch(iTempolimit){
+		case 1:
+			return Innerorts;
+			break;
+		case 2:
+			return Landstrasse;
+			break;
+		case 3:
+			return Autobahn;
+			break;
+		default:
+			return Autobahn;
+			break;
+	}
 }
 
 

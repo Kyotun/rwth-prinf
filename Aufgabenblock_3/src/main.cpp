@@ -871,17 +871,15 @@ void vAufgabe_8(){
 }
 
 void vAufgabe_9(){
+	double dStunden = 0.0;
+	// Lese die gewuenschte Simulationzeit ein.(Benutzerfreundlciher)
+	cout << "Bitte geben Sie die Simulationzeit in Stunden ein: ";
+	cin >> dStunden;
 
-//	read the file
-//	while getline file sonundaki zeilede degilken
-//	if "STRASSE"
-	// is >> StartKreuzung >> ZielKreuzung >> Hinweg >> Rueckweg >> Weglaenge >> eTempolimit >> bUeberholverbot
-//	elif "KREUZUNG"
-		// is >> name >> dTankstelle
-//	elif "PKW"
-	// is >> name >> maxgeschwindigkeit >> dVerbrauch >> dTankvolumen >> Startkreuzung >> dStartzeit
-//	elif "FAHRRAD"
-	// is >> Name >> maxgeschwindigkeit >> StartKreuzung >> dStartZeit
+	double dEpsilon = 0.0;
+	// Einlesen der Zeittakt vom Benutzer.
+	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
 
 	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/Simu.dat");
 	if (!inputFile.is_open()) {
@@ -889,6 +887,7 @@ void vAufgabe_9(){
 	}
 	Simulation simulator;
 	simulator.vEinlesen(inputFile, false);
+	simulator.vSimulieren(dStunden, dEpsilon);
 }
 
 void vAufgabe_9a(){

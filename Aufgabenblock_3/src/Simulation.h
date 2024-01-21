@@ -14,6 +14,9 @@
 #include <vector>
 #include <map>
 #include "Kreuzung.h"
+#include "Tempolimit.h"
+#include "PKW.h"
+#include "Fahrrad.h"
 
 using namespace std;
 
@@ -22,7 +25,7 @@ public:
 	// Voids
 	void vSimulieren(double dDauer, double dZeitschritt);
 	void vEinlesen(istream& is, bool bMitGrafik=false);
-	void addKreuzung(const string& name, const Kreuzung& kreuzung);
+	void addKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung);
 	void vCheckKreuzung(const string& name);
 	void vCheckDoppelKreuzung(const string& name);
 
@@ -30,11 +33,16 @@ public:
 
 
 	// Getters
-	const map<string, Kreuzung>& getKreuzungenMap() const;
-	const Kreuzung& getKreuzung(const string& name);
+	shared_ptr<Kreuzung> getKreuzung(const string& name);
+
+	// Checkers
+	void vCheckKreuzungName(string name);
+
+	// Converters
+	Tempolimit convertTempolimit(int iTempolimit);
 
 private:
-	map<string, Kreuzung> kreuzungenMap;
+	map<string, shared_ptr<Kreuzung>> kreuzungenMap;
 };
 
 

@@ -32,6 +32,10 @@ public:
 	double getTankvolumen() const override{return p_dTankvolumen;};
 	double getVerbrauch(){return p_dVerbrauch;};
 
+	// Setters
+	void setVerbrauch(double dVerbrauch){this->p_dVerbrauch = dVerbrauch;}
+	void setTankvolumen(double dTankvolumen){this->p_dTankvolumen = dTankvolumen;}
+
 	// Doubles
 	double dGeschwindigkeit() const override;
 	double dTanken(double dMenge = std::numeric_limits<double>::infinity()) override;
