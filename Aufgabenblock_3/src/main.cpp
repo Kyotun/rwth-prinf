@@ -20,6 +20,7 @@
 #include "Weg.h"
 #include "Simulationsobjekt.h"
 #include "Tempolimit.h"
+#include "Simulation.h"
 //#include "SimuClient.h"
 #include "vertagt_liste.h"
 
@@ -789,6 +790,50 @@ void vAufgabe_7(){
 	kreuzungen.push_back(Kr3);
 	kreuzungen.push_back(Kr4);
 
+	// Initsialisiere Grafik
+	bInitialisiereGrafik(800, 500);
+
+
+	// Zeichne Kreuzungen
+	void bZeichneKreuzung(int 680, int 40);
+	void bZeichneKreuzung(int 680, int 300);
+	void bZeichneKreuzung(int 680, int 570);
+	void bZeichneKreuzung(int 320, int 300);
+
+//	// Zeichne Strassen
+//	// Strasse 1
+//	int kS1[] = {680, 40, 680, 300};
+//	bZeichneStrasse(W12->getName(), W21->getName(), W12->getLaenge(), 2, kS1);
+//
+//	// Strasse 2
+//	int kS2[] = {680, 300, 850, 300, 970, 390, 970, 500, 850, 570, 680, 570};
+//	bZeichneStrasse(W23a->getName(), W32a->getName(), W23a->getLaenge(), 2, kS2);
+//
+//	// Strasse 3
+//	int kS3[] = {680, 300, 680, 570};
+//	bZeichneStrasse(W23b->getName(), W32b->getName(), W23b->getLaenge(), 2, kS3);
+//
+//	// Strasse 4
+//	int kS4[] = {680, 300, 320, 300};
+//	bZeichneStrasse(W24->getName(), W42->getName(), W24->getLaenge(), 2, kS4);
+//
+//	// Strasse 5
+//	int kS5[] = {680, 570, 500, 570, 350, 510, 320, 420, 320, 300};
+//	bZeichneStrasse(W34->getName(), W43->getName(), W34->getLaenge(), 2, kS5);
+//
+//	// Strasse 6
+//	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300};
+//	bZeichneStrasse(W44a->getName(), W44a->getName(), W44a->getLaenge(), 2, kS6);
+//
+//	// Simuliere alle Kreuzungen in dieser Liste in einer For-loop bis ende der gegebenen Zeit.
+//	Fahrzeug::vKopf();
+//	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < dStunden; dGlobaleZeit += dEpsilon){
+//		for(const auto& kreuzung : kreuzungen){
+//			kreuzung->vSimulieren();
+//		}
+//		vSleep(1000);
+//	}
+//	vBeendeGrafik();
 
 }
 
@@ -823,5 +868,30 @@ void vAufgabe_8(){
 	} catch(...){
 		cerr << "Unbekannter Fehler." << endl;
 	}
+}
+
+void vAufgabe_9(){
+
+//	read the file
+//	while getline file sonundaki zeilede degilken
+//	if "STRASSE"
+	// is >> StartKreuzung >> ZielKreuzung >> Hinweg >> Rueckweg >> Weglaenge >> eTempolimit >> bUeberholverbot
+//	elif "KREUZUNG"
+		// is >> name >> dTankstelle
+//	elif "PKW"
+	// is >> name >> maxgeschwindigkeit >> dVerbrauch >> dTankvolumen >> Startkreuzung >> dStartzeit
+//	elif "FAHRRAD"
+	// is >> Name >> maxgeschwindigkeit >> StartKreuzung >> dStartZeit
+
+	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/Simu.dat");
+
+	Simulation simulator;
+	simulator.vEinlesen(inputFile, true);
+}
+
+void vAufgabe_9a(){
+	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/SimuDisplay.dat");
+
+
 }
 

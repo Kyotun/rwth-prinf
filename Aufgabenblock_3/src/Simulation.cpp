@@ -12,19 +12,40 @@
 using namespace std;
 
 
-//void Simulation::vEinlesen(istream& is, bool bMitGrafik=false){
-//
-//
-//}
-
-// Getter for a specific Kreuzung by name
-const Kreuzung& getKreuzung(const string& name){
-	// Check if the requested Kreuzung exists
-	auto it = getKreuzungenMap().find(name);
-	if (it == getKreuzungenMap().end()) {
-		throw std::runtime_error("Kreuzung not found: " + name);
-	}
-
-	return it->second;
+void Simulation::vEinlesen(istream& is, bool bMitGrafik=false){
+	return;
 }
+
+void Simulation::vSimulieren(double dDauer, double dZeitschritt){
+	return;
+}
+
+void Simulation::vCheckKreuzung(const string& name){
+	if(kreuzungenMap.find(name) == kreuzungenMap.end()){
+		throw runtime_error("Es gibt keine Kreuzung unter diesen Name.");
+	}
+}
+
+void Simulation::vCheckDoppelKreuzung(const string& name){
+	if(kreuzungenMap.find(name) != kreuzungenMap.end()){
+		throw runtime_error("Es gibt bereits eine andere Kreuzunge unter der Name: " + name);
+	}
+}
+
+// Function to add a Kreuzung to the map
+void Simulation::addKreuzung(const string& name, const Kreuzung& kreuzung) {
+	vCheckDoppelKreuzung(name);
+	kreuzungenMap[name] = kreuzung;
+}
+
+const map<string, Kreuzung>& Simulation::getKreuzungenMap() const{
+	return kreuzungenMap;
+}
+
+const Kreuzung& Simulation::getKreuzung(const string& name) {
+	vCheckKreuzung(name);
+    auto it = getKreuzungenMap().find(name);
+    return it->second;
+}
+
 

@@ -20,23 +20,18 @@ using namespace std;
 class Simulation{
 public:
 	// Voids
-	void vSimulieren();
+	void vSimulieren(double dDauer, double dZeitschritt);
 	void vEinlesen(istream& is, bool bMitGrafik=false);
+	void addKreuzung(const string& name, const Kreuzung& kreuzung);
+	void vCheckKreuzung(const string& name);
+	void vCheckDoppelKreuzung(const string& name);
 
 	// Setters
 
 
 	// Getters
-	const map<string, Kreuzung>& getKreuzungenMap() const{return kreuzungenMap;}
-	const Kreuzung& getKreuzung(const string& name){
-		// Check if the requested Kreuzung exists
-		auto it = getKreuzungenMap().find(name);
-		if (it == getKreuzungenMap().end()) {
-			throw runtime_error("Kreuzung not found: " + name);
-		}
-
-		return it->second;
-	}
+	const map<string, Kreuzung>& getKreuzungenMap() const;
+	const Kreuzung& getKreuzung(const string& name);
 
 private:
 	map<string, Kreuzung> kreuzungenMap;
