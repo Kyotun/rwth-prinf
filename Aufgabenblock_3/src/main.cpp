@@ -790,16 +790,16 @@ void vAufgabe_7(){
 	kreuzungen.push_back(Kr3);
 	kreuzungen.push_back(Kr4);
 
-	// Initsialisiere Grafik
-	bInitialisiereGrafik(800, 500);
-
-
-	// Zeichne Kreuzungen
-	void bZeichneKreuzung(int 680, int 40);
-	void bZeichneKreuzung(int 680, int 300);
-	void bZeichneKreuzung(int 680, int 570);
-	void bZeichneKreuzung(int 320, int 300);
-
+//	// Initsialisiere Grafik
+//	bInitialisiereGrafik(800, 500);
+//
+//
+//	// Zeichne Kreuzungen
+//	void bZeichneKreuzung(int 680, int 40);
+//	void bZeichneKreuzung(int 680, int 300);
+//	void bZeichneKreuzung(int 680, int 570);
+//	void bZeichneKreuzung(int 320, int 300);
+//
 //	// Zeichne Strassen
 //	// Strasse 1
 //	int kS1[] = {680, 40, 680, 300};
@@ -884,9 +884,11 @@ void vAufgabe_9(){
 	// is >> Name >> maxgeschwindigkeit >> StartKreuzung >> dStartZeit
 
 	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/Simu.dat");
-
+	if (!inputFile.is_open()) {
+		throw runtime_error("InputFile konnte nicht geoeffnet werden.");
+	}
 	Simulation simulator;
-	simulator.vEinlesen(inputFile, true);
+	simulator.vEinlesen(inputFile, false);
 }
 
 void vAufgabe_9a(){
