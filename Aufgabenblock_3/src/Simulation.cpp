@@ -12,75 +12,6 @@
 using namespace std;
 extern double dGlobaleZeit;
 
-void Simulation::vEinlesen(istream& is, bool bMitGrafik){
-	string line;
-	string firstWord;
-	int lineNumber = 0;
-
-	while (getline(is, line)) {
-		lineNumber++;
-		istringstream iss(line);
-		iss >> firstWord;
-
-		if(firstWord == "KREUZUNG"){
-			string name;
-			int dTankstelle;
-			iss >> name;
-			vCheckDoppelKreuzung(name);
-			vCheckKreuzungName(name);
-			shared_ptr<Kreuzung> kreuzung;
-			iss >> dTankstelle;
-			kreuzung->setName(name);
-			kreuzung->setTankstelle(dTankstelle);
-			addKreuzung(name, kreuzung);
-
-		}else if(firstWord == "STRASSE"){
-			string sHinwegName;
-			string sRueckwegName;
-			string sStartkreuzungName;
-			string sZielkreuzungName;
-			double dLaenge;
-			bool bUeberholverbot;
-			int iTempolimit;
-			iss >> sStartkreuzungName >> sZielkreuzungName >> sHinwegName >> sRueckwegName >> dLaenge >> iTempolimit >> bUeberholverbot;
-			vCheckKreuzungName(sStartkreuzungName);
-			vCheckKreuzungName(sZielkreuzungName);
-			Kreuzung::vVerbinde(sHinwegName, sRueckwegName, dLaenge,
-					getKreuzung(sStartkreuzungName),
-					getKreuzung(sZielkreuzungName),
-					convertTempolimit(iTempolimit),
-					bUeberholverbot);
-		}else if(firstWord == "PKW"){
-			unique_ptr<PKW> pkw;
-			string sName;
-			double dMaxgeschwindigkeit;
-			double dVerbrauch;
-			double dTankvolumen;
-			string sStartkreuzungName;
-			double dStartzeit;
-			iss >> sName >> dMaxgeschwindigkeit >> dVerbrauch
-			>> dTankvolumen >> sStartkreuzungName >> dStartzeit;
-			pkw->setMaxGeschwindigkeit(dMaxgeschwindigkeit);
-			pkw->setName(sName);
-			pkw->setVerbrauch(dVerbrauch);
-			pkw->setTankvolumen(dTankvolumen);
-			getKreuzung(sStartkreuzungName)->vAnnahme(std::move(pkw), dStartzeit);
-		}else if(firstWord == "FAHRRAD"){
-			unique_ptr<Fahrrad> fahrrad;
-			string sName;
-			double dMaxgeschwindigkeit;
-			string sStartkreuzungName;
-			double dStartzeit;
-			iss >> sName >> dMaxgeschwindigkeit >> sStartkreuzungName >> dStartzeit;
-			fahrrad->setMaxGeschwindigkeit(dMaxgeschwindigkeit);
-			fahrrad->setName(sName);
-			getKreuzung(sStartkreuzungName)->vAnnahme(std::move(fahrrad), dStartzeit);
-		}else{
-			throw runtime_error("Kein Objekt kann fuer dieses Schluesselwort erzeugt werden." + to_string(lineNumber));
-		}
-	}
-}
-
 void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dZeitschritt; dGlobaleZeit < dDauer; dGlobaleZeit += dZeitschritt){
@@ -90,9 +21,81 @@ void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 	}
 }
 
+void Simulation::vEinlesen(istream& is){
+	string line;
+	string firstWord;
+	int lineNumber = 0;
+
+	try{
+		while (getline(is, line)) {
+			lineNumber++;
+			istringstream iss(line);
+			iss >> firstWord;
+			if(firstWord == "KREUZUNG"){
+				string sName;
+				int dTankstelle;
+				iss >> sName;
+				vCheckDoppelKreuzung(sName);
+				vCheckKreuzungName(sName);
+				iss >> dTankstelle;
+				shared_ptr<Kreuzung> kreuzung = make_shared<Kreuzung>(sName, dTankstelle);
+				vAddKreuzung(sName, std::move(kreuzung));
+
+			}else if(firstWord == "STRASSE"){
+				string sHinwegName;
+				string sRueckwegName;
+				string sStartkreuzungName;
+				string sZielkreuzungName;
+				double dLaenge;
+				bool bUeberholverbot;
+				int iTempolimit;
+				iss >> sStartkreuzungName >> sZielkreuzungName >> sHinwegName >> sRueckwegName >> dLaenge >> iTempolimit >> bUeberholverbot;
+				vCheckKreuzung(sStartkreuzungName);
+				vCheckKreuzung(sZielkreuzungName);
+				Kreuzung::vVerbinde(sHinwegName, sRueckwegName, dLaenge,
+						getKreuzung(sStartkreuzungName),
+						getKreuzung(sZielkreuzungName),
+						convertTempolimit(iTempolimit),
+						bUeberholverbot);
+			}else if(firstWord == "PKW"){
+				string sName;
+				double dMaxgeschwindigkeit;
+				double dVerbrauch;
+				double dTankvolumen;
+				string sStartkreuzungName;
+				double dStartzeit;
+				iss >> sName >> dMaxgeschwindigkeit >> dVerbrauch
+				>> dTankvolumen >> sStartkreuzungName >> dStartzeit;
+				unique_ptr<PKW> pkw = make_unique<PKW>(sName, dMaxgeschwindigkeit, dVerbrauch, dTankvolumen);
+				getKreuzung(sStartkreuzungName)->vAnnahme(std::move(pkw), dStartzeit);
+			}else if(firstWord == "FAHRRAD"){
+				string sName;
+				double dMaxgeschwindigkeit;
+				string sStartkreuzungName;
+				double dStartzeit;
+				iss >> sName >> dMaxgeschwindigkeit >> sStartkreuzungName >> dStartzeit;
+				unique_ptr<Fahrrad> fahrrad = make_unique<Fahrrad>(sName, dMaxgeschwindigkeit);
+				getKreuzung(sStartkreuzungName)->vAnnahme(std::move(fahrrad), dStartzeit);
+			}else{
+				throw runtime_error("\nKein Objekt kann fuer dieses Schluesselwort erzeugt werden. Schluesselwort: " + firstWord
+						+ "\nZuerst soll das Objekt beschrieben(Schluesselwort fuer Objekt) werden. Z.B: 'FAHRRAD', 'STARSSE', 'PKW', 'KREUZUNG'");
+			}
+		}
+	}catch(const runtime_error& message){
+		cerr << "Aufgefangene runtime error: " << message.what() << endl;
+		cerr << "Zeilennummer: " << lineNumber << endl;
+
+	}
+}
+
+void Simulation::vAddKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung) {
+	vCheckDoppelKreuzung(name);
+	kreuzungenMap[name] = kreuzung;
+}
+
 void Simulation::vCheckKreuzung(const string& name){
 	if(kreuzungenMap.find(name) == kreuzungenMap.end()){
-		throw runtime_error("Es gibt keine Kreuzung unter diesen Name.");
+		throw runtime_error("Es gibt keine Kreuzung unter diesen Name: " + name);
 	}
 }
 
@@ -102,10 +105,11 @@ void Simulation::vCheckDoppelKreuzung(const string& name){
 	}
 }
 
-// Function to add a Kreuzung to the map
-void Simulation::addKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung) {
-	vCheckDoppelKreuzung(name);
-	kreuzungenMap[name] = kreuzung;
+void Simulation::vAktualisiereKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung){
+	vCheckKreuzung(name);
+	kreuzungenMap.erase(name);
+	vAddKreuzung(name, kreuzung);
+
 }
 
 shared_ptr<Kreuzung> Simulation::getKreuzung(const string& name) {
@@ -116,7 +120,7 @@ shared_ptr<Kreuzung> Simulation::getKreuzung(const string& name) {
 
 void Simulation::vCheckKreuzungName(string name){
 	if(name.length() != 3){
-		throw runtime_error("Name der Kreuzung soll wie Kr1 aussehen.");
+		throw runtime_error("Name der Kreuzung soll wie Kr1 aussehen. Gegeben: " + name);
 	}
 }
 

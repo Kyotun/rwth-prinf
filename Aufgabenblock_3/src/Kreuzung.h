@@ -47,6 +47,12 @@ public:
 
 	// Setters
 	void setTankstelle(double dTank){
+		if(dTank >= 0){
+			this->p_dTankstelle = dTank;
+		}
+	}
+
+	void setTankstelleMinus(double dTank){
 		this->p_dTankstelle -= dTank;
 		if(this->p_dTankstelle < 0){
 			this->p_dTankstelle = 0;

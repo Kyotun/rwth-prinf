@@ -51,8 +51,8 @@ int main(){
 //	vAufgabe_6();
 //	vAufgabe_6a();
 //	vAufgabe_7();
-	vAufgabe_8();
-//	vAufgabe_9();
+//	vAufgabe_8();
+	vAufgabe_9();
 	return 0;
 }
 
@@ -878,15 +878,16 @@ void vAufgabe_9(){
 
 	double dEpsilon = 0.0;
 	// Einlesen der Zeittakt vom Benutzer.
-	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
+	cout << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 	cin >> dEpsilon;
 
-	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/Simu.dat");
+	Simulation simulator;
+	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/Simu6.dat");
 	if (!inputFile.is_open()) {
 		throw runtime_error("InputFile konnte nicht geoeffnet werden.");
 	}
-	Simulation simulator;
-	simulator.vEinlesen(inputFile, false);
+	simulator.vEinlesen(inputFile);
+	inputFile.close();
 	simulator.vSimulieren(dStunden, dEpsilon);
 }
 

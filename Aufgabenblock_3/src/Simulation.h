@@ -24,13 +24,13 @@ class Simulation{
 public:
 	// Voids
 	void vSimulieren(double dDauer, double dZeitschritt);
-	void vEinlesen(istream& is, bool bMitGrafik=false);
-	void addKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung);
+	void vEinlesen(istream& is);
+	void vAddKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung);
 	void vCheckKreuzung(const string& name);
 	void vCheckDoppelKreuzung(const string& name);
+	void vAktualisiereKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung);
 
 	// Setters
-
 
 	// Getters
 	shared_ptr<Kreuzung> getKreuzung(const string& name);

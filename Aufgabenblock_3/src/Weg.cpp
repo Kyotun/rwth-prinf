@@ -89,8 +89,8 @@ void Weg::vSimulieren(){
 	// Wenn nein, mach einfach weiter.
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end();){
 		try{
-			cout << *it;
-			(*it)->vZeichnen(*this);
+			cout << *(*it);
+//			(*it)->vZeichnen(*this);
 			(*it)->vSimulieren();
 			it++;
 		} catch (Fahrausnahme *fahrausnahme){

@@ -24,7 +24,8 @@ Fahrrad::Fahrrad(string p_sName): Fahrzeug(p_sName){
 
 // Konstruktor mit dem Name und der Geschwindigkeit, erbt von der Klasse Fahrzeug
 Fahrrad::Fahrrad(string p_sName, double p_dMaxGeschwindigkeit):
-		Fahrzeug(p_sName, p_dMaxGeschwindigkeit){}
+		Fahrzeug(p_sName, p_dMaxGeschwindigkeit){
+}
 
 // Geschwindigkeitfunktion, die die aktuelle Geschwindigkeit der Fahrräder aktualisiert.
 // Wenn es schon kleiner gleich 12 ist, bleibt es 12.

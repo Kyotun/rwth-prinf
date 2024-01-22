@@ -31,22 +31,22 @@ public:
 	Fahrzeug(const Fahrzeug&) = delete;
 
 	// Getters
-	virtual double getMaxGeschwindigkeit() const{return p_dMaxGeschwindigkeit;};
-	double getGesamtstrecke() const {return p_dGesamtstrecke;};
-	double getGesamtZeit() const {return p_dGesamtZeit;};
-	double getZeit() const {return p_dZeit;};
-	double getGlobaleZeit() const {return dGlobaleZeit;};
-	virtual double getGesamtVerbrauch() const {return 0.0;};
-	virtual double getTankinhalt() const {return 0.0;};
-	virtual double getTankvolumen() const {return 0.0;};
-	double getAbschnittStrecke() const{return p_dAbschnittStrecke;};
+	virtual double getMaxGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}
+	double getGesamtstrecke() const {return p_dGesamtstrecke;}
+	double getGesamtZeit() const {return p_dGesamtZeit;}
+	double getZeit() const {return p_dZeit;}
+	double getGlobaleZeit() const {return dGlobaleZeit;}
+	virtual double getGesamtVerbrauch() const {return 0.0;}
+	virtual double getTankinhalt() const {return 0.0;}
+	virtual double getTankvolumen() const {return 0.0;}
+	double getAbschnittStrecke() const{return p_dAbschnittStrecke;}
 	const unique_ptr<Verhalten>& getVerhalten()const{return p_pVerhalten;}
 
 	// Setters
-	void setMaxGeschwindigkeit(double p_dMaxGeschwindigkeit){this->p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit;};
-	void setGesamtstrecke(double p_dGesamtstrecke){this->p_dGesamtstrecke = p_dGesamtstrecke;};
-	void setAbschnittStrecke(double dAbschnittStrecke){this->p_dAbschnittStrecke = dAbschnittStrecke;};
-	void vResetAbschnittStrecke(){this->p_dAbschnittStrecke = 0;};
+	void setMaxGeschwindigkeit(double p_dMaxGeschwindigkeit){this->p_dMaxGeschwindigkeit = p_dMaxGeschwindigkeit;}
+	void setGesamtstrecke(double p_dGesamtstrecke){this->p_dGesamtstrecke = p_dGesamtstrecke;}
+	void setAbschnittStrecke(double dAbschnittStrecke){this->p_dAbschnittStrecke = dAbschnittStrecke;}
+	void vResetAbschnittStrecke(){this->p_dAbschnittStrecke = 0;}
 
 	// Doubles
 	virtual double dGeschwindigkeit() const{return p_dMaxGeschwindigkeit;}; // @suppress("No return")
@@ -59,7 +59,7 @@ public:
 	virtual void vSimulieren() override;
 	void vNeueStrecke(Weg& weg);
 	void vNeueStrecke(Weg& weg, double dStartZeitpunkt);
-	virtual void vZeichnen(const Weg& weg){};
+	virtual void vZeichnen(const Weg& weg){}
 	virtual void vEinlesen(istream& is) override;
 	//void operator =(const Fahrzeug& fahrzeug);
 

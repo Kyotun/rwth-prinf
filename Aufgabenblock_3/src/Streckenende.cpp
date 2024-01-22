@@ -14,7 +14,7 @@ extern double dGlobaleZeit;
 // Durch try-catch Block.
 void Streckenende::vBearbeiten(){
 	// Print den Hinweis, dass das Fahrzeug am Ende des Wegs gekommen ist.
-	cout << "Das Fahrzeug " << p_pFahrzeug.getName()
+	cout << "\nDas Fahrzeug " << p_pFahrzeug.getName()
 		 << " ist jetzt am Ende des Wegs " << p_pWeg.getName()
 		 << " im Zeitpunkt " << dGlobaleZeit <<"." << endl;
 
@@ -37,14 +37,14 @@ void Streckenende::vBearbeiten(){
 	lokalZufaelligerWeg->vAnnahme(move(lokalFahrzeug));
 
 	// Gibt die Informationen aus.
-	cout << "Das Fahrzeug mit der ID " << p_pFahrzeug.getID()
-		 << " hat auf dem Weg mit der ID " << p_pWeg.getID()
+	cout << "Das Fahrzeug " << p_pFahrzeug.getName()
+		 << " hat auf dem Weg " << p_pWeg.getName()
 		 << " das Streckenede erreicht." << std::endl;
 
-	cout << "ZEIT     " << ":" << dGlobaleZeit << endl;
-	cout << "KREUZUNG " << ":" << lokalKreuzung->getName() << " " << lokalKreuzung->getTankstelle() << endl;
-	cout << "WECHSEL  " << ":" << p_pWeg.getName() << " -> " << lokalZufaelligerWeg->getName() << endl;
-	cout << "FAHRZEUG " << p_pFahrzeug.getName();
+	cout << "ZEIT     " << ": " << dGlobaleZeit << endl;
+	cout << "KREUZUNG " << ": " << lokalKreuzung->getName() << ", Tankvolumen erhaeltlich(Liter): " << lokalKreuzung->getTankstelle() << endl;
+	cout << "WECHSEL  " << ": " << p_pWeg.getName() << " -> " << lokalZufaelligerWeg->getName() << endl;
+	cout << "FAHRZEUG " << ": " << p_pFahrzeug.getName() << endl;
 }
 
 

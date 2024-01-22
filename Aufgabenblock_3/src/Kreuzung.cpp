@@ -23,6 +23,9 @@ Kreuzung::Kreuzung(string sName, double dTankstelle):
 // Dieser Rueckweg ist in der Liste von dieser Kreuzung.
 // Wenn es nur einen Weg gibt, der zu dieser Kreuzung fuehrt, wuerde dieser Weg ausgewaehlt muessen.
 shared_ptr<Weg> Kreuzung::pZufaelligerWeg(Weg& weg){
+	if(p_pWege.empty()){
+		throw runtime_error("Diese Kreuzung " + getName() + " enthaelt keinen Weg.");
+	}
 
 	shared_ptr<Weg> rueckWeg = weg.getRueckweg();
 	if (!rueckWeg) {
@@ -74,7 +77,6 @@ void Kreuzung::vVerbinde(string sNameHinweg, string sNameRuckweg,
 		double dWegLaenge, weak_ptr<Kreuzung> pStartKreuzung,
 		const weak_ptr<Kreuzung> pZielKreuzung,
 		Tempolimit eTempolimit, bool bUeberholverbot) {
-	return;
 
 	shared_ptr<Weg> pHinweg = make_shared<Weg>(sNameHinweg,
 			dWegLaenge,
@@ -104,11 +106,14 @@ void Kreuzung::vTanken(Fahrzeug& fahrzeug){
 	double dTankinhalt = fahrzeug.getTankinhalt();
 	double dBrauchteTank = dTankvolumen - dTankinhalt;
 	fahrzeug.dTanken(dBrauchteTank);
-	this->setTankstelle(dBrauchteTank);
+	this->setTankstelleMinus(dBrauchteTank);
 }
 
 // das uebergebene Fahrzeug wird zuerst getankt dann von der Kreuzung angenommen.(als parkend bis Startzeit)
 void Kreuzung::vAnnahme(unique_ptr<Fahrzeug> fahrzeug, double dStartzeit){
+	if(p_pWege.empty()){
+		throw runtime_error("Diese Kreuzung " + getName() + " enthaelt keinen Weg.");
+	}
 	vTanken(*fahrzeug);
 	p_pWege.back()->vAnnahme(std::move(fahrzeug), dStartzeit);
 }
@@ -117,6 +122,9 @@ void Kreuzung::vAnnahme(unique_ptr<Fahrzeug> fahrzeug, double dStartzeit){
 // Simuliere jeden Weg, der sich zu der Kreuzung verbindet.
 void Kreuzung::vSimulieren(){
 	// Simulieren der Wege an einer Kreuzung
+	if(p_pWege.empty()){
+		throw runtime_error("Diese Kreuzung " + getName() + " enthaelt keinen Weg.");
+	}
 	list<shared_ptr<Weg>>::iterator it;
 
 	for(it = p_pWege.begin(); it != p_pWege.end(); it++) {
@@ -141,6 +149,10 @@ void Kreuzung::vEinlesen(istream& is){
 
 // Kontrolliere, ob uebergebenen Weg in der Liste p_pWege ist.
 bool Kreuzung::istInWegList(Weg& weg){
+	if(p_pWege.empty()){
+		throw runtime_error("Diese Kreuzung " + getName() + " enthaelt keinen Weg.");
+	}
+
 	for(auto& wegPtr : p_pWege){
 		if(wegPtr.get() == &weg){
 			return true;

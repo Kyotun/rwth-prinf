@@ -27,7 +27,7 @@ Simulationsobjekt::Simulationsobjekt(){
 Simulationsobjekt::~Simulationsobjekt(){
 	cout << "Ein Simulationsobjekt wurde mit dem Name '" << p_sName
 		 << "' und mit der ID " << p_iID
-		 << " gelöscht." << endl;
+		 << " geloescht." << endl;
 }
 
 Simulationsobjekt::Simulationsobjekt(string p_sName): p_sName(p_sName){
@@ -56,14 +56,14 @@ void Simulationsobjekt::vAusgeben() const{
 
 void Simulationsobjekt::vEinlesen(istream& is){
 	if (!p_sName.empty()) {
-		throw runtime_error("Object already initialized");
+		throw runtime_error("Objekt ist schon initsialisiert.");
 	}
 
 	cout << "Bitte geben Sie den Namen des Objekts " << this->getID() << ": ";
 	is >> p_sName;
 
 	if(is.fail()){
-		throw runtime_error("Error reading from input stream.");
+		throw runtime_error("Fehler beim Einlesen der Eingabe Stream.");
 	}
 
 }
