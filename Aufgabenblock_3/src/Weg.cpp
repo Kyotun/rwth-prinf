@@ -46,6 +46,7 @@ void Weg::setTempolimiti(int iTempolimit){
 			break;
 	}
 }
+
 Tempolimit Weg::gettTempolimit(){
 	switch((int)getTempolimit()){
 		case 50:

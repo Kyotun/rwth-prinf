@@ -12,6 +12,7 @@
 using namespace std;
 extern double dGlobaleZeit;
 
+// Simulieren der Kreuzungen fuer gegebene Dauer und Zeitschritt.
 void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dZeitschritt; dGlobaleZeit < dDauer; dGlobaleZeit += dZeitschritt){
@@ -21,6 +22,10 @@ void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 	}
 }
 
+// Nimmt als parameter die Daten von draussen an.
+// Liest Zeile fuer Zeile und kontrolliere das erste Wort, ob es ein gueltiges Schlusselwoert ist.
+// Setzt die Parametern nach dem gegebenen Schluesselwort ein.
+// Wenn etwas schief lauft, gibt eine Ausnahme aus.
 void Simulation::vEinlesen(istream& is){
 	string line;
 	string firstWord;
@@ -93,18 +98,22 @@ void Simulation::vAddKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung)
 	kreuzungenMap[name] = kreuzung;
 }
 
+// Kontrolliere, ob der gegebene Name nicht im Map ist.
 void Simulation::vCheckKreuzung(const string& name){
 	if(kreuzungenMap.find(name) == kreuzungenMap.end()){
 		throw runtime_error("Es gibt keine Kreuzung unter diesen Name: " + name);
 	}
 }
 
+// Kontrolliere, ob der gegebene Name sich im Map schon befindet.
 void Simulation::vCheckDoppelKreuzung(const string& name){
 	if(kreuzungenMap.find(name) != kreuzungenMap.end()){
 		throw runtime_error("Es gibt bereits eine andere Kreuzunge unter der Name: " + name);
 	}
 }
 
+// Aktualisiert die gegebene Kreuzung.
+// Zuerst loescht die gegebene Kreuzung, dann addiert wieder in die Map.
 void Simulation::vAktualisiereKreuzung(const string& name, shared_ptr<Kreuzung> kreuzung){
 	vCheckKreuzung(name);
 	kreuzungenMap.erase(name);
@@ -118,12 +127,14 @@ shared_ptr<Kreuzung> Simulation::getKreuzung(const string& name) {
     return it->second;
 }
 
+// Wenn die Laenge des Names der Kreuzung nicht drei ist, gibt eine Ausnahme zurueck.
 void Simulation::vCheckKreuzungName(string name){
 	if(name.length() != 3){
 		throw runtime_error("Name der Kreuzung soll wie Kr1 aussehen. Gegeben: " + name);
 	}
 }
 
+// Waehlt ein Tempolimit aus, nach der gegebenen integer Zahl.
 Tempolimit Simulation::convertTempolimit(int iTempolimit){
 	switch(iTempolimit){
 		case 1:
