@@ -8,6 +8,7 @@
 #include <iostream>
 #include <map>
 #include "Simulation.h"
+#include "Simuclient.h"
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -26,10 +27,13 @@ void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 // Liest Zeile fuer Zeile und kontrolliere das erste Wort, ob es ein gueltiges Schlusselwoert ist.
 // Setzt die Parametern nach dem gegebenen Schluesselwort ein.
 // Wenn etwas schief lauft, gibt eine Ausnahme aus.
-void Simulation::vEinlesen(istream& is){
+void Simulation::vEinlesen(istream& is, bool bMitGrafik){
 	string line;
 	string firstWord;
 	int lineNumber = 0;
+	if(bMitGrafik){
+		bInitialisiereGrafik(800, 500);
+	}
 
 	try{
 		while (getline(is, line)) {
@@ -44,6 +48,12 @@ void Simulation::vEinlesen(istream& is){
 				vCheckKreuzungName(sName);
 				iss >> dTankstelle;
 				shared_ptr<Kreuzung> kreuzung = make_shared<Kreuzung>(sName, dTankstelle);
+				if(bMitGrafik){
+					int x;
+					int y;
+					iss >> x >> y;
+					bZeichneKreuzung(x, y);
+				}
 				vAddKreuzung(sName, std::move(kreuzung));
 
 			}else if(firstWord == "STRASSE"){
@@ -62,6 +72,15 @@ void Simulation::vEinlesen(istream& is){
 						getKreuzung(sZielkreuzungName),
 						convertTempolimit(iTempolimit),
 						bUeberholverbot);
+				if(bMitGrafik){
+					int iAnzahlKoordinaten;
+					iss >> iAnzahlKoordinaten;
+					int koordinatenStrasse[iAnzahlKoordinaten*2];
+					for(int i = 0; i < iAnzahlKoordinaten; i++){
+						iss >> koordinatenStrasse[i];
+					}
+						bZeichneStrasse(sHinwegName, sRueckwegName, dLaenge, 2, koordinatenStrasse);
+				}
 			}else if(firstWord == "PKW"){
 				string sName;
 				double dMaxgeschwindigkeit;

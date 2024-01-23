@@ -55,17 +55,10 @@ void Simulationsobjekt::vAusgeben() const{
 }
 
 void Simulationsobjekt::vEinlesen(istream& is){
-	if (!p_sName.empty()) {
-		throw runtime_error("Objekt ist schon initsialisiert.");
-	}
-
-	cout << "Bitte geben Sie den Namen des Objekts " << this->getID() << ": ";
-	is >> p_sName;
-
 	if(is.fail()){
 		throw runtime_error("Fehler beim Einlesen der Eingabe Stream.");
 	}
-
+	is >> p_sName;
 }
 
 // Ueberladen des Zuweisungsoperators

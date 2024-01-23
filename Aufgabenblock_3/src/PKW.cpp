@@ -8,7 +8,7 @@
 #include <iomanip>
 #include <cmath>
 #include "PKW.h"
-//#include "SimuClient.h"
+#include "SimuClient.h"
 #include <iostream>
 #include <string>
 #include <limits>
@@ -134,25 +134,12 @@ void PKW::vAusgeben() const {
 
 void PKW::vZeichnen(const Weg& weg){
 	double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-//	bZeichnePKW(getName(), weg.getName(), relativePosition, dGeschwindigkeit(), getTankinhalt());
+	bZeichnePKW(getName(), weg.getName(), relativePosition, dGeschwindigkeit(), getTankinhalt());
 }
 
 void PKW::vEinlesen(istream& is){
 	Fahrzeug::vEinlesen(is);
-
-	if(p_dVerbrauch != 0.0){
-		throw runtime_error("Object already initialized");
-	}
-
-	cout << "Bitte geben Sie den Verbrauch des Objekts " << this->getID() << " in l/100km: ";
-	is >> p_dVerbrauch;
-
-	cout << "Bitte geben Sie den Tankvolumen des Objekts " << this->getID() << " in l: ";
-	is >> p_dTankvolumen;
-
-	if(is.fail()){
-		throw runtime_error("Error reading from input stream.");
-	}
+	is >> p_dVerbrauch >> p_dTankvolumen;
 }
 
 

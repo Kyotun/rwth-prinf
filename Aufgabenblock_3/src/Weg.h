@@ -71,9 +71,9 @@ protected:
 private:
 	double p_dLaenge = 0.0;
 	VListe<unique_ptr<Fahrzeug>> p_pFahrzeuge;
-	Tempolimit p_eTempolimit;
-	bool p_bUeberholverbot;
-	double p_dSchranke;
+	Tempolimit p_eTempolimit = Autobahn;
+	bool p_bUeberholverbot = true;
+	double p_dSchranke = 0.0;
 
 	weak_ptr<Weg> p_pRueckweg;
 	const weak_ptr<Kreuzung> p_pZielkreuzung;

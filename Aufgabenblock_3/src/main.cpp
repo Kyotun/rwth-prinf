@@ -21,7 +21,7 @@
 #include "Simulationsobjekt.h"
 #include "Tempolimit.h"
 #include "Simulation.h"
-//#include "SimuClient.h"
+#include "SimuClient.h"
 #include "vertagt_liste.h"
 
 using namespace std;
@@ -39,6 +39,7 @@ void vAufgabe_6a();
 void vAufgabe_7();
 void vAufgabe_8();
 void vAufgabe_9();
+void vAufgabe_9a();
 
 int main(){
 //	vAufgabe_1();
@@ -51,8 +52,10 @@ int main(){
 //	vAufgabe_6();
 //	vAufgabe_6a();
 //	vAufgabe_7();
+
 //	vAufgabe_8();
 	vAufgabe_9();
+//	vAufgabe_9a();
 	return 0;
 }
 
@@ -466,8 +469,6 @@ void vAufgabe_5(){
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
 		for(const auto& fahrzeug : *weg_ptr1->getFahrzeugList()){
-			cout << *fahrzeug;
-
 			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 			}
@@ -476,83 +477,12 @@ void vAufgabe_5(){
 	}
 }
 
-void vAufgabe_6(){
-
-	// Dynamisches Erzeugen aller Objekte.
-	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 250);
-	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 250, Innerorts);
-
-	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
-	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
-	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<PKW>("PKW3", 133.39, 12.22);
-	unique_ptr<Fahrzeug> fahrzeug4 = make_unique<PKW>("PKW4", 188.32, 16.37);
-
-	unique_ptr<Fahrzeug> fahrzeug5 = make_unique<Fahrrad>("Fahrrad1", 30.33);
-	unique_ptr<Fahrzeug> fahrzeug6 = make_unique<Fahrrad>("Fahrrad2", 25.35);
-
-
-	// Wege akzeptieren die Fahrzeuge.
-	cout << endl;
-	autobahn->vAnnahme(std::move(fahrzeug));
-	autobahn->vAnnahme(std::move(fahrzeug2),2);
-	autobahn->vAnnahme(std::move(fahrzeug5));
-
-	innerort->vAnnahme(std::move(fahrzeug3));
-	innerort->vAnnahme(std::move(fahrzeug4),3);
-	innerort->vAnnahme(std::move(fahrzeug6));
-
-
-
-	// In jeder x.x Stunden werden die Taenke der PKWs aufgefuellt.
-	double dTankZeit = 0.0;
-	cout << endl << "Bitte geben Sie eine Period fuer Tanken der PKWs: ";
-	cin >> dTankZeit;
-
-	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
-	double dEpsilon = 0.0; // Zeittakt.
-	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
-	cin >> dEpsilon;
-
-	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
-	Fahrzeug::vKopf();
-	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
-		for(const auto& fahrzeug : *autobahn->getFahrzeugList()){
-			// Gibt die Fahrzeuge aus.
-			cout << *fahrzeug;
-
-			// Kontrolliere ob die TankZeit gekommen ist.
-			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
-				fahrzeug->dTanken(fahrzeug->getTankvolumen());
-			}
-		}
-		// Simuliere den Weg.
-		autobahn->vSimulieren();
-	}
-	dGlobaleZeit = 0;
-
-	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
-	cout << "\n\nAutobahn wurde Simuliert. Nun wird der Innerort simuliert." << endl;
-	Fahrzeug::vKopf();
-	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
-		for(const auto& fahrzeug : *innerort->getFahrzeugList()){
-			// Gibt die Fahrzeuge aus.
-			cout << *fahrzeug;
-
-			// Kontrolliere ob die TankZeit gekommen ist.
-			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
-				fahrzeug->dTanken(fahrzeug->getTankvolumen());
-			}
-		}
-		// Simuliere den Weg.
-		innerort->vSimulieren();
-	}
-}
-
+// Ohne grafische Ausgabe, altaere Aufgabe6
 //void vAufgabe_6(){
 //
-//	//Dynamisches Erzeugen der Elementen
-//	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 500.0);
-//	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 500.0, Innerorts);
+//	// Dynamisches Erzeugen aller Objekte.
+//	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 250);
+//	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 250, Innerorts);
 //
 //	unique_ptr<Fahrzeug> fahrzeug = make_unique<PKW>("PKW1", 123.35, 13.37);
 //	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<PKW>("PKW2", 155.37, 15.55, 62.37);
@@ -562,24 +492,15 @@ void vAufgabe_6(){
 //	unique_ptr<Fahrzeug> fahrzeug5 = make_unique<Fahrrad>("Fahrrad1", 30.33);
 //	unique_ptr<Fahrzeug> fahrzeug6 = make_unique<Fahrrad>("Fahrrad2", 25.35);
 //
-//	// Intialisierung der Grafik auf dem SimuServer
-//	bInitialisiereGrafik(800, 500);
 //
-//	// Setzen der Koordinaten fuer die Straße, gerade Linie
-//	int koordinaten[4] = { 700, 250, 100, 250 };
-//
-//	// Zeichnen der Straße
-//	bZeichneStrasse(autobahn->getName(), innerort->getName(), autobahn->getLaenge(), 2, koordinaten);
-//
-//
-//	//Annehmen der Fahrzeuge in die Wege.
+//	// Wege akzeptieren die Fahrzeuge.
 //	cout << endl;
 //	autobahn->vAnnahme(std::move(fahrzeug));
 //	autobahn->vAnnahme(std::move(fahrzeug2),2);
 //	autobahn->vAnnahme(std::move(fahrzeug5));
 //
 //	innerort->vAnnahme(std::move(fahrzeug3));
-//	innerort->vAnnahme(std::move(fahrzeug4),1.5);
+//	innerort->vAnnahme(std::move(fahrzeug4),3);
 //	innerort->vAnnahme(std::move(fahrzeug6));
 //
 //
@@ -596,40 +517,113 @@ void vAufgabe_6(){
 //
 //	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 //	Fahrzeug::vKopf();
-//	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
-//		vSetzeZeit(dGlobaleZeit);
-//
-//		//Printen des Autobahns
-//		for(const auto& fahrzeug : autobahn->getFahrzeugList()){
-//
-//			//Gibt die Eigenschaften der Fahrzeuge aus.
-//			cout << *fahrzeug;
-//
-//			//Kontrolliere ob die TankZeit gekommen ist.
+//	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
+//		for(const auto& fahrzeug : *autobahn->getFahrzeugList()){
+//			// Kontrolliere ob die TankZeit gekommen ist.
 //			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
 //				fahrzeug->dTanken(fahrzeug->getTankvolumen());
 //			}
 //		}
-//
-//		//Printen des Innerorts
-//		for(const auto& fahrzeug : innerort->getFahrzeugList()){
-//
-//			//Gibt die Eigensschaften der Fahrzeuge aus.
-//			cout << *fahrzeug;
-//
-//
-//			//Kontrolliere ob die TankZeit gekommen ist.
-//			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
-//				fahrzeug->dTanken(fahrzeug->getTankvolumen());
-//			}
-//		}
-//
-//		innerort->vSimulieren();
+//		// Simuliere den Weg.
 //		autobahn->vSimulieren();
-//		vSleep(100);
 //	}
-//	vBeendeGrafik();
+//	dGlobaleZeit = 0;
+//
+//	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
+//	cout << "\n\nAutobahn wurde Simuliert. Nun wird der Innerort simuliert." << endl;
+//	Fahrzeug::vKopf();
+//	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 5; dGlobaleZeit += dEpsilon){
+//		for(const auto& fahrzeug : *innerort->getFahrzeugList()){
+//			// Kontrolliere ob die TankZeit gekommen ist.
+//			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+//				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+//			}
+//		}
+//		// Simuliere den Weg.
+//		innerort->vSimulieren();
+//	}
 //}
+
+// Mit grafische Ausgabe, neue Aufgabe6
+void vAufgabe_6(){
+
+	//Dynamisches Erzeugen der Elementen
+	unique_ptr<Weg> autobahn = make_unique<Weg>("Autobahn", 500.0);
+	unique_ptr<Weg> innerort = make_unique<Weg>("Innerort", 500.0, Innerorts);
+
+	unique_ptr<PKW> pkw1 = make_unique<PKW>("PKW1_AB", 123.35, 13.37);
+	unique_ptr<PKW> pkw2 = make_unique<PKW>("PKW2_AB", 155.37, 15.55, 62.37);
+	unique_ptr<PKW> pkw3 = make_unique<PKW>("PKW3_IN", 133.39, 12.22);
+	unique_ptr<PKW> pkw4 = make_unique<PKW>("PKW4_IN", 188.32, 16.37);
+
+	unique_ptr<Fahrrad> fahrrad1 = make_unique<Fahrrad>("Fahrrad1_AB", 30.33);
+	unique_ptr<Fahrrad> fahrrad2 = make_unique<Fahrrad>("Fahrrad2_IN", 25.35);
+
+	// Intialisierung der Grafik auf dem SimuServer
+	bInitialisiereGrafik(800, 500);
+
+	// Setzen der Koordinaten fuer die Straße, gerade Linie
+	int koordinaten[4] = { 700, 250, 100, 250 };
+
+	// Zeichnen der Straße
+	bZeichneStrasse(autobahn->getName(), innerort->getName(), autobahn->getLaenge(), 2, koordinaten);
+
+
+	//Annehmen der Fahrzeuge in die Wege.
+	cout << endl;
+	// Zum beobachten des Ueberholverbot, die kleinste Geschwindigkeit soll als erstes angenommen werden.
+	// Auf dem Autobahn kann man Ueberholverbot beobachten.
+	autobahn->vAnnahme(std::move(fahrrad1));
+	autobahn->vAnnahme(std::move(pkw1));
+	autobahn->vAnnahme(std::move(pkw2),2);
+
+	// Hier kann man nur zwischen pk4 und fahrrad2 das Ueberholverbot beobachten.
+	innerort->vAnnahme(std::move(pkw3));
+	innerort->vAnnahme(std::move(pkw4),1.5);
+	innerort->vAnnahme(std::move(fahrrad2));
+
+
+
+	// In jeder x.x Stunden werden die Taenke der PKWs aufgefuellt.
+	double dTankZeit = 0.0;
+	cout << endl << "Bitte geben Sie eine Period fuer Tanken der PKWs: ";
+	cin >> dTankZeit;
+
+	// Wie lange eine Simulationsschritt dauert? -> dEpsilon
+	double dEpsilon = 0.0; // Zeittakt.
+	cout << endl << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
+
+	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
+	Fahrzeug::vKopf();
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
+		vSetzeZeit(dGlobaleZeit);
+
+		// Kontrolliere die Fahrzeuge fuer Tanken, die aufm Autobahn fahren.
+		for(const auto& fahrzeug : *autobahn->getFahrzeugList()){
+			//Kontrolliere ob die TankZeit gekommen ist.
+			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+			}
+		}
+
+		// Kontrolliere die Fahrzeuge fuer Tanken, die aufm Innerorts fahren.
+		for(const auto& fahrzeug : *innerort->getFahrzeugList()){
+			//Kontrolliere ob die TankZeit gekommen ist.
+			if(fmod(dGlobaleZeit,dTankZeit) < dEpsilon){
+				fahrzeug->dTanken(fahrzeug->getTankvolumen());
+			}
+		}
+
+		// Als erstes werden die Fahrzeuge ausgegeben, die aufm Autobahn fahren.
+		autobahn->vSimulieren();
+		cout << endl;
+		innerort->vSimulieren();
+		cout << endl;
+		vSleep(500);
+	}
+	vBeendeGrafik();
+}
 
 void vAufgabe_6a(){
 
@@ -723,65 +717,26 @@ void vAufgabe_7(){
 	shared_ptr<Kreuzung> Kr2 = make_shared<Kreuzung>("Kr2", 1000);
 	shared_ptr<Kreuzung> Kr3 = make_shared<Kreuzung>("Kr3", 0);
 	shared_ptr<Kreuzung> Kr4 = make_shared<Kreuzung>("Kr4", 0);
-//
-//	// Strasse1 -> W12, W21 : 40, Innerorts, false
-//	unique_ptr<Weg> W12 = make_unique<Weg>("W12", 40, Kr2, Innerorts, false);
-//	unique_ptr<Weg> W21 = make_unique<Weg>("W21", 40, Kr1, Innerorts, false);
-//
-//	// Strasse2 -> W23a, W32a: 115, Autobahn, true
-//	unique_ptr<Weg> W23a = make_unique<Weg>("W23a", 115 , Kr3, Autobahn, true);
-//	unique_ptr<Weg> W32a = make_unique<Weg>("W32a", 115 , Kr2, Autobahn, true);
-//
-//	// Strasse3 -> W23b, W32b: 40, Innerorts, false
-//	unique_ptr<Weg> W23b = make_unique<Weg>("W23b", 40, Kr3, Innerorts, false);
-//	unique_ptr<Weg> W32b = make_unique<Weg>("W32b", 40, Kr2, Innerorts, false);
-//
-//	// Strasse4 -> W24, W42: 55, Innerorts, false
-//	unique_ptr<Weg> W24 = make_unique<Weg>("W24", 55, Kr4, Innerorts, false);
-//	unique_ptr<Weg> W42 = make_unique<Weg>("W42", 55, Kr2, Innerorts, false);
-//
-//	// Strasse5 -> W34, W43: 85, Autobahn, true
-//	unique_ptr<Weg> W34 = make_unique<Weg>("W34", 85, Kr4, Autobahn, true);
-//	unique_ptr<Weg> W43 = make_unique<Weg>("W43", 85, Kr3, Autobahn, true);
-//
-//	// Strasse6 -> W44a, W44b: 130, Landstrasse, true
-//	unique_ptr<Weg> W44a = make_unique<Weg>("W44a", 130, Kr4, Landstrasse, true);
-//	unique_ptr<Weg> W44b = make_unique<Weg>("W44b", 130, Kr4, Landstrasse, true);
 
-	// Kr1 -> W12
-	// Kr2 -> W21, W23a, W23b, W24
-	// Kr3 -> W32a, W32b, W34
-	// Kr4 -> W42, W43, W44a, W44b,
-	// Verbinde die Kreuzungen und Wege.
-//	Kreuzung::vVerbinde(W12->getName(), W21->getName(), W12->getLaenge(), Kr1, Kr2, W12->gettTempolimit(), W12->getUeberholverbot());
-//	Kreuzung::vVerbinde(W23a->getName(), W32a->getName(), W23a->getLaenge(), Kr2, Kr3, W23a->gettTempolimit(), W23a->getUeberholverbot());
-//	Kreuzung::vVerbinde(W23b->getName(), W32b->getName(), W23b->getLaenge(), Kr2, Kr3, W23b->gettTempolimit(), W23b->getUeberholverbot());
-//	Kreuzung::vVerbinde(W24->getName(), W42->getName(), W24->getLaenge(), Kr2, Kr4, W24->gettTempolimit(), W24->getUeberholverbot());
-//	Kreuzung::vVerbinde(W34->getName(), W43->getName(), W34->getLaenge(), Kr3, Kr4, W34->gettTempolimit(), W34->getUeberholverbot());
-//	Kreuzung::vVerbinde(W44a->getName(), W44b->getName(), W44a->getLaenge(), Kr4, Kr4, W44a->gettTempolimit(), W44a->getUeberholverbot());
-
-	Kreuzung::vVerbinde("W12", "W21", 40, Kr1, Kr2, Innerorts, false);
-	Kreuzung::vVerbinde("W23a", "W32a", 40, Kr2, Kr3, Autobahn, true);
+	// Verbinde die Kreuzungen mit den Wegen
+	Kreuzung::vVerbinde("W12", "W21", 40, Kr1, Kr2, Innerorts, true);
+	Kreuzung::vVerbinde("W23a", "W32a", 115, Kr2, Kr3, Autobahn, true);
 	Kreuzung::vVerbinde("W23b", "W32b", 40, Kr2, Kr3, Innerorts, false);
-	Kreuzung::vVerbinde("W24", "W42", 40, Kr2, Kr4, Innerorts, false);
-	Kreuzung::vVerbinde("W34", "W43", 40, Kr3, Kr4, Autobahn, true);
-	Kreuzung::vVerbinde("W44a", "W44a", 40, Kr4, Kr4, Landstrasse, true);
+	Kreuzung::vVerbinde("W24", "W42", 55, Kr2, Kr4, Innerorts, false);
+	Kreuzung::vVerbinde("W34", "W43", 85, Kr3, Kr4, Autobahn, true);
+	Kreuzung::vVerbinde("W44a", "W44a", 130, Kr4, Kr4, Landstrasse, true);
 
 	// Erzeuge Fahrzeuge
-	unique_ptr<PKW> pkw1 = make_unique<PKW>("pkw1", 99.83, 11.27);
-	unique_ptr<PKW> pkw2 = make_unique<PKW>("pkw2", 157.24, 15.88, 67.73);
-	unique_ptr<Fahrrad> fahrrad1 = make_unique<Fahrrad>("fahrrad1", 27.34);
-	unique_ptr<Fahrrad> fahrrad2 = make_unique<Fahrrad>("fahrrad2", 15.25);
-	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1", 123.45);
-	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("fahrzeug2", 72.79);
+	unique_ptr<PKW> pkw1 = make_unique<PKW>("pkw1", 47.83, 11.27);
+	unique_ptr<PKW> pkw2 = make_unique<PKW>("pkw2", 35.24, 15.88, 67.73);
+	unique_ptr<Fahrrad> fahrrad1 = make_unique<Fahrrad>("fahrrad1", 21.34);
+	unique_ptr<Fahrrad> fahrrad2 = make_unique<Fahrrad>("fahrrad2", 27.25);
 
 	// KR1 nimmt alle Fahrzeuge an
-	Kr1->vAnnahme(std::move(pkw1),0.0);
-	Kr1->vAnnahme(std::move(pkw2),0.0);
-	Kr1->vAnnahme(std::move(fahrrad1),0.0);
-	Kr1->vAnnahme(std::move(fahrrad2),0.0);
-	Kr1->vAnnahme(std::move(fahrzeug1),0.0);
-	Kr1->vAnnahme(std::move(fahrzeug2),0.0);
+	Kr1->vAnnahme(std::move(pkw1),1);
+	Kr1->vAnnahme(std::move(pkw2),0.75);
+	Kr1->vAnnahme(std::move(fahrrad1),0.25);
+	Kr1->vAnnahme(std::move(fahrrad2),0.5);
 
 	// Erzeuge eine Liste/Vektor dann zieht alle Kreuzungen in diese Liste um.
 	vector<shared_ptr<Kreuzung>>kreuzungen;
@@ -790,50 +745,50 @@ void vAufgabe_7(){
 	kreuzungen.push_back(Kr3);
 	kreuzungen.push_back(Kr4);
 
-//	// Initsialisiere Grafik
-//	bInitialisiereGrafik(800, 500);
-//
-//
-//	// Zeichne Kreuzungen
-//	void bZeichneKreuzung(int 680, int 40);
-//	void bZeichneKreuzung(int 680, int 300);
-//	void bZeichneKreuzung(int 680, int 570);
-//	void bZeichneKreuzung(int 320, int 300);
-//
-//	// Zeichne Strassen
-//	// Strasse 1
-//	int kS1[] = {680, 40, 680, 300};
-//	bZeichneStrasse(W12->getName(), W21->getName(), W12->getLaenge(), 2, kS1);
-//
-//	// Strasse 2
-//	int kS2[] = {680, 300, 850, 300, 970, 390, 970, 500, 850, 570, 680, 570};
-//	bZeichneStrasse(W23a->getName(), W32a->getName(), W23a->getLaenge(), 2, kS2);
-//
-//	// Strasse 3
-//	int kS3[] = {680, 300, 680, 570};
-//	bZeichneStrasse(W23b->getName(), W32b->getName(), W23b->getLaenge(), 2, kS3);
-//
-//	// Strasse 4
-//	int kS4[] = {680, 300, 320, 300};
-//	bZeichneStrasse(W24->getName(), W42->getName(), W24->getLaenge(), 2, kS4);
-//
-//	// Strasse 5
-//	int kS5[] = {680, 570, 500, 570, 350, 510, 320, 420, 320, 300};
-//	bZeichneStrasse(W34->getName(), W43->getName(), W34->getLaenge(), 2, kS5);
-//
-//	// Strasse 6
-//	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300};
-//	bZeichneStrasse(W44a->getName(), W44a->getName(), W44a->getLaenge(), 2, kS6);
-//
-//	// Simuliere alle Kreuzungen in dieser Liste in einer For-loop bis ende der gegebenen Zeit.
-//	Fahrzeug::vKopf();
-//	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < dStunden; dGlobaleZeit += dEpsilon){
-//		for(const auto& kreuzung : kreuzungen){
-//			kreuzung->vSimulieren();
-//		}
-//		vSleep(1000);
-//	}
-//	vBeendeGrafik();
+	// Initsialisiere Grafik
+	bInitialisiereGrafik(800, 500);
+
+
+	// Zeichne Kreuzungen
+	bZeichneKreuzung(680, 40);
+	bZeichneKreuzung(680, 300);
+	bZeichneKreuzung(680, 570);
+	bZeichneKreuzung(320, 300);
+
+	// Zeichne Strassen
+	// Strasse 1
+	int kS1[] = {680, 40, 680, 300};
+	bZeichneStrasse("W12", "W21", 40, 2, kS1);
+
+	// Strasse 2
+	int kS2[] = {680, 300, 850, 300, 970, 390, 970, 500, 850, 570, 680, 570};
+	bZeichneStrasse("W23a", "W32a", 115, 2, kS2);
+
+	// Strasse 3
+	int kS3[] = {680, 300, 680, 570};
+	bZeichneStrasse("W23b", "W32b", 40, 2, kS3);
+
+	// Strasse 4
+	int kS4[] = {680, 300, 320, 300};
+	bZeichneStrasse("W24", "W42", 55, 2, kS4);
+
+	// Strasse 5
+	int kS5[] = {680, 570, 500, 570, 350, 510, 320, 420, 320, 300};
+	bZeichneStrasse("W34", "W43", 85, 2, kS5);
+
+	// Strasse 6
+	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300};
+	bZeichneStrasse("W44a", "W44a", 130, 2, kS6);
+
+	// Simuliere alle Kreuzungen in dieser Liste in einer For-loop bis ende der gegebenen Zeit.
+	Fahrzeug::vKopf();
+	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < dStunden; dGlobaleZeit += dEpsilon){
+		for(const auto& kreuzung : kreuzungen){
+			kreuzung->vSimulieren();
+		}
+		vSleep(1000);
+	}
+	vBeendeGrafik();
 
 }
 

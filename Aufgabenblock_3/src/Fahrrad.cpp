@@ -8,7 +8,7 @@
 #include <math.h>
 #include <iomanip>
 #include "Fahrrad.h"
-//#include "SimuClient.h"
+#include "SimuClient.h"
 #include <iostream>
 #include <string>
 #include <limits>
@@ -89,7 +89,7 @@ void Fahrrad::vSimulieren(){
 
 void Fahrrad::vZeichnen(const Weg& weg){
 	double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-//	bZeichneFahrrad(getName(), weg.getName(), relativePosition, dGeschwindigkeit());
+	bZeichneFahrrad(getName(), weg.getName(), relativePosition, dGeschwindigkeit());
 }
 
 void Fahrrad::vEinlesen(istream& is){

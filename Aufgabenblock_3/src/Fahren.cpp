@@ -15,15 +15,14 @@ double Fahren::dStrecke(Fahrzeug& fahrzeug, double dZeitDifferenz){
 	double dLaenge = p_pWeg->getLaenge();
 	double dAbschnittStrecke = fahrzeug.getAbschnittStrecke();
 
-	// Wenn der Weg einen Ueberholverbot besitzt
-	// soll man auch die Schranke kontrollieren.
-	// Falls die Schranke noch nicht gesetzt ist, das heisst, dass das Fahrzeug auf der ersten Stelle der Liste steht.
-	// Es faehrt dann bis, wo es fahren kann.
-	// Aber wenn es die Schranke schon gesetzt ist, das Fahrzeug darf nur bis die Schranke fahren.
-	if (p_pWeg->getUeberholverbot()){
+	// Wenn es ein Ueberholverbot gibt, soll die Schranke beobachtet werden.
+	// Falls die Schranke schon gesetzt ist, darf dieses Fahrzeug maximal bis zu dieser Schranke weiterfahren.
+	// Wenn die Schranke nicht ueberschritten wird, faehrt das Fahrzeug bis, wo es fahren kann.
+	// Wenn aber die Schranke ueberschritten wird, wird die TeilStrecke nach dieser Situation berechnet.
+	if(p_pWeg->getUeberholverbot()){
 		double dSchranke = p_pWeg->getSchranke();
-		if(dSchranke > 0){
-			double dNeuAbschnittStrecke = dAbschnittStrecke + dTeilStrecke;
+		if(dAbschnittStrecke < dSchranke){
+			double dNeuAbschnittStrecke = dTeilStrecke + dAbschnittStrecke;
 			if(dNeuAbschnittStrecke > dSchranke){
 				dTeilStrecke = dSchranke - dAbschnittStrecke;
 			}

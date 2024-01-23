@@ -134,17 +134,7 @@ void Kreuzung::vSimulieren(){
 
 void Kreuzung::vEinlesen(istream& is){
 	Simulationsobjekt::vEinlesen(is);
-
-	if (p_dTankstelle != 0.0){
-		throw runtime_error("Object already initialized");
-	}
-
-	cout << "Bitte geben Sie die Kapazitaet der Tankstelle der Kreuzung " << this->getID() << " ein: ";
 	is >> p_dTankstelle;
-
-	if(is.fail()){
-		throw runtime_error("Error reading from input stream.");
-	}
 }
 
 // Kontrolliere, ob uebergebenen Weg in der Liste p_pWege ist.
