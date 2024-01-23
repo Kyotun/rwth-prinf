@@ -120,9 +120,7 @@ void vAufgabe_1(){
 //	vectorFahrzeuge.push_back(fahrzeug_s);
 
 
-
-
-	// Lsche den Intahl des Vektors. Die Objekte werden durch der Destruktor geloescht.
+	// Loesche den Intahl des Vektors. Die Objekte werden durch der Destruktor geloescht.
 	vectorFahrzeuge.clear();
 
 
