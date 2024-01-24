@@ -4,6 +4,7 @@
  *  Created on: 16.11.2023
  *      Author: kyotun
  */
+
 #include <string>
 #include <iomanip>
 #include <iostream>
@@ -15,9 +16,8 @@
 #include "Weg.h"
 
 using namespace std;
+
 extern double dGlobaleZeit;
-
-
 
 // Fahrzeug-Objekt mit dem Name
 Fahrzeug::Fahrzeug(string p_sName): Simulationsobjekt(p_sName){
@@ -63,7 +63,6 @@ void Fahrzeug::vKopf(){
 		 << setw(15) << "Name"
 		 << resetiosflags(ios::adjustfield)
 		 << setiosflags(ios::right)
-//		 << setw(20) << "Simu-Daten"
 		 << setw(20) << "MaxGeschwindigkeit"
 		 << setw(20) << "Gesamtstrecke"
 		 << setw(20) << "Abschnittstrecke"
@@ -113,6 +112,9 @@ void Fahrzeug::vSimulieren(){
 // Wenn ein Fahrzeug von einem Weg akzeptiert wurde, soll es auch diesen Weg in sich selbst anerkannt machen.
 // Diese Method fuer die fahrende Fahrzeuge
 void Fahrzeug::vNeueStrecke(Weg& weg){
+	if(p_pVerhalten){
+		p_pVerhalten.reset();
+	}
 	p_pVerhalten = make_unique<Fahren>(weg);
 	this->vResetAbschnittStrecke();
 	cout << "Fahrzeug " << p_sName << " ist in den Weg " << weg.getName() << " zum Fahren angekommen." << endl;
@@ -156,16 +158,6 @@ Fahrzeug& Fahrzeug::operator=(const Fahrzeug& other) {
 	this->p_dGesamtZeit = other.getGesamtZeit();
 
 	return *this;
-}
-
-
-// Ueberladung von '<<' (Ausgabe) Operator.
-// Nun koennen die Objekte der Klasse Fahrzeug(und die Unterkalsse Objekte davon)
-// einfach mit "cout << Objekt" ausgegeben werden. Ohne die Ausgabefunktion zu nutzen.
-
-ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug) {
-	fahrzeug.vAusgeben(ausgabe);
-	return ausgabe;
 }
 
 /*

@@ -1,346 +1,112 @@
-18:40:10 **** Build of configuration Debug for project Aufgabenblock_3 ****
+00:36:36 **** Build of configuration Debug for project ce ****
 make all 
 Building file: ../src/Fahrausnahme.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrausnahme.d" -MT"src/Fahrausnahme.o" -o "src/Fahrausnahme.o" "../src/Fahrausnahme.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrausnahme.d" -MT"src/Fahrausnahme.o" -o "src/Fahrausnahme.o" "../src/Fahrausnahme.cpp"
 Finished building: ../src/Fahrausnahme.cpp
  
 Building file: ../src/Fahren.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahren.d" -MT"src/Fahren.o" -o "src/Fahren.o" "../src/Fahren.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahren.d" -MT"src/Fahren.o" -o "src/Fahren.o" "../src/Fahren.cpp"
 Finished building: ../src/Fahren.cpp
  
 Building file: ../src/Fahrrad.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrrad.d" -MT"src/Fahrrad.o" -o "src/Fahrrad.o" "../src/Fahrrad.cpp"
-../src/Fahrrad.cpp:90:9: warning: unused variable 'relativePosition' [-Wunused-variable]
-        double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-               ^
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrrad.d" -MT"src/Fahrrad.o" -o "src/Fahrrad.o" "../src/Fahrrad.cpp"
+In file included from ../src/Fahrrad.cpp:11:
+../src/SimuClient.h:2:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma warning (disable:4786)
+        ^
 1 warning generated.
 Finished building: ../src/Fahrrad.cpp
  
 Building file: ../src/Fahrzeug.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrzeug.d" -MT"src/Fahrzeug.o" -o "src/Fahrzeug.o" "../src/Fahrzeug.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrzeug.d" -MT"src/Fahrzeug.o" -o "src/Fahrzeug.o" "../src/Fahrzeug.cpp"
 Finished building: ../src/Fahrzeug.cpp
  
 Building file: ../src/Kreuzung.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Kreuzung.d" -MT"src/Kreuzung.o" -o "src/Kreuzung.o" "../src/Kreuzung.cpp"
-../src/Kreuzung.cpp:28:7: warning: unused variable 'rueckWeg' [-Wunused-variable]
-        Weg& rueckWeg = weg.getRueckweg();
-             ^
-1 warning generated.
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Kreuzung.d" -MT"src/Kreuzung.o" -o "src/Kreuzung.o" "../src/Kreuzung.cpp"
 Finished building: ../src/Kreuzung.cpp
  
 Building file: ../src/Losfahren.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Losfahren.d" -MT"src/Losfahren.o" -o "src/Losfahren.o" "../src/Losfahren.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Losfahren.d" -MT"src/Losfahren.o" -o "src/Losfahren.o" "../src/Losfahren.cpp"
 Finished building: ../src/Losfahren.cpp
  
 Building file: ../src/PKW.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PKW.d" -MT"src/PKW.o" -o "src/PKW.o" "../src/PKW.cpp"
-../src/PKW.cpp:136:9: warning: unused variable 'relativePosition' [-Wunused-variable]
-        double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-               ^
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PKW.d" -MT"src/PKW.o" -o "src/PKW.o" "../src/PKW.cpp"
+In file included from ../src/PKW.cpp:14:
+../src/SimuClient.h:2:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma warning (disable:4786)
+        ^
 1 warning generated.
 Finished building: ../src/PKW.cpp
  
 Building file: ../src/Parken.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Parken.d" -MT"src/Parken.o" -o "src/Parken.o" "../src/Parken.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Parken.d" -MT"src/Parken.o" -o "src/Parken.o" "../src/Parken.cpp"
 Finished building: ../src/Parken.cpp
+ 
+Building file: ../src/SimuClient.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SimuClient.d" -MT"src/SimuClient.o" -o "src/SimuClient.o" "../src/SimuClient.cpp"
+In file included from ../src/SimuClient.cpp:1:
+../src/SimuClient.h:2:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma warning (disable:4786)
+        ^
+1 warning generated.
+Finished building: ../src/SimuClient.cpp
+ 
+Building file: ../src/SimuClientSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SimuClientSocket.d" -MT"src/SimuClientSocket.o" -o "src/SimuClientSocket.o" "../src/SimuClientSocket.cpp"
+Finished building: ../src/SimuClientSocket.cpp
+ 
+Building file: ../src/Simulation.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulation.d" -MT"src/Simulation.o" -o "src/Simulation.o" "../src/Simulation.cpp"
+In file included from ../src/Simulation.cpp:19:
+../src/SimuClient.h:2:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma warning (disable:4786)
+        ^
+1 warning generated.
+Finished building: ../src/Simulation.cpp
  
 Building file: ../src/Simulationsobjekt.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulationsobjekt.d" -MT"src/Simulationsobjekt.o" -o "src/Simulationsobjekt.o" "../src/Simulationsobjekt.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulationsobjekt.d" -MT"src/Simulationsobjekt.o" -o "src/Simulationsobjekt.o" "../src/Simulationsobjekt.cpp"
 Finished building: ../src/Simulationsobjekt.cpp
  
 Building file: ../src/Streckenende.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
 Finished building: ../src/Streckenende.cpp
  
 Building file: ../src/Verhalten.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Verhalten.d" -MT"src/Verhalten.o" -o "src/Verhalten.o" "../src/Verhalten.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Verhalten.d" -MT"src/Verhalten.o" -o "src/Verhalten.o" "../src/Verhalten.cpp"
 Finished building: ../src/Verhalten.cpp
  
 Building file: ../src/Weg.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Weg.d" -MT"src/Weg.o" -o "src/Weg.o" "../src/Weg.cpp"
-../src/Weg.cpp:31:2: warning: field 'p_pZielkreuzung' will be initialized after field 'p_eTempolimit' [-Wreorder-ctor]
-        p_pZielkreuzung(pZielkreuzung),
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        p_eTempolimit(eTempolimit)
-1 warning generated.
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Weg.d" -MT"src/Weg.o" -o "src/Weg.o" "../src/Weg.cpp"
 Finished building: ../src/Weg.cpp
  
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+g++ -std=c++2a -I/Users/kyotun/boost -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:28:
+../src/SimuClient.h:2:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma warning (disable:4786)
+        ^
+1 warning generated.
 Finished building: ../src/main.cpp
  
-Building target: Aufgabenblock_3
+Building target: ce
 Invoking: MacOS X C++ Linker
-g++  -o "Aufgabenblock_3"  ./src/Fahrausnahme.o ./src/Fahren.o ./src/Fahrrad.o ./src/Fahrzeug.o ./src/Kreuzung.o ./src/Losfahren.o ./src/PKW.o ./src/Parken.o ./src/Simulationsobjekt.o ./src/Streckenende.o ./src/Verhalten.o ./src/Weg.o ./src/main.o   
-Finished building target: Aufgabenblock_3
- 
-18:43:15 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Fahrausnahme.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrausnahme.d" -MT"src/Fahrausnahme.o" -o "src/Fahrausnahme.o" "../src/Fahrausnahme.cpp"
-Finished building: ../src/Fahrausnahme.cpp
- 
-Building file: ../src/Fahren.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahren.d" -MT"src/Fahren.o" -o "src/Fahren.o" "../src/Fahren.cpp"
-Finished building: ../src/Fahren.cpp
- 
-Building file: ../src/Fahrrad.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrrad.d" -MT"src/Fahrrad.o" -o "src/Fahrrad.o" "../src/Fahrrad.cpp"
-../src/Fahrrad.cpp:90:9: warning: unused variable 'relativePosition' [-Wunused-variable]
-        double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-               ^
-1 warning generated.
-Finished building: ../src/Fahrrad.cpp
- 
-Building file: ../src/Fahrzeug.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrzeug.d" -MT"src/Fahrzeug.o" -o "src/Fahrzeug.o" "../src/Fahrzeug.cpp"
-Finished building: ../src/Fahrzeug.cpp
- 
-Building file: ../src/Kreuzung.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Kreuzung.d" -MT"src/Kreuzung.o" -o "src/Kreuzung.o" "../src/Kreuzung.cpp"
-../src/Kreuzung.cpp:28:7: warning: unused variable 'rueckWeg' [-Wunused-variable]
-        Weg& rueckWeg = *(weg.getRueckweg());
-             ^
-1 warning generated.
-Finished building: ../src/Kreuzung.cpp
- 
-Building file: ../src/Losfahren.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Losfahren.d" -MT"src/Losfahren.o" -o "src/Losfahren.o" "../src/Losfahren.cpp"
-Finished building: ../src/Losfahren.cpp
- 
-Building file: ../src/PKW.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PKW.d" -MT"src/PKW.o" -o "src/PKW.o" "../src/PKW.cpp"
-../src/PKW.cpp:136:9: warning: unused variable 'relativePosition' [-Wunused-variable]
-        double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-               ^
-1 warning generated.
-Finished building: ../src/PKW.cpp
- 
-Building file: ../src/Parken.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Parken.d" -MT"src/Parken.o" -o "src/Parken.o" "../src/Parken.cpp"
-Finished building: ../src/Parken.cpp
- 
-Building file: ../src/Streckenende.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
-Finished building: ../src/Streckenende.cpp
- 
-Building file: ../src/Verhalten.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Verhalten.d" -MT"src/Verhalten.o" -o "src/Verhalten.o" "../src/Verhalten.cpp"
-Finished building: ../src/Verhalten.cpp
- 
-Building file: ../src/Weg.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Weg.d" -MT"src/Weg.o" -o "src/Weg.o" "../src/Weg.cpp"
-../src/Weg.cpp:31:2: warning: field 'p_pZielkreuzung' will be initialized after field 'p_eTempolimit' [-Wreorder-ctor]
-        p_pZielkreuzung(pZielkreuzung),
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        p_eTempolimit(eTempolimit)
-1 warning generated.
-Finished building: ../src/Weg.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: Aufgabenblock_3
-Invoking: MacOS X C++ Linker
-g++  -o "Aufgabenblock_3"  ./src/Fahrausnahme.o ./src/Fahren.o ./src/Fahrrad.o ./src/Fahrzeug.o ./src/Kreuzung.o ./src/Losfahren.o ./src/PKW.o ./src/Parken.o ./src/Simulationsobjekt.o ./src/Streckenende.o ./src/Verhalten.o ./src/Weg.o ./src/main.o   
-Finished building target: Aufgabenblock_3
- 
-18:49:18 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Fahrausnahme.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrausnahme.d" -MT"src/Fahrausnahme.o" -o "src/Fahrausnahme.o" "../src/Fahrausnahme.cpp"
-Finished building: ../src/Fahrausnahme.cpp
- 
-Building file: ../src/Fahren.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahren.d" -MT"src/Fahren.o" -o "src/Fahren.o" "../src/Fahren.cpp"
-Finished building: ../src/Fahren.cpp
- 
-Building file: ../src/Fahrrad.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrrad.d" -MT"src/Fahrrad.o" -o "src/Fahrrad.o" "../src/Fahrrad.cpp"
-../src/Fahrrad.cpp:90:9: warning: unused variable 'relativePosition' [-Wunused-variable]
-        double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-               ^
-1 warning generated.
-Finished building: ../src/Fahrrad.cpp
- 
-Building file: ../src/Fahrzeug.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Fahrzeug.d" -MT"src/Fahrzeug.o" -o "src/Fahrzeug.o" "../src/Fahrzeug.cpp"
-Finished building: ../src/Fahrzeug.cpp
- 
-Building file: ../src/Kreuzung.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Kreuzung.d" -MT"src/Kreuzung.o" -o "src/Kreuzung.o" "../src/Kreuzung.cpp"
-Finished building: ../src/Kreuzung.cpp
- 
-Building file: ../src/Losfahren.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Losfahren.d" -MT"src/Losfahren.o" -o "src/Losfahren.o" "../src/Losfahren.cpp"
-Finished building: ../src/Losfahren.cpp
- 
-Building file: ../src/PKW.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PKW.d" -MT"src/PKW.o" -o "src/PKW.o" "../src/PKW.cpp"
-../src/PKW.cpp:136:9: warning: unused variable 'relativePosition' [-Wunused-variable]
-        double relativePosition = getAbschnittStrecke()/ weg.getLaenge();
-               ^
-1 warning generated.
-Finished building: ../src/PKW.cpp
- 
-Building file: ../src/Parken.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Parken.d" -MT"src/Parken.o" -o "src/Parken.o" "../src/Parken.cpp"
-Finished building: ../src/Parken.cpp
- 
-Building file: ../src/Streckenende.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
-Finished building: ../src/Streckenende.cpp
- 
-Building file: ../src/Verhalten.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Verhalten.d" -MT"src/Verhalten.o" -o "src/Verhalten.o" "../src/Verhalten.cpp"
-Finished building: ../src/Verhalten.cpp
- 
-Building file: ../src/Weg.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Weg.d" -MT"src/Weg.o" -o "src/Weg.o" "../src/Weg.cpp"
-../src/Weg.cpp:31:2: warning: field 'p_pZielkreuzung' will be initialized after field 'p_eTempolimit' [-Wreorder-ctor]
-        p_pZielkreuzung(pZielkreuzung),
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        p_eTempolimit(eTempolimit)
-1 warning generated.
-Finished building: ../src/Weg.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: Aufgabenblock_3
-Invoking: MacOS X C++ Linker
-g++  -o "Aufgabenblock_3"  ./src/Fahrausnahme.o ./src/Fahren.o ./src/Fahrrad.o ./src/Fahrzeug.o ./src/Kreuzung.o ./src/Losfahren.o ./src/PKW.o ./src/Parken.o ./src/Simulationsobjekt.o ./src/Streckenende.o ./src/Verhalten.o ./src/Weg.o ./src/main.o   
-Finished building target: Aufgabenblock_3
- 
-19:17:46 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Kreuzung.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Kreuzung.d" -MT"src/Kreuzung.o" -o "src/Kreuzung.o" "../src/Kreuzung.cpp"
-../src/Kreuzung.cpp:28:72: error: expected ';' after expression
-                throw runtime_error("Es gibt keinen Rueckweg fuer uebergebenen Weg.")
-                                                                                     ^
-                                                                                     ;
-1 error generated.
-make: *** [src/Kreuzung.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-19:17:56 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Kreuzung.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Kreuzung.d" -MT"src/Kreuzung.o" -o "src/Kreuzung.o" "../src/Kreuzung.cpp"
-../src/Kreuzung.cpp:28:72: error: expected ';' after expression
-                throw runtime_error("Es gibt keinen Rueckweg fuer uebergebenen Weg.")
-                                                                                     ^
-                                                                                     ;
-1 error generated.
-make: *** [src/Kreuzung.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-19:18:07 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Kreuzung.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Kreuzung.d" -MT"src/Kreuzung.o" -o "src/Kreuzung.o" "../src/Kreuzung.cpp"
-Finished building: ../src/Kreuzung.cpp
- 
-Building file: ../src/Streckenende.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
-../src/Streckenende.cpp:22:53: error: too few arguments to function call, expected 2, have 1
-        p_pWeg.getKreuzung()->vAnnahme(std::move(lokal_ptr));
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                     ^
-../src/Kreuzung.h:36:7: note: 'vAnnahme' declared here
-        void vAnnahme(unique_ptr<Fahrzeug> fahrzeug, double dStartzeit);
-             ^
-1 error generated.
-make: *** [src/Streckenende.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-19:20:35 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Streckenende.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
-../src/Streckenende.cpp:22:24: error: no member named 'pZufaelligerweg' in 'Kreuzung'; did you mean 'pZufaelligerWeg'?
-        p_pWeg.getKreuzung()->pZufaelligerweg(p_pWeg);
-                              ^~~~~~~~~~~~~~~
-                              pZufaelligerWeg
-../src/Kreuzung.h:28:17: note: 'pZufaelligerWeg' declared here
-        shared_ptr<Weg>pZufaelligerWeg(Weg& weg);
-                       ^
-1 error generated.
-make: *** [src/Streckenende.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-19:20:56 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Streckenende.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
-Finished building: ../src/Streckenende.cpp
- 
-Building target: Aufgabenblock_3
-Invoking: MacOS X C++ Linker
-g++  -o "Aufgabenblock_3"  ./src/Fahrausnahme.o ./src/Fahren.o ./src/Fahrrad.o ./src/Fahrzeug.o ./src/Kreuzung.o ./src/Losfahren.o ./src/PKW.o ./src/Parken.o ./src/Simulationsobjekt.o ./src/Streckenende.o ./src/Verhalten.o ./src/Weg.o ./src/main.o   
-Finished building target: Aufgabenblock_3
- 
-19:21:37 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Streckenende.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
-../src/Streckenende.cpp:22:40: error: indirection requires pointer operand ('Weg' invalid)
-        p_pWeg.getKreuzung()->pZufaelligerWeg(*p_pWeg);
-                                              ^~~~~~~
-1 error generated.
-make: *** [src/Streckenende.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-19:21:47 **** Incremental Build of configuration Debug for project Aufgabenblock_3 ****
-make all 
-Building file: ../src/Streckenende.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Streckenende.d" -MT"src/Streckenende.o" -o "src/Streckenende.o" "../src/Streckenende.cpp"
-Finished building: ../src/Streckenende.cpp
- 
-Building target: Aufgabenblock_3
-Invoking: MacOS X C++ Linker
-g++  -o "Aufgabenblock_3"  ./src/Fahrausnahme.o ./src/Fahren.o ./src/Fahrrad.o ./src/Fahrzeug.o ./src/Kreuzung.o ./src/Losfahren.o ./src/PKW.o ./src/Parken.o ./src/Simulationsobjekt.o ./src/Streckenende.o ./src/Verhalten.o ./src/Weg.o ./src/main.o   
-Finished building target: Aufgabenblock_3
+g++ -L/Users/kyotun/boost/libs -o "ce"  ./src/Fahrausnahme.o ./src/Fahren.o ./src/Fahrrad.o ./src/Fahrzeug.o ./src/Kreuzung.o ./src/Losfahren.o ./src/PKW.o ./src/Parken.o ./src/SimuClient.o ./src/SimuClientSocket.o ./src/Simulation.o ./src/Simulationsobjekt.o ./src/Streckenende.o ./src/Verhalten.o ./src/Weg.o ./src/main.o   
+Finished building target: ce
  

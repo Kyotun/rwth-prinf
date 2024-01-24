@@ -67,6 +67,7 @@ Simulationsobjekt& Simulationsobjekt::operator=(const Simulationsobjekt& other) 
 	}
 
 	this->p_sName = other.getName();
+	this->p_dZeit = other.getZeit();
 
 	return *this;
 }

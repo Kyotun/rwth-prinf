@@ -52,7 +52,7 @@ void Weg::setTempolimiti(int iTempolimit){
 	}
 }
 
-Tempolimit Weg::gettTempolimit(){
+Tempolimit Weg::gettTempolimit() const{
 	switch((int)getTempolimit()){
 		case 50:
 			return Innerorts;
@@ -99,7 +99,7 @@ void Weg::vSimulieren(){
 			(*it)->vZeichnen(*this);
 			(*it)->vSimulieren();
 			it++;
-		} catch (Fahrausnahme *fahrausnahme){
+		}catch (Fahrausnahme *fahrausnahme){
 			it++;
 			fahrausnahme->vBearbeiten();
 		}

@@ -6,7 +6,6 @@
  */
 
 #include <sstream>
-#include "SimuClient.h"
 #include <iostream>
 #include <memory>
 #include <iomanip>
@@ -18,6 +17,7 @@
 #include <fstream>
 #include <exception>
 #include <stdexcept>
+
 #include "Fahrausnahme.h"
 #include "Fahren.h"
 #include "Fahrrad.h"
@@ -59,14 +59,14 @@ int main(){
 //	vAufgabe_2();
 //	vAufgabe_3();
 //	vAufgabe_AB1();
-//	vAufgabe_4();
+	vAufgabe_4();
 //	vAufgabe_5();
 //	vAufgabe_6();
 //	vAufgabe_6a();
 //	vAufgabe_7();
 
 //	vAufgabe_8();
-	vAufgabe_9();
+//	vAufgabe_9();
 //	vAufgabe_9a();
 	return 0;
 }
@@ -422,13 +422,16 @@ void vAufgabe_3(){
 void vAufgabe_4(){
 
 	// Statisches erzeugen eines Wegs "Innerorts"
-	Weg weg1("weg", 105.99, Tempolimit::Innerorts);
+	Weg weg1("weg1", 105.99, Tempolimit::Innerorts);
 
 	// Dynamisches erzeugen(mit Smart-Ptr) eines wegs "Autobahn"
 	unique_ptr<Weg> weg_ptr = make_unique<Weg>("weg_ptr", 287.34, Autobahn);
 
 	// Dynamisches erzeugen eines Fahrzeugs.
-	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("fahrzeug1");
+	unique_ptr<Fahrzeug> fahrzeug1 = make_unique<Fahrzeug>("BMW");
+	unique_ptr<Fahrzeug> fahrzeug2 = make_unique<Fahrzeug>("Audi");
+	unique_ptr<Fahrzeug> fahrzeug3 = make_unique<Fahrzeug>("BMX");
+
 
 	// Weg sollte leer sein.
 	cout << "\nVor dem Annahme:";
@@ -439,6 +442,8 @@ void vAufgabe_4(){
 	// Nach diesen Zeilen soll Weg fahrzeug1 enthalten.
 	cout << "Nach dem Annahme von fahrzeug1 im weg1:" << endl;
 	weg1.vAnnahme(std::move(fahrzeug1));
+	weg1.vAnnahme(std::move(fahrzeug2));
+	weg1.vAnnahme(std::move(fahrzeug3));
 	Weg::vKopf();
 	cout << weg1 << endl;
 	cout << *weg_ptr << endl << endl;

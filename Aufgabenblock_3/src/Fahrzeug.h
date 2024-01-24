@@ -4,6 +4,7 @@
  *  Created on: 10.11.2023
  *      Author: kyotun
  */
+
 #ifndef FAHRZEUG_H_
 #define FAHRZEUG_H_
 
@@ -85,13 +86,6 @@ protected:
 private:
 
 };
-
-// Überladung von '<<' (Ausgabe) Operator.
-// Dekleration außerhalb der Klasse. Auf diese Weise kann der Ausgabeoperator die private bzw. protected Bereiche
-// nicht erreichen kann.
-// Also keine friend Dekleration.
-// Aber getters werden benötigt, um die private bzw. protected Bereiche erreichen zu können.
-ostream& operator<<(ostream& ausgabe,const Fahrzeug& fahrzeug);
 
 #endif /* FAHRZEUG_H_ */
 

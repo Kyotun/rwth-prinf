@@ -60,7 +60,15 @@ private:
 	static inline int p_iMaxID = 0;
 };
 
-ostream& operator<<(ostream& ausgabe,const Simulationsobjekt& simuobjekt);
+// Ueberladung von '<<' (Ausgabe) Operator.
+// Dekleration außerhalb der Klasse. Auf diese Weise kann der Ausgabeoperator die private bzw. protected Bereiche
+// nicht erreichen kann.
+// Also keine friend Dekleration.
+// Aber getters werden benötigt, um die private bzw. protected Bereiche erreichen zu können.
+ostream& operator<<(ostream& ausgabe, const Simulationsobjekt& simuobjekt);
+
+// Ueberladung von operator>>(Eingabe Operator)
+// Die Attributen koennen einfach durch die einkommende Eingabe eingesetzt werden.
 istream& operator>>(istream& is, Simulationsobjekt& simuobjekt);
 
 #endif /* SIMULATIONSOBJEKT_H_ */

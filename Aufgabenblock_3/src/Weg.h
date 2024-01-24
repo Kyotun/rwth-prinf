@@ -32,8 +32,8 @@ public:
 	double getTempolimit() const;
 	double getLaenge() const{return p_dLaenge;}
 	double getSchranke()const{return this->p_dSchranke;}
-	double getTempolimit(){return this->p_eTempolimit;}
-	Tempolimit gettTempolimit();
+//	double getTempolimit(){return this->p_eTempolimit;}
+	Tempolimit gettTempolimit() const;
 	void getFahrzeuge() const;
 	VListe<unique_ptr<Fahrzeug>>* getFahrzeugList(){return &p_pFahrzeuge;}
 	shared_ptr<Weg> getRueckweg();

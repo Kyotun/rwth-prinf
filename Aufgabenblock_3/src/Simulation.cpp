@@ -31,6 +31,7 @@ void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 		for(auto& pair : kreuzungenMap){
 			pair.second->vSimulieren();
 		}
+		vSleep(1000);
 	}
 }
 
