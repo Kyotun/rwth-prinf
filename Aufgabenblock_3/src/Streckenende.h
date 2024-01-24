@@ -4,11 +4,13 @@
  *  Created on: 03.12.2023
  *      Author: kyotun
  */
-
 #ifndef STRECKENENDE_H_
 #define STRECKENENDE_H_
 
 #include "Fahrausnahme.h"
+
+class Weg;
+class Fahrzeug;
 
 class Streckenende : public Fahrausnahme{
 public:

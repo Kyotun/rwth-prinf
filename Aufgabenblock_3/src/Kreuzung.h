@@ -4,17 +4,16 @@
  *  Created on: 12.01.2024
  *      Author: kyotun
  */
-
-#pragma once
-#include <memory>
-#include <list>
-#include "Simulationsobjekt.h"
-#include "Tempolimit.h"
-#include "Weg.h"
-
 #ifndef KREUZUNG_H_
 #define KREUZUNG_H_
 
+#include <memory>
+#include <list>
+
+#include "Simulationsobjekt.h"
+#include "Tempolimit.h"
+
+class Weg;
 class Fahrzeug;
 
 using namespace std;

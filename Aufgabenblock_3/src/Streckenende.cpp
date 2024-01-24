@@ -4,10 +4,16 @@
  *  Created on: 03.12.2023
  *      Author: kyotun
  */
+
 #include <iostream>
 #include <memory>
+#include <string>
+
+#include "Fahrzeug.h"
+#include "Kreuzung.h"
 #include "Streckenende.h"
-#include "vertagt_liste.h"
+#include "Weg.h"
+
 extern double dGlobaleZeit;
 
 // Wenn ein Fahrzeug am Ende eines Wegs gefahren ist, wird diese Methode von der Methode des Wegs vSimulieren aufgerufen.
@@ -34,7 +40,7 @@ void Streckenende::vBearbeiten(){
 	lokalKreuzung->vTanken(*lokalFahrzeug);
 
 	// Umziehen vom Fahrzeug in den neuen Weg.
-	lokalZufaelligerWeg->vAnnahme(move(lokalFahrzeug));
+	lokalZufaelligerWeg->vAnnahme(std::move(lokalFahrzeug));
 
 	// Gibt die Informationen aus.
 	cout << "Das Fahrzeug " << p_pFahrzeug.getName()

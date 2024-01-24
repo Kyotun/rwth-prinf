@@ -4,19 +4,16 @@
  *  Created on: 20.01.2024
  *      Author: kyotun
  */
-
 #ifndef SIMULATION_H_
 #define SIMULATION_H_
 
+#include <string>
 #include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
 #include <map>
-#include "Kreuzung.h"
+#include <memory>
+
 #include "Tempolimit.h"
-#include "PKW.h"
-#include "Fahrrad.h"
+#include "Kreuzung.h"
 
 using namespace std;
 

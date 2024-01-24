@@ -4,15 +4,14 @@
  *  Created on: 16.11.2023
  *      Author: kyotun
  */
-
-#pragma once
-#include <limits>
-#include "Fahrzeug.h"
-#include "Verhalten.h"
-#include "Weg.h"
-
 #ifndef PKW_H_
 #define PKW_H_
+
+#include <string>
+#include <limits>
+#include <iostream>
+
+#include "Fahrzeug.h"
 
 using namespace std;
 

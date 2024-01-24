@@ -5,15 +5,14 @@
  *      Author: kyotun
  */
 
-#include <math.h>
-#include <iomanip>
-#include "Fahrrad.h"
-#include "SimuClient.h"
-#include <iostream>
 #include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
+#include <iomanip>
+#include <iostream>
+#include "SimuClient.h"
+#include "Fahrzeug.h"
+#include "Fahrrad.h"
+#include "Verhalten.h"
+#include "Weg.h"
 
 using namespace std;
 extern double dGlobaleZeit;

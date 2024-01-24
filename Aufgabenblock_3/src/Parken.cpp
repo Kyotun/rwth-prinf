@@ -5,18 +5,14 @@
  *      Author: kyotun
  */
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <limits>
-#include <vector>
-#include <cmath>
-using namespace std;
-extern double dGlobaleZeit;
-
-#include "Parken.h"
 #include "Fahrzeug.h"
 #include "Losfahren.h"
+#include "Parken.h"
+#include "Weg.h"
+
+using namespace std;
+
+extern double dGlobaleZeit;
 
 // dStrecke Ausrechnen fuer das parkendes Fahrzeug.
 // Wartet auf seine Zeit zum Fahren.

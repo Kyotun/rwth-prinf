@@ -5,10 +5,20 @@
  *      Author: kyotun
  */
 
+#include <string>
 #include <iostream>
+#include <memory>
 #include <map>
+#include <sstream>
+
+#include "Fahrrad.h"
+#include "Fahrzeug.h"
+#include "Kreuzung.h"
+#include "PKW.h"
 #include "Simulation.h"
-#include "Simuclient.h"
+#include "SimuClient.h"
+#include "Tempolimit.h"
+#include "Weg.h"
 
 using namespace std;
 extern double dGlobaleZeit;
@@ -17,6 +27,7 @@ extern double dGlobaleZeit;
 void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dZeitschritt; dGlobaleZeit < dDauer; dGlobaleZeit += dZeitschritt){
+		vSetzeZeit(dGlobaleZeit);
 		for(auto& pair : kreuzungenMap){
 			pair.second->vSimulieren();
 		}

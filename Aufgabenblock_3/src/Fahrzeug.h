@@ -4,16 +4,18 @@
  *  Created on: 10.11.2023
  *      Author: kyotun
  */
-#pragma once
-#include <iostream>
-#include "Weg.h"
-
 #ifndef FAHRZEUG_H_
 #define FAHRZEUG_H_
 
-#include "Verhalten.h"
-#include "Fahren.h"
+#include <string>
+#include <memory>
+#include <iostream>
+#include <limits>
 
+#include "Simulationsobjekt.h"
+#include "Verhalten.h"
+
+class Weg;
 
 extern double dGlobaleZeit;
 
@@ -78,7 +80,7 @@ protected:
 	double p_dAbschnittStrecke = 0.0;
 
 	// Parkendes oder fahrendes Fahrzeug?
-	unique_ptr<Verhalten> p_pVerhalten = nullptr;
+	unique_ptr<Verhalten> p_pVerhalten;
 
 private:
 

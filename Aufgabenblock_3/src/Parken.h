@@ -4,14 +4,13 @@
  *  Created on: 03.12.2023
  *      Author: kyotun
  */
-
-#include "Verhalten.h"
-
 #ifndef PARKEN_H_
 #define PARKEN_H_
 
-class Weg;
+#include "Verhalten.h"
+
 class Fahrzeug;
+class Weg;
 
 using namespace std;
 

@@ -4,12 +4,10 @@
  *  Created on: 16.11.2023
  *      Author: kyotun
  */
-
-#pragma once
-#include "Fahrzeug.h"
-
 #ifndef FAHRRAD_H_
 #define FAHRRAD_H_
+
+#include "Fahrzeug.h"
 
 using namespace std;
 

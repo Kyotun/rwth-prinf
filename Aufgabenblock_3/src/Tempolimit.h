@@ -4,11 +4,10 @@
  *  Created on: 02.12.2023
  *      Author: kyotun
  */
-#include <limits>
-#include <iostream>
-
 #ifndef TEMPOLIMIT_H_
 #define TEMPOLIMIT_H_
+
+#include <limits>
 
 // Vorhandene Tempolimits fuer unterschiedliche Wegtypen.
 enum Tempolimit{

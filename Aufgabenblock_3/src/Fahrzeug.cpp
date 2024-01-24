@@ -4,13 +4,15 @@
  *  Created on: 16.11.2023
  *      Author: kyotun
  */
-#include <iostream>
+#include <string>
 #include <iomanip>
-#include "Fahrzeug.h"
-#include "Verhalten.h"
-#include "Parken.h"
+#include <iostream>
+#include <memory>
 #include "Fahren.h"
-#include "Fahrausnahme.h"
+#include "Fahrzeug.h"
+#include "Parken.h"
+#include "Simulationsobjekt.h"
+#include "Weg.h"
 
 using namespace std;
 extern double dGlobaleZeit;

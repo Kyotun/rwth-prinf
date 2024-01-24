@@ -4,17 +4,15 @@
  *  Created on: 02.12.2023
  *      Author: kyotun
  */
-
-#include <iostream>
-#include <list>
-#include "Simulationsobjekt.h"
-#include "vertagt_liste.h"
-#include "Tempolimit.h"
-#include "Fahrzeug.h"
-#include "Kreuzung.h"
-
 #ifndef WEG_H_
 #define WEG_H_
+
+#include <string>
+#include <memory>
+
+#include "Simulationsobjekt.h"
+#include "Tempolimit.h"
+#include "vertagt_liste.h"
 
 class Fahrzeug;
 class Kreuzung;
@@ -22,7 +20,6 @@ class Kreuzung;
 using namespace std;
 using namespace vertagt;
 extern double dGlobaleZeit;
-
 
 class Weg : public Simulationsobjekt{
 public:
@@ -71,12 +68,11 @@ protected:
 private:
 	double p_dLaenge = 0.0;
 	VListe<unique_ptr<Fahrzeug>> p_pFahrzeuge;
+	const weak_ptr<Kreuzung> p_pZielkreuzung;
 	Tempolimit p_eTempolimit = Autobahn;
 	bool p_bUeberholverbot = true;
 	double p_dSchranke = 0.0;
-
 	weak_ptr<Weg> p_pRueckweg;
-	const weak_ptr<Kreuzung> p_pZielkreuzung;
 
 };
 

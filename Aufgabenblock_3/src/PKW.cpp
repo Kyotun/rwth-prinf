@@ -5,14 +5,17 @@
  *      Author: kyotun
  */
 
+#include <string>
+#include <iostream>
 #include <iomanip>
-#include <cmath>
+
+#include "Fahrzeug.h"
 #include "PKW.h"
 #include "SimuClient.h"
-#include <iostream>
-#include <string>
-#include <limits>
-#include <vector>
+#include "Tempolimit.h"
+#include "Verhalten.h"
+#include "Weg.h"
+
 
 using namespace std;
 extern double dGlobaleZeit;

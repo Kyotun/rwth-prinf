@@ -4,11 +4,11 @@
  *  Created on: 02.12.2023
  *      Author: kyotun
  */
-
 #ifndef SIMULATIONSOBJEKT_H_
 #define SIMULATIONSOBJEKT_H_
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 

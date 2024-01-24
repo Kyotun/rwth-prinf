@@ -5,16 +5,21 @@
  *      Author: kyotun
  */
 
+#include <memory>
+#include <string>
+#include <list>
 #include <iostream>
 #include <iomanip>
-#include <string>
-#include "Simulationsobjekt.h"
-#include "vertagt_liste.h"
-#include "Weg.h"
-#include "Tempolimit.h"
+
 #include "Fahrausnahme.h"
+#include "Fahrzeug.h"
+#include "Kreuzung.h"
+#include "Tempolimit.h"
+#include "Weg.h"
+#include "vertagt_liste.h"
 
 using namespace std;
+using namespace vertagt;
 extern double dGlobaleZeit;
 
 // Konstruktor fuer Weg Objekt mit 3 Parametern

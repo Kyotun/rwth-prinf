@@ -4,12 +4,12 @@
  *  Created on: 03.12.2023
  *      Author: kyotun
  */
-
 #ifndef LOSFAHREN_H_
 #define LOSFAHREN_H_
 
 #include "Fahrausnahme.h"
 
+class Weg;
 class Fahrzeug;
 
 class Losfahren : public Fahrausnahme{

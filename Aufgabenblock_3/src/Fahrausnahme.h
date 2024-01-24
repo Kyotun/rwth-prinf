@@ -4,13 +4,12 @@
  *  Created on: 03.12.2023
  *      Author: kyotun
  */
-
 #ifndef FAHRAUSNAHME_H_
 #define FAHRAUSNAHME_H_
 
-#include "Fahrzeug.h"
-#include "Weg.h"
 #include <exception>
+class Weg;
+class Fahrzeug;
 
 // Fahrausnahme Klasse erbt von STL Exception.
 class Fahrausnahme : public std::exception{

@@ -6,7 +6,8 @@
  */
 
 #include "Fahren.h"
-#include "Verhalten.h"
+#include "Fahrzeug.h"
+#include "Weg.h"
 #include "Streckenende.h"
 
 // Ausrechnen der aktuelle zuruckgelegten Strecke des fahrenden Fahrzeuges

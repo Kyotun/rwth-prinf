@@ -1,7 +1,6 @@
 #pragma once
 
 #include <list>
-
 namespace vertagt
 {
 	// Oberklasse VAktion

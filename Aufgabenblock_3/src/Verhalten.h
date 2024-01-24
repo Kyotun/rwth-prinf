@@ -4,14 +4,15 @@
  *  Created on: 03.12.2023
  *      Author: kyotun
  */
-#include "Fahrzeug.h"
-
 #ifndef VERHALTEN_H_
 #define VERHALTEN_H_
 
-using namespace std;
+#include <memory>
 
 class Weg;
+class Fahrzeug;
+
+using namespace std;
 
 class Verhalten{
 public:
@@ -20,7 +21,7 @@ public:
 	Verhalten(Weg& weg): p_pWeg(&weg){}
 
 	// Destruktor
-	virtual ~Verhalten() = default;
+	virtual ~Verhalten(){}
 
 	// Getters
 	Weg* getpWeg() const{return p_pWeg;}
