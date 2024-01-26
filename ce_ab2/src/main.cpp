@@ -622,7 +622,7 @@ void vAufgabe_6(){
 		cout << endl;
 		rueckweg->vSimulieren();
 		cout << endl;
-//		vSleep(500);
+		vSleep(500);
 	}
 	vBeendeGrafik();
 }
@@ -764,7 +764,7 @@ void vAufgabe_7(){
 
 	// Strasse 2
 	int kS2[] = {680, 300, 850, 300, 970, 390, 970, 500, 850, 570, 680, 570};
-	bZeichneStrasse("W23a", "W32a", 115, 2, kS2);
+	bZeichneStrasse("W23a", "W32a", 115, 6, kS2);
 
 	// Strasse 3
 	int kS3[] = {680, 300, 680, 570};
@@ -776,11 +776,11 @@ void vAufgabe_7(){
 
 	// Strasse 5
 	int kS5[] = {680, 570, 500, 570, 350, 510, 320, 420, 320, 300};
-	bZeichneStrasse("W34", "W43", 85, 2, kS5);
+	bZeichneStrasse("W34", "W43", 85, 5, kS5);
 
 	// Strasse 6
-	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300};
-	bZeichneStrasse("W44a", "W44b", 130, 2, kS6);
+	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300, 320, 300};
+	bZeichneStrasse("W44a", "W44b", 130, 7, kS6);
 
 	// Simuliere alle Kreuzungen in dieser Liste in einer For-loop bis ende der gegebenen Zeit.
 	Fahrzeug::vKopf();
