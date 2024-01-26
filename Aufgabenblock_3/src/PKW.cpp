@@ -74,8 +74,9 @@ double PKW::dTanken(double dMenge){
 }
 
 // Simulationfunktion von PKWs.
-// In jeder Zeittakt, in der die PKWs similuert werden, nimmt der aktuelle Tankvolumen ab.
-// Kontrolliere ob es groeßer null ist, wenn nicht, darf das PKW nicht weiter simuliert.
+// In jeder Zeittakt, in der die PKWs similuert werden, wird die aktuelle Tankvolumen berechnet
+// und dann wird der Inhalt der aktuelle Tankvolumen abnehmen.
+// Kontrolliere ob der Tankinhalt groeßer null ist, wenn nicht, darf das PKW nicht weiter simuliert.
 void PKW::vSimulieren() {
 
 	if(p_dTankinhalt <= 0){

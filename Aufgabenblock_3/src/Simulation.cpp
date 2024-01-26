@@ -39,6 +39,7 @@ void Simulation::vSimulieren(double dDauer, double dZeitschritt){
 // Liest Zeile fuer Zeile und kontrolliere das erste Wort, ob es ein gueltiges Schlusselwoert ist.
 // Setzt die Parametern nach dem gegebenen Schluesselwort ein.
 // Wenn etwas schief lauft, gibt eine Ausnahme aus.
+// Gueltige Schlusselwoerter fuer dieses Projekt -> STARRSE, KREUZUNG, PKW, FAHRRAD
 void Simulation::vEinlesen(istream& is, bool bMitGrafik){
 	string line;
 	string firstWord;
@@ -85,13 +86,13 @@ void Simulation::vEinlesen(istream& is, bool bMitGrafik){
 						convertTempolimit(iTempolimit),
 						bUeberholverbot);
 				if(bMitGrafik){
-					int iAnzahlKoordinaten;
-					iss >> iAnzahlKoordinaten;
-					int koordinatenStrasse[iAnzahlKoordinaten*2];
-					for(int i = 0; i < 2*iAnzahlKoordinaten; i++){
+					int iAnzahlPairs;
+					iss >> iAnzahlPairs;
+					int koordinatenStrasse[iAnzahlPairs*2];
+					for(int i = 0; i < 2*iAnzahlPairs; i++){
 						iss >> koordinatenStrasse[i];
 					}
-						bZeichneStrasse(sHinwegName, sRueckwegName, dLaenge, iAnzahlKoordinaten, koordinatenStrasse);
+						bZeichneStrasse(sHinwegName, sRueckwegName, dLaenge, iAnzahlPairs, koordinatenStrasse);
 				}
 			}else if(firstWord == "PKW"){
 				string sName;

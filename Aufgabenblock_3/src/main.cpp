@@ -63,11 +63,11 @@ int main(){
 //	vAufgabe_5();
 //	vAufgabe_6();
 //	vAufgabe_6a();
-	vAufgabe_7();
+//	vAufgabe_7();
 
 //	vAufgabe_8();
 //	vAufgabe_9();
-//	vAufgabe_9a();
+	vAufgabe_9a();
 	return 0;
 }
 
@@ -810,6 +810,7 @@ void vAufgabe_7(){
 
 // Lese die Daten der Objekte aus Einer Datei
 // Gibt eine Ausnahme aus, wenn es einen Fehler gibt.(Z.B: Eroeffnung einer Datei)
+// Wenn es keinen Fehler gibt, gibt die Daten der Objekten aus.
 void vAufgabe_8(){
 
 	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/VO.dat");
@@ -851,6 +852,9 @@ void vAufgabe_9(){
 	cout << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 	cin >> dEpsilon;
 
+	// Simulator wird die Dateieingabe einlesen und die Variablen fuer die Objekte einsetzen.
+	// Nachdem der die Variable eingesetzt hat, wird der die Kreuzungen fuer der innerhalb gegebenen Zeit simulieren.
+	// Achtung! -> Bei dieser Aufgabe gibt es keine grafische Ausgabe.
 	Simulation simulator;
 	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/Simu6.dat");
 	if (!inputFile.is_open()) {
@@ -872,6 +876,9 @@ void vAufgabe_9a(){
 	cout << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
 	cin >> dEpsilon;
 
+	// Simulator wird die Dateieingabe einlesen und die Variablen fuer die Objekte einsetzen.
+	// Nachdem der die Variable eingesetzt hat, wird der die Kreuzungen fuer der innerhalb gegebenen Zeit simulieren.
+	// Achtung! -> Bei dieser Aufgabe gibt es grafische Ausgabe.
 	Simulation simulator;
 	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/SimuDisplay.dat");
 	if (!inputFile.is_open()) {
@@ -880,7 +887,5 @@ void vAufgabe_9a(){
 	simulator.vEinlesen(inputFile, true);
 	inputFile.close();
 	simulator.vSimulieren(dStunden, dEpsilon);
-
-
 }
 
