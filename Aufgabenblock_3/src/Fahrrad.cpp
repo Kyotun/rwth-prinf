@@ -8,6 +8,7 @@
 #include <string>
 #include <iomanip>
 #include <iostream>
+#include <cmath>
 #include "SimuClient.h"
 #include "Fahrzeug.h"
 #include "Fahrrad.h"

@@ -44,7 +44,7 @@ void Simulation::vEinlesen(istream& is, bool bMitGrafik){
 	string firstWord;
 	int lineNumber = 0;
 	if(bMitGrafik){
-		bInitialisiereGrafik(800, 500);
+		bInitialisiereGrafik(1000, 1000);
 	}
 
 	try{
@@ -88,10 +88,10 @@ void Simulation::vEinlesen(istream& is, bool bMitGrafik){
 					int iAnzahlKoordinaten;
 					iss >> iAnzahlKoordinaten;
 					int koordinatenStrasse[iAnzahlKoordinaten*2];
-					for(int i = 0; i < iAnzahlKoordinaten; i++){
+					for(int i = 0; i < 2*iAnzahlKoordinaten; i++){
 						iss >> koordinatenStrasse[i];
 					}
-						bZeichneStrasse(sHinwegName, sRueckwegName, dLaenge, 2, koordinatenStrasse);
+						bZeichneStrasse(sHinwegName, sRueckwegName, dLaenge, iAnzahlKoordinaten, koordinatenStrasse);
 				}
 			}else if(firstWord == "PKW"){
 				string sName;

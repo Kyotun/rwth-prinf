@@ -59,11 +59,11 @@ int main(){
 //	vAufgabe_2();
 //	vAufgabe_3();
 //	vAufgabe_AB1();
-	vAufgabe_4();
+//	vAufgabe_4();
 //	vAufgabe_5();
 //	vAufgabe_6();
 //	vAufgabe_6a();
-//	vAufgabe_7();
+	vAufgabe_7();
 
 //	vAufgabe_8();
 //	vAufgabe_9();
@@ -612,7 +612,6 @@ void vAufgabe_6(){
 	// Gibt die Eigenschaften der Objekte aufm Bildschrim formatiert aus.
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < 4; dGlobaleZeit += dEpsilon){
-		vSetzeZeit(dGlobaleZeit);
 
 		// Kontrolliere die Fahrzeuge fuer Tanken, die aufm Autobahn fahren.
 		for(const auto& fahrzeug : *autobahn->getFahrzeugList()){
@@ -734,12 +733,12 @@ void vAufgabe_7(){
 	shared_ptr<Kreuzung> Kr4 = make_shared<Kreuzung>("Kr4", 0);
 
 	// Verbinde die Kreuzungen mit den Wegen
-	Kreuzung::vVerbinde("W12", "W21", 40, Kr1, Kr2, Innerorts, true);
+	Kreuzung::vVerbinde("W12", "W21", 40, Kr1, Kr2, Innerorts, false);
 	Kreuzung::vVerbinde("W23a", "W32a", 115, Kr2, Kr3, Autobahn, true);
 	Kreuzung::vVerbinde("W23b", "W32b", 40, Kr2, Kr3, Innerorts, false);
 	Kreuzung::vVerbinde("W24", "W42", 55, Kr2, Kr4, Innerorts, false);
 	Kreuzung::vVerbinde("W34", "W43", 85, Kr3, Kr4, Autobahn, true);
-	Kreuzung::vVerbinde("W44a", "W44a", 130, Kr4, Kr4, Landstrasse, true);
+	Kreuzung::vVerbinde("W44a", "W44b", 130, Kr4, Kr4, Landstrasse, true);
 
 	// Erzeuge Fahrzeuge
 	unique_ptr<PKW> pkw1 = make_unique<PKW>("pkw1", 47.83, 11.27);
@@ -761,7 +760,7 @@ void vAufgabe_7(){
 	kreuzungen.push_back(Kr4);
 
 	// Initsialisiere Grafik
-	bInitialisiereGrafik(800, 500);
+	bInitialisiereGrafik(1000, 1000);
 
 
 	// Zeichne Kreuzungen
@@ -777,7 +776,7 @@ void vAufgabe_7(){
 
 	// Strasse 2
 	int kS2[] = {680, 300, 850, 300, 970, 390, 970, 500, 850, 570, 680, 570};
-	bZeichneStrasse("W23a", "W32a", 115, 2, kS2);
+	bZeichneStrasse("W23a", "W32a", 115, 6, kS2);
 
 	// Strasse 3
 	int kS3[] = {680, 300, 680, 570};
@@ -789,11 +788,11 @@ void vAufgabe_7(){
 
 	// Strasse 5
 	int kS5[] = {680, 570, 500, 570, 350, 510, 320, 420, 320, 300};
-	bZeichneStrasse("W34", "W43", 85, 2, kS5);
+	bZeichneStrasse("W34", "W43", 85, 5, kS5);
 
 	// Strasse 6
-	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300};
-	bZeichneStrasse("W44a", "W44a", 130, 2, kS6);
+	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300, 320, 300};
+	bZeichneStrasse("W44a", "W44b", 130, 7, kS6);
 
 	// Simuliere alle Kreuzungen in dieser Liste in einer For-loop bis ende der gegebenen Zeit.
 	Fahrzeug::vKopf();
@@ -802,7 +801,7 @@ void vAufgabe_7(){
 		for(const auto& kreuzung : kreuzungen){
 			kreuzung->vSimulieren();
 		}
-		vSleep(1000);
+		vSleep(500);
 	}
 	vBeendeGrafik();
 
@@ -863,7 +862,24 @@ void vAufgabe_9(){
 }
 
 void vAufgabe_9a(){
+	double dStunden = 0.0;
+	// Lese die gewuenschte Simulationzeit ein.(Benutzerfreundlciher)
+	cout << "Bitte geben Sie die Simulationzeit in Stunden ein: ";
+	cin >> dStunden;
+
+	double dEpsilon = 0.0;
+	// Einlesen der Zeittakt vom Benutzer.
+	cout << "Bitte geben Sie eine Period fuer die Simulation(lieber als Bruchteile von Studen): ";
+	cin >> dEpsilon;
+
+	Simulation simulator;
 	ifstream inputFile("/Users/kyotun/Desktop/rwth-prinf/Aufgabenblock_3/src/SimuDisplay.dat");
+	if (!inputFile.is_open()) {
+		throw runtime_error("InputFile konnte nicht geoeffnet werden.");
+	}
+	simulator.vEinlesen(inputFile, true);
+	inputFile.close();
+	simulator.vSimulieren(dStunden, dEpsilon);
 
 
 }
