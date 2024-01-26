@@ -93,7 +93,10 @@ void Kreuzung::vVerbinde(string sNameHinweg, string sNameRuckweg,
 	pHinweg->setRueckweg(pRueckweg);
 	pRueckweg->setRueckweg(pHinweg);
 
+	//Kr4
 	pZielKreuzung.lock()->p_pWege.push_back(pRueckweg);
+
+	//Kr2
 	pStartKreuzung.lock()->p_pWege.push_back(pHinweg);
 }
 

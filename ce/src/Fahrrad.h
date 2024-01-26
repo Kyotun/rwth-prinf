@@ -28,6 +28,5 @@ public:
 	void vZeichnen(const Weg& weg) override;
 
 private:
-
 };
 #endif /* FAHRRAD_H_ */

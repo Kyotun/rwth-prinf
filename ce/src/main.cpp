@@ -26,7 +26,6 @@
 #include "Parken.h"
 #include "PKW.h"
 #include "SimuClient.h"
-#include "Simulation.h"
 #include "Simulationsobjekt.h"
 #include "Streckenende.h"
 #include "Tempolimit.h"
@@ -56,10 +55,10 @@ int main(){
 //	vAufgabe_3();
 //	vAufgabe_AB1();
 //	vAufgabe_4();
-	vAufgabe_5();
+//	vAufgabe_5();
 //	vAufgabe_6();
 //	vAufgabe_6a();
-//	vAufgabe_7();
+	vAufgabe_7();
 	return 0;
 }
 
@@ -577,13 +576,10 @@ void vAufgabe_6(){
 
 	//Annehmen der Fahrzeuge in die Wege.
 	cout << endl;
-	// Zum beobachten des Ueberholverbot, die kleinste Geschwindigkeit soll als erstes angenommen werden.
-	// Auf dem Autobahn kann man Ueberholverbot beobachten.
 	hinweg->vAnnahme(std::move(fahrrad1));
 	hinweg->vAnnahme(std::move(pkw1));
 	hinweg->vAnnahme(std::move(pkw2),2);
 
-	// Hier kann man nur zwischen pk4 und fahrrad2 das Ueberholverbot beobachten.
 	rueckweg->vAnnahme(std::move(pkw3));
 	rueckweg->vAnnahme(std::move(pkw4),1.5);
 	rueckweg->vAnnahme(std::move(fahrrad2));
@@ -621,12 +617,12 @@ void vAufgabe_6(){
 			}
 		}
 
-		// Als erstes werden die Fahrzeuge ausgegeben, die aufm Autobahn fahren.
+		// Als erstes werden die Fahrzeuge ausgegeben, die aufm Hinweg fahren.
 		hinweg->vSimulieren();
 		cout << endl;
 		rueckweg->vSimulieren();
 		cout << endl;
-		vSleep(500);
+//		vSleep(500);
 	}
 	vBeendeGrafik();
 }
@@ -640,7 +636,7 @@ void vAufgabe_6a(){
 	VListe<int> VListe;
 
 	// Zur Erstellung einer zufaelligen Zahl
-	static std::mt19937 device(0);
+	static std::mt19937 device(4);
 	std::uniform_int_distribution<int> dist(1, 10);
 
 	// Zahlen in die Liste eingeben.
@@ -672,7 +668,7 @@ void vAufgabe_6a(){
 		}
 	}
 
-	cout << "\n\nElemente grßer als 5 wurden gelscht aber nicht aktualisiert..\n";
+	cout << "\n\nElemente groesser als 5 wurden geloescht aber nicht aktualisiert..\n";
 	cout << "Liste:\n";
 	// Ausgabe sollte die gleiche sein, da vAktualisieren noch nicht durchgefuehrt wurde
 	for(auto it = VListe.begin(); it != VListe.end(); it++) {
@@ -752,7 +748,7 @@ void vAufgabe_7(){
 	kreuzungen.push_back(Kr4);
 
 	// Initsialisiere Grafik
-	bInitialisiereGrafik(800, 500);
+	bInitialisiereGrafik(1000, 1000);
 
 
 	// Zeichne Kreuzungen
@@ -784,12 +780,11 @@ void vAufgabe_7(){
 
 	// Strasse 6
 	int kS6[] = {320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300};
-	bZeichneStrasse("W44a", "W44a", 130, 2, kS6);
+	bZeichneStrasse("W44a", "W44b", 130, 2, kS6);
 
 	// Simuliere alle Kreuzungen in dieser Liste in einer For-loop bis ende der gegebenen Zeit.
 	Fahrzeug::vKopf();
 	for(dGlobaleZeit = dEpsilon; dGlobaleZeit < dStunden; dGlobaleZeit += dEpsilon){
-		vSetzeZeit(dGlobaleZeit);
 		for(const auto& kreuzung : kreuzungen){
 			kreuzung->vSimulieren();
 		}

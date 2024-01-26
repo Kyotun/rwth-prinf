@@ -66,5 +66,4 @@ private:
 // Aber getters werden benötigt, um die private bzw. protected Bereiche erreichen zu können.
 ostream& operator<<(ostream& ausgabe, const Simulationsobjekt& simuobjekt);
 
-
 #endif /* SIMULATIONSOBJEKT_H_ */

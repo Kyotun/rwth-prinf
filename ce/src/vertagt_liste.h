@@ -9,7 +9,7 @@ namespace vertagt
 	class VListe
 	{
 	private:
-		std::list<T> p_objekte;
+		std::list<T> p_objekte; // p_pFahrzeuge
 		std::list<std::unique_ptr<VAktion<T>>> p_aktionen;
 
 	public:
